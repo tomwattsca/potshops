@@ -1,0 +1,27 @@
+:root { color-scheme: light; --green:#115e35; --mint:#e8f5ed; --ink:#132018; --muted:#5b6b61; --line:#dbe7df; --gold:#b7791f; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color:var(--ink); background:#fbfdfb; }
+a { color: var(--green); text-decoration: none; } a:hover { text-decoration: underline; }
+.site-header { border-bottom:1px solid var(--line); background:white; position:sticky; top:0; z-index:10; }
+.nav { max-width:1120px; margin:auto; display:flex; align-items:center; justify-content:space-between; padding:18px 20px; gap:24px; }
+.logo { font-weight:800; font-size:1.35rem; color:var(--green); }
+.nav-links { display:flex; gap:18px; flex-wrap:wrap; font-size:.95rem; }
+.hero { background:linear-gradient(135deg,#e8f5ed,#fff7ed); border-bottom:1px solid var(--line); }
+.hero-inner, main, .footer-inner { max-width:1120px; margin:auto; padding:54px 20px; }
+.eyebrow { color:var(--gold); font-weight:700; letter-spacing:.08em; text-transform:uppercase; font-size:.78rem; }
+h1 { font-size:clamp(2.2rem,5vw,4.6rem); line-height:1.02; margin:10px 0 18px; max-width:920px; }
+h2 { font-size:clamp(1.5rem,3vw,2.25rem); margin:0 0 16px; }
+h3 { margin:0 0 8px; font-size:1.15rem; }
+p { line-height:1.65; color:var(--muted); }
+.lede { font-size:1.18rem; max-width:760px; }
+.cta-row { display:flex; gap:14px; flex-wrap:wrap; margin-top:28px; }
+.button { display:inline-flex; align-items:center; justify-content:center; border-radius:999px; padding:12px 18px; font-weight:700; background:var(--green); color:white; border:1px solid var(--green); }
+.button.secondary { background:white; color:var(--green); }
+.grid { display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); margin:24px 0 44px; }
+.card { background:white; border:1px solid var(--line); border-radius:20px; padding:22px; box-shadow:0 10px 30px rgba(17,94,53,.06); }
+.card .meta { color:var(--muted); font-size:.9rem; }
+.split { display:grid; gap:30px; grid-template-columns:minmax(0,1.4fr) minmax(260px,.6fr); align-items:start; }
+.notice { background:#fff7ed; border:1px solid #fed7aa; border-radius:16px; padding:16px; }
+.footer { border-top:1px solid var(--line); background:#f3faf5; margin-top:40px; }
+ul.clean { padding-left:18px; color:var(--muted); line-height:1.7; }
+@media (max-width: 760px) { .split { grid-template-columns:1fr; } .nav { align-items:flex-start; flex-direction:column; } }
