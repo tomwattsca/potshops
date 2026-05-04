@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { listingSeeds, priorityLocations } from './data/directory';
+import { listingSeeds, priorityCategories, priorityLocations } from './data/directory';
 
 export default function Home() {
   return (
@@ -26,6 +26,20 @@ export default function Home() {
                 <h3><Link href={`/locations/${location.slug}`}>{location.city}, {location.province}</Link></h3>
                 <p>{location.description}</p>
                 <p className="meta">Priority {location.priority} · {location.legacyImpressions.toLocaleString()} legacy impressions signal</p>
+              </article>
+            ))}
+          </div>
+        </section>
+        <section id="categories">
+          <div className="eyebrow">Commercial-intent recovery</div>
+          <h2>Priority category pages</h2>
+          <p>These legacy category URLs had Search Console demand and now act as hubs to city and listing pages while Potshops verifies commercial data.</p>
+          <div className="grid">
+            {priorityCategories.map((category) => (
+              <article className="card" key={category.slug}>
+                <h3><Link href={`/categories/${category.slug}`}>{category.title}</Link></h3>
+                <p>{category.description}</p>
+                <p className="meta">Legacy path: <code>{category.legacyPath}</code> · {category.legacyImpressions.toLocaleString()} impressions</p>
               </article>
             ))}
           </div>
