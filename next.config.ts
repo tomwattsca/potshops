@@ -6,6 +6,12 @@ const nextConfig: NextConfig = {
   outputFileTracingRoot: process.cwd(),
   async redirects() {
     return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.potshops.ca' }],
+        destination: 'https://potshops.ca/:path*',
+        permanent: true,
+      },
       ...listingSeeds.map((listing) => ({
         source: listing.legacyPath.replace(/\/$/, ""),
         destination: `/listings/${listing.slug}`,
