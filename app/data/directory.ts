@@ -27,6 +27,16 @@ export type ListingSeed = {
   gscImpressions: number;
   gscClicks: number;
   averagePosition: number;
+  address?: string;
+  city?: string;
+  province?: string;
+  postalCode?: string;
+  phone?: string;
+  verificationStatus?: 'historical_source' | 'current_source' | 'needs_verification';
+  lastVerified?: string;
+  sourceName?: string;
+  sourceUrl?: string;
+  sourceNote?: string;
 };
 
 export const priorityLocations: Location[] = [
@@ -43,9 +53,11 @@ export const priorityLocations: Location[] = [
 ];
 
 export const listingSeeds: ListingSeed[] = [
-  { slug: 'green-leaf', name: 'Green Leaf', legacyPath: '/listing/green-leaf/', locationHint: 'Kahnawake, QC', gscImpressions: 7311, gscClicks: 436, averagePosition: 12.4 },
-  { slug: 'the-green-leaf-society', name: 'The Green Leaf Society', legacyPath: '/listing/the-green-leaf-society/', locationHint: 'Vancouver / BC', gscImpressions: 5426, gscClicks: 123, averagePosition: 21.9 },
-  { slug: 'healing-health-compassion', name: 'Healing Health Compassion', legacyPath: '/listing/healing-health-compassion/', locationHint: 'Canada', gscImpressions: 4829, gscClicks: 18, averagePosition: 7.9 },
+  { slug: 'cannabis-culture-920-davie', name: 'Cannabis Culture - 920 Davie', legacyPath: '/listing/cannabis-culture-920-davie/', locationHint: 'Vancouver, BC', gscImpressions: 61, gscClicks: 0, averagePosition: 33.6, address: '920 Davie Street', city: 'Vancouver', province: 'BC', postalCode: 'V6Z 1B8', phone: '(604) 428-5310', verificationStatus: 'historical_source', lastVerified: '2026-05-06', sourceName: 'WeedsFarm public directory', sourceUrl: 'https://weedsfarm.com/store/cannabis-culture-920-davie/', sourceNote: 'Public directory page lists address and phone for the historical Davie Street listing; current licensing and operating status still needs official confirmation.' },
+  { slug: 'king-canna-fredericton-2', name: 'King Canna Fredericton', legacyPath: '/listing/king-canna-fredericton-2/', locationHint: 'Fredericton, NB', gscImpressions: 1, gscClicks: 0, averagePosition: 6.0, address: '1010 Hanwell Road', city: 'Fredericton', province: 'NB', postalCode: 'E3B 6A4', verificationStatus: 'historical_source', lastVerified: '2026-05-06', sourceName: 'CannaConnection public shop directory', sourceUrl: 'https://www.cannaconnection.com/shops/1010-hanwell-rd/fredericton/new-brunswick/king-canna-fredericton', sourceNote: 'Public shop directory lists the Hanwell Road address; current licensing and operating status still needs official confirmation.' },
+  { slug: 'green-leaf', name: 'Green Leaf', legacyPath: '/listing/green-leaf/', locationHint: 'Kahnawake, QC', gscImpressions: 7311, gscClicks: 436, averagePosition: 12.4, city: 'Kahnawake', province: 'QC', verificationStatus: 'historical_source', lastVerified: '2026-05-06', sourceName: 'The Eastern Door', sourceUrl: 'https://easterndoor.com/article/green-leaf-dispensary-raided-for-the-fifth-time', sourceNote: 'Local reporting identifies Green Leaf as a Kahnawake dispensary and notes enforcement history; no current public operating address was verified in this pass.' },
+  { slug: 'the-green-leaf-society', name: 'The Green Leaf Society', legacyPath: '/listing/the-green-leaf-society/', locationHint: 'Vancouver / BC', gscImpressions: 5426, gscClicks: 123, averagePosition: 21.9, address: '1191 Victoria Drive', city: 'Vancouver', province: 'BC', postalCode: 'V5L 4G4', verificationStatus: 'historical_source', lastVerified: '2026-05-06', sourceName: 'OpenGovCA / City of Vancouver business licence dataset', sourceUrl: 'https://opengovca.com/vancouver-business/10-192137', sourceNote: 'Public licence dataset lists Green Leaf Cannabis Cafe Society at 1191 Victoria Drive with cancelled historical licence status; treat as legacy context, not a current operating claim.' },
+  { slug: 'healing-health-compassion', name: 'Healing Health Compassion', legacyPath: '/listing/healing-health-compassion/', locationHint: 'London, ON', gscImpressions: 4829, gscClicks: 18, averagePosition: 7.9, address: '1472 Dundas Street Unit C', city: 'London', province: 'ON', postalCode: 'N5W 3B9', phone: '(519) 204-4900', verificationStatus: 'historical_source', lastVerified: '2026-05-06', sourceName: 'WeedsFarm public directory', sourceUrl: 'https://weedsfarm.com/store/healing-health-compassion/', sourceNote: 'Public directory page lists address and phone; current licensing and operating status still needs confirmation from an official source.' },
   { slug: 'rocket-chronic-2', name: 'Rocket Chronic', legacyPath: '/listing/rocket-chronic-2/', locationHint: 'Canada', gscImpressions: 2439, gscClicks: 6, averagePosition: 6.0 },
   { slug: 'farm-the-original-farmacy-downtown', name: 'Farm: The Original Farmacy Downtown', legacyPath: '/listing/farm-the-original-farmacy-downtown/', locationHint: 'Victoria, BC', gscImpressions: 1974, gscClicks: 2, averagePosition: 25.3 },
   { slug: 'mountain-greenery', name: 'Mountain Greenery', legacyPath: '/listing/mountain-greenery/', locationHint: 'Hamilton, ON', gscImpressions: 1433, gscClicks: 15, averagePosition: 8.9 },
