@@ -9,6 +9,17 @@ export type Location = {
   priority: number;
 };
 
+export type LocationUtility = {
+  slug: string;
+  summary: string;
+  directoryStatus: string;
+  searchIntent: string[];
+  relatedListingSlugs: string[];
+  internalCategorySlugs: string[];
+  localCaveats: string[];
+  verificationNextSteps: string[];
+};
+
 export type Category = {
   slug: string;
   legacyPath: string;
@@ -52,6 +63,63 @@ export const priorityLocations: Location[] = [
   { slug: 'dartmouth', city: 'Dartmouth', province: 'NS', title: 'Cannabis stores and dispensaries in Dartmouth', description: 'Dartmouth appears as an adjacent Nova Scotia opportunity that can support the Halifax cluster.', gscEvidence: 'GSC page data showed /location/dartmouth/ with 71 impressions, making it a useful supporting page for the Halifax/Nova Scotia cluster.', legacyImpressions: 71, priority: 10 },
 ];
 
+export const locationUtilities: LocationUtility[] = [
+  {
+    slug: 'kahnawake',
+    summary: 'Kahnawake is the clearest city-level recovery opportunity in the current Potshops data because searches use direct local language rather than only legacy brand names.',
+    directoryStatus: 'One high-demand legacy profile is mapped to Kahnawake today. It is labelled historical because the available source confirms local reporting context, not a current licence or storefront status.',
+    searchIntent: ['weed shop kahnawake', 'kahnawake dispensary', 'weed dispensary kahnawake'],
+    relatedListingSlugs: ['green-leaf'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Kahnawake cannabis search results can mix community businesses, historical enforcement coverage, and current-store intent; Potshops should separate those facts clearly.',
+      'Do not treat historical local reporting as proof that a store is currently open, licensed, or accepting orders.',
+      'Priority enrichment should verify address, operating status, and source date before adding maps, hours, or commercial links.',
+    ],
+    verificationNextSteps: [
+      'Confirm whether each Kahnawake profile has an official/current public source.',
+      'Add address-level facts only when they come from an official business, regulator, or current directory source.',
+      'Keep this page as a cautious city guide until at least two verified local profiles are available.',
+    ],
+  },
+  {
+    slug: 'vancouver',
+    summary: 'Vancouver has the broadest cluster of legacy store-profile demand in the seed data, including Davie Street, Victoria Drive, Mount Pleasant, and Arbutus Ridge-adjacent searches.',
+    directoryStatus: 'Four Vancouver-area listing seeds are connected to this page; two have public-source enrichment and the others are still queued for verification.',
+    searchIntent: ['cannabis culture dispensary', 'weed delivery arbutus ridge bc', 'the green leaf society', 'vancouver dispensary'],
+    relatedListingSlugs: ['cannabis-culture-920-davie', 'the-green-leaf-society', 'ahuevo-premium-marijuana', 'the-herb-co-mount-pleasant'],
+    internalCategorySlugs: ['dispensary', 'in-town-delivery'],
+    localCaveats: [
+      'Vancouver legacy demand is mostly listing-led, so the page should point users to profile-level evidence instead of claiming comprehensive city coverage.',
+      'The Arbutus Ridge delivery query is intent evidence only; Potshops should not advertise delivery availability until a compliant current source is verified.',
+      'Some Vancouver source data is historical or cancelled-licence context, so visible copy must avoid current operating claims.',
+    ],
+    verificationNextSteps: [
+      'Finish source notes for Ahuevo Premium Marijuana and The Herb Co Mount Pleasant.',
+      'Separate Vancouver neighbourhood hints such as Davie Street, Victoria Drive, Mount Pleasant, and Arbutus Ridge when enough verified profiles exist.',
+      'Only add outbound websites or contact links after compliance and current-status checks pass.',
+    ],
+  },
+  {
+    slug: 'fredericton',
+    summary: 'Fredericton is a smaller but useful recovery page because it has both city-level query demand and a specific legacy King Canna profile that has already been source-enriched.',
+    directoryStatus: 'One Fredericton listing seed is mapped and has historical public-source address context; current licensing and operating status still needs confirmation.',
+    searchIntent: ['cannabis store fredericton', 'dispensary fredericton', 'weed dispensary fredericton'],
+    relatedListingSlugs: ['king-canna-fredericton-2'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'The current seed set is too small to present as a complete Fredericton directory.',
+      'The Hanwell Road address is sourced from a public shop directory, but Potshops still needs an official/current confirmation before stronger claims.',
+      'Until more verified New Brunswick profiles are imported, this page should emphasize recovery status and verification needs.',
+    ],
+    verificationNextSteps: [
+      'Check official/current sources for King Canna Fredericton before adding hours, map links, or contact CTAs.',
+      'Find at least two additional Fredericton or nearby New Brunswick profiles before expanding the page into a broader local guide.',
+      'Use this page to test the import validation workflow before scaling New Brunswick listings.',
+    ],
+  },
+];
+
 export const listingSeeds: ListingSeed[] = [
   { slug: 'cannabis-culture-920-davie', name: 'Cannabis Culture - 920 Davie', legacyPath: '/listing/cannabis-culture-920-davie/', locationHint: 'Vancouver, BC', gscImpressions: 61, gscClicks: 0, averagePosition: 33.6, address: '920 Davie Street', city: 'Vancouver', province: 'BC', postalCode: 'V6Z 1B8', phone: '(604) 428-5310', verificationStatus: 'historical_source', lastVerified: '2026-05-06', sourceName: 'WeedsFarm public directory', sourceUrl: 'https://weedsfarm.com/store/cannabis-culture-920-davie/', sourceNote: 'Public directory page lists address and phone for the historical Davie Street listing; current licensing and operating status still needs official confirmation.' },
   { slug: 'king-canna-fredericton-2', name: 'King Canna Fredericton', legacyPath: '/listing/king-canna-fredericton-2/', locationHint: 'Fredericton, NB', gscImpressions: 1, gscClicks: 0, averagePosition: 6.0, address: '1010 Hanwell Road', city: 'Fredericton', province: 'NB', postalCode: 'E3B 6A4', verificationStatus: 'historical_source', lastVerified: '2026-05-06', sourceName: 'CannaConnection public shop directory', sourceUrl: 'https://www.cannaconnection.com/shops/1010-hanwell-rd/fredericton/new-brunswick/king-canna-fredericton', sourceNote: 'Public shop directory lists the Hanwell Road address; current licensing and operating status still needs official confirmation.' },
@@ -90,4 +158,5 @@ export const priorityCategories: Category[] = [
 export const getCategory = (slug: string) => priorityCategories.find((category) => category.slug === slug);
 
 export const getLocation = (slug: string) => priorityLocations.find((location) => location.slug === slug);
+export const getLocationUtility = (slug: string) => locationUtilities.find((utility) => utility.slug === slug);
 export const getListing = (slug: string) => listingSeeds.find((listing) => listing.slug === slug);
