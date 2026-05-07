@@ -108,14 +108,20 @@
     "slug": "rocket-chronic-2",
     "name": "Rocket Chronic",
     "legacyPath": "/listing/rocket-chronic-2/",
-    "locationHint": "Canada",
+    "locationHint": "Vancouver, BC",
     "gscImpressions": 2439,
     "gscClicks": 6,
     "averagePosition": 6,
-    "verificationStatus": "needs_verification",
+    "city": "Vancouver",
+    "province": "BC",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary"
-    ]
+    ],
+    "lastVerified": "2026-05-07",
+    "sourceName": "Rocket Chronic contact page and BBB public profile",
+    "sourceUrl": "https://rocketchronic.com/contact/",
+    "sourceNote": "Public sources associate Rocket Chronic with Canada and Vancouver, BC, but no street address was verified from accessible source text during this check. Treat as directory evidence only; current licensing and operating status still need confirmation."
   },
   {
     "slug": "farm-the-original-farmacy-downtown",
@@ -125,10 +131,18 @@
     "gscImpressions": 1974,
     "gscClicks": 2,
     "averagePosition": 25.3,
-    "verificationStatus": "needs_verification",
+    "address": "1402 Douglas St",
+    "city": "Victoria",
+    "province": "BC",
+    "postalCode": "V8W 2G1",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary"
-    ]
+    ],
+    "lastVerified": "2026-05-07",
+    "sourceName": "VictoriaDirect, Leafly, and TrustedBud public directory pages",
+    "sourceUrl": "https://the-original-farm.victoriadirect.ca/",
+    "sourceNote": "Public third-party directory pages associate The Original Farm / Farm - The Original Farmacy with 1402 Douglas St, Victoria, BC V8W 2G1. Leafly data was visibly stale, so treat operating details as historical until independently reverified."
   },
   {
     "slug": "mountain-greenery",
@@ -138,10 +152,17 @@
     "gscImpressions": 1433,
     "gscClicks": 15,
     "averagePosition": 8.9,
-    "verificationStatus": "needs_verification",
+    "address": "478 Upper Wellington Street",
+    "city": "Hamilton",
+    "province": "ON",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary"
-    ]
+    ],
+    "lastVerified": "2026-05-07",
+    "sourceName": "Mountain Greenery website and public directory pages",
+    "sourceUrl": "https://mountaingreenery420.com/",
+    "sourceNote": "The Mountain Greenery website publicly associates the name with Hamilton, Ontario; a third-party Cannawayz page lists 478 Upper Wellington Street. Verify address and compliance details before any promotion."
   },
   {
     "slug": "green-essence-head-shop-dispensary",
@@ -151,10 +172,18 @@
     "gscImpressions": 981,
     "gscClicks": 7,
     "averagePosition": 9.9,
-    "verificationStatus": "needs_verification",
+    "address": "409 Martin Street",
+    "city": "Penticton",
+    "province": "BC",
+    "postalCode": "V2A 5L1",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary"
-    ]
+    ],
+    "lastVerified": "2026-05-07",
+    "sourceName": "FindStoreNearMe and Cannawayz public directory pages",
+    "sourceUrl": "https://penticton-bc.findstorenearme.ca/green-essence-head-shop-inc/",
+    "sourceNote": "Third-party public directory pages list Green Essence Head Shop Inc. / Green Essence Head Shop & Dispensary at 409 Martin Street in Penticton, BC. Use as public directory evidence only; not a claim of current licensing or availability."
   },
   {
     "slug": "ahuevo-premium-marijuana",
@@ -164,10 +193,16 @@
     "gscImpressions": 539,
     "gscClicks": 21,
     "averagePosition": 8.3,
-    "verificationStatus": "needs_verification",
+    "city": "Vancouver",
+    "province": "BC",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary"
-    ]
+    ],
+    "lastVerified": "2026-05-07",
+    "sourceName": "Cannawayz, Tokey, and Breken public directory pages",
+    "sourceUrl": "https://cannawayz.com/deliveries/ahuevo",
+    "sourceNote": "Public third-party directory pages associate Ahuevo / Ahuevo Premium Marijuana with Vancouver-area locations, but sources conflict on street address. Use only as historical directory evidence and avoid current-status claims."
   },
   {
     "slug": "mount-zion-rastafarian-church",
@@ -360,10 +395,18 @@
     "gscImpressions": 171,
     "gscClicks": 4,
     "averagePosition": 30.5,
-    "verificationStatus": "needs_verification",
+    "address": "1193 Main St",
+    "city": "Vancouver",
+    "province": "BC",
+    "postalCode": "V6A 4B6",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary"
-    ]
+    ],
+    "lastVerified": "2026-05-07",
+    "sourceName": "TheCBD and Humidify historical directory pages",
+    "sourceUrl": "https://thecbd.co/listing/the-herb-co-mount-pleasant/",
+    "sourceNote": "Historical third-party directory pages list The Herb Co. Mount Pleasant at 1193 Main St, Vancouver, BC V6A 4B6. Use as historical public-source evidence only; not a claim of current licensing or availability."
   },
   {
     "slug": "the-kootenays-medicine-tree",
