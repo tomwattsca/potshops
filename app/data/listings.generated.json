@@ -1,0 +1,381 @@
+[
+  {
+    "slug": "cannabis-culture-920-davie",
+    "name": "Cannabis Culture - 920 Davie",
+    "legacyPath": "/listing/cannabis-culture-920-davie/",
+    "locationHint": "Vancouver, BC",
+    "gscImpressions": 61,
+    "gscClicks": 0,
+    "averagePosition": 33.6,
+    "address": "920 Davie Street",
+    "city": "Vancouver",
+    "province": "BC",
+    "postalCode": "V6Z 1B8",
+    "phone": "(604) 428-5310",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-06",
+    "sourceName": "WeedsFarm public directory",
+    "sourceUrl": "https://weedsfarm.com/store/cannabis-culture-920-davie/",
+    "sourceNote": "Public directory page lists address and phone for the historical Davie Street listing; current licensing and operating status still needs official confirmation."
+  },
+  {
+    "slug": "king-canna-fredericton-2",
+    "name": "King Canna Fredericton",
+    "legacyPath": "/listing/king-canna-fredericton-2/",
+    "locationHint": "Fredericton, NB",
+    "gscImpressions": 1,
+    "gscClicks": 0,
+    "averagePosition": 6,
+    "address": "1010 Hanwell Road",
+    "city": "Fredericton",
+    "province": "NB",
+    "postalCode": "E3B 6A4",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-06",
+    "sourceName": "CannaConnection public shop directory",
+    "sourceUrl": "https://www.cannaconnection.com/shops/1010-hanwell-rd/fredericton/new-brunswick/king-canna-fredericton",
+    "sourceNote": "Public shop directory lists the Hanwell Road address; current licensing and operating status still needs official confirmation."
+  },
+  {
+    "slug": "green-leaf",
+    "name": "Green Leaf",
+    "legacyPath": "/listing/green-leaf/",
+    "locationHint": "Kahnawake, QC",
+    "gscImpressions": 7311,
+    "gscClicks": 436,
+    "averagePosition": 12.4,
+    "city": "Kahnawake",
+    "province": "QC",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-06",
+    "sourceName": "The Eastern Door",
+    "sourceUrl": "https://easterndoor.com/article/green-leaf-dispensary-raided-for-the-fifth-time",
+    "sourceNote": "Local reporting identifies Green Leaf as a Kahnawake dispensary and notes enforcement history; no current public operating address was verified in this pass."
+  },
+  {
+    "slug": "the-green-leaf-society",
+    "name": "The Green Leaf Society",
+    "legacyPath": "/listing/the-green-leaf-society/",
+    "locationHint": "Vancouver / BC",
+    "gscImpressions": 5426,
+    "gscClicks": 123,
+    "averagePosition": 21.9,
+    "address": "1191 Victoria Drive",
+    "city": "Vancouver",
+    "province": "BC",
+    "postalCode": "V5L 4G4",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-06",
+    "sourceName": "OpenGovCA / City of Vancouver business licence dataset",
+    "sourceUrl": "https://opengovca.com/vancouver-business/10-192137",
+    "sourceNote": "Public licence dataset lists Green Leaf Cannabis Cafe Society at 1191 Victoria Drive with cancelled historical licence status; treat as legacy context, not a current operating claim."
+  },
+  {
+    "slug": "healing-health-compassion",
+    "name": "Healing Health Compassion",
+    "legacyPath": "/listing/healing-health-compassion/",
+    "locationHint": "London, ON",
+    "gscImpressions": 4829,
+    "gscClicks": 18,
+    "averagePosition": 7.9,
+    "address": "1472 Dundas Street Unit C",
+    "city": "London",
+    "province": "ON",
+    "postalCode": "N5W 3B9",
+    "phone": "(519) 204-4900",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-06",
+    "sourceName": "WeedsFarm public directory",
+    "sourceUrl": "https://weedsfarm.com/store/healing-health-compassion/",
+    "sourceNote": "Public directory page lists address and phone; current licensing and operating status still needs confirmation from an official source."
+  },
+  {
+    "slug": "rocket-chronic-2",
+    "name": "Rocket Chronic",
+    "legacyPath": "/listing/rocket-chronic-2/",
+    "locationHint": "Canada",
+    "gscImpressions": 2439,
+    "gscClicks": 6,
+    "averagePosition": 6,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "farm-the-original-farmacy-downtown",
+    "name": "Farm: The Original Farmacy Downtown",
+    "legacyPath": "/listing/farm-the-original-farmacy-downtown/",
+    "locationHint": "Victoria, BC",
+    "gscImpressions": 1974,
+    "gscClicks": 2,
+    "averagePosition": 25.3,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "mountain-greenery",
+    "name": "Mountain Greenery",
+    "legacyPath": "/listing/mountain-greenery/",
+    "locationHint": "Hamilton, ON",
+    "gscImpressions": 1433,
+    "gscClicks": 15,
+    "averagePosition": 8.9,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "green-essence-head-shop-dispensary",
+    "name": "Green Essence Head Shop and Dispensary",
+    "legacyPath": "/listing/green-essence-head-shop-dispensary/",
+    "locationHint": "Penticton, BC",
+    "gscImpressions": 981,
+    "gscClicks": 7,
+    "averagePosition": 9.9,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "ahuevo-premium-marijuana",
+    "name": "Ahuevo Premium Marijuana",
+    "legacyPath": "/listing/ahuevo-premium-marijuana/",
+    "locationHint": "Vancouver, BC",
+    "gscImpressions": 539,
+    "gscClicks": 21,
+    "averagePosition": 8.3,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "mount-zion-rastafarian-church",
+    "name": "Mount Zion Rastafarian Church",
+    "legacyPath": "/listing/mount-zion-rastafarian-church/",
+    "locationHint": "Canada",
+    "gscImpressions": 405,
+    "gscClicks": 29,
+    "averagePosition": 11.6,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "leagle-dreams",
+    "name": "Leagle Dreams",
+    "legacyPath": "/listing/leagle-dreams/",
+    "locationHint": "Canada",
+    "gscImpressions": 562,
+    "gscClicks": 11,
+    "averagePosition": 8.5,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "maritime-medicinal",
+    "name": "Maritime Medicinal",
+    "legacyPath": "/listing/maritime-medicinal/",
+    "locationHint": "Atlantic Canada",
+    "gscImpressions": 103,
+    "gscClicks": 11,
+    "averagePosition": 13.1,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "clone-corner",
+    "name": "Clone Corner",
+    "legacyPath": "/listing/clone-corner/",
+    "locationHint": "Canada",
+    "gscImpressions": 219,
+    "gscClicks": 10,
+    "averagePosition": 39.8,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "mr-greens",
+    "name": "Mr. Greens",
+    "legacyPath": "/listing/mr-greens/",
+    "locationHint": "Canada",
+    "gscImpressions": 550,
+    "gscClicks": 10,
+    "averagePosition": 26.4,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "gulf-island-organics",
+    "name": "Gulf Island Organics",
+    "legacyPath": "/listing/gulf-island-organics/",
+    "locationHint": "BC",
+    "gscImpressions": 190,
+    "gscClicks": 8,
+    "averagePosition": 18,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "remedy-ice-cream",
+    "name": "Remedy Ice Cream",
+    "legacyPath": "/listing/remedy-ice-cream/",
+    "locationHint": "Canada",
+    "gscImpressions": 64,
+    "gscClicks": 8,
+    "averagePosition": 6.3,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "tpd-boutique",
+    "name": "TPD Boutique",
+    "legacyPath": "/listing/tpd-boutique/",
+    "locationHint": "Canada",
+    "gscImpressions": 334,
+    "gscClicks": 8,
+    "averagePosition": 7.5,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "420-delivery",
+    "name": "420 Delivery",
+    "legacyPath": "/listing/420-delivery/",
+    "locationHint": "Canada",
+    "gscImpressions": 353,
+    "gscClicks": 7,
+    "averagePosition": 47.5,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary",
+      "in-town-delivery"
+    ]
+  },
+  {
+    "slug": "blessed-herbs-cafe",
+    "name": "Blessed Herbs Cafe",
+    "legacyPath": "/listing/blessed-herbs-cafe/",
+    "locationHint": "Canada",
+    "gscImpressions": 135,
+    "gscClicks": 6,
+    "averagePosition": 9.3,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "tribal-releaf",
+    "name": "Tribal Releaf",
+    "legacyPath": "/listing/tribal-releaf/",
+    "locationHint": "Canada",
+    "gscImpressions": 371,
+    "gscClicks": 6,
+    "averagePosition": 7.9,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "piff-express",
+    "name": "Piff Express",
+    "legacyPath": "/listing/piff-express/",
+    "locationHint": "Canada",
+    "gscImpressions": 72,
+    "gscClicks": 5,
+    "averagePosition": 4.9,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "compassion-in-motion",
+    "name": "Compassion in Motion",
+    "legacyPath": "/listing/compassion-in-motion/",
+    "locationHint": "Canada",
+    "gscImpressions": 601,
+    "gscClicks": 4,
+    "averagePosition": 6.5,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "eden",
+    "name": "Eden",
+    "legacyPath": "/listing/eden/",
+    "locationHint": "Canada",
+    "gscImpressions": 254,
+    "gscClicks": 4,
+    "averagePosition": 21.4,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "the-herb-co-mount-pleasant",
+    "name": "The Herb Co Mount Pleasant",
+    "legacyPath": "/listing/the-herb-co-mount-pleasant/",
+    "locationHint": "Vancouver, BC",
+    "gscImpressions": 171,
+    "gscClicks": 4,
+    "averagePosition": 30.5,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  },
+  {
+    "slug": "the-kootenays-medicine-tree",
+    "name": "The Kootenays Medicine Tree",
+    "legacyPath": "/listing/the-kootenays-medicine-tree/",
+    "locationHint": "BC",
+    "gscImpressions": 77,
+    "gscClicks": 4,
+    "averagePosition": 10.1,
+    "verificationStatus": "needs_verification",
+    "categories": [
+      "dispensary"
+    ]
+  }
+]

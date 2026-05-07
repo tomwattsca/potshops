@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "import:listings": "node scripts/generate-listings.mjs"
   },
   "dependencies": {
     "next": "^15.3.0",
