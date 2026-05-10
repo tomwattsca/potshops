@@ -208,14 +208,23 @@
     "slug": "mount-zion-rastafarian-church",
     "name": "Mount Zion Rastafarian Church",
     "legacyPath": "/listing/mount-zion-rastafarian-church/",
-    "locationHint": "Canada",
+    "locationHint": "Toronto, ON",
     "gscImpressions": 405,
     "gscClicks": 29,
     "averagePosition": 11.6,
-    "verificationStatus": "needs_verification",
+    "address": "534 Annette St.",
+    "city": "Toronto",
+    "province": "ON",
+    "postalCode": "M6S 2C2",
+    "phone": "416-551-8926",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary"
-    ]
+    ],
+    "lastVerified": "2026-05-10",
+    "sourceName": "WeedsFarm public directory",
+    "sourceUrl": "https://weedsfarm.com/store/mount-zion-rastafarian-church/",
+    "sourceNote": "Public directory page lists Mount Zion Rastafarian Church in Toronto with Annette Street address and phone context. Potshops treats this as historical directory evidence until current regulatory and storefront status are confirmed."
   },
   {
     "slug": "leagle-dreams",
@@ -242,14 +251,23 @@
     "slug": "maritime-medicinal",
     "name": "Maritime Medicinal",
     "legacyPath": "/listing/maritime-medicinal/",
-    "locationHint": "Atlantic Canada",
+    "locationHint": "Bible Hill, NS",
     "gscImpressions": 103,
     "gscClicks": 11,
     "averagePosition": 13.1,
-    "verificationStatus": "needs_verification",
+    "address": "27 Main St.",
+    "city": "Bible Hill",
+    "province": "NS",
+    "postalCode": "B2N 4G6",
+    "phone": "902-895-9827",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary"
-    ]
+    ],
+    "lastVerified": "2026-05-10",
+    "sourceName": "WeedsFarm public directory",
+    "sourceUrl": "https://weedsfarm.com/store/maritime-medicinal/",
+    "sourceNote": "Public directory page lists Maritime Medicinal in Bible Hill with Main Street address and phone context. Use this as historical Nova Scotia directory evidence, not a current-store or service claim."
   },
   {
     "slug": "clone-corner",
@@ -277,14 +295,23 @@
     "slug": "mr-greens",
     "name": "Mr. Greens",
     "legacyPath": "/listing/mr-greens/",
-    "locationHint": "Canada",
+    "locationHint": "Nanaimo, BC",
     "gscImpressions": 550,
     "gscClicks": 10,
     "averagePosition": 26.4,
-    "verificationStatus": "needs_verification",
+    "address": "129 Nicol Street",
+    "city": "Nanaimo",
+    "province": "BC",
+    "postalCode": "V9R 4T1",
+    "phone": "(250) 591-0406",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary"
-    ]
+    ],
+    "lastVerified": "2026-05-10",
+    "sourceName": "WeedsFarm public directory",
+    "sourceUrl": "https://weedsfarm.com/store/mr-greens/",
+    "sourceNote": "Public directory page lists Mr. Green’s in Nanaimo with Nicol Street address and phone context. Treat as historical profile recovery until current public-source status is rechecked."
   },
   {
     "slug": "gulf-island-organics",
@@ -331,14 +358,23 @@
     "slug": "tpd-boutique",
     "name": "TPD Boutique",
     "legacyPath": "/listing/tpd-boutique/",
-    "locationHint": "Canada",
+    "locationHint": "Penticton, BC",
     "gscImpressions": 334,
     "gscClicks": 8,
     "averagePosition": 7.5,
-    "verificationStatus": "needs_verification",
+    "address": "101 151 Front St",
+    "city": "Penticton",
+    "province": "BC",
+    "postalCode": "V2A 1H3",
+    "phone": "1-778-622-1455",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary"
-    ]
+    ],
+    "lastVerified": "2026-05-10",
+    "sourceName": "WeedsFarm public directory",
+    "sourceUrl": "https://weedsfarm.com/store/tpd-boutique/",
+    "sourceNote": "Public directory page lists TPD Boutique in Penticton with Front Street address and phone context. Potshops keeps this as historical source-backed data until current details are independently confirmed."
   },
   {
     "slug": "420-delivery",
@@ -358,14 +394,23 @@
     "slug": "blessed-herbs-cafe",
     "name": "Blessed Herbs Cafe",
     "legacyPath": "/listing/blessed-herbs-cafe/",
-    "locationHint": "Canada",
+    "locationHint": "Toronto, ON",
     "gscImpressions": 135,
     "gscClicks": 6,
     "averagePosition": 9.3,
-    "verificationStatus": "needs_verification",
+    "address": "534 Annette St.",
+    "city": "Toronto",
+    "province": "ON",
+    "postalCode": "M6S 2C2",
+    "phone": "416-551-8926",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary"
-    ]
+    ],
+    "lastVerified": "2026-05-10",
+    "sourceName": "WeedsFarm public directory",
+    "sourceUrl": "https://weedsfarm.com/store/blessed-herbs-cafe/",
+    "sourceNote": "Public directory page lists Blessed Herbs Cafe in Toronto with Annette Street address and phone context. This overlaps with another historical Annette Street row, so the profile should stay caveated until entity history is verified."
   },
   {
     "slug": "tribal-releaf",
@@ -426,14 +471,23 @@
     "slug": "eden",
     "name": "Eden",
     "legacyPath": "/listing/eden/",
-    "locationHint": "Canada",
+    "locationHint": "Salmon Arm, BC",
     "gscImpressions": 254,
     "gscClicks": 4,
     "averagePosition": 21.4,
-    "verificationStatus": "needs_verification",
+    "address": "30 Lakeshore Dr NW",
+    "city": "Salmon Arm",
+    "province": "BC",
+    "postalCode": "V1E 1E4",
+    "phone": "1-778-489-3399",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary"
-    ]
+    ],
+    "lastVerified": "2026-05-10",
+    "sourceName": "WeedsFarm public directory",
+    "sourceUrl": "https://weedsfarm.com/store/eden/",
+    "sourceNote": "Public directory page lists Eden in Salmon Arm with Lakeshore Drive address and phone context. Potshops treats this as historical directory evidence and does not infer current availability or service details."
   },
   {
     "slug": "the-herb-co-mount-pleasant",
@@ -460,13 +514,22 @@
     "slug": "the-kootenays-medicine-tree",
     "name": "The Kootenays Medicine Tree",
     "legacyPath": "/listing/the-kootenays-medicine-tree/",
-    "locationHint": "BC",
+    "locationHint": "Nelson, BC",
     "gscImpressions": 77,
     "gscClicks": 4,
     "averagePosition": 10.1,
-    "verificationStatus": "needs_verification",
+    "address": "601 Front Street, Office #102",
+    "city": "Nelson",
+    "province": "BC",
+    "postalCode": "V1L 4B6",
+    "phone": "(250) 442-8248",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary"
-    ]
+    ],
+    "lastVerified": "2026-05-10",
+    "sourceName": "WeedsFarm public directory",
+    "sourceUrl": "https://weedsfarm.com/store/the-kootenays-medicine-tree/",
+    "sourceNote": "Public directory page lists The Kootenay’s Medicine Tree in Nelson with Front Street address and phone context. Keep the row as historical source-backed evidence until fresher current-status sources are found."
   }
 ]

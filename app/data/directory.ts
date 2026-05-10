@@ -62,13 +62,15 @@ export const priorityLocations: Location[] = [
   { slug: 'duncan', city: 'Duncan', province: 'BC', title: 'Cannabis stores and dispensaries in Duncan', description: 'Duncan has a source-backed Clone Corner profile that can anchor a small Vancouver Island recovery page.', gscEvidence: 'GSC listing demand showed Clone Corner with 219 impressions and 10 clicks; source-backed enrichment mapped the row to Sahilton Road in Duncan.', legacyImpressions: 219, priority: 6 },
   { slug: 'victoria', city: 'Victoria', province: 'BC', title: 'Cannabis stores and dispensaries in Victoria', description: 'Victoria demand is tied to legacy Farmacy, Pineapple Express, and Gulf Island Organics listing searches plus downtown dispensary terms.', gscEvidence: 'Queries included “farmacy victoria”, “farm dispensary victoria”, “gulf island organics”, and downtown Victoria dispensary variants.', legacyImpressions: 3310, priority: 7 },
   { slug: 'hamilton', city: 'Hamilton', province: 'ON', title: 'Cannabis stores and dispensaries in Hamilton', description: 'Hamilton now has an importer-backed Mountain Greenery listing that can anchor cautious local utility while broader city coverage is rebuilt.', gscEvidence: 'Source-backed rebuild work mapped Mountain Greenery to Hamilton and Upper Wellington Street; use this as a local recovery clue, not a current operating claim.', legacyImpressions: 0, priority: 8 },
-  { slug: 'penticton', city: 'Penticton', province: 'BC', title: 'Cannabis stores and dispensaries in Penticton', description: 'Penticton now has a source-backed Green Essence listing that supports a small-market recovery page with clear historical-source caveats.', gscEvidence: 'Source-backed rebuild work mapped Green Essence Head Shop and Dispensary to Penticton and Martin Street; use this as a profile recovery clue, not a current operating claim.', legacyImpressions: 0, priority: 9 },
+  { slug: 'penticton', city: 'Penticton', province: 'BC', title: 'Cannabis stores and dispensaries in Penticton', description: 'Penticton now has multiple source-backed historical profiles that support a cautious South Okanagan recovery page.', gscEvidence: 'Source-backed rebuild work mapped Green Essence to Martin Street and TPD Boutique to Front Street; use these as profile recovery clues, not current operating claims.', legacyImpressions: 0, priority: 9 },
   { slug: 'calgary', city: 'Calgary', province: 'AB', title: 'Cannabis stores and pot shops in Calgary', description: 'Calgary queries skew toward “pot shops”, city-level dispensary discovery, and Remedy Ice Cream legacy interest.', gscEvidence: 'Queries included “calgary pot shops”, “pot shop calgary”, “dispensary calgary”, and a source-backed Remedy Ice Cream listing cluster.', legacyImpressions: 269, priority: 10 },
-  { slug: 'nanaimo', city: 'Nanaimo', province: 'BC', title: 'Cannabis stores and pot shops in Nanaimo', description: 'Nanaimo has legacy location-page impressions and long-tail pot shop demand.', gscEvidence: 'Queries included “pot shops nanaimo” and “nanaimo dispensaries still open”.', legacyImpressions: 166, priority: 11 },
-  { slug: 'nelson', city: 'Nelson', province: 'BC', title: 'Cannabis stores and dispensaries in Nelson', description: 'Nelson appeared as both a location page and store-level query cluster in legacy Search Console data.', gscEvidence: 'Queries included “dispensary nelson”, “dispensary nelson bc”, and “nelson potorium”.', legacyImpressions: 470, priority: 12 },
+  { slug: 'nanaimo', city: 'Nanaimo', province: 'BC', title: 'Cannabis stores and pot shops in Nanaimo', description: 'Nanaimo has legacy location-page impressions, long-tail pot shop demand, and now a source-backed Mr. Green’s recovery profile.', gscEvidence: 'Queries included “pot shops nanaimo” and “nanaimo dispensaries still open”; source-backed enrichment mapped Mr. Green’s to Nicol Street.', legacyImpressions: 166, priority: 11 },
+  { slug: 'nelson', city: 'Nelson', province: 'BC', title: 'Cannabis stores and dispensaries in Nelson', description: 'Nelson appeared as both a location page and store-level query cluster, and now has a source-backed Kootenays Medicine Tree profile.', gscEvidence: 'Queries included “dispensary nelson”, “dispensary nelson bc”, and “nelson potorium”; source-backed enrichment mapped The Kootenay’s Medicine Tree to Front Street.', legacyImpressions: 470, priority: 12 },
   { slug: 'vancouver', city: 'Vancouver', province: 'BC', title: 'Cannabis stores and dispensaries in Vancouver', description: 'Vancouver has meaningful legacy location-page impressions plus multiple high-impression legacy store profiles.', gscEvidence: 'GSC page data showed /location/vancouver/ with 512 impressions, and listing demand around The Green Leaf Society, Ahuevo, Herb Co, and other Vancouver-area profiles.', legacyImpressions: 512, priority: 13 },
-  { slug: 'toronto', city: 'Toronto', province: 'ON', title: 'Cannabis stores and dispensaries in Toronto', description: 'Toronto is a broad rebuild target with legacy location-page demand and a large commercial cannabis search market.', gscEvidence: 'GSC page data showed /location/toronto/ with 109 impressions even while the old site was unavailable.', legacyImpressions: 109, priority: 14 },
-  { slug: 'dartmouth', city: 'Dartmouth', province: 'NS', title: 'Cannabis stores and dispensaries in Dartmouth', description: 'Dartmouth appears as an adjacent Nova Scotia opportunity that can support the Halifax cluster.', gscEvidence: 'GSC page data showed /location/dartmouth/ with 71 impressions, making it a useful supporting page for the Halifax/Nova Scotia cluster.', legacyImpressions: 71, priority: 15 },
+  { slug: 'toronto', city: 'Toronto', province: 'ON', title: 'Cannabis stores and dispensaries in Toronto', description: 'Toronto is a broad rebuild target with legacy location-page demand and several source-backed historical profiles now mapped.', gscEvidence: 'GSC page data showed /location/toronto/ with 109 impressions; enrichment now maps Piff Express plus Annette Street historical profiles.', legacyImpressions: 109, priority: 14 },
+  { slug: 'bible-hill', city: 'Bible Hill', province: 'NS', title: 'Cannabis stores and dispensaries in Bible Hill', description: 'Bible Hill now has a source-backed Maritime Medicinal historical profile that supports a cautious Nova Scotia recovery page.', gscEvidence: 'Source-backed enrichment mapped Maritime Medicinal to Main Street in Bible Hill; use this as profile recovery evidence, not a current-service claim.', legacyImpressions: 103, priority: 15 },
+  { slug: 'salmon-arm', city: 'Salmon Arm', province: 'BC', title: 'Cannabis stores and dispensaries in Salmon Arm', description: 'Salmon Arm now has a source-backed Eden historical profile that can anchor a small Interior BC recovery page.', gscEvidence: 'Source-backed enrichment mapped Eden to Lakeshore Drive NW in Salmon Arm; use this as historical directory evidence until fresher sources are found.', legacyImpressions: 0, priority: 16 },
+  { slug: 'dartmouth', city: 'Dartmouth', province: 'NS', title: 'Cannabis stores and dispensaries in Dartmouth', description: 'Dartmouth appears as an adjacent Nova Scotia opportunity that can support the Halifax cluster.', gscEvidence: 'GSC page data showed /location/dartmouth/ with 71 impressions, making it a useful supporting page for the Halifax/Nova Scotia cluster.', legacyImpressions: 71, priority: 17 },
 ];
 
 export const locationUtilities: LocationUtility[] = [
@@ -165,12 +167,12 @@ export const locationUtilities: LocationUtility[] = [
   {
     slug: 'penticton',
     summary: 'Penticton is a small but concrete recovery opportunity after the enrichment batch added Green Essence Head Shop and Dispensary with source-backed local context.',
-    directoryStatus: 'One Penticton listing is mapped today: Green Essence Head Shop and Dispensary. The available evidence is treated as historical/public-source context, not a current availability or licence claim.',
-    searchIntent: ['green essence penticton', 'penticton dispensary', 'penticton cannabis store', 'martin street cannabis'],
-    relatedListingSlugs: ['green-essence-head-shop-dispensary'],
+    directoryStatus: 'Two Penticton listings are mapped today: Green Essence Head Shop and Dispensary, plus TPD Boutique. The available evidence is treated as historical/public-source context, not a current availability claim.',
+    searchIntent: ['green essence penticton', 'tpd boutique penticton', 'penticton dispensary', 'penticton cannabis store', 'martin street cannabis', 'front street cannabis'],
+    relatedListingSlugs: ['green-essence-head-shop-dispensary', 'tpd-boutique'],
     internalCategorySlugs: ['dispensary'],
     localCaveats: [
-      'Penticton currently has one mapped listing, so the page should be clear that Potshops is rebuilding coverage rather than listing every local option.',
+      'Penticton currently has two mapped listings, so the page should still be clear that Potshops is rebuilding coverage rather than listing every local option.',
       'Source-backed address context should remain separate from current operating, ordering, delivery, review, or rating claims.',
       'Small-market pages can become thin quickly; keep visible utility tied to exact mapped listing evidence and verification needs.',
     ],
@@ -183,9 +185,9 @@ export const locationUtilities: LocationUtility[] = [
   {
     slug: 'toronto',
     summary: 'Toronto has broad city-level demand and now one source-backed historical Piff Express row that can anchor a cautious delivery-intent recovery section.',
-    directoryStatus: 'One Toronto listing is mapped today: Piff Express. It is historical/enforcement-context evidence only, not a current service, availability, or compliance claim.',
-    searchIntent: ['piff express', 'toronto cannabis delivery', 'dundas street west cannabis', 'toronto dispensary'],
-    relatedListingSlugs: ['piff-express'],
+    directoryStatus: 'Three Toronto listings are mapped today: Piff Express, Mount Zion Rastafarian Church, and Blessed Herbs Cafe. All remain historical/contextual evidence, not current service or availability claims.',
+    searchIntent: ['piff express', 'toronto cannabis delivery', 'dundas street west cannabis', 'annette street cannabis', 'toronto dispensary'],
+    relatedListingSlugs: ['piff-express', 'mount-zion-rastafarian-church', 'blessed-herbs-cafe'],
     internalCategorySlugs: ['in-town-delivery', 'dispensary'],
     localCaveats: [
       'Toronto is too large for one profile to imply meaningful coverage.',
@@ -271,6 +273,79 @@ export const locationUtilities: LocationUtility[] = [
     ],
   },
 
+
+  {
+    slug: 'nanaimo',
+    summary: 'Nanaimo has legacy pot-shop demand and now one source-backed Mr. Green’s profile that can anchor a cautious Vancouver Island recovery page.',
+    directoryStatus: 'One Nanaimo listing is mapped today: Mr. Green’s. It is historical/source-backed until current status and regulator/business-source details are independently confirmed.',
+    searchIntent: ['pot shops nanaimo', 'nanaimo dispensaries still open', 'mr greens nanaimo', 'nicol street cannabis'],
+    relatedListingSlugs: ['mr-greens'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'The current Nanaimo footprint is one mapped profile, so the page should not imply complete city coverage.',
+      'Historical directory address and phone context must not become hours, ordering, stock, or current availability claims.',
+      'Nanaimo and broader Vancouver Island pages should stay evidence-led until multiple current public sources are mapped.',
+    ],
+    verificationNextSteps: [
+      'Find official or current public sources for Mr. Green’s before adding maps, hours, or outbound contact links.',
+      'Research additional Nanaimo and mid-Island candidates through the validated importer.',
+      'Keep users pointed to exact listing evidence while coverage is still thin.',
+    ],
+  },
+  {
+    slug: 'nelson',
+    summary: 'Nelson combines legacy dispensary queries with a newly source-backed Kootenays Medicine Tree profile, making it a useful Kootenay recovery page.',
+    directoryStatus: 'One Nelson listing is mapped today: The Kootenay’s Medicine Tree. It remains historical/source-backed until fresher current-status evidence is found.',
+    searchIntent: ['dispensary nelson', 'dispensary nelson bc', 'nelson potorium', 'kootenays medicine tree'],
+    relatedListingSlugs: ['the-kootenays-medicine-tree'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Nelson search demand mixes city-level discovery and older store-name interest; Potshops should keep those evidence types separate.',
+      'Address and phone context from a public directory should not be converted into current storefront or service claims.',
+      'Broader Kootenay coverage needs more source-backed rows before this page becomes more than a recovery guide.',
+    ],
+    verificationNextSteps: [
+      'Look for official/current public references for Kootenays Medicine Tree before adding richer business facts.',
+      'Add additional Nelson or Kootenay listings through the importer only with visible source URLs and conservative notes.',
+      'Use the page for internal linking to the exact recovered profile and category hub while coverage is small.',
+    ],
+  },
+  {
+    slug: 'bible-hill',
+    summary: 'Bible Hill gives the Nova Scotia cluster one source-backed profile through Maritime Medicinal, adjacent to Halifax/Dartmouth search demand.',
+    directoryStatus: 'One Bible Hill listing is mapped today: Maritime Medicinal. It is historical/source-backed and should not be presented as a current service listing.',
+    searchIntent: ['maritime medicinal', 'bible hill dispensary', 'truro cannabis', 'nova scotia dispensary'],
+    relatedListingSlugs: ['maritime-medicinal'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Bible Hill and Truro-area searches are adjacent to the larger Halifax/Dartmouth cluster, but one profile is not enough for complete coverage.',
+      'Public directory contact data needs fresher confirmation before maps, hours, or contact CTAs are added.',
+      'Nova Scotia pages should stay especially clear about historical versus current source status.',
+    ],
+    verificationNextSteps: [
+      'Find official/current sources for Maritime Medicinal before adding any stronger business details.',
+      'Research additional Halifax, Dartmouth, Truro, and Bible Hill candidates through the importer.',
+      'Keep the page linked to exact source-backed evidence until the province cluster has more depth.',
+    ],
+  },
+  {
+    slug: 'salmon-arm',
+    summary: 'Salmon Arm now has one recovered Interior BC profile through Eden, adding a small but concrete location page outside the larger Vancouver Island and Lower Mainland clusters.',
+    directoryStatus: 'One Salmon Arm listing is mapped today: Eden. The row is historical/source-backed until current public-source status is independently confirmed.',
+    searchIntent: ['eden salmon arm', 'salmon arm dispensary', 'salmon arm cannabis store', 'lakeshore drive cannabis'],
+    relatedListingSlugs: ['eden'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'The current Salmon Arm footprint is one recovered profile, not a complete city directory.',
+      'Historical directory evidence should not be used for current availability, service, or compliance claims.',
+      'Interior BC coverage needs more source-backed profiles before broader local guide copy is warranted.',
+    ],
+    verificationNextSteps: [
+      'Find fresher official or business-source evidence before adding maps, hours, or outbound contact links.',
+      'Research additional Salmon Arm and Shuswap-area candidates through the import workflow.',
+      'Use this page primarily for legacy recovery and internal linking while the local dataset is thin.',
+    ],
+  },
 ];
 
 export const listingSeeds: ListingSeed[] = listingSeedsImport as ListingSeed[];
