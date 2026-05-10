@@ -221,14 +221,22 @@
     "slug": "leagle-dreams",
     "name": "Leagle Dreams",
     "legacyPath": "/listing/leagle-dreams/",
-    "locationHint": "Canada",
+    "locationHint": "Shannonville, ON",
     "gscImpressions": 562,
     "gscClicks": 11,
     "averagePosition": 8.5,
-    "verificationStatus": "needs_verification",
+    "address": "5285 Old Highway 2",
+    "city": "Shannonville",
+    "province": "ON",
+    "phone": "(613) 661-8865",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary"
-    ]
+    ],
+    "lastVerified": "2026-05-10",
+    "sourceName": "MapQuest public business listing",
+    "sourceUrl": "https://www.mapquest.com/ca/ontario/leagle-dreams-marijuana-dispensary-429548106",
+    "sourceNote": "Public business listing identifies L’Eagle Dreams in Shannonville and lists Old Highway 2 address context plus phone. Potshops treats this as historical directory evidence until current regulatory and operating status are verified."
   },
   {
     "slug": "maritime-medicinal",
@@ -247,14 +255,23 @@
     "slug": "clone-corner",
     "name": "Clone Corner",
     "legacyPath": "/listing/clone-corner/",
-    "locationHint": "Canada",
+    "locationHint": "Duncan, BC",
     "gscImpressions": 219,
     "gscClicks": 10,
     "averagePosition": 39.8,
-    "verificationStatus": "needs_verification",
+    "address": "2699 Sahilton Road",
+    "city": "Duncan",
+    "province": "BC",
+    "postalCode": "V9L 6V2",
+    "phone": "(250) 618-6042",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary"
-    ]
+    ],
+    "lastVerified": "2026-05-10",
+    "sourceName": "WeedsFarm public directory",
+    "sourceUrl": "https://weedsfarm.com/store/clone-corner/",
+    "sourceNote": "Public directory page lists Clone Corner in Duncan with Sahilton Road address and phone. Current licence, hours, and operating status still need official confirmation."
   },
   {
     "slug": "mr-greens",
@@ -273,27 +290,42 @@
     "slug": "gulf-island-organics",
     "name": "Gulf Island Organics",
     "legacyPath": "/listing/gulf-island-organics/",
-    "locationHint": "BC",
+    "locationHint": "Victoria, BC",
     "gscImpressions": 190,
     "gscClicks": 8,
     "averagePosition": 18,
-    "verificationStatus": "needs_verification",
+    "address": "1040 Fort Street",
+    "city": "Victoria",
+    "province": "BC",
+    "postalCode": "V8V 3K4",
+    "phone": "(778) 265-5919",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary"
-    ]
+    ],
+    "lastVerified": "2026-05-10",
+    "sourceName": "Google Business Profile result",
+    "sourceUrl": "https://www.google.com/search?q=%22Gulf+Island+Organics%22+cannabis",
+    "sourceNote": "Public Google result identifies Gulf Island Organics Cannabis Dispensary in Victoria, shows a Fort Street address and phone, and labels the profile permanently closed. Potshops keeps the row historical and avoids current-store claims."
   },
   {
     "slug": "remedy-ice-cream",
     "name": "Remedy Ice Cream",
     "legacyPath": "/listing/remedy-ice-cream/",
-    "locationHint": "Canada",
+    "locationHint": "Calgary, AB",
     "gscImpressions": 64,
     "gscClicks": 8,
     "averagePosition": 6.3,
-    "verificationStatus": "needs_verification",
+    "city": "Calgary",
+    "province": "AB",
+    "verificationStatus": "historical_source",
     "categories": [
-      "dispensary"
-    ]
+      "in-town-delivery"
+    ],
+    "lastVerified": "2026-05-10",
+    "sourceName": "CBC Calgary reporting",
+    "sourceUrl": "https://www.cbc.ca/news/canada/calgary/remedy-ice-cream-cannabis-1.4059691",
+    "sourceNote": "CBC reporting identified Remedy Ice Cream as a Calgary-made cannabis-infused ice cream operation in 2017 and noted legality concerns at the time. Potshops keeps this row historical and does not add contact, availability, or commerce claims."
   },
   {
     "slug": "tpd-boutique",
@@ -339,27 +371,43 @@
     "slug": "tribal-releaf",
     "name": "Tribal Releaf",
     "legacyPath": "/listing/tribal-releaf/",
-    "locationHint": "Canada",
+    "locationHint": "Tobique Narrows, NB",
     "gscImpressions": 371,
     "gscClicks": 6,
     "averagePosition": 7.9,
-    "verificationStatus": "needs_verification",
+    "address": "13056 NB-105",
+    "city": "Tobique Narrows",
+    "province": "NB",
+    "postalCode": "E7H 3Y1",
+    "phone": "(506) 273-2353",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary"
-    ]
+    ],
+    "lastVerified": "2026-05-10",
+    "sourceName": "WeedsFarm public directory",
+    "sourceUrl": "https://weedsfarm.com/store/tribal-releaf/",
+    "sourceNote": "Public directory page lists Tribal ReLeaf in Tobique Narrows with NB-105 address and phone. Current licence, hours, and operating status still need official confirmation."
   },
   {
     "slug": "piff-express",
     "name": "Piff Express",
     "legacyPath": "/listing/piff-express/",
-    "locationHint": "Canada",
+    "locationHint": "Toronto, ON",
     "gscImpressions": 72,
     "gscClicks": 5,
     "averagePosition": 4.9,
-    "verificationStatus": "needs_verification",
+    "address": "3449 Dundas Street West",
+    "city": "Toronto",
+    "province": "ON",
+    "verificationStatus": "historical_source",
     "categories": [
-      "dispensary"
-    ]
+      "in-town-delivery"
+    ],
+    "lastVerified": "2026-05-10",
+    "sourceName": "Ontario court decision summary",
+    "sourceUrl": "https://www.minicounsel.ca/2022/01/17/r-v-morrison-and-raguette-2022-onsc-17/",
+    "sourceNote": "Court-decision summary identifies “Piff” at 3449 Dundas Street West in Toronto in historical enforcement/search-warrant context. Potshops uses this only as profile-recovery evidence, not a current service or availability claim."
   },
   {
     "slug": "compassion-in-motion",
