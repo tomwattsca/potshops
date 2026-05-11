@@ -76,6 +76,8 @@ export const priorityLocations: Location[] = [
   { slug: 'belleville', city: 'Belleville', province: 'ON', title: 'Cannabis stores and dispensaries in Belleville', description: 'Belleville adds an official-source Bay of Quinte page that can support the Deseronto/Tyendinaga recovery cluster without relying only on historical seed rows.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add an official-source Belleville profile; use it as cautious local directory depth, not a menu or availability claim.', legacyImpressions: 0, priority: 20 },
   { slug: 'ottawa', city: 'Ottawa', province: 'ON', title: 'Cannabis stores and dispensaries in Ottawa', description: 'Ottawa adds an official-source Ontario city cluster with multiple AGCO-listed address-context profiles.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add Ottawa profiles on Preston, George, and Somerset streets; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 21 },
   { slug: 'kingston', city: 'Kingston', province: 'ON', title: 'Cannabis stores and dispensaries in Kingston', description: 'Kingston adds an official-source eastern Ontario cluster with several AGCO-listed address-context profiles.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add Kingston profiles on Princess and Division streets; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 22 },
+  { slug: 'london', city: 'London', province: 'ON', title: 'Cannabis stores and dispensaries in London, Ontario', description: 'London adds an official-source Ontario city cluster with multiple AGCO-listed address-context profiles across Wharncliffe, Adelaide, and Dundas corridors.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add London profiles on Wharncliffe Road, Adelaide Street, and Dundas Street East; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 23 },
+  { slug: 'windsor', city: 'Windsor', province: 'ON', title: 'Cannabis stores and dispensaries in Windsor, Ontario', description: 'Windsor adds an official-source southwestern Ontario cluster with AGCO-listed address-context profiles on Huron Church, Wyandotte, and Drouillard.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add Windsor profiles on Huron Church Road, Wyandotte Street West, and Drouillard Road; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 24 },
 ];
 
 export const locationUtilities: LocationUtility[] = [
@@ -404,6 +406,42 @@ export const locationUtilities: LocationUtility[] = [
       'Add more Ottawa profiles through the validated importer only when source URLs and conservative notes pass validation.',
       'Look for official or business-source confirmation before adding phone, maps, hours, or richer LocalBusiness fields.',
       'Monitor GSC for Ottawa city/page rows before expanding this page beyond source-backed utility and internal links.',
+    ],
+  },
+  {
+    slug: 'london',
+    summary: 'London now has an official-source cluster from the AGCO public status table, connecting several address-context profiles across north and east London corridors.',
+    directoryStatus: 'Three London listings are mapped today from AGCO public status-table evidence. Potshops keeps the page to source-backed directory context and avoids hours, menus, stock, ordering, service, review, or availability claims.',
+    searchIntent: ['london ontario dispensary', 'london cannabis store', 'wharncliffe cannabis', 'adelaide street cannabis', 'dundas street london cannabis'],
+    relatedListingSlugs: ['cannabist-shop-wharncliffe-london', 'holy-cannabis-london', 'cost-cannabis-london'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'London has many public AGCO rows, so this page is a curated source-backed starting point rather than a complete local directory.',
+      'Address context from AGCO should not be rewritten into current hours, menu, stock, ordering, service, or availability claims.',
+      'The selected rows cover Wharncliffe Road, Adelaide Street, and Dundas Street East, giving users corridor clues without implying neighbourhood completeness.',
+    ],
+    verificationNextSteps: [
+      'Add more London rows only through the import workflow with official or business-source evidence.',
+      'Confirm richer facts such as phone or hours from visible current sources before adding optional schema fields.',
+      'Use GSC monitoring to decide whether London should get neighbourhood-level copy after these pages have crawled.',
+    ],
+  },
+  {
+    slug: 'windsor',
+    summary: 'Windsor now has an official-source cluster from the AGCO public status table, adding southwestern Ontario coverage with mapped address-context profiles.',
+    directoryStatus: 'Three Windsor listings are mapped today from AGCO public status-table evidence. Potshops treats them as official address context only, not as proof of hours, menus, stock, ordering, service, reviews, or availability.',
+    searchIntent: ['windsor cannabis store', 'windsor dispensary', 'wyandotte cannabis', 'huron church cannabis', 'drouillard cannabis'],
+    relatedListingSlugs: ['value-buds-windsor', 'discounted-cannabis-windsor', 'greentown-cannabis-discount-hut-windsor'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Windsor has a broad official-source table footprint, so this page should remain explicit about being a partial verified directory cluster.',
+      'Multiple rows share brand names or corridors across Windsor; each profile needs its own source-backed address before any richer copy is added.',
+      'AGCO status-table evidence should not be converted into purchase, delivery, menu, stock, or operating-hours language.',
+    ],
+    verificationNextSteps: [
+      'Add additional Windsor rows only after exact-city filtering and import validation.',
+      'Confirm any optional website, phone, or richer business details against visible current sources before adding them to schema.',
+      'Watch GSC for Windsor query/page impressions before expanding to a larger southwestern Ontario page set.',
     ],
   },
   {

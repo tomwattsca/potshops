@@ -818,5 +818,131 @@
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kingston",
     "sourceNote": "AGCO public status table lists Mary J's Cannabis in Kingston with Division Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "cannabist-shop-wharncliffe-london",
+    "name": "The Cannabist Shop - Wharncliffe N",
+    "legacyPath": "/listing/cannabist-shop-wharncliffe-london/",
+    "locationHint": "London, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "60 Wharncliffe Rd N Unit B",
+    "city": "London",
+    "province": "ON",
+    "postalCode": "N6H 2A3",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=London",
+    "sourceNote": "AGCO public status table lists The Cannabist Shop - Wharncliffe N in London with Wharncliffe Road address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "holy-cannabis-london",
+    "name": "Holy Cannabis London",
+    "legacyPath": "/listing/holy-cannabis-london/",
+    "locationHint": "London, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "1080 Adelaide St N Suite 9",
+    "city": "London",
+    "province": "ON",
+    "postalCode": "N5Y 2N1",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=London",
+    "sourceNote": "AGCO public status table lists Holy Cannabis in London with Adelaide Street address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "cost-cannabis-london",
+    "name": "Cost Cannabis London",
+    "legacyPath": "/listing/cost-cannabis-london/",
+    "locationHint": "London, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "1905 Dundas St E Unit B2",
+    "city": "London",
+    "province": "ON",
+    "postalCode": "N5W 3G3",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=London",
+    "sourceNote": "AGCO public status table lists Cost Cannabis in London with Dundas Street East address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "value-buds-windsor",
+    "name": "Value Buds Windsor",
+    "legacyPath": "/listing/value-buds-windsor/",
+    "locationHint": "Windsor, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "1726 Huron Church Rd Suite 4",
+    "city": "Windsor",
+    "province": "ON",
+    "postalCode": "N9C 2L4",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Windsor",
+    "sourceNote": "AGCO public status table lists Value Buds in Windsor with Huron Church Road address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "discounted-cannabis-windsor",
+    "name": "Discounted Cannabis Windsor",
+    "legacyPath": "/listing/discounted-cannabis-windsor/",
+    "locationHint": "Windsor, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "397 Wyandotte St W",
+    "city": "Windsor",
+    "province": "ON",
+    "postalCode": "N9A 5X3",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Windsor",
+    "sourceNote": "AGCO public status table lists Discounted Cannabis in Windsor with Wyandotte Street West address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "greentown-cannabis-discount-hut-windsor",
+    "name": "Greentown Cannabis Discount Hut Windsor",
+    "legacyPath": "/listing/greentown-cannabis-discount-hut-windsor/",
+    "locationHint": "Windsor, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "1519 Drouillard Rd",
+    "city": "Windsor",
+    "province": "ON",
+    "postalCode": "N8Y 2S1",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Windsor",
+    "sourceNote": "AGCO public status table lists Greentown Cannabis Discount Hut in Windsor with Drouillard Road address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
   }
 ]

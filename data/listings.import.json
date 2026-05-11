@@ -310,7 +310,7 @@
       "https://www.mapquest.com/ca/ontario/leagle-dreams-marijuana-dispensary-429548106"
     ],
     "source_name": "MapQuest public business listing",
-    "source_note": "Public business listing identifies L\u2019Eagle Dreams in Shannonville and lists Old Highway 2 address context plus phone. Potshops treats this as historical directory evidence until current regulatory and operating status are verified.",
+    "source_note": "Public business listing identifies L’Eagle Dreams in Shannonville and lists Old Highway 2 address context plus phone. Potshops treats this as historical directory evidence until current regulatory and operating status are verified.",
     "last_verified_at": "2026-05-10",
     "legacy_path": "/listing/leagle-dreams/",
     "location_hint": "Shannonville, ON",
@@ -388,7 +388,7 @@
       "https://weedsfarm.com/store/mr-greens/"
     ],
     "source_name": "WeedsFarm public directory",
-    "source_note": "Public directory page lists Mr. Green\u2019s in Nanaimo with Nicol Street address and phone context. Treat as historical profile recovery until current public-source status is rechecked.",
+    "source_note": "Public directory page lists Mr. Green’s in Nanaimo with Nicol Street address and phone context. Treat as historical profile recovery until current public-source status is rechecked.",
     "last_verified_at": "2026-05-10",
     "legacy_path": "/listing/mr-greens/",
     "location_hint": "Nanaimo, BC",
@@ -571,7 +571,7 @@
       "https://www.minicounsel.ca/2022/01/17/r-v-morrison-and-raguette-2022-onsc-17/"
     ],
     "source_name": "Ontario court decision summary",
-    "source_note": "Court-decision summary identifies \u201cPiff\u201d at 3449 Dundas Street West in Toronto in historical enforcement/search-warrant context. Potshops uses this only as profile-recovery evidence, not a current service or availability claim.",
+    "source_note": "Court-decision summary identifies “Piff” at 3449 Dundas Street West in Toronto in historical enforcement/search-warrant context. Potshops uses this only as profile-recovery evidence, not a current service or availability claim.",
     "last_verified_at": "2026-05-10",
     "legacy_path": "/listing/piff-express/",
     "location_hint": "Toronto, ON",
@@ -677,7 +677,7 @@
       "https://weedsfarm.com/store/the-kootenays-medicine-tree/"
     ],
     "source_name": "WeedsFarm public directory",
-    "source_note": "Public directory page lists The Kootenay\u2019s Medicine Tree in Nelson with Front Street address and phone context. Keep the row as historical source-backed evidence until fresher current-status sources are found.",
+    "source_note": "Public directory page lists The Kootenay’s Medicine Tree in Nelson with Front Street address and phone context. Keep the row as historical source-backed evidence until fresher current-status sources are found.",
     "last_verified_at": "2026-05-10",
     "legacy_path": "/listing/the-kootenays-medicine-tree/",
     "location_hint": "Nelson, BC",
@@ -1019,6 +1019,162 @@
     "last_verified_at": "2026-05-11",
     "legacy_path": "/listing/mary-js-cannabis-kingston/",
     "location_hint": "Kingston, ON",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "cannabist-shop-wharncliffe-london",
+    "name": "The Cannabist Shop - Wharncliffe N",
+    "status": "current_source",
+    "address": "60 Wharncliffe Rd N Unit B",
+    "city": "London",
+    "province": "ON",
+    "postal_code": "N6H 2A3",
+    "website": "https://www.cannabistshop.ca/cannabis-dispensaries",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=London"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists The Cannabist Shop - Wharncliffe N in London with Wharncliffe Road address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/cannabist-shop-wharncliffe-london/",
+    "location_hint": "London, ON",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "holy-cannabis-london",
+    "name": "Holy Cannabis London",
+    "status": "current_source",
+    "address": "1080 Adelaide St N Suite 9",
+    "city": "London",
+    "province": "ON",
+    "postal_code": "N5Y 2N1",
+    "website": "https://holycannabis.ca",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=London"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Holy Cannabis in London with Adelaide Street address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/holy-cannabis-london/",
+    "location_hint": "London, ON",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "cost-cannabis-london",
+    "name": "Cost Cannabis London",
+    "status": "current_source",
+    "address": "1905 Dundas St E Unit B2",
+    "city": "London",
+    "province": "ON",
+    "postal_code": "N5W 3G3",
+    "website": "https://costcan.ca/",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=London"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Cost Cannabis in London with Dundas Street East address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/cost-cannabis-london/",
+    "location_hint": "London, ON",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "value-buds-windsor",
+    "name": "Value Buds Windsor",
+    "status": "current_source",
+    "address": "1726 Huron Church Rd Suite 4",
+    "city": "Windsor",
+    "province": "ON",
+    "postal_code": "N9C 2L4",
+    "website": "https://www.valuebuds.com",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Windsor"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Value Buds in Windsor with Huron Church Road address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/value-buds-windsor/",
+    "location_hint": "Windsor, ON",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "discounted-cannabis-windsor",
+    "name": "Discounted Cannabis Windsor",
+    "status": "current_source",
+    "address": "397 Wyandotte St W",
+    "city": "Windsor",
+    "province": "ON",
+    "postal_code": "N9A 5X3",
+    "website": "https://www.discountedcannabis.ca",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Windsor"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Discounted Cannabis in Windsor with Wyandotte Street West address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/discounted-cannabis-windsor/",
+    "location_hint": "Windsor, ON",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "greentown-cannabis-discount-hut-windsor",
+    "name": "Greentown Cannabis Discount Hut Windsor",
+    "status": "current_source",
+    "address": "1519 Drouillard Rd",
+    "city": "Windsor",
+    "province": "ON",
+    "postal_code": "N8Y 2S1",
+    "website": "",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Windsor"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Greentown Cannabis Discount Hut in Windsor with Drouillard Road address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/greentown-cannabis-discount-hut-windsor/",
+    "location_hint": "Windsor, ON",
     "gsc_impressions": 0,
     "gsc_clicks": 0,
     "average_position": 0,
