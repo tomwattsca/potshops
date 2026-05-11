@@ -1196,5 +1196,131 @@
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Waterloo",
     "sourceNote": "AGCO public status table lists Phoenix Cannabis in Waterloo with an Albert Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "highland-cannabis-kitchener",
+    "name": "Highland Cannabis Kitchener",
+    "legacyPath": "/listing/highland-cannabis-kitchener/",
+    "locationHint": "Kitchener, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "370 Highland Rd W Unit 15B",
+    "city": "Kitchener",
+    "province": "ON",
+    "postalCode": "N2M 5J9",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kitchener",
+    "sourceNote": "AGCO public status table lists Highland Cannabis in Kitchener with a Highland Road West address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "the-cannabist-shop-king-kitchener",
+    "name": "The Cannabist Shop - King Kitchener",
+    "legacyPath": "/listing/the-cannabist-shop-king-kitchener/",
+    "locationHint": "Kitchener, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "201 King St W",
+    "city": "Kitchener",
+    "province": "ON",
+    "postalCode": "N2G 1B1",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kitchener",
+    "sourceNote": "AGCO public status table lists The Cannabist Shop - King in Kitchener with a King Street West address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "canna-cabana-weber-kitchener",
+    "name": "Canna Cabana Weber Kitchener",
+    "legacyPath": "/listing/canna-cabana-weber-kitchener/",
+    "locationHint": "Kitchener, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "1375 Weber St E Unit 111",
+    "city": "Kitchener",
+    "province": "ON",
+    "postalCode": "N2A 3Y7",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kitchener",
+    "sourceNote": "AGCO public status table lists Canna Cabana in Kitchener with a Weber Street East address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "value-buds-guelph",
+    "name": "Value Buds Guelph",
+    "legacyPath": "/listing/value-buds-guelph/",
+    "locationHint": "Guelph, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "73 Gordon St",
+    "city": "Guelph",
+    "province": "ON",
+    "postalCode": "N1H 4H5",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Guelph",
+    "sourceNote": "AGCO public status table lists Value Buds in Guelph with a Gordon Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "canna-cabana-woodlawn-guelph",
+    "name": "Canna Cabana Woodlawn Guelph",
+    "legacyPath": "/listing/canna-cabana-woodlawn-guelph/",
+    "locationHint": "Guelph, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "3 Woodlawn Rd W",
+    "city": "Guelph",
+    "province": "ON",
+    "postalCode": "N1H 1G8",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Guelph",
+    "sourceNote": "AGCO public status table lists Canna Cabana in Guelph with a Woodlawn Road West address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "spiritleaf-guelph",
+    "name": "Spiritleaf Guelph",
+    "legacyPath": "/listing/spiritleaf-guelph/",
+    "locationHint": "Guelph, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "492 Edinburgh Rd S Unit B2B",
+    "city": "Guelph",
+    "province": "ON",
+    "postalCode": "N1G 4Z1",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Guelph",
+    "sourceNote": "AGCO public status table lists Spiritleaf Guelph with an Edinburgh Road South address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
   }
 ]

@@ -1485,5 +1485,155 @@
     "gsc_clicks": 0,
     "average_position": 0,
     "commercial_claims": []
+  },
+  {
+    "slug": "highland-cannabis-kitchener",
+    "name": "Highland Cannabis Kitchener",
+    "status": "current_source",
+    "address": "370 Highland Rd W Unit 15B",
+    "city": "Kitchener",
+    "province": "ON",
+    "postal_code": "N2M 5J9",
+    "website": "https://highlandonhighland.com/",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kitchener"
+    ],
+    "source_note": "AGCO public status table lists Highland Cannabis in Kitchener with a Highland Road West address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Kitchener, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/highland-cannabis-kitchener/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "the-cannabist-shop-king-kitchener",
+    "name": "The Cannabist Shop - King Kitchener",
+    "status": "current_source",
+    "address": "201 King St W",
+    "city": "Kitchener",
+    "province": "ON",
+    "postal_code": "N2G 1B1",
+    "website": "https://www.cannabistshop.ca/cannabis-dispensaries",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kitchener"
+    ],
+    "source_note": "AGCO public status table lists The Cannabist Shop - King in Kitchener with a King Street West address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Kitchener, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/the-cannabist-shop-king-kitchener/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "canna-cabana-weber-kitchener",
+    "name": "Canna Cabana Weber Kitchener",
+    "status": "current_source",
+    "address": "1375 Weber St E Unit 111",
+    "city": "Kitchener",
+    "province": "ON",
+    "postal_code": "N2A 3Y7",
+    "website": "https://cannacabana.com/",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kitchener"
+    ],
+    "source_note": "AGCO public status table lists Canna Cabana in Kitchener with a Weber Street East address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Kitchener, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/canna-cabana-weber-kitchener/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "value-buds-guelph",
+    "name": "Value Buds Guelph",
+    "status": "current_source",
+    "address": "73 Gordon St",
+    "city": "Guelph",
+    "province": "ON",
+    "postal_code": "N1H 4H5",
+    "website": "https://www.valuebuds.com",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Guelph"
+    ],
+    "source_note": "AGCO public status table lists Value Buds in Guelph with a Gordon Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Guelph, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/value-buds-guelph/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "canna-cabana-woodlawn-guelph",
+    "name": "Canna Cabana Woodlawn Guelph",
+    "status": "current_source",
+    "address": "3 Woodlawn Rd W",
+    "city": "Guelph",
+    "province": "ON",
+    "postal_code": "N1H 1G8",
+    "website": "https://cannacabana.com/",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Guelph"
+    ],
+    "source_note": "AGCO public status table lists Canna Cabana in Guelph with a Woodlawn Road West address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Guelph, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/canna-cabana-woodlawn-guelph/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "spiritleaf-guelph",
+    "name": "Spiritleaf Guelph",
+    "status": "current_source",
+    "address": "492 Edinburgh Rd S Unit B2B",
+    "city": "Guelph",
+    "province": "ON",
+    "postal_code": "N1G 4Z1",
+    "website": "https://spiritleaf.ca/collections/spiritleaf-south-guelph",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Guelph"
+    ],
+    "source_note": "AGCO public status table lists Spiritleaf Guelph with an Edinburgh Road South address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Guelph, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/spiritleaf-guelph/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
   }
 ]

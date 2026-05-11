@@ -82,6 +82,8 @@ export const priorityLocations: Location[] = [
   { slug: 'barrie', city: 'Barrie', province: 'ON', title: 'Cannabis stores and dispensaries in Barrie, Ontario', description: 'Barrie adds an official-source Simcoe County city cluster with AGCO-listed address-context profiles around Bayfield Street and Park Place.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add Barrie profiles on Bayfield Street and Park Place Boulevard; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 26 },
   { slug: 'oshawa', city: 'Oshawa', province: 'ON', title: 'Cannabis stores and dispensaries in Oshawa, Ontario', description: 'Oshawa adds an official-source Durham Region city cluster with AGCO-listed address-context profiles across Ritson Road, Taunton Road, and King Street East.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add Oshawa profiles on Ritson Road South, Taunton Road East, and King Street East; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 27 },
   { slug: 'waterloo', city: 'Waterloo', province: 'ON', title: 'Cannabis stores and dispensaries in Waterloo, Ontario', description: 'Waterloo adds an official-source Kitchener-Waterloo city cluster with AGCO-listed address-context profiles around King Street, Westmount Road, and Albert Street.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table and exact-city filtering to add Waterloo profiles on King Street North, Westmount Road North, and Albert Street; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 28 },
+  { slug: 'kitchener', city: 'Kitchener', province: 'ON', title: 'Cannabis stores and dispensaries in Kitchener, Ontario', description: 'Kitchener adds an official-source Waterloo Region city cluster with AGCO-listed address-context profiles across Highland Road, King Street, and Weber Street.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table and exact-city filtering to add Kitchener profiles on Highland Road West, King Street West, and Weber Street East; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 29 },
+  { slug: 'guelph', city: 'Guelph', province: 'ON', title: 'Cannabis stores and dispensaries in Guelph, Ontario', description: 'Guelph adds an official-source Wellington County city cluster with AGCO-listed address-context profiles around Gordon, Woodlawn, and Edinburgh.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table and exact-city filtering to add Guelph profiles on Gordon Street, Woodlawn Road West, and Edinburgh Road South; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 30 },
 ];
 
 export const locationUtilities: LocationUtility[] = [
@@ -518,6 +520,42 @@ export const locationUtilities: LocationUtility[] = [
       'Recheck exact-city public sources for each Waterloo row before adding phone, maps, hours, or richer profile details.',
       'Consider nearby Kitchener only as a separate future city cluster, not as implied Waterloo coverage.',
       'Use GSC monitoring to decide whether Waterloo should get deeper neighbourhood or campus-area copy after these URLs have crawled.',
+    ],
+  },
+  {
+    slug: 'kitchener',
+    summary: 'Kitchener now has a compact official-source cluster from the AGCO public status table, with enough Waterloo Region address context to make the location page useful without broad unsupported coverage claims.',
+    directoryStatus: 'Three Kitchener rows are mapped today from AGCO public status-table evidence across Highland Road West, King Street West, and Weber Street East. Potshops keeps them as address-context profiles only.',
+    searchIntent: ['kitchener cannabis store', 'kitchener dispensary', 'highland road cannabis', 'king street kitchener cannabis', 'weber street cannabis'],
+    relatedListingSlugs: ['highland-cannabis-kitchener', 'the-cannabist-shop-king-kitchener', 'canna-cabana-weber-kitchener'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Kitchener and Waterloo searches can overlap, so this page only maps exact city/town rows labelled KITCHENER rather than implying regional completeness.',
+      'AGCO public-status evidence supports address context only; Potshops should not add live menu, stock, ordering, delivery, rating, or operating-hours language from it.',
+      'Street-level hints such as Highland, King, and Weber should stay tied to the exact listing evidence visible on profile pages.',
+    ],
+    verificationNextSteps: [
+      'Recheck exact-city public sources for each Kitchener row before adding phone, maps, hours, or richer profile details.',
+      'Keep Waterloo as a separate nearby cluster and avoid merging Kitchener-Waterloo coverage unless source-backed regional pages are intentionally designed.',
+      'Use future GSC rows to decide whether Kitchener deserves deeper neighbourhood or corridor copy after these URLs have crawled.',
+    ],
+  },
+  {
+    slug: 'guelph',
+    summary: 'Guelph now has a source-backed Wellington County cluster from the AGCO public status table, with address-context profiles on Gordon, Woodlawn, and Edinburgh corridors.',
+    directoryStatus: 'Three Guelph rows are mapped today from AGCO public status-table evidence. The original AGCO query can return Guelph Line rows from other cities, so exact city/town filtering is part of the evidence trail.',
+    searchIntent: ['guelph cannabis store', 'guelph dispensary', 'gordon street cannabis', 'woodlawn road cannabis', 'edinburgh road cannabis'],
+    relatedListingSlugs: ['value-buds-guelph', 'canna-cabana-woodlawn-guelph', 'spiritleaf-guelph'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'The AGCO query for Guelph can surface street-name matches in Burlington and Georgetown, so this page only uses rows whose city/town is exactly GUELPH.',
+      'AGCO public-status evidence should not be rewritten into hours, stock, ordering, delivery, ratings, reviews, or availability claims.',
+      'This is a selective official-source starting point rather than a complete Guelph directory.',
+    ],
+    verificationNextSteps: [
+      'Confirm optional facts such as phone, maps, and hours from visible current business sources before adding richer schema fields.',
+      'Add additional Guelph rows only through exact-city filtering and import validation.',
+      'Monitor future GSC rows for Guelph brand, street, and generic dispensary queries before expanding beyond source-backed utility.',
     ],
   },
   {
