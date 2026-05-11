@@ -73,6 +73,7 @@ export const priorityLocations: Location[] = [
   { slug: 'deseronto', city: 'Deseronto', province: 'ON', title: 'Cannabis stores and dispensaries in Deseronto', description: 'Deseronto now has a source-backed Cannabis Convenience historical profile that can support a cautious Bay of Quinte recovery page.', gscEvidence: 'Source-backed enrichment mapped Cannabis Convenience to Highway 49 in Deseronto; use this as historical directory evidence until current official sources are found.', legacyImpressions: 0, priority: 17 },
   { slug: 'vernon', city: 'Vernon', province: 'BC', title: 'Cannabis stores and dispensaries in Vernon', description: 'Vernon now has a source-backed Okanagan Cannabinoid Therapy historical profile, adding a cautious North Okanagan recovery page.', gscEvidence: 'Source-backed enrichment mapped Okanagan Cannabinoid Therapy to 30th Avenue in Vernon; use this as historical directory evidence until current official sources are found.', legacyImpressions: 0, priority: 18 },
   { slug: 'dartmouth', city: 'Dartmouth', province: 'NS', title: 'Cannabis stores and dispensaries in Dartmouth', description: 'Dartmouth appears as an adjacent Nova Scotia opportunity that can support the Halifax cluster.', gscEvidence: 'GSC page data showed /location/dartmouth/ with 71 impressions, making it a useful supporting page for the Halifax/Nova Scotia cluster.', legacyImpressions: 71, priority: 19 },
+  { slug: 'belleville', city: 'Belleville', province: 'ON', title: 'Cannabis stores and dispensaries in Belleville', description: 'Belleville adds an official-source Bay of Quinte page that can support the Deseronto/Tyendinaga recovery cluster without relying only on historical seed rows.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add an official-source Belleville profile; use it as cautious local directory depth, not a menu or availability claim.', legacyImpressions: 0, priority: 20 },
 ];
 
 export const locationUtilities: LocationUtility[] = [
@@ -151,12 +152,12 @@ export const locationUtilities: LocationUtility[] = [
   {
     slug: 'hamilton',
     summary: 'Hamilton is now a useful supporting location page because the importer-backed batch added Mountain Greenery with city and address context that can anchor a cautious local directory section.',
-    directoryStatus: 'One Hamilton listing is mapped today: Mountain Greenery. The row remains historical/source-backed until current operating, licence, and contact facts are independently confirmed.',
-    searchIntent: ['mountain greenery hamilton', 'hamilton dispensary', 'hamilton cannabis store', 'upper wellington cannabis'],
-    relatedListingSlugs: ['mountain-greenery'],
+    directoryStatus: 'Three Hamilton listings are mapped today: one historical recovery profile and two AGCO-sourced address-context profiles. The official-source rows add current directory depth, but Potshops still avoids hours, menus, stock, ordering, or service claims.',
+    searchIntent: ['mountain greenery hamilton', 'village cannabis hamilton', 'neku cannabis hamilton', 'hamilton dispensary', 'hamilton cannabis store', 'upper wellington cannabis', 'king street east cannabis'],
+    relatedListingSlugs: ['mountain-greenery', 'village-cannabis-co-hamilton', 'neku-cannabis-hamilton'],
     internalCategorySlugs: ['dispensary'],
     localCaveats: [
-      'The current Hamilton footprint is one mapped profile, so this page should not be framed as a complete Hamilton cannabis directory.',
+      'The current Hamilton footprint is still selective, so this page should not be framed as a complete Hamilton cannabis directory even after adding two official-source rows.',
       'Address-level context came from public sources but should not be converted into hours, ordering, delivery, or availability claims.',
       'Hamilton neighbourhood and street-level hints are helpful only when tied to visible source notes on listing pages.',
     ],
@@ -187,12 +188,12 @@ export const locationUtilities: LocationUtility[] = [
   {
     slug: 'toronto',
     summary: 'Toronto has broad city-level demand and now one source-backed historical Piff Express row that can anchor a cautious delivery-intent recovery section.',
-    directoryStatus: 'Three Toronto listings are mapped today: Piff Express, Mount Zion Rastafarian Church, and Blessed Herbs Cafe. All remain historical/contextual evidence, not current service or availability claims.',
-    searchIntent: ['piff express', 'toronto cannabis delivery', 'dundas street west cannabis', 'annette street cannabis', 'toronto dispensary'],
-    relatedListingSlugs: ['piff-express', 'mount-zion-rastafarian-church', 'blessed-herbs-cafe'],
+    directoryStatus: 'Five Toronto listings are mapped today: three historical/contextual profiles plus two AGCO-sourced address-context profiles. The official-source rows improve city coverage, but Potshops still avoids hours, menus, stock, ordering, or service claims.',
+    searchIntent: ['piff express', 'canna savanna toronto', 'fogtown flower toronto', 'toronto cannabis delivery', 'dundas street west cannabis', 'queen street west cannabis', 'yonge street cannabis', 'toronto dispensary'],
+    relatedListingSlugs: ['piff-express', 'mount-zion-rastafarian-church', 'blessed-herbs-cafe', 'canna-savanna-toronto', 'fogtown-flower-toronto'],
     internalCategorySlugs: ['in-town-delivery', 'dispensary'],
     localCaveats: [
-      'Toronto is too large for one profile to imply meaningful coverage.',
+      'Toronto is too large for five mapped profiles to imply comprehensive coverage.',
       'Enforcement-context source data should be clearly separated from current business discovery.',
       'Delivery-intent pages require extra compliance caution and should not contain order, availability, or service claims without current legal review.',
     ],

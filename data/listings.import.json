@@ -737,5 +737,135 @@
     "gsc_clicks": 0,
     "average_position": 0,
     "commercial_claims": []
+  },
+  {
+    "slug": "village-cannabis-co-hamilton",
+    "name": "Village Cannabis Co. Hamilton",
+    "status": "current_source",
+    "address": "275 King St E",
+    "city": "Hamilton",
+    "province": "ON",
+    "postal_code": "L8N 1B9",
+    "website": "https://villagecannabisco.ca",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Hamilton"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Village Cannabis Co. in Hamilton with King Street East address and an active public status entry; Potshops records the address from that official table without adding hours, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/village-cannabis-co-hamilton/",
+    "location_hint": "Hamilton, ON",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "neku-cannabis-hamilton",
+    "name": "Neku Cannabis Hamilton",
+    "status": "current_source",
+    "address": "858 Upper James St Unit 1",
+    "city": "Hamilton",
+    "province": "ON",
+    "postal_code": "L9C 3A4",
+    "website": "https://nekucannabis.com/",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Hamilton"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Neku Cannabis in Hamilton with Upper James Street address and an active public status entry; Potshops keeps this to official address context only, with no hours, ordering, stock, or service claims.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/neku-cannabis-hamilton/",
+    "location_hint": "Hamilton, ON",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "canna-savanna-toronto",
+    "name": "Canna Savanna Toronto",
+    "status": "current_source",
+    "address": "1149 Queen St W",
+    "city": "Toronto",
+    "province": "ON",
+    "postal_code": "M6J 1J4",
+    "website": "https://www.cannasavanna.com/",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Toronto"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Canna Savanna in Toronto with Queen Street West address and an active public status entry; Potshops records the official address context without adding hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/canna-savanna-toronto/",
+    "location_hint": "Toronto, ON",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "fogtown-flower-toronto",
+    "name": "Fogtown Flower Toronto",
+    "status": "current_source",
+    "address": "2152 Yonge St",
+    "city": "Toronto",
+    "province": "ON",
+    "postal_code": "M4S 2A8",
+    "website": "https://fogtown.ca",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Toronto"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Fogtown Flower in Toronto with Yonge Street address and an active public status entry; Potshops records the official address context only and does not add hours, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/fogtown-flower-toronto/",
+    "location_hint": "Toronto, ON",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "true-north-cannabis-belleville",
+    "name": "True North Cannabis Co. Belleville",
+    "status": "current_source",
+    "address": "20 Bridge St W",
+    "city": "Belleville",
+    "province": "ON",
+    "postal_code": "K8P 1H7",
+    "website": "https://tncc.ca",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Belleville"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists True North Cannabis Co. in Belleville with Bridge Street West address and an active public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/true-north-cannabis-belleville/",
+    "location_hint": "Belleville, ON",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
   }
 ]

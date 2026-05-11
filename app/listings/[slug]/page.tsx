@@ -8,8 +8,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const resolvedParams = await params;
   const listing = getListing(resolvedParams.slug);
   if (!listing) return { title: 'Listing not found' };
+  const hasCurrentSource = listing.verificationStatus === 'current_source';
   const description = listing.sourceName
-    ? `${listing.name} has public-source listing facts from ${listing.sourceName}. Potshops labels these as historical until current licensing is confirmed.`
+    ? hasCurrentSource
+      ? `${listing.name} has official public-source address facts from ${listing.sourceName}. Potshops shows source-backed context without hours, menu, stock, ordering, or service claims.`
+      : `${listing.name} has public-source listing facts from ${listing.sourceName}. Potshops labels these as historical until current licensing is confirmed.`
     : `${listing.name} was a high-priority legacy Potshops.ca listing with ${listing.gscImpressions} Search Console impressions. Profile data is queued for verification.`;
   return { title: `${listing.name} cannabis listing`, description, alternates: { canonical: `/listings/${listing.slug}` } };
 }
@@ -18,6 +21,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   const resolvedParams = await params;
   const listing = getListing(resolvedParams.slug);
   if (!listing) return <main><h1>Listing not found</h1></main>;
+  const hasCurrentSource = listing.verificationStatus === 'current_source';
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
@@ -55,7 +59,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
           </ul>
         </section>
         <aside className="notice">
-          <h3>{listing.sourceName ? 'Public-source verification' : 'Claim or verify this listing'}</h3>
+          <h3>{listing.sourceName ? (hasCurrentSource ? 'Official-source verification' : 'Public-source verification') : 'Claim or verify this listing'}</h3>
           {listing.sourceName ? (
             <>
               <p><strong>Last checked:</strong> {listing.lastVerified}</p>
@@ -73,7 +77,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
             {listing.address && <li>Address: {listing.address}, {listing.city}, {listing.province} {listing.postalCode}</li>}
             {listing.phone && <li>Phone listed by source: {listing.phone}</li>}
             <li>Source: <a href={listing.sourceUrl ?? '#'} rel="nofollow noopener">{listing.sourceName}</a></li>
-            <li>Status: historical/public-source verification only; current licensing and operating status still needs confirmation.</li>
+            <li>Status: {hasCurrentSource ? 'official public-source address context; Potshops still withholds hours, menus, stock, ordering, and service claims until further review.' : 'historical/public-source verification only; current licensing and operating status still needs confirmation.'}</li>
           </ul>
         </section>
       )}
