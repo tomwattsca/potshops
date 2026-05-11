@@ -78,6 +78,8 @@ export const priorityLocations: Location[] = [
   { slug: 'kingston', city: 'Kingston', province: 'ON', title: 'Cannabis stores and dispensaries in Kingston', description: 'Kingston adds an official-source eastern Ontario cluster with several AGCO-listed address-context profiles.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add Kingston profiles on Princess and Division streets; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 22 },
   { slug: 'london', city: 'London', province: 'ON', title: 'Cannabis stores and dispensaries in London, Ontario', description: 'London adds an official-source Ontario city cluster with multiple AGCO-listed address-context profiles across Wharncliffe, Adelaide, and Dundas corridors.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add London profiles on Wharncliffe Road, Adelaide Street, and Dundas Street East; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 23 },
   { slug: 'windsor', city: 'Windsor', province: 'ON', title: 'Cannabis stores and dispensaries in Windsor, Ontario', description: 'Windsor adds an official-source southwestern Ontario cluster with AGCO-listed address-context profiles on Huron Church, Wyandotte, and Drouillard.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add Windsor profiles on Huron Church Road, Wyandotte Street West, and Drouillard Road; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 24 },
+  { slug: 'mississauga', city: 'Mississauga', province: 'ON', title: 'Cannabis stores and dispensaries in Mississauga, Ontario', description: 'Mississauga adds an official-source Peel Region city cluster with AGCO-listed address-context profiles across Dundas, Hurontario, and Port Credit.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add Mississauga profiles on Dundas Street West, Hurontario Street, and Lakeshore Road East; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 25 },
+  { slug: 'barrie', city: 'Barrie', province: 'ON', title: 'Cannabis stores and dispensaries in Barrie, Ontario', description: 'Barrie adds an official-source Simcoe County city cluster with AGCO-listed address-context profiles around Bayfield Street and Park Place.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add Barrie profiles on Bayfield Street and Park Place Boulevard; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 26 },
 ];
 
 export const locationUtilities: LocationUtility[] = [
@@ -442,6 +444,42 @@ export const locationUtilities: LocationUtility[] = [
       'Add additional Windsor rows only after exact-city filtering and import validation.',
       'Confirm any optional website, phone, or richer business details against visible current sources before adding them to schema.',
       'Watch GSC for Windsor query/page impressions before expanding to a larger southwestern Ontario page set.',
+    ],
+  },
+  {
+    slug: 'mississauga',
+    summary: 'Mississauga is a high-value Peel Region cluster where the AGCO source provides enough address-context evidence to create a useful city page without making current menu or availability claims.',
+    directoryStatus: 'Three Mississauga rows are mapped from the AGCO public status table across Dundas Street West, Hurontario Street, and Port Credit. They are address-context profiles only, not commercial availability claims.',
+    searchIntent: ['mississauga cannabis store', 'mississauga dispensary', 'port credit cannabis store'],
+    relatedListingSlugs: ['wed-cannabis-mississauga', 'canna-cabana-hurontario-mississauga', 'kindling-cannabis-port-credit-mississauga'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Mississauga searches can mix broad Peel Region intent, chain-store brand queries, and neighbourhood searches such as Port Credit; Potshops should keep exact profile evidence visible.',
+      'The AGCO table supports address and public-status context, but Potshops should not infer hours, stock, ordering, delivery, ratings, or live menu data.',
+      "WE'D Cannabis has no source-backed website in this import; do not add outbound/contact claims until a stronger public source is verified.",
+    ],
+    verificationNextSteps: [
+      'Recheck official/public sources for each Mississauga row before adding phones, maps, or richer profile details.',
+      'Consider adding additional Mississauga rows only after monitoring whether generic city or Port Credit queries appear in GSC.',
+      'Keep the page as a source-backed city directory rather than a recommendation page until compliance and freshness checks are stronger.',
+    ],
+  },
+  {
+    slug: 'barrie',
+    summary: 'Barrie is a useful Simcoe County cluster because the AGCO source shows several address-context profiles around Bayfield Street and Park Place, enough to support a non-doorway city page.',
+    directoryStatus: 'Three Barrie rows are mapped from the AGCO public status table. They support local profile discovery only; empty phone fields stay omitted from structured data.',
+    searchIntent: ['barrie cannabis store', 'barrie dispensary', 'cannabis stores near bayfield barrie'],
+    relatedListingSlugs: ['pops-cannabis-barrie', 'spiritleaf-park-place-barrie', 'emerald-cannabis-barrie'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Barrie demand can mix generic city searches, Bayfield Street retail intent, and chain-store brand queries; Potshops should keep the page anchored to exact sourced profiles.',
+      'The AGCO source supports public address/status context, but Potshops should not add hours, stock, ordering, delivery, ratings, or live menu language from it.',
+      'Future Barrie expansion should keep small enough batches to verify exact city matching and avoid accidentally importing street-name matches from other cities.',
+    ],
+    verificationNextSteps: [
+      'Recheck official/public sources for each Barrie row before adding phones, maps, or richer profile details.',
+      'Monitor future GSC rows for Barrie street, brand, and generic dispensary queries before deciding whether to expand into neighbourhood pages.',
+      'Keep any richer recommendation, sponsor, or outbound commercial treatment blocked until compliance and current-source standards are clearer.',
     ],
   },
   {

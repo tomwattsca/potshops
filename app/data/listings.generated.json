@@ -944,5 +944,131 @@
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Windsor",
     "sourceNote": "AGCO public status table lists Greentown Cannabis Discount Hut in Windsor with Drouillard Road address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "wed-cannabis-mississauga",
+    "name": "WE'D Cannabis Mississauga",
+    "legacyPath": "/listing/wed-cannabis-mississauga/",
+    "locationHint": "Mississauga, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "2400 Dundas St W Unit 14",
+    "city": "Mississauga",
+    "province": "ON",
+    "postalCode": "L5K 2R8",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Mississauga",
+    "sourceNote": "AGCO public status table lists WE'D Cannabis in Mississauga with a Dundas Street West address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "canna-cabana-hurontario-mississauga",
+    "name": "Canna Cabana Hurontario Mississauga",
+    "legacyPath": "/listing/canna-cabana-hurontario-mississauga/",
+    "locationHint": "Mississauga, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "2090 Hurontario St Unit 4",
+    "city": "Mississauga",
+    "province": "ON",
+    "postalCode": "L5B 1M8",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Mississauga",
+    "sourceNote": "AGCO public status table lists Canna Cabana in Mississauga with a Hurontario Street address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "kindling-cannabis-port-credit-mississauga",
+    "name": "Kindling Cannabis Port Credit",
+    "legacyPath": "/listing/kindling-cannabis-port-credit-mississauga/",
+    "locationHint": "Mississauga, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "251 Lakeshore Rd E",
+    "city": "Mississauga",
+    "province": "ON",
+    "postalCode": "L5G 1G8",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Mississauga",
+    "sourceNote": "AGCO public status table lists Kindling Cannabis Port Credit in Mississauga with a Lakeshore Road East address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "pops-cannabis-barrie",
+    "name": "Pop's Cannabis Co. Barrie",
+    "legacyPath": "/listing/pops-cannabis-barrie/",
+    "locationHint": "Barrie, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "534 Bayfield St Unit B",
+    "city": "Barrie",
+    "province": "ON",
+    "postalCode": "L4M 5A2",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Barrie",
+    "sourceNote": "AGCO public status table lists Pop's Cannabis Co. in Barrie with a Bayfield Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "spiritleaf-park-place-barrie",
+    "name": "Spiritleaf Park Place Barrie",
+    "legacyPath": "/listing/spiritleaf-park-place-barrie/",
+    "locationHint": "Barrie, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "120 Park Place Boulevard Unit 1 Building 3",
+    "city": "Barrie",
+    "province": "ON",
+    "postalCode": "L4N 6P1",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Barrie",
+    "sourceNote": "AGCO public status table lists Spiritleaf Park Place in Barrie with a Park Place Boulevard address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "emerald-cannabis-barrie",
+    "name": "Emerald Cannabis Co Barrie",
+    "legacyPath": "/listing/emerald-cannabis-barrie/",
+    "locationHint": "Barrie, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "102 Bayfield St Unit 2",
+    "city": "Barrie",
+    "province": "ON",
+    "postalCode": "L4M 3A8",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Barrie",
+    "sourceNote": "AGCO public status table lists Emerald Cannabis Co in Barrie with a Bayfield Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
   }
 ]
