@@ -1448,5 +1448,131 @@
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=St.%20Catharines",
     "sourceNote": "AGCO public status table lists Superbud in St. Catharines with an address at 216 Glenridge Ave Unit 11ab and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "honeypot-smoke-shop-niagara-falls",
+    "name": "Honeypot Smoke Shop Niagara Falls",
+    "legacyPath": "/listing/honeypot-smoke-shop-niagara-falls/",
+    "locationHint": "Niagara Falls, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "6832 Drummond Rd",
+    "city": "Niagara Falls",
+    "province": "ON",
+    "postalCode": "L2G 4P3",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Niagara+Falls",
+    "sourceNote": "AGCO public status table lists Honeypot Smoke Shop in Niagara Falls with an address at 6832 Drummond Rd and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "value-buds-portage-niagara-falls",
+    "name": "Value Buds Portage Niagara Falls",
+    "legacyPath": "/listing/value-buds-portage-niagara-falls/",
+    "locationHint": "Niagara Falls, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "3714 Portage Rd Unit 210",
+    "city": "Niagara Falls",
+    "province": "ON",
+    "postalCode": "L2J 2K9",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Niagara+Falls",
+    "sourceNote": "AGCO public status table lists Value Buds in Niagara Falls with an address at 3714 Portage Rd Unit 210 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "sparkle-cannabis-niagara-falls",
+    "name": "Sparkle Cannabis Company Niagara Falls",
+    "legacyPath": "/listing/sparkle-cannabis-niagara-falls/",
+    "locationHint": "Niagara Falls, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "7000 McLeod Rd Unit 9",
+    "city": "Niagara Falls",
+    "province": "ON",
+    "postalCode": "L2G 7K3",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Niagara+Falls",
+    "sourceNote": "AGCO public status table lists Sparkle Cannabis Company in Niagara Falls with an address at 7000 McLeod Rd Unit 9 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "pufftastic-cannabis-scarborough",
+    "name": "Pufftastic Cannabis Company Scarborough",
+    "legacyPath": "/listing/pufftastic-cannabis-scarborough/",
+    "locationHint": "Scarborough, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "2830 Markham Rd",
+    "city": "Scarborough",
+    "province": "ON",
+    "postalCode": "M1X 1E6",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Scarborough",
+    "sourceNote": "AGCO public status table lists Pufftastic Cannabis Company in Scarborough with an address at 2830 Markham Rd and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "green-merchant-scarborough",
+    "name": "Green Merchant Cannabis Boutique Scarborough",
+    "legacyPath": "/listing/green-merchant-scarborough/",
+    "locationHint": "Scarborough, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "33 Lapsley Rd",
+    "city": "Scarborough",
+    "province": "ON",
+    "postalCode": "M1B 1K1",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Scarborough",
+    "sourceNote": "AGCO public status table lists Green Merchant Cannabis Boutique in Scarborough with an address at 33 Lapsley Rd and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "budssmoke-scarborough",
+    "name": "BUDSSMOKE Scarborough",
+    "legacyPath": "/listing/budssmoke-scarborough/",
+    "locationHint": "Scarborough, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "1133 Markham Rd Unit 3",
+    "city": "Scarborough",
+    "province": "ON",
+    "postalCode": "M1H 2Y5",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Scarborough",
+    "sourceNote": "AGCO public status table lists BUDSSMOKE in Scarborough with an address at 1133 Markham Rd Unit 3 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
   }
 ]

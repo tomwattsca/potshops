@@ -310,7 +310,7 @@
       "https://www.mapquest.com/ca/ontario/leagle-dreams-marijuana-dispensary-429548106"
     ],
     "source_name": "MapQuest public business listing",
-    "source_note": "Public business listing identifies L’Eagle Dreams in Shannonville and lists Old Highway 2 address context plus phone. Potshops treats this as historical directory evidence until current regulatory and operating status are verified.",
+    "source_note": "Public business listing identifies L\u2019Eagle Dreams in Shannonville and lists Old Highway 2 address context plus phone. Potshops treats this as historical directory evidence until current regulatory and operating status are verified.",
     "last_verified_at": "2026-05-10",
     "legacy_path": "/listing/leagle-dreams/",
     "location_hint": "Shannonville, ON",
@@ -388,7 +388,7 @@
       "https://weedsfarm.com/store/mr-greens/"
     ],
     "source_name": "WeedsFarm public directory",
-    "source_note": "Public directory page lists Mr. Green’s in Nanaimo with Nicol Street address and phone context. Treat as historical profile recovery until current public-source status is rechecked.",
+    "source_note": "Public directory page lists Mr. Green\u2019s in Nanaimo with Nicol Street address and phone context. Treat as historical profile recovery until current public-source status is rechecked.",
     "last_verified_at": "2026-05-10",
     "legacy_path": "/listing/mr-greens/",
     "location_hint": "Nanaimo, BC",
@@ -571,7 +571,7 @@
       "https://www.minicounsel.ca/2022/01/17/r-v-morrison-and-raguette-2022-onsc-17/"
     ],
     "source_name": "Ontario court decision summary",
-    "source_note": "Court-decision summary identifies “Piff” at 3449 Dundas Street West in Toronto in historical enforcement/search-warrant context. Potshops uses this only as profile-recovery evidence, not a current service or availability claim.",
+    "source_note": "Court-decision summary identifies \u201cPiff\u201d at 3449 Dundas Street West in Toronto in historical enforcement/search-warrant context. Potshops uses this only as profile-recovery evidence, not a current service or availability claim.",
     "last_verified_at": "2026-05-10",
     "legacy_path": "/listing/piff-express/",
     "location_hint": "Toronto, ON",
@@ -677,7 +677,7 @@
       "https://weedsfarm.com/store/the-kootenays-medicine-tree/"
     ],
     "source_name": "WeedsFarm public directory",
-    "source_note": "Public directory page lists The Kootenay’s Medicine Tree in Nelson with Front Street address and phone context. Keep the row as historical source-backed evidence until fresher current-status sources are found.",
+    "source_note": "Public directory page lists The Kootenay\u2019s Medicine Tree in Nelson with Front Street address and phone context. Keep the row as historical source-backed evidence until fresher current-status sources are found.",
     "last_verified_at": "2026-05-10",
     "legacy_path": "/listing/the-kootenays-medicine-tree/",
     "location_hint": "Nelson, BC",
@@ -1779,6 +1779,150 @@
     "source_name": "AGCO public cannabis retail application status table",
     "last_verified_at": "2026-05-11",
     "legacy_path": "/listing/superbud-st-catharines/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "honeypot-smoke-shop-niagara-falls",
+    "name": "Honeypot Smoke Shop Niagara Falls",
+    "status": "current_source",
+    "address": "6832 Drummond Rd",
+    "city": "Niagara Falls",
+    "province": "ON",
+    "postal_code": "L2G 4P3",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Niagara+Falls"
+    ],
+    "source_note": "AGCO public status table lists Honeypot Smoke Shop in Niagara Falls with an address at 6832 Drummond Rd and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Niagara Falls, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-12",
+    "legacy_path": "/listing/honeypot-smoke-shop-niagara-falls/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "value-buds-portage-niagara-falls",
+    "name": "Value Buds Portage Niagara Falls",
+    "status": "current_source",
+    "address": "3714 Portage Rd Unit 210",
+    "city": "Niagara Falls",
+    "province": "ON",
+    "postal_code": "L2J 2K9",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Niagara+Falls"
+    ],
+    "source_note": "AGCO public status table lists Value Buds in Niagara Falls with an address at 3714 Portage Rd Unit 210 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Niagara Falls, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-12",
+    "legacy_path": "/listing/value-buds-portage-niagara-falls/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "sparkle-cannabis-niagara-falls",
+    "name": "Sparkle Cannabis Company Niagara Falls",
+    "status": "current_source",
+    "address": "7000 McLeod Rd Unit 9",
+    "city": "Niagara Falls",
+    "province": "ON",
+    "postal_code": "L2G 7K3",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Niagara+Falls"
+    ],
+    "source_note": "AGCO public status table lists Sparkle Cannabis Company in Niagara Falls with an address at 7000 McLeod Rd Unit 9 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Niagara Falls, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-12",
+    "legacy_path": "/listing/sparkle-cannabis-niagara-falls/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "pufftastic-cannabis-scarborough",
+    "name": "Pufftastic Cannabis Company Scarborough",
+    "status": "current_source",
+    "address": "2830 Markham Rd",
+    "city": "Scarborough",
+    "province": "ON",
+    "postal_code": "M1X 1E6",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Scarborough"
+    ],
+    "source_note": "AGCO public status table lists Pufftastic Cannabis Company in Scarborough with an address at 2830 Markham Rd and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Scarborough, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-12",
+    "legacy_path": "/listing/pufftastic-cannabis-scarborough/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "green-merchant-scarborough",
+    "name": "Green Merchant Cannabis Boutique Scarborough",
+    "status": "current_source",
+    "address": "33 Lapsley Rd",
+    "city": "Scarborough",
+    "province": "ON",
+    "postal_code": "M1B 1K1",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Scarborough"
+    ],
+    "source_note": "AGCO public status table lists Green Merchant Cannabis Boutique in Scarborough with an address at 33 Lapsley Rd and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Scarborough, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-12",
+    "legacy_path": "/listing/green-merchant-scarborough/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "budssmoke-scarborough",
+    "name": "BUDSSMOKE Scarborough",
+    "status": "current_source",
+    "address": "1133 Markham Rd Unit 3",
+    "city": "Scarborough",
+    "province": "ON",
+    "postal_code": "M1H 2Y5",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Scarborough"
+    ],
+    "source_note": "AGCO public status table lists BUDSSMOKE in Scarborough with an address at 1133 Markham Rd Unit 3 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Scarborough, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-12",
+    "legacy_path": "/listing/budssmoke-scarborough/",
     "gsc_impressions": 0,
     "gsc_clicks": 0,
     "average_position": 0,

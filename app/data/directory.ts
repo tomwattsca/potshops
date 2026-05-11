@@ -86,6 +86,8 @@ export const priorityLocations: Location[] = [
   { slug: 'guelph', city: 'Guelph', province: 'ON', title: 'Cannabis stores and dispensaries in Guelph, Ontario', description: 'Guelph adds an official-source Wellington County city cluster with AGCO-listed address-context profiles around Gordon, Woodlawn, and Edinburgh.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table and exact-city filtering to add Guelph profiles on Gordon Street, Woodlawn Road West, and Edinburgh Road South; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 30 },
   { slug: 'brampton', city: 'Brampton', province: 'ON', title: 'Cannabis stores and dispensaries in Brampton, Ontario', description: 'Brampton adds an official-source Peel Region city cluster with AGCO-listed address-context profiles across McVean, Worthington, and Inspire corridors.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table and exact-city filtering to add Brampton profiles on McVean Drive, Worthington Avenue, and Inspire Boulevard; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 31 },
   { slug: 'st-catharines', city: 'St. Catharines', province: 'ON', title: 'Cannabis stores and dispensaries in St. Catharines, Ontario', description: 'St. Catharines adds an official-source Niagara Region city cluster with AGCO-listed address-context profiles across Glendale, Scott, and Glenridge corridors.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table, exact-city filtering, and exclusion of a cancelled duplicate row to add St. Catharines profiles; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 32 },
+  { slug: 'niagara-falls', city: 'Niagara Falls', province: 'ON', title: 'Cannabis stores and dispensaries in Niagara Falls, Ontario', description: 'Niagara Falls adds an official-source Niagara Region city cluster with AGCO-listed address-context profiles across Drummond, Portage, and McLeod corridors.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact-city filtering to add Niagara Falls profiles on Drummond Road, Portage Road, and McLeod Road; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 33 },
+  { slug: 'scarborough', city: 'Scarborough', province: 'ON', title: 'Cannabis stores and dispensaries in Scarborough, Ontario', description: 'Scarborough adds an official-source east Toronto cluster with AGCO-listed address-context profiles on Markham Road and Lapsley Road.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Scarborough profiles; query results can include Markham Road street-name matches, so rows are filtered by the city/town field rather than query text alone.', legacyImpressions: 0, priority: 34 },
 ];
 
 export const locationUtilities: LocationUtility[] = [
@@ -595,6 +597,42 @@ export const locationUtilities: LocationUtility[] = [
       'Confirm richer facts such as phone, maps, and hours from visible current business sources before adding schema fields.',
       'Consider Niagara Falls or nearby Niagara-area rows as separate exact-city clusters rather than blending them into this page.',
       'Use future GSC rows to decide whether St. Catharines deserves additional neighbourhood copy after these URLs have crawled.',
+    ],
+  },
+  {
+    slug: 'niagara-falls',
+    summary: 'Niagara Falls adds a source-backed Niagara Region cluster from the AGCO public status table, with address-context profiles across Drummond, Portage, and McLeod corridors.',
+    directoryStatus: 'Three Niagara Falls rows are mapped today from exact-city AGCO public status-table evidence. The page is a selective address-context cluster, not a live menu, stock, delivery, or availability guide.',
+    searchIntent: ['niagara falls cannabis store', 'niagara falls dispensary', 'drummond road cannabis', 'portage road cannabis', 'mcleod road cannabis'],
+    relatedListingSlugs: ['honeypot-smoke-shop-niagara-falls', 'value-buds-portage-niagara-falls', 'sparkle-cannabis-niagara-falls'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'The AGCO Niagara Falls query returns many authorized and cancelled rows, so this page intentionally maps a small authorized sample rather than implying complete city coverage.',
+      'AGCO address/status data should not be converted into current hours, stock, ordering, delivery, ratings, reviews, or availability claims.',
+      'Niagara-area users may compare Niagara Falls and St. Catharines pages, so each city should keep exact-profile links and avoid blended regional claims.',
+    ],
+    verificationNextSteps: [
+      'Confirm richer facts such as phone, maps, and hours from visible current business sources before adding optional schema fields.',
+      'Add additional Niagara Falls rows only when the page can preserve clear exact-city filtering notes and useful internal links.',
+      'Watch future GSC rows for Niagara Falls brand, tourism-corridor, and neighbourhood queries after these URLs have crawled.',
+    ],
+  },
+  {
+    slug: 'scarborough',
+    summary: 'Scarborough adds an east Toronto official-source cluster from the AGCO public status table, anchored by Markham Road and Lapsley Road address-context rows.',
+    directoryStatus: 'Three Scarborough rows are mapped today from exact city/town AGCO public status-table evidence. The page deliberately treats Markham Road as a street context inside Scarborough, not evidence for the separate City of Markham.',
+    searchIntent: ['scarborough cannabis store', 'scarborough dispensary', 'markham road cannabis', 'lapsley road cannabis', 'east toronto dispensary'],
+    relatedListingSlugs: ['pufftastic-cannabis-scarborough', 'green-merchant-scarborough', 'budssmoke-scarborough'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'AGCO searches for Markham can surface Scarborough rows because Markham Road appears in addresses; Potshops filters by exact city/town before creating city pages.',
+      'Scarborough is a large east Toronto market, so three rows are not enough to claim complete local coverage.',
+      'AGCO address/status data should not be converted into current hours, stock, ordering, delivery, ratings, reviews, or availability claims.',
+    ],
+    verificationNextSteps: [
+      'Confirm richer facts from visible current business sources before adding phone, hours, maps, or optional schema fields.',
+      'Keep Scarborough and Markham/Vaughan strategy separate unless official rows support the exact municipal page.',
+      'Use future GSC rows to decide whether Scarborough deserves neighbourhood subcopy around Markham Road, Eglinton, Kingston Road, or Steeles corridors.',
     ],
   },
   {
