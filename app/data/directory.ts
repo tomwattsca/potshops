@@ -80,6 +80,8 @@ export const priorityLocations: Location[] = [
   { slug: 'windsor', city: 'Windsor', province: 'ON', title: 'Cannabis stores and dispensaries in Windsor, Ontario', description: 'Windsor adds an official-source southwestern Ontario cluster with AGCO-listed address-context profiles on Huron Church, Wyandotte, and Drouillard.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add Windsor profiles on Huron Church Road, Wyandotte Street West, and Drouillard Road; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 24 },
   { slug: 'mississauga', city: 'Mississauga', province: 'ON', title: 'Cannabis stores and dispensaries in Mississauga, Ontario', description: 'Mississauga adds an official-source Peel Region city cluster with AGCO-listed address-context profiles across Dundas, Hurontario, and Port Credit.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add Mississauga profiles on Dundas Street West, Hurontario Street, and Lakeshore Road East; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 25 },
   { slug: 'barrie', city: 'Barrie', province: 'ON', title: 'Cannabis stores and dispensaries in Barrie, Ontario', description: 'Barrie adds an official-source Simcoe County city cluster with AGCO-listed address-context profiles around Bayfield Street and Park Place.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add Barrie profiles on Bayfield Street and Park Place Boulevard; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 26 },
+  { slug: 'oshawa', city: 'Oshawa', province: 'ON', title: 'Cannabis stores and dispensaries in Oshawa, Ontario', description: 'Oshawa adds an official-source Durham Region city cluster with AGCO-listed address-context profiles across Ritson Road, Taunton Road, and King Street East.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add Oshawa profiles on Ritson Road South, Taunton Road East, and King Street East; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 27 },
+  { slug: 'waterloo', city: 'Waterloo', province: 'ON', title: 'Cannabis stores and dispensaries in Waterloo, Ontario', description: 'Waterloo adds an official-source Kitchener-Waterloo city cluster with AGCO-listed address-context profiles around King Street, Westmount Road, and Albert Street.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table and exact-city filtering to add Waterloo profiles on King Street North, Westmount Road North, and Albert Street; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 28 },
 ];
 
 export const locationUtilities: LocationUtility[] = [
@@ -480,6 +482,42 @@ export const locationUtilities: LocationUtility[] = [
       'Recheck official/public sources for each Barrie row before adding phones, maps, or richer profile details.',
       'Monitor future GSC rows for Barrie street, brand, and generic dispensary queries before deciding whether to expand into neighbourhood pages.',
       'Keep any richer recommendation, sponsor, or outbound commercial treatment blocked until compliance and current-source standards are clearer.',
+    ],
+  },
+  {
+    slug: 'oshawa',
+    summary: 'Oshawa is a Durham Region official-source cluster where the AGCO public table provides enough exact-city address evidence to add useful local directory depth without implying menus or availability.',
+    directoryStatus: 'Three Oshawa rows are mapped today from AGCO public status-table evidence across Ritson Road South, Taunton Road East, and King Street East. Potshops keeps them as address-context profiles only.',
+    searchIntent: ['oshawa cannabis store', 'oshawa dispensary', 'taunton road cannabis', 'ritson road cannabis', 'king street east oshawa cannabis'],
+    relatedListingSlugs: ['the-nug-co-oshawa', 'spiritleaf-taunton-oshawa', 'budget-bud-oshawa'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Oshawa has many official-source rows, so this page is a selective verified starting point rather than a complete local directory.',
+      'AGCO address/status context should not be rewritten into current hours, menu, stock, ordering, delivery, ratings, or availability claims.',
+      'Street-level hints such as Ritson, Taunton, and King Street East should stay tied to the exact listing evidence visible on profile pages.',
+    ],
+    verificationNextSteps: [
+      'Add additional Oshawa rows only through exact-city filtering and import validation.',
+      'Confirm optional facts such as phone, maps, or hours against visible current business sources before adding richer schema fields.',
+      'Monitor future GSC rows for Oshawa brand, street, and generic dispensary queries before expanding beyond source-backed utility.',
+    ],
+  },
+  {
+    slug: 'waterloo',
+    summary: 'Waterloo now has a compact official-source cluster from the AGCO public status table, with enough Kitchener-Waterloo address context to avoid a generic location shell.',
+    directoryStatus: 'Three Waterloo rows are mapped today from AGCO public status-table evidence across King Street North, Westmount Road North, and Albert Street. Empty phone fields remain omitted from listing schema.',
+    searchIntent: ['waterloo cannabis store', 'waterloo dispensary', 'king street waterloo cannabis', 'westmount road cannabis', 'albert street waterloo cannabis'],
+    relatedListingSlugs: ['value-buds-waterloo', 'growers-retail-waterloo', 'phoenix-cannabis-waterloo'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'The AGCO query for Waterloo can return street-name matches in other cities, so this batch only uses exact city/town rows labelled WATERLOO.',
+      'AGCO public-status evidence supports address context only; Potshops should not add live menu, stock, ordering, delivery, rating, or operating-hours language from it.',
+      'Phoenix Cannabis has no source-backed website in this import; keep outbound/contact claims blocked until a stronger public source is verified.',
+    ],
+    verificationNextSteps: [
+      'Recheck exact-city public sources for each Waterloo row before adding phone, maps, hours, or richer profile details.',
+      'Consider nearby Kitchener only as a separate future city cluster, not as implied Waterloo coverage.',
+      'Use GSC monitoring to decide whether Waterloo should get deeper neighbourhood or campus-area copy after these URLs have crawled.',
     ],
   },
   {

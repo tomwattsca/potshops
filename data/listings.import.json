@@ -1335,5 +1335,155 @@
     "gsc_clicks": 0,
     "average_position": 0,
     "commercial_claims": []
+  },
+  {
+    "slug": "the-nug-co-oshawa",
+    "name": "The Nug Co. Oshawa",
+    "status": "current_source",
+    "address": "514 Ritson Rd S",
+    "city": "Oshawa",
+    "province": "ON",
+    "postal_code": "L1H 5K4",
+    "website": "https://www.thenugco.ca",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Oshawa"
+    ],
+    "source_note": "AGCO public status table lists The Nug Co. in Oshawa with a Ritson Road South address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Oshawa, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/the-nug-co-oshawa/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "spiritleaf-taunton-oshawa",
+    "name": "Spiritleaf Taunton Oshawa",
+    "status": "current_source",
+    "address": "250 Taunton Rd E Unit 12",
+    "city": "Oshawa",
+    "province": "ON",
+    "postal_code": "L1G 7T1",
+    "website": "https://spiritleaf.ca/collections/spiritleaf-taunton",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Oshawa"
+    ],
+    "source_note": "AGCO public status table lists Spiritleaf in Oshawa with a Taunton Road East address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Oshawa, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/spiritleaf-taunton-oshawa/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "budget-bud-oshawa",
+    "name": "Budget Bud Oshawa",
+    "status": "current_source",
+    "address": "650 King St E Unit 7",
+    "city": "Oshawa",
+    "province": "ON",
+    "postal_code": "L1H 1G5",
+    "website": "https://budget-bud.com/oshawa/",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Oshawa"
+    ],
+    "source_note": "AGCO public status table lists Budget Bud Oshawa with a King Street East address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Oshawa, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/budget-bud-oshawa/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "value-buds-waterloo",
+    "name": "Value Buds Waterloo",
+    "status": "current_source",
+    "address": "628 King St N Unit A4",
+    "city": "Waterloo",
+    "province": "ON",
+    "postal_code": "N2V 0C7",
+    "website": "https://www.valuebuds.com",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Waterloo"
+    ],
+    "source_note": "AGCO public status table lists Value Buds in Waterloo with a King Street North address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Waterloo, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/value-buds-waterloo/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "growers-retail-waterloo",
+    "name": "Growers Retail Waterloo",
+    "status": "current_source",
+    "address": "50 Westmount Rd N",
+    "city": "Waterloo",
+    "province": "ON",
+    "postal_code": "N2L 2R5",
+    "website": "https://www.growersretailcannabis.ca",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Waterloo"
+    ],
+    "source_note": "AGCO public status table lists Growers Retail in Waterloo with a Westmount Road North address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Waterloo, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/growers-retail-waterloo/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "phoenix-cannabis-waterloo",
+    "name": "Phoenix Cannabis Waterloo",
+    "status": "current_source",
+    "address": "288 Albert St Unit 101",
+    "city": "Waterloo",
+    "province": "ON",
+    "postal_code": "N2L 0G9",
+    "website": "",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Waterloo"
+    ],
+    "source_note": "AGCO public status table lists Phoenix Cannabis in Waterloo with an Albert Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Waterloo, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/phoenix-cannabis-waterloo/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
   }
 ]
