@@ -380,15 +380,21 @@
     "slug": "420-delivery",
     "name": "420 Delivery",
     "legacyPath": "/listing/420-delivery/",
-    "locationHint": "Canada",
+    "locationHint": "Greater Vancouver, BC",
     "gscImpressions": 353,
     "gscClicks": 7,
     "averagePosition": 47.5,
-    "verificationStatus": "needs_verification",
+    "city": "Vancouver",
+    "province": "BC",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary",
       "in-town-delivery"
-    ]
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "Call 420 public website",
+    "sourceUrl": "https://call420delivery.io/",
+    "sourceNote": "Public website metadata identifies Call 420 as a Greater Vancouver-area cannabis brand. Potshops records this as brand and region context only, not current availability, licence, or contact proof."
   },
   {
     "slug": "blessed-herbs-cafe",
@@ -458,14 +464,20 @@
     "slug": "compassion-in-motion",
     "name": "Compassion in Motion",
     "legacyPath": "/listing/compassion-in-motion/",
-    "locationHint": "Canada",
+    "locationHint": "Greater Vancouver, BC",
     "gscImpressions": 601,
     "gscClicks": 4,
     "averagePosition": 6.5,
-    "verificationStatus": "needs_verification",
+    "city": "Vancouver",
+    "province": "BC",
+    "verificationStatus": "historical_source",
     "categories": [
       "dispensary"
-    ]
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "Compassion in Motion public websites",
+    "sourceUrl": "https://compassioninmotion.io/",
+    "sourceNote": "Public websites identify Compassion in Motion with Greater Vancouver-area cannabis context and long-running service history. Potshops records this as brand and region context only, not current availability, licence, or contact proof."
   },
   {
     "slug": "eden",
