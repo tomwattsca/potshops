@@ -310,7 +310,7 @@
       "https://www.mapquest.com/ca/ontario/leagle-dreams-marijuana-dispensary-429548106"
     ],
     "source_name": "MapQuest public business listing",
-    "source_note": "Public business listing identifies L’Eagle Dreams in Shannonville and lists Old Highway 2 address context plus phone. Potshops treats this as historical directory evidence until current regulatory and operating status are verified.",
+    "source_note": "Public business listing identifies L\u2019Eagle Dreams in Shannonville and lists Old Highway 2 address context plus phone. Potshops treats this as historical directory evidence until current regulatory and operating status are verified.",
     "last_verified_at": "2026-05-10",
     "legacy_path": "/listing/leagle-dreams/",
     "location_hint": "Shannonville, ON",
@@ -388,7 +388,7 @@
       "https://weedsfarm.com/store/mr-greens/"
     ],
     "source_name": "WeedsFarm public directory",
-    "source_note": "Public directory page lists Mr. Green’s in Nanaimo with Nicol Street address and phone context. Treat as historical profile recovery until current public-source status is rechecked.",
+    "source_note": "Public directory page lists Mr. Green\u2019s in Nanaimo with Nicol Street address and phone context. Treat as historical profile recovery until current public-source status is rechecked.",
     "last_verified_at": "2026-05-10",
     "legacy_path": "/listing/mr-greens/",
     "location_hint": "Nanaimo, BC",
@@ -571,7 +571,7 @@
       "https://www.minicounsel.ca/2022/01/17/r-v-morrison-and-raguette-2022-onsc-17/"
     ],
     "source_name": "Ontario court decision summary",
-    "source_note": "Court-decision summary identifies “Piff” at 3449 Dundas Street West in Toronto in historical enforcement/search-warrant context. Potshops uses this only as profile-recovery evidence, not a current service or availability claim.",
+    "source_note": "Court-decision summary identifies \u201cPiff\u201d at 3449 Dundas Street West in Toronto in historical enforcement/search-warrant context. Potshops uses this only as profile-recovery evidence, not a current service or availability claim.",
     "last_verified_at": "2026-05-10",
     "legacy_path": "/listing/piff-express/",
     "location_hint": "Toronto, ON",
@@ -677,7 +677,7 @@
       "https://weedsfarm.com/store/the-kootenays-medicine-tree/"
     ],
     "source_name": "WeedsFarm public directory",
-    "source_note": "Public directory page lists The Kootenay’s Medicine Tree in Nelson with Front Street address and phone context. Keep the row as historical source-backed evidence until fresher current-status sources are found.",
+    "source_note": "Public directory page lists The Kootenay\u2019s Medicine Tree in Nelson with Front Street address and phone context. Keep the row as historical source-backed evidence until fresher current-status sources are found.",
     "last_verified_at": "2026-05-10",
     "legacy_path": "/listing/the-kootenays-medicine-tree/",
     "location_hint": "Nelson, BC",
@@ -863,6 +863,162 @@
     "last_verified_at": "2026-05-11",
     "legacy_path": "/listing/true-north-cannabis-belleville/",
     "location_hint": "Belleville, ON",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "pakalolo-ottawa",
+    "name": "Pakalolo Ottawa",
+    "status": "current_source",
+    "address": "440 Preston St",
+    "city": "Ottawa",
+    "province": "ON",
+    "postal_code": "K1S 4N6",
+    "website": "https://www.shoppakalolo.com",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ottawa"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Pakalolo in Ottawa with Preston Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/pakalolo-ottawa/",
+    "location_hint": "Ottawa, ON",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "buzzed-buds-ottawa",
+    "name": "Buzzed Buds Ottawa",
+    "status": "current_source",
+    "address": "179 George St Unit 101",
+    "city": "Ottawa",
+    "province": "ON",
+    "postal_code": "K1N 1J8",
+    "website": "https://www.buzzedbuds.co/",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ottawa"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Buzzed Buds in Ottawa with George Street address and a current public status entry; Potshops records official address context only and avoids hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/buzzed-buds-ottawa/",
+    "location_hint": "Ottawa, ON",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "electrical-banana-ottawa",
+    "name": "Electrical Banana Ottawa",
+    "status": "current_source",
+    "address": "693 Somerset St W",
+    "city": "Ottawa",
+    "province": "ON",
+    "postal_code": "K1R 6P5",
+    "website": "https://www.electricalbanana.ca",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ottawa"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Electrical Banana in Ottawa with Somerset Street West address and a current public status entry; Potshops keeps this to official address context without adding hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/electrical-banana-ottawa/",
+    "location_hint": "Ottawa, ON",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "710-kingston",
+    "name": "710 Kingston",
+    "status": "current_source",
+    "address": "471 Princess St",
+    "city": "Kingston",
+    "province": "ON",
+    "postal_code": "K7L 1C3",
+    "website": "https://710kingston.com/",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kingston"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists 710 Kingston in Kingston with Princess Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/710-kingston/",
+    "location_hint": "Kingston, ON",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "giggles-cannabis-kingston",
+    "name": "Giggles Cannabis Kingston",
+    "status": "current_source",
+    "address": "652 Princess St Suite 108",
+    "city": "Kingston",
+    "province": "ON",
+    "postal_code": "K7L 1E5",
+    "website": "https://kingstongiggles.ca",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kingston"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Giggles Cannabis in Kingston with Princess Street address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/giggles-cannabis-kingston/",
+    "location_hint": "Kingston, ON",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "mary-js-cannabis-kingston",
+    "name": "Mary J's Cannabis Kingston",
+    "status": "current_source",
+    "address": "154 Division St",
+    "city": "Kingston",
+    "province": "ON",
+    "postal_code": "K7L 3M6",
+    "website": "https://www.maryjcannabis.ca/",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kingston"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Mary J's Cannabis in Kingston with Division Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/mary-js-cannabis-kingston/",
+    "location_hint": "Kingston, ON",
     "gsc_impressions": 0,
     "gsc_clicks": 0,
     "average_position": 0,

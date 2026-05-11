@@ -692,5 +692,131 @@
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Belleville",
     "sourceNote": "AGCO public status table lists True North Cannabis Co. in Belleville with Bridge Street West address and an active public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "pakalolo-ottawa",
+    "name": "Pakalolo Ottawa",
+    "legacyPath": "/listing/pakalolo-ottawa/",
+    "locationHint": "Ottawa, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "440 Preston St",
+    "city": "Ottawa",
+    "province": "ON",
+    "postalCode": "K1S 4N6",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ottawa",
+    "sourceNote": "AGCO public status table lists Pakalolo in Ottawa with Preston Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "buzzed-buds-ottawa",
+    "name": "Buzzed Buds Ottawa",
+    "legacyPath": "/listing/buzzed-buds-ottawa/",
+    "locationHint": "Ottawa, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "179 George St Unit 101",
+    "city": "Ottawa",
+    "province": "ON",
+    "postalCode": "K1N 1J8",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ottawa",
+    "sourceNote": "AGCO public status table lists Buzzed Buds in Ottawa with George Street address and a current public status entry; Potshops records official address context only and avoids hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "electrical-banana-ottawa",
+    "name": "Electrical Banana Ottawa",
+    "legacyPath": "/listing/electrical-banana-ottawa/",
+    "locationHint": "Ottawa, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "693 Somerset St W",
+    "city": "Ottawa",
+    "province": "ON",
+    "postalCode": "K1R 6P5",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ottawa",
+    "sourceNote": "AGCO public status table lists Electrical Banana in Ottawa with Somerset Street West address and a current public status entry; Potshops keeps this to official address context without adding hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "710-kingston",
+    "name": "710 Kingston",
+    "legacyPath": "/listing/710-kingston/",
+    "locationHint": "Kingston, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "471 Princess St",
+    "city": "Kingston",
+    "province": "ON",
+    "postalCode": "K7L 1C3",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kingston",
+    "sourceNote": "AGCO public status table lists 710 Kingston in Kingston with Princess Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "giggles-cannabis-kingston",
+    "name": "Giggles Cannabis Kingston",
+    "legacyPath": "/listing/giggles-cannabis-kingston/",
+    "locationHint": "Kingston, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "652 Princess St Suite 108",
+    "city": "Kingston",
+    "province": "ON",
+    "postalCode": "K7L 1E5",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kingston",
+    "sourceNote": "AGCO public status table lists Giggles Cannabis in Kingston with Princess Street address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "mary-js-cannabis-kingston",
+    "name": "Mary J's Cannabis Kingston",
+    "legacyPath": "/listing/mary-js-cannabis-kingston/",
+    "locationHint": "Kingston, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "154 Division St",
+    "city": "Kingston",
+    "province": "ON",
+    "postalCode": "K7L 3M6",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kingston",
+    "sourceNote": "AGCO public status table lists Mary J's Cannabis in Kingston with Division Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
   }
 ]

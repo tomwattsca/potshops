@@ -74,6 +74,8 @@ export const priorityLocations: Location[] = [
   { slug: 'vernon', city: 'Vernon', province: 'BC', title: 'Cannabis stores and dispensaries in Vernon', description: 'Vernon now has a source-backed Okanagan Cannabinoid Therapy historical profile, adding a cautious North Okanagan recovery page.', gscEvidence: 'Source-backed enrichment mapped Okanagan Cannabinoid Therapy to 30th Avenue in Vernon; use this as historical directory evidence until current official sources are found.', legacyImpressions: 0, priority: 18 },
   { slug: 'dartmouth', city: 'Dartmouth', province: 'NS', title: 'Cannabis stores and dispensaries in Dartmouth', description: 'Dartmouth appears as an adjacent Nova Scotia opportunity that can support the Halifax cluster.', gscEvidence: 'GSC page data showed /location/dartmouth/ with 71 impressions, making it a useful supporting page for the Halifax/Nova Scotia cluster.', legacyImpressions: 71, priority: 19 },
   { slug: 'belleville', city: 'Belleville', province: 'ON', title: 'Cannabis stores and dispensaries in Belleville', description: 'Belleville adds an official-source Bay of Quinte page that can support the Deseronto/Tyendinaga recovery cluster without relying only on historical seed rows.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add an official-source Belleville profile; use it as cautious local directory depth, not a menu or availability claim.', legacyImpressions: 0, priority: 20 },
+  { slug: 'ottawa', city: 'Ottawa', province: 'ON', title: 'Cannabis stores and dispensaries in Ottawa', description: 'Ottawa adds an official-source Ontario city cluster with multiple AGCO-listed address-context profiles.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add Ottawa profiles on Preston, George, and Somerset streets; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 21 },
+  { slug: 'kingston', city: 'Kingston', province: 'ON', title: 'Cannabis stores and dispensaries in Kingston', description: 'Kingston adds an official-source eastern Ontario cluster with several AGCO-listed address-context profiles.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table to add Kingston profiles on Princess and Division streets; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 22 },
 ];
 
 export const locationUtilities: LocationUtility[] = [
@@ -383,6 +385,43 @@ export const locationUtilities: LocationUtility[] = [
       'Find fresher official or business-source evidence before adding contact links, maps, hours, or richer schema facts.',
       'Research additional Vernon, Kelowna, and Okanagan candidates through the import workflow.',
       'Use this page for legacy recovery and internal links while the local dataset remains thin.',
+    ],
+  },
+
+  {
+    slug: 'ottawa',
+    summary: 'Ottawa now has a small official-source cluster from the AGCO public status table, giving Potshops a stronger eastern Ontario city page than a generic location template.',
+    directoryStatus: 'Three Ottawa listings are mapped today from AGCO public status-table evidence. They add address-context depth, but Potshops still avoids hours, menus, stock, ordering, service, review, or availability claims.',
+    searchIntent: ['ottawa dispensary', 'ottawa cannabis store', 'preston street cannabis', 'byward market cannabis', 'somerset street cannabis'],
+    relatedListingSlugs: ['pakalolo-ottawa', 'buzzed-buds-ottawa', 'electrical-banana-ottawa'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'The Ottawa footprint is selective and sourced for address context, not a complete city directory.',
+      'AGCO table rows should not be expanded into menu, hours, delivery, stock, or current-service claims unless a stronger visible source supports those exact facts.',
+      'Street-level hints such as Preston, George, and Somerset should stay tied to the exact listing evidence shown on profile pages.',
+    ],
+    verificationNextSteps: [
+      'Add more Ottawa profiles through the validated importer only when source URLs and conservative notes pass validation.',
+      'Look for official or business-source confirmation before adding phone, maps, hours, or richer LocalBusiness fields.',
+      'Monitor GSC for Ottawa city/page rows before expanding this page beyond source-backed utility and internal links.',
+    ],
+  },
+  {
+    slug: 'kingston',
+    summary: 'Kingston now has an official-source cluster from the AGCO public status table, with multiple downtown and midtown address-context profiles.',
+    directoryStatus: 'Three Kingston listings are mapped today from AGCO public status-table evidence. They improve local depth, but Potshops still avoids hours, menus, stock, ordering, service, review, or availability claims.',
+    searchIntent: ['kingston dispensary', 'kingston cannabis store', 'princess street cannabis', 'division street cannabis', 'downtown kingston cannabis'],
+    relatedListingSlugs: ['710-kingston', 'giggles-cannabis-kingston', 'mary-js-cannabis-kingston'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'The Kingston page is a source-backed starting point, not a complete city guide.',
+      'AGCO public status-table address context should not be converted into operating, ordering, stock, or availability claims.',
+      'Two profiles sit on Princess Street, so page copy can mention the corridor only as a directory clue tied to listed profiles.',
+    ],
+    verificationNextSteps: [
+      'Add additional Kingston-area rows only through the import workflow with official or business-source evidence.',
+      'Confirm richer facts such as phone or hours from a source that visibly supports them before adding schema fields.',
+      'Use GSC monitoring to decide whether Kingston deserves deeper neighbourhood copy or should remain a compact utility page.',
     ],
   },
 ];
