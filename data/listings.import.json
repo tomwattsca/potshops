@@ -680,5 +680,57 @@
     "gsc_clicks": 4,
     "average_position": 10.1,
     "commercial_claims": []
+  },
+  {
+    "slug": "cannabis-convenience",
+    "name": "Cannabis Convenience",
+    "status": "historical_source",
+    "address": "406 Hwy #49",
+    "city": "Deseronto",
+    "province": "ON",
+    "postal_code": "K0K 1X0",
+    "website": "",
+    "phone": "613-243-7242",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://weedsfarm.com/store/cannabis-convenience/"
+    ],
+    "source_name": "WeedsFarm public directory",
+    "source_note": "Public directory page lists Deseronto, Ontario address and phone context for the historical Cannabis Convenience profile; current licensing and operating status still needs official confirmation.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/cannabis-convenience/",
+    "location_hint": "Deseronto, ON",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "okanagan-cannabinoid-therapy-vernon",
+    "name": "Okanagan Cannabinoid Therapy - Vernon",
+    "status": "historical_source",
+    "address": "3116 30th Avenue",
+    "city": "Vernon",
+    "province": "BC",
+    "postal_code": "V1T 2C2",
+    "website": "",
+    "phone": "1 (236) 426-2837",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://weedsfarm.com/store/okanagan-cannabinoid-therapy-vernon/"
+    ],
+    "source_name": "WeedsFarm public directory",
+    "source_note": "Public directory page lists Vernon, BC address and phone context for the historical Okanagan Cannabinoid Therapy profile; current licensing and operating status still needs official confirmation.",
+    "last_verified_at": "2026-05-11",
+    "legacy_path": "/listing/okanagan-cannabinoid-therapy-vernon/",
+    "location_hint": "Vernon, BC",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
   }
 ]

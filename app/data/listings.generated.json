@@ -531,5 +531,49 @@
     "sourceName": "WeedsFarm public directory",
     "sourceUrl": "https://weedsfarm.com/store/the-kootenays-medicine-tree/",
     "sourceNote": "Public directory page lists The Kootenay’s Medicine Tree in Nelson with Front Street address and phone context. Keep the row as historical source-backed evidence until fresher current-status sources are found."
+  },
+  {
+    "slug": "cannabis-convenience",
+    "name": "Cannabis Convenience",
+    "legacyPath": "/listing/cannabis-convenience/",
+    "locationHint": "Deseronto, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "406 Hwy #49",
+    "city": "Deseronto",
+    "province": "ON",
+    "postalCode": "K0K 1X0",
+    "phone": "613-243-7242",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "WeedsFarm public directory",
+    "sourceUrl": "https://weedsfarm.com/store/cannabis-convenience/",
+    "sourceNote": "Public directory page lists Deseronto, Ontario address and phone context for the historical Cannabis Convenience profile; current licensing and operating status still needs official confirmation."
+  },
+  {
+    "slug": "okanagan-cannabinoid-therapy-vernon",
+    "name": "Okanagan Cannabinoid Therapy - Vernon",
+    "legacyPath": "/listing/okanagan-cannabinoid-therapy-vernon/",
+    "locationHint": "Vernon, BC",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "3116 30th Avenue",
+    "city": "Vernon",
+    "province": "BC",
+    "postalCode": "V1T 2C2",
+    "phone": "1 (236) 426-2837",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "WeedsFarm public directory",
+    "sourceUrl": "https://weedsfarm.com/store/okanagan-cannabinoid-therapy-vernon/",
+    "sourceNote": "Public directory page lists Vernon, BC address and phone context for the historical Okanagan Cannabinoid Therapy profile; current licensing and operating status still needs official confirmation."
   }
 ]

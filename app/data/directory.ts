@@ -70,7 +70,9 @@ export const priorityLocations: Location[] = [
   { slug: 'toronto', city: 'Toronto', province: 'ON', title: 'Cannabis stores and dispensaries in Toronto', description: 'Toronto is a broad rebuild target with legacy location-page demand and several source-backed historical profiles now mapped.', gscEvidence: 'GSC page data showed /location/toronto/ with 109 impressions; enrichment now maps Piff Express plus Annette Street historical profiles.', legacyImpressions: 109, priority: 14 },
   { slug: 'bible-hill', city: 'Bible Hill', province: 'NS', title: 'Cannabis stores and dispensaries in Bible Hill', description: 'Bible Hill now has a source-backed Maritime Medicinal historical profile that supports a cautious Nova Scotia recovery page.', gscEvidence: 'Source-backed enrichment mapped Maritime Medicinal to Main Street in Bible Hill; use this as profile recovery evidence, not a current-service claim.', legacyImpressions: 103, priority: 15 },
   { slug: 'salmon-arm', city: 'Salmon Arm', province: 'BC', title: 'Cannabis stores and dispensaries in Salmon Arm', description: 'Salmon Arm now has a source-backed Eden historical profile that can anchor a small Interior BC recovery page.', gscEvidence: 'Source-backed enrichment mapped Eden to Lakeshore Drive NW in Salmon Arm; use this as historical directory evidence until fresher sources are found.', legacyImpressions: 0, priority: 16 },
-  { slug: 'dartmouth', city: 'Dartmouth', province: 'NS', title: 'Cannabis stores and dispensaries in Dartmouth', description: 'Dartmouth appears as an adjacent Nova Scotia opportunity that can support the Halifax cluster.', gscEvidence: 'GSC page data showed /location/dartmouth/ with 71 impressions, making it a useful supporting page for the Halifax/Nova Scotia cluster.', legacyImpressions: 71, priority: 17 },
+  { slug: 'deseronto', city: 'Deseronto', province: 'ON', title: 'Cannabis stores and dispensaries in Deseronto', description: 'Deseronto now has a source-backed Cannabis Convenience historical profile that can support a cautious Bay of Quinte recovery page.', gscEvidence: 'Source-backed enrichment mapped Cannabis Convenience to Highway 49 in Deseronto; use this as historical directory evidence until current official sources are found.', legacyImpressions: 0, priority: 17 },
+  { slug: 'vernon', city: 'Vernon', province: 'BC', title: 'Cannabis stores and dispensaries in Vernon', description: 'Vernon now has a source-backed Okanagan Cannabinoid Therapy historical profile, adding a cautious North Okanagan recovery page.', gscEvidence: 'Source-backed enrichment mapped Okanagan Cannabinoid Therapy to 30th Avenue in Vernon; use this as historical directory evidence until current official sources are found.', legacyImpressions: 0, priority: 18 },
+  { slug: 'dartmouth', city: 'Dartmouth', province: 'NS', title: 'Cannabis stores and dispensaries in Dartmouth', description: 'Dartmouth appears as an adjacent Nova Scotia opportunity that can support the Halifax cluster.', gscEvidence: 'GSC page data showed /location/dartmouth/ with 71 impressions, making it a useful supporting page for the Halifax/Nova Scotia cluster.', legacyImpressions: 71, priority: 19 },
 ];
 
 export const locationUtilities: LocationUtility[] = [
@@ -344,6 +346,42 @@ export const locationUtilities: LocationUtility[] = [
       'Find fresher official or business-source evidence before adding maps, hours, or outbound contact links.',
       'Research additional Salmon Arm and Shuswap-area candidates through the import workflow.',
       'Use this page primarily for legacy recovery and internal linking while the local dataset is thin.',
+    ],
+  },
+  {
+    slug: 'deseronto',
+    summary: 'Deseronto now has one recovered historical profile through Cannabis Convenience, giving the Bay of Quinte/Tyendinaga-area cluster a source-backed starting point.',
+    directoryStatus: 'One Deseronto listing is mapped today: Cannabis Convenience. The row is historical/source-backed and should not be presented as a current service or availability listing.',
+    searchIntent: ['cannabis convenience deseronto', 'deseronto dispensary', 'bay of quinte cannabis store', 'highway 49 cannabis'],
+    relatedListingSlugs: ['cannabis-convenience'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Deseronto and nearby Tyendinaga searches can mix historical directory profiles, Indigenous-territory businesses, and current commercial intent; Potshops should keep evidence types visible.',
+      'The public directory address and phone are useful profile context, not proof of current licensing, hours, stock, or service availability.',
+      'Do not infer delivery or ordering availability from the old Potshops recovery footprint or nearby-category language.',
+    ],
+    verificationNextSteps: [
+      'Look for official/current sources for Cannabis Convenience before adding maps, hours, outbound links, or stronger LocalBusiness facts.',
+      'Research nearby Tyendinaga, Shannonville, and Bay of Quinte profiles through the import workflow before broadening local guide copy.',
+      'Keep this page focused on exact source-backed evidence while the local dataset is one profile.',
+    ],
+  },
+  {
+    slug: 'vernon',
+    summary: 'Vernon now has one recovered North Okanagan profile through Okanagan Cannabinoid Therapy, complementing the existing Penticton and Salmon Arm Interior BC pages.',
+    directoryStatus: 'One Vernon listing is mapped today: Okanagan Cannabinoid Therapy - Vernon. The row is historical/source-backed until current public-source status is independently confirmed.',
+    searchIntent: ['okanagan cannabinoid therapy vernon', 'vernon dispensary', 'north okanagan cannabis store', '30th avenue cannabis'],
+    relatedListingSlugs: ['okanagan-cannabinoid-therapy-vernon'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'The current Vernon footprint is one recovered profile, not a complete North Okanagan directory.',
+      'Historical directory evidence should not be converted into current availability, hours, review, delivery, or licensing claims.',
+      'Interior BC coverage should remain profile-led until more source-backed rows support broader city guide copy.',
+    ],
+    verificationNextSteps: [
+      'Find fresher official or business-source evidence before adding contact links, maps, hours, or richer schema facts.',
+      'Research additional Vernon, Kelowna, and Okanagan candidates through the import workflow.',
+      'Use this page for legacy recovery and internal links while the local dataset remains thin.',
     ],
   },
 ];
