@@ -38,7 +38,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
         postalCode: listing.postalCode,
         addressCountry: 'CA',
       },
-      telephone: listing.phone,
+      ...(listing.phone ? { telephone: listing.phone } : {}),
     } : {}),
   };
   return (
