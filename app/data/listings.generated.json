@@ -1322,5 +1322,131 @@
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Guelph",
     "sourceNote": "AGCO public status table lists Spiritleaf Guelph with an Edinburgh Road South address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "moonwlkr-cannabis-brampton",
+    "name": "MOONWLKR Cannabis Brampton",
+    "legacyPath": "/listing/moonwlkr-cannabis-brampton/",
+    "locationHint": "Brampton, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "11685 Mcvean Dr Unit 44",
+    "city": "Brampton",
+    "province": "ON",
+    "postalCode": "L6P 4N5",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Brampton",
+    "sourceNote": "AGCO public status table lists MOONWLKR Cannabis in Brampton with an address at 11685 Mcvean Dr Unit 44 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "value-buds-worthington-brampton",
+    "name": "Value Buds Worthington Brampton",
+    "legacyPath": "/listing/value-buds-worthington-brampton/",
+    "locationHint": "Brampton, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "17 Worthington Ave Unit 7",
+    "city": "Brampton",
+    "province": "ON",
+    "postalCode": "L7A 2Y7",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Brampton",
+    "sourceNote": "AGCO public status table lists Value Buds on Worthington Avenue in Brampton with an address at 17 Worthington Ave Unit 7 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "vibes-cannabis-brampton",
+    "name": "Vibes Cannabis Company Brampton",
+    "legacyPath": "/listing/vibes-cannabis-brampton/",
+    "locationHint": "Brampton, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "117 Inspire Blvd",
+    "city": "Brampton",
+    "province": "ON",
+    "postalCode": "L6R 3W4",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Brampton",
+    "sourceNote": "AGCO public status table lists Vibes Cannabis Company in Brampton with an address at 117 Inspire Blvd and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "one-plant-st-catharines",
+    "name": "One Plant St. Catharines",
+    "legacyPath": "/listing/one-plant-st-catharines/",
+    "locationHint": "St. Catharines, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "343 Glendale Ave Suite 520",
+    "city": "St. Catharines",
+    "province": "ON",
+    "postalCode": "L2T 0A1",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=St.%20Catharines",
+    "sourceNote": "AGCO public status table lists One Plant St. Catharines in St. Catharines with an address at 343 Glendale Ave Suite 520 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "spiritleaf-st-catharines",
+    "name": "Spiritleaf St. Catharines",
+    "legacyPath": "/listing/spiritleaf-st-catharines/",
+    "locationHint": "St. Catharines, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "400 Scott St Unit C2",
+    "city": "St. Catharines",
+    "province": "ON",
+    "postalCode": "L2M 3W4",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=St.%20Catharines",
+    "sourceNote": "AGCO public status table lists Spiritleaf St. Catharines in St. Catharines with an address at 400 Scott St Unit C2 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "superbud-st-catharines",
+    "name": "Superbud St. Catharines",
+    "legacyPath": "/listing/superbud-st-catharines/",
+    "locationHint": "St. Catharines, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "216 Glenridge Ave Unit 11ab",
+    "city": "St. Catharines",
+    "province": "ON",
+    "postalCode": "L2T 3J9",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-11",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=St.%20Catharines",
+    "sourceNote": "AGCO public status table lists Superbud in St. Catharines with an address at 216 Glenridge Ave Unit 11ab and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
   }
 ]

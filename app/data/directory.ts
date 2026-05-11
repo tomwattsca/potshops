@@ -84,6 +84,8 @@ export const priorityLocations: Location[] = [
   { slug: 'waterloo', city: 'Waterloo', province: 'ON', title: 'Cannabis stores and dispensaries in Waterloo, Ontario', description: 'Waterloo adds an official-source Kitchener-Waterloo city cluster with AGCO-listed address-context profiles around King Street, Westmount Road, and Albert Street.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table and exact-city filtering to add Waterloo profiles on King Street North, Westmount Road North, and Albert Street; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 28 },
   { slug: 'kitchener', city: 'Kitchener', province: 'ON', title: 'Cannabis stores and dispensaries in Kitchener, Ontario', description: 'Kitchener adds an official-source Waterloo Region city cluster with AGCO-listed address-context profiles across Highland Road, King Street, and Weber Street.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table and exact-city filtering to add Kitchener profiles on Highland Road West, King Street West, and Weber Street East; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 29 },
   { slug: 'guelph', city: 'Guelph', province: 'ON', title: 'Cannabis stores and dispensaries in Guelph, Ontario', description: 'Guelph adds an official-source Wellington County city cluster with AGCO-listed address-context profiles around Gordon, Woodlawn, and Edinburgh.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table and exact-city filtering to add Guelph profiles on Gordon Street, Woodlawn Road West, and Edinburgh Road South; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 30 },
+  { slug: 'brampton', city: 'Brampton', province: 'ON', title: 'Cannabis stores and dispensaries in Brampton, Ontario', description: 'Brampton adds an official-source Peel Region city cluster with AGCO-listed address-context profiles across McVean, Worthington, and Inspire corridors.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table and exact-city filtering to add Brampton profiles on McVean Drive, Worthington Avenue, and Inspire Boulevard; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 31 },
+  { slug: 'st-catharines', city: 'St. Catharines', province: 'ON', title: 'Cannabis stores and dispensaries in St. Catharines, Ontario', description: 'St. Catharines adds an official-source Niagara Region city cluster with AGCO-listed address-context profiles across Glendale, Scott, and Glenridge corridors.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table, exact-city filtering, and exclusion of a cancelled duplicate row to add St. Catharines profiles; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 32 },
 ];
 
 export const locationUtilities: LocationUtility[] = [
@@ -556,6 +558,43 @@ export const locationUtilities: LocationUtility[] = [
       'Confirm optional facts such as phone, maps, and hours from visible current business sources before adding richer schema fields.',
       'Add additional Guelph rows only through exact-city filtering and import validation.',
       'Monitor future GSC rows for Guelph brand, street, and generic dispensary queries before expanding beyond source-backed utility.',
+    ],
+  },
+
+  {
+    slug: 'brampton',
+    summary: 'Brampton now has an official-source Peel Region cluster from the AGCO public status table, giving the page useful address-level context across McVean, Worthington, and Inspire corridors.',
+    directoryStatus: 'Three Brampton rows are mapped today from AGCO public status-table evidence. They are address-context profiles only, not a complete Brampton store finder or live availability guide.',
+    searchIntent: ['brampton cannabis store', 'brampton dispensary', 'mcvean cannabis', 'worthington cannabis brampton', 'inspire boulevard cannabis'],
+    relatedListingSlugs: ['moonwlkr-cannabis-brampton', 'value-buds-worthington-brampton', 'vibes-cannabis-brampton'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Brampton has many AGCO rows, so this batch intentionally selected a small exact-city sample rather than implying complete local coverage.',
+      'AGCO public-status evidence supports address context only; Potshops should not add live menu, stock, ordering, delivery, rating, operating-hours, or availability language from it.',
+      'Rows without source-backed websites should not receive outbound contact or richer schema fields until another current public source supports them.',
+    ],
+    verificationNextSteps: [
+      'Add more Brampton rows in later batches only if the page can keep clear exact-profile links and avoid becoming a thin scraped table.',
+      'Verify optional details such as phone, maps, and hours from visible business sources before adding richer LocalBusiness fields.',
+      'Watch future GSC rows for Brampton brand and neighbourhood queries before deciding whether this cluster needs deeper local copy.',
+    ],
+  },
+  {
+    slug: 'st-catharines',
+    summary: 'St. Catharines adds a Niagara-area official-source cluster anchored by AGCO rows for Glendale, Scott, and Glenridge addresses.',
+    directoryStatus: 'Three St. Catharines rows are mapped today from AGCO public status-table evidence. The page deliberately distinguishes authorized public-status rows from one cancelled duplicate row in the source results.',
+    searchIntent: ['st catharines cannabis store', 'st catharines dispensary', 'glendale avenue cannabis', 'grantham plaza cannabis', 'glenridge cannabis'],
+    relatedListingSlugs: ['one-plant-st-catharines', 'spiritleaf-st-catharines', 'superbud-st-catharines'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'The AGCO query includes a cancelled duplicate for Spiritleaf, so this page only maps Authorized to Open rows and keeps the evidence trail explicit.',
+      'AGCO address/status data should not be converted into current hours, stock, ordering, delivery, ratings, reviews, or availability claims.',
+      'This is a compact Niagara-area source cluster, not proof of complete St. Catharines market coverage.',
+    ],
+    verificationNextSteps: [
+      'Confirm richer facts such as phone, maps, and hours from visible current business sources before adding schema fields.',
+      'Consider Niagara Falls or nearby Niagara-area rows as separate exact-city clusters rather than blending them into this page.',
+      'Use future GSC rows to decide whether St. Catharines deserves additional neighbourhood copy after these URLs have crawled.',
     ],
   },
   {
