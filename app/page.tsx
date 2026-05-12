@@ -1,5 +1,15 @@
 import Link from 'next/link';
-import { listingSeeds, priorityCategories, priorityLocations } from './data/directory';
+import { getCategory, getLocation, listingSeeds, priorityCategories, priorityLocations } from './data/directory';
+
+const gscVisibleLocationSlugs = ['nelson', 'kahnawake', 'penticton'];
+const gscVisibleListingSlugs = ['green-leaf', 'green-essence-head-shop-dispensary', 'compassion-in-motion'];
+const gscVisibleCategorySlugs = ['dispensary', 'in-town-delivery'];
+
+const gscVisibleLocations = gscVisibleLocationSlugs.map((slug) => getLocation(slug)).filter((location) => Boolean(location));
+const gscVisibleListings = gscVisibleListingSlugs.map((slug) => listingSeeds.find((listing) => listing.slug === slug)).filter((listing) => Boolean(listing));
+const gscVisibleCategories = gscVisibleCategorySlugs.map((slug) => getCategory(slug)).filter((category) => Boolean(category));
+const sourceBackedListingCount = listingSeeds.filter((listing) => listing.sourceName).length;
+const currentSourceListingCount = listingSeeds.filter((listing) => listing.verificationStatus === 'current_source').length;
 
 export default function Home() {
   return (
@@ -16,6 +26,46 @@ export default function Home() {
         </div>
       </section>
       <main>
+        <section className="card evidence-panel" aria-labelledby="current-search-signals">
+          <div>
+            <div className="eyebrow">Current search signals</div>
+            <h2 id="current-search-signals">Start with the Potshops pages already showing in Google data</h2>
+            <p>The latest final-data Search Console sample still shows the homepage, Nelson, Green Leaf, Green Essence, Compassion in Motion, and broad dispensary/category intent. This section gives visitors and crawlers a shorter path to those existing pages before the full directory grid.</p>
+          </div>
+          <div className="signal-grid">
+            <article className="mini-card">
+              <h3>GSC-visible city pages</h3>
+              <ul className="clean">
+                {gscVisibleLocations.map((location) => location && (
+                  <li key={location.slug}><Link href={`/locations/${location.slug}`}>{location.city}, {location.province} cannabis directory notes</Link></li>
+                ))}
+              </ul>
+            </article>
+            <article className="mini-card">
+              <h3>GSC-visible profiles</h3>
+              <ul className="clean">
+                {gscVisibleListings.map((listing) => listing && (
+                  <li key={listing.slug}><Link href={`/listings/${listing.slug}`}>{listing.name}</Link> <span className="meta">({listing.locationHint})</span></li>
+                ))}
+              </ul>
+            </article>
+            <article className="mini-card">
+              <h3>Category hubs to browse next</h3>
+              <ul className="clean">
+                {gscVisibleCategories.map((category) => category && (
+                  <li key={category.slug}><Link href={`/categories/${category.slug}`}>{category.title}</Link></li>
+                ))}
+              </ul>
+            </article>
+          </div>
+          <div className="stats-row" aria-label="Potshops source-backed coverage summary">
+            <span><strong>{listingSeeds.length}</strong> total rebuilt profiles</span>
+            <span><strong>{sourceBackedListingCount}</strong> source-backed profiles</span>
+            <span><strong>{currentSourceListingCount}</strong> current-source address-context profiles</span>
+            <span><strong>153</strong> sitemap URLs</span>
+          </div>
+        </section>
+
         <section id="locations">
           <div className="eyebrow">GSC-led information architecture</div>
           <h2>Priority location pages</h2>

@@ -30,3 +30,11 @@ ul.clean { padding-left:18px; color:var(--muted); line-height:1.7; }
 .update-card { display:flex; align-items:center; justify-content:space-between; gap:24px; margin-top:32px; background:#f8faf8; }
 .update-card .cta-row { margin-top:0; }
 @media (max-width: 720px) { .update-card { align-items:flex-start; flex-direction:column; } }
+
+.evidence-panel { margin-bottom:42px; }
+.signal-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-top:22px; }
+.mini-card { border:1px solid var(--line); border-radius:16px; padding:16px; background:#fbfdfb; }
+.stats-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
+.stats-row span { border:1px solid var(--line); border-radius:999px; padding:8px 12px; background:white; color:var(--muted); font-size:.9rem; }
+.stats-row strong { color:var(--green); }
+@media (max-width: 860px) { .signal-grid { grid-template-columns:1fr; } }
