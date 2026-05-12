@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getListing, listingSeeds } from '../../data/directory';
+import { getCategory, getListing, listingSeeds, priorityLocations } from '../../data/directory';
 
 export function generateStaticParams() { return listingSeeds.map((listing) => ({ slug: listing.slug })); }
 
@@ -14,7 +14,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       ? `${listing.name} has official public-source address facts from ${listing.sourceName}. Potshops shows source-backed context without hours, menu, stock, ordering, or service claims.`
       : `${listing.name} has public-source listing facts from ${listing.sourceName}. Potshops labels these as historical until current licensing is confirmed.`
     : `${listing.name} was a high-priority legacy Potshops.ca listing with ${listing.gscImpressions} Search Console impressions. Profile data is queued for verification.`;
-  return { title: `${listing.name} cannabis listing`, description, alternates: { canonical: `/listings/${listing.slug}` } };
+  const locationLabel = listing.city && listing.province ? `${listing.city}, ${listing.province}` : listing.locationHint;
+  const titleSuffix = hasCurrentSource ? 'source-backed cannabis profile' : 'historical cannabis listing';
+  return { title: `${listing.name} in ${locationLabel} | ${titleSuffix}`, description, alternates: { canonical: `/listings/${listing.slug}` } };
 }
 
 export default async function ListingPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -22,6 +24,8 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   const listing = getListing(resolvedParams.slug);
   if (!listing) return <main><h1>Listing not found</h1></main>;
   const hasCurrentSource = listing.verificationStatus === 'current_source';
+  const relatedLocation = priorityLocations.find((location) => location.city === listing.city && location.province === listing.province);
+  const relatedCategories = listing.categories?.map((slug) => getCategory(slug)).filter((category) => Boolean(category)) ?? [];
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
@@ -77,10 +81,31 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
             {listing.address && <li>Address: {listing.address}, {listing.city}, {listing.province} {listing.postalCode}</li>}
             {listing.phone && <li>Phone listed by source: {listing.phone}</li>}
             <li>Source: <a href={listing.sourceUrl ?? '#'} rel="nofollow noopener">{listing.sourceName}</a></li>
-            <li>Status: {hasCurrentSource ? 'official public-source address context; Potshops still withholds hours, menus, stock, ordering, and service claims until further review.' : 'historical/public-source verification only; current licensing and operating status still needs confirmation.'}</li>
+            <li>Status: {hasCurrentSource ? 'official public-source address context; Potshops still withholds hours, menus, stock, ordering, and service claims until further review.' : 'historical/public-source verification only; current regulatory and operating status still needs confirmation.'}</li>
           </ul>
         </section>
       )}
+
+      <section className="card">
+        <h2>Related Potshops pages for this profile</h2>
+        <p>Use these internal links to review the city and category context behind this listing. Potshops keeps the links informational until a public source supports stronger business details.</p>
+        <ul className="clean">
+          {relatedLocation ? (
+            <li>City context: <Link href={`/locations/${relatedLocation.slug}`}>{relatedLocation.city}, {relatedLocation.province} cannabis directory notes</Link></li>
+          ) : (
+            <li>City context: {listing.locationHint} is recorded on the listing, but a dedicated city page is not mapped yet.</li>
+          )}
+          {relatedCategories.map((category) => category && (
+            <li key={category.slug}>Category hub: <Link href={`/categories/${category.slug}`}>{category.title}</Link></li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="card">
+        <h2>What Potshops is not claiming yet</h2>
+        <p>This profile is intentionally limited to source-backed directory context. It does not verify current hours, menus, stock, ordering, delivery, prices, reviews, ratings, or whether a storefront is operating today.</p>
+      </section>
+
       <section className="card update-card">
         <div>
           <p className="eyebrow">Keep this profile accurate</p>
