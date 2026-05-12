@@ -96,6 +96,17 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
         </>
       )}
 
+      <section className="card update-card">
+        <div>
+          <p className="eyebrow">Improve {location.city} coverage</p>
+          <h2>Have a source-backed correction for this city?</h2>
+          <p>Share exact public-source evidence for missing listings, address corrections, or city coverage gaps. Potshops will keep the page conservative unless the source supports the specific fact.</p>
+        </div>
+        <p className="cta-row">
+          <Link className="button" href="/updates" data-event="listing_update_click" data-cta-location="location_detail">Suggest a {location.city} update</Link>
+        </p>
+      </section>
+
       <p><Link href="/">← Back to Potshops.ca rebuild priorities</Link></p>
     </main>
   );

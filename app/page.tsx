@@ -11,7 +11,7 @@ export default function Home() {
           <p className="lede">Potshops.ca is being rebuilt from scratch using Google Search Console evidence from the old site. The first launch focuses on the locations and store pages that already showed search demand.</p>
           <div className="cta-row">
             <a className="button" href="#locations">Browse priority cities</a>
-            <Link className="button secondary" href="/updates">Suggest a listing update</Link>
+            <Link className="button secondary" href="/updates" data-event="listing_update_click" data-cta-location="home_hero">Suggest a listing update</Link>
           </div>
         </div>
       </section>
@@ -68,7 +68,7 @@ export default function Home() {
               <li>Clearly labelled owner notes before any sponsorship conversation.</li>
               <li>No hours, menus, ordering, delivery, availability, rating, or promotional claims without exact source and compliance review.</li>
             </ul>
-            <p><Link className="button" href="/updates">Send a source-backed update</Link></p>
+            <p><Link className="button" href="/updates" data-event="listing_update_click" data-cta-location="home_update_section">Send a source-backed update</Link></p>
           </div>
           <aside className="notice">
             <h3>Data quality note</h3>

@@ -81,7 +81,16 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
           </ul>
         </section>
       )}
-      <p><Link href="/updates">Suggest a source-backed correction for this listing</Link></p>
+      <section className="card update-card">
+        <div>
+          <p className="eyebrow">Keep this profile accurate</p>
+          <h2>Know a better public source for {listing.name}?</h2>
+          <p>Send Potshops a regulator, business, or public-directory source so this listing can improve without adding unsupported hours, menu, delivery, availability, licence, rating, or promotional claims.</p>
+        </div>
+        <p className="cta-row">
+          <Link className="button" href="/updates" data-event="listing_update_click" data-cta-location="listing_detail">Suggest a source-backed correction</Link>
+        </p>
+      </section>
       <p><Link href="/">← Back to Potshops.ca rebuild priorities</Link></p>
     </main>
   );
