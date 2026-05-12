@@ -11,7 +11,7 @@ export default function Home() {
           <p className="lede">Potshops.ca is being rebuilt from scratch using Google Search Console evidence from the old site. The first launch focuses on the locations and store pages that already showed search demand.</p>
           <div className="cta-row">
             <a className="button" href="#locations">Browse priority cities</a>
-            <a className="button secondary" href="#claim">Claim or sponsor a listing</a>
+            <Link className="button secondary" href="/updates">Suggest a listing update</Link>
           </div>
         </div>
       </section>
@@ -61,17 +61,18 @@ export default function Home() {
         <section id="claim" className="split">
           <div>
             <div className="eyebrow">Revenue path</div>
-            <h2>Claim, update, or sponsor a cannabis listing</h2>
-            <p>Near-term monetization should come from verified enhanced listings, sponsored city placements, and compliant affiliate partnerships. The initial rebuild keeps public claims conservative until listing data is validated.</p>
+            <h2>Suggest a source-backed cannabis listing update</h2>
+            <p>Potshops can grow faster when store owners and readers send official-source corrections, but the public directory stays conservative until facts are verified.</p>
             <ul className="clean">
-              <li>Verified profile updates for stores and delivery services.</li>
-              <li>Sponsored placements on city and category pages once traffic returns.</li>
-              <li>Affiliate/compliance review before any outbound purchase CTAs go live.</li>
+              <li>Address and city corrections backed by regulator, business, or public directory sources.</li>
+              <li>Clearly labelled owner notes before any sponsorship conversation.</li>
+              <li>No hours, menus, ordering, delivery, availability, rating, or promotional claims without exact source and compliance review.</li>
             </ul>
+            <p><Link className="button" href="/updates">Send a source-backed update</Link></p>
           </div>
           <aside className="notice">
             <h3>Data quality note</h3>
-            <p>Old WordPress data is unavailable. Early pages are based on Search Console demand signals and should be enriched with verified address, hours, category, and compliance data before aggressive indexation or paid placement.</p>
+            <p>Old WordPress data is unavailable. Early pages are based on Search Console demand signals and public-source acquisition. Potshops needs source-backed address/category corrections before any stronger current-status or paid-placement claims.</p>
           </aside>
         </section>
       </main>

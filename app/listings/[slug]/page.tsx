@@ -66,7 +66,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
               <p>{listing.sourceNote}</p>
             </>
           ) : (
-            <p>The rebuild needs verified address, hours, service area, official website, and compliance-friendly description before commercial promotion.</p>
+            <p>The rebuild needs source-backed address, city, category, and compliance-friendly context before any stronger current-status or commercial promotion.</p>
           )}
         </aside>
       </div>
@@ -81,6 +81,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
           </ul>
         </section>
       )}
+      <p><Link href="/updates">Suggest a source-backed correction for this listing</Link></p>
       <p><Link href="/">← Back to Potshops.ca rebuild priorities</Link></p>
     </main>
   );
