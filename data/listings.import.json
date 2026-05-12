@@ -2071,5 +2071,149 @@
     "gsc_clicks": 0,
     "average_position": 0,
     "commercial_claims": []
+  },
+  {
+    "slug": "treetop-burlington",
+    "name": "TreeTop Burlington",
+    "status": "current_source",
+    "address": "796 Brant St",
+    "city": "Burlington",
+    "province": "ON",
+    "postal_code": "L7R 2J2",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Burlington"
+    ],
+    "source_note": "AGCO public status table lists TreeTop Burlington in Burlington with an address at 796 Brant St and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Burlington, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-12",
+    "legacy_path": "/listing/treetop-burlington/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "value-buds-appleby-burlington",
+    "name": "Value Buds Appleby Line Burlington",
+    "status": "current_source",
+    "address": "2485 Appleby Line Unit G1",
+    "city": "Burlington",
+    "province": "ON",
+    "postal_code": "L7L 0B6",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Burlington"
+    ],
+    "source_note": "AGCO public status table lists Value Buds Appleby Line Burlington in Burlington with an address at 2485 Appleby Line Unit G1 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Burlington, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-12",
+    "legacy_path": "/listing/value-buds-appleby-burlington/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "value-buds-fairview-burlington",
+    "name": "Value Buds Fairview Burlington",
+    "status": "current_source",
+    "address": "1235 Fairview St Unit A",
+    "city": "Burlington",
+    "province": "ON",
+    "postal_code": "L7S 2H9",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Burlington"
+    ],
+    "source_note": "AGCO public status table lists Value Buds Fairview Burlington in Burlington with an address at 1235 Fairview St Unit A and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Burlington, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-12",
+    "legacy_path": "/listing/value-buds-fairview-burlington/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "lakeview-cannabis-etobicoke",
+    "name": "Lakeview Cannabis Etobicoke",
+    "status": "current_source",
+    "address": "4 Mimico Ave",
+    "city": "Etobicoke",
+    "province": "ON",
+    "postal_code": "M8V 1R1",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Etobicoke"
+    ],
+    "source_note": "AGCO public status table lists Lakeview Cannabis Etobicoke in Etobicoke with an address at 4 Mimico Ave and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Etobicoke, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-12",
+    "legacy_path": "/listing/lakeview-cannabis-etobicoke/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "herb-n-bud-etobicoke",
+    "name": "HERB N BUD Etobicoke",
+    "status": "current_source",
+    "address": "3759 Lake Shore Blvd W",
+    "city": "Etobicoke",
+    "province": "ON",
+    "postal_code": "M8W 1R1",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Etobicoke"
+    ],
+    "source_note": "AGCO public status table lists HERB N BUD Etobicoke in Etobicoke with an address at 3759 Lake Shore Blvd W and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Etobicoke, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-12",
+    "legacy_path": "/listing/herb-n-bud-etobicoke/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "purple-pineapple-etobicoke",
+    "name": "Purple Pineapple Cannabis Co Etobicoke",
+    "status": "current_source",
+    "address": "25 Woodbine Downs Blvd Unit 8",
+    "city": "Etobicoke",
+    "province": "ON",
+    "postal_code": "M9W 6N5",
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Etobicoke"
+    ],
+    "source_note": "AGCO public status table lists Purple Pineapple Cannabis Co Etobicoke in Etobicoke with an address at 25 Woodbine Downs Blvd Unit 8 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "location_hint": "Etobicoke, ON",
+    "categories": [
+      "dispensary"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "last_verified_at": "2026-05-12",
+    "legacy_path": "/listing/purple-pineapple-etobicoke/",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
   }
 ]

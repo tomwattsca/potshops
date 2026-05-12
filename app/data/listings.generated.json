@@ -1700,5 +1700,131 @@
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ajax",
     "sourceNote": "AGCO public status table lists Cannaverse in Ajax with an address at 314 Harwood Ave S Unit 16 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "treetop-burlington",
+    "name": "TreeTop Burlington",
+    "legacyPath": "/listing/treetop-burlington/",
+    "locationHint": "Burlington, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "796 Brant St",
+    "city": "Burlington",
+    "province": "ON",
+    "postalCode": "L7R 2J2",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Burlington",
+    "sourceNote": "AGCO public status table lists TreeTop Burlington in Burlington with an address at 796 Brant St and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "value-buds-appleby-burlington",
+    "name": "Value Buds Appleby Line Burlington",
+    "legacyPath": "/listing/value-buds-appleby-burlington/",
+    "locationHint": "Burlington, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "2485 Appleby Line Unit G1",
+    "city": "Burlington",
+    "province": "ON",
+    "postalCode": "L7L 0B6",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Burlington",
+    "sourceNote": "AGCO public status table lists Value Buds Appleby Line Burlington in Burlington with an address at 2485 Appleby Line Unit G1 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "value-buds-fairview-burlington",
+    "name": "Value Buds Fairview Burlington",
+    "legacyPath": "/listing/value-buds-fairview-burlington/",
+    "locationHint": "Burlington, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "1235 Fairview St Unit A",
+    "city": "Burlington",
+    "province": "ON",
+    "postalCode": "L7S 2H9",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Burlington",
+    "sourceNote": "AGCO public status table lists Value Buds Fairview Burlington in Burlington with an address at 1235 Fairview St Unit A and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "lakeview-cannabis-etobicoke",
+    "name": "Lakeview Cannabis Etobicoke",
+    "legacyPath": "/listing/lakeview-cannabis-etobicoke/",
+    "locationHint": "Etobicoke, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "4 Mimico Ave",
+    "city": "Etobicoke",
+    "province": "ON",
+    "postalCode": "M8V 1R1",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Etobicoke",
+    "sourceNote": "AGCO public status table lists Lakeview Cannabis Etobicoke in Etobicoke with an address at 4 Mimico Ave and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "herb-n-bud-etobicoke",
+    "name": "HERB N BUD Etobicoke",
+    "legacyPath": "/listing/herb-n-bud-etobicoke/",
+    "locationHint": "Etobicoke, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "3759 Lake Shore Blvd W",
+    "city": "Etobicoke",
+    "province": "ON",
+    "postalCode": "M8W 1R1",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Etobicoke",
+    "sourceNote": "AGCO public status table lists HERB N BUD Etobicoke in Etobicoke with an address at 3759 Lake Shore Blvd W and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "purple-pineapple-etobicoke",
+    "name": "Purple Pineapple Cannabis Co Etobicoke",
+    "legacyPath": "/listing/purple-pineapple-etobicoke/",
+    "locationHint": "Etobicoke, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "25 Woodbine Downs Blvd Unit 8",
+    "city": "Etobicoke",
+    "province": "ON",
+    "postalCode": "M9W 6N5",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Etobicoke",
+    "sourceNote": "AGCO public status table lists Purple Pineapple Cannabis Co Etobicoke in Etobicoke with an address at 25 Woodbine Downs Blvd Unit 8 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
   }
 ]

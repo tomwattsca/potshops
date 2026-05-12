@@ -90,6 +90,8 @@ export const priorityLocations: Location[] = [
   { slug: 'scarborough', city: 'Scarborough', province: 'ON', title: 'Cannabis stores and dispensaries in Scarborough, Ontario', description: 'Scarborough adds an official-source east Toronto cluster with AGCO-listed address-context profiles on Markham Road and Lapsley Road.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Scarborough profiles; query results can include Markham Road street-name matches, so rows are filtered by the city/town field rather than query text alone.', legacyImpressions: 0, priority: 34 },
   { slug: 'pickering', city: 'Pickering', province: 'ON', title: 'Cannabis stores and dispensaries in Pickering, Ontario', description: 'Pickering adds an official-source Durham Region cluster with AGCO-listed address-context profiles across Pickering Parkway, Brock Road, and Central Street.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Pickering profiles on Pickering Parkway, Brock Road, and Central Street; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 35 },
   { slug: 'ajax', city: 'Ajax', province: 'ON', title: 'Cannabis stores and dispensaries in Ajax, Ontario', description: 'Ajax adds an official-source Durham Region cluster with AGCO-listed address-context profiles across Westney, Kingston Road, and Harwood corridors.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Ajax profiles on Westney Road, Kingston Road, and Harwood Avenue; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 36 },
+  { slug: 'burlington', city: 'Burlington', province: 'ON', title: 'Cannabis stores and dispensaries in Burlington, Ontario', description: 'Burlington adds an official-source Halton Region cluster with AGCO-listed address-context profiles across Brant Street, Appleby Line, and Fairview Street.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Burlington profiles on Brant Street, Appleby Line, and Fairview Street; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 37 },
+  { slug: 'etobicoke', city: 'Etobicoke', province: 'ON', title: 'Cannabis stores and dispensaries in Etobicoke, Ontario', description: 'Etobicoke adds an official-source west Toronto cluster with AGCO-listed address-context profiles across Mimico Avenue, Lake Shore Boulevard West, and Woodbine Downs.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Etobicoke profiles on Mimico Avenue, Lake Shore Boulevard West, and Woodbine Downs Boulevard; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 38 },
 ];
 
 export const locationUtilities: LocationUtility[] = [
@@ -689,6 +691,42 @@ export const locationUtilities: LocationUtility[] = [
       'Confirm richer facts such as phone, maps, and hours from visible current business sources before adding optional schema fields.',
       'Watch future GSC rows for Ajax brand, Westney, Kingston Road, and Harwood Avenue query patterns after the URLs have crawled.',
       'Add additional Ajax rows only through the validated import workflow with exact city/town filtering.',
+    ],
+  },
+  {
+    slug: 'burlington',
+    summary: 'Burlington adds a Halton Region official-source cluster from the AGCO public status table, anchored by Brant Street, Appleby Line, and Fairview Street address-context rows.',
+    directoryStatus: 'Three Burlington rows are mapped today from exact city/town AGCO public status-table evidence. The page stays factual and does not imply complete local coverage, store ranking, live inventory, or ordering options.',
+    searchIntent: ['burlington cannabis store', 'burlington dispensary', 'brant street cannabis', 'appleby line cannabis', 'fairview street cannabis'],
+    relatedListingSlugs: ['treetop-burlington', 'value-buds-appleby-burlington', 'value-buds-fairview-burlington'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Burlington and broader Halton searches can overlap with Oakville and Hamilton-area intent, so this page should link only to exact-city rows unless a source clearly supports a broader regional claim.',
+      'Three AGCO rows are not enough to claim complete Burlington coverage or recommend one store over another.',
+      'AGCO address/status data should not be converted into current hours, stock, ordering, delivery, ratings, reviews, or availability claims.',
+    ],
+    verificationNextSteps: [
+      'Confirm richer facts such as phone, maps, and hours from visible current business sources before adding optional schema fields.',
+      'Watch future GSC rows for Burlington brand, Brant Street, Appleby Line, and Fairview Street query patterns after the URLs have crawled.',
+      'Add additional Halton rows only through the validated import workflow with exact city/town filtering.',
+    ],
+  },
+  {
+    slug: 'etobicoke',
+    summary: 'Etobicoke adds a west Toronto official-source cluster from the AGCO public status table, anchored by Mimico Avenue, Lake Shore Boulevard West, and Woodbine Downs address-context rows.',
+    directoryStatus: 'Three Etobicoke rows are mapped today from exact city/town AGCO public status-table evidence. The page is a source-backed local directory starting point, not a current menu, stock, delivery, or ranking guide.',
+    searchIntent: ['etobicoke cannabis store', 'etobicoke dispensary', 'mimico cannabis', 'lake shore boulevard west cannabis', 'woodbine downs cannabis'],
+    relatedListingSlugs: ['lakeview-cannabis-etobicoke', 'herb-n-bud-etobicoke', 'purple-pineapple-etobicoke'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Etobicoke sits inside west Toronto, so Potshops should keep exact Etobicoke rows distinct from Toronto, North York, and Mississauga pages unless the source itself supports a broader geography.',
+      'AGCO status-table rows provide address context, not live inventory, hours, reviews, delivery options, or ordering availability.',
+      'This page should remain a compact source-backed utility until GSC shows which Etobicoke corridors or brand queries deserve deeper copy.',
+    ],
+    verificationNextSteps: [
+      'Confirm richer facts such as phone, maps, and hours from visible current business sources before adding optional schema fields.',
+      'Use future GSC rows to decide whether Etobicoke deserves corridor copy around Mimico, Lake Shore Boulevard West, Albion, or Woodbine Downs.',
+      'Add additional west Toronto rows only when exact city/town filtering and visible source notes remain clear.',
     ],
   },
 ];
