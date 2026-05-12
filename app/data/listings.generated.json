@@ -1826,5 +1826,131 @@
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Etobicoke",
     "sourceNote": "AGCO public status table lists Purple Pineapple Cannabis Co Etobicoke in Etobicoke with an address at 25 Woodbine Downs Blvd Unit 8 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "value-buds-cambridge",
+    "name": "Value Buds Cambridge",
+    "legacyPath": "/listing/value-buds-cambridge/",
+    "locationHint": "Cambridge, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "150 Holiday Inn Dr Unit 111",
+    "city": "Cambridge",
+    "province": "ON",
+    "postalCode": "N3C 2T2",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Cambridge",
+    "sourceNote": "AGCO public status table lists Value Buds Cambridge in Cambridge with an address at 150 Holiday Inn Dr Unit 111 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "thisel-cambridge",
+    "name": "THISEL Cambridge",
+    "legacyPath": "/listing/thisel-cambridge/",
+    "locationHint": "Cambridge, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "115 Christopher Dr Suite 750",
+    "city": "Cambridge",
+    "province": "ON",
+    "postalCode": "N1R 4S1",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Cambridge",
+    "sourceNote": "AGCO public status table lists THISEL Cambridge in Cambridge with an address at 115 Christopher Dr Suite 750 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "tokyo-smoke-cambridge-pinebush",
+    "name": "Tokyo Smoke Cambridge Pinebush",
+    "legacyPath": "/listing/tokyo-smoke-cambridge-pinebush/",
+    "locationHint": "Cambridge, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "75 Pinebush Rd Unit D0005",
+    "city": "Cambridge",
+    "province": "ON",
+    "postalCode": "N1R 8R5",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Cambridge",
+    "sourceNote": "AGCO public status table lists Tokyo Smoke Cambridge Pinebush in Cambridge with an address at 75 Pinebush Rd Unit D0005 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "happy-life-sudbury",
+    "name": "HAPPY LIFE Sudbury",
+    "legacyPath": "/listing/happy-life-sudbury/",
+    "locationHint": "Sudbury, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "1021 Kingsway Unit 3",
+    "city": "Sudbury",
+    "province": "ON",
+    "postalCode": "P3B 2E6",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sudbury",
+    "sourceNote": "AGCO public status table lists HAPPY LIFE Sudbury in Sudbury with an address at 1021 Kingsway Unit 3 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "pops-cannabis-sudbury",
+    "name": "Pop's Cannabis Co. Sudbury",
+    "legacyPath": "/listing/pops-cannabis-sudbury/",
+    "locationHint": "Sudbury, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "450 Notre Dame Ave Unit 105B",
+    "city": "Sudbury",
+    "province": "ON",
+    "postalCode": "P3C 5K8",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sudbury",
+    "sourceNote": "AGCO public status table lists Pop's Cannabis Co. Sudbury in Sudbury with an address at 450 Notre Dame Ave Unit 105B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "wild-flowerz-sudbury",
+    "name": "Wild Flowerz Sudbury",
+    "legacyPath": "/listing/wild-flowerz-sudbury/",
+    "locationHint": "Sudbury, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "533 Kathleen St Unit B",
+    "city": "Sudbury",
+    "province": "ON",
+    "postalCode": "P3C 2N1",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sudbury",
+    "sourceNote": "AGCO public status table lists Wild Flowerz Sudbury in Sudbury with an address at 533 Kathleen St Unit B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
   }
 ]

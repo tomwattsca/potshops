@@ -92,6 +92,8 @@ export const priorityLocations: Location[] = [
   { slug: 'ajax', city: 'Ajax', province: 'ON', title: 'Cannabis stores and dispensaries in Ajax, Ontario', description: 'Ajax adds an official-source Durham Region cluster with AGCO-listed address-context profiles across Westney, Kingston Road, and Harwood corridors.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Ajax profiles on Westney Road, Kingston Road, and Harwood Avenue; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 36 },
   { slug: 'burlington', city: 'Burlington', province: 'ON', title: 'Cannabis stores and dispensaries in Burlington, Ontario', description: 'Burlington adds an official-source Halton Region cluster with AGCO-listed address-context profiles across Brant Street, Appleby Line, and Fairview Street.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Burlington profiles on Brant Street, Appleby Line, and Fairview Street; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 37 },
   { slug: 'etobicoke', city: 'Etobicoke', province: 'ON', title: 'Cannabis stores and dispensaries in Etobicoke, Ontario', description: 'Etobicoke adds an official-source west Toronto cluster with AGCO-listed address-context profiles across Mimico Avenue, Lake Shore Boulevard West, and Woodbine Downs.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Etobicoke profiles on Mimico Avenue, Lake Shore Boulevard West, and Woodbine Downs Boulevard; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 38 },
+  { slug: 'cambridge', city: 'Cambridge', province: 'ON', title: 'Cannabis stores and dispensaries in Cambridge, Ontario', description: 'Cambridge adds a Waterloo Region official-source cluster with AGCO-listed address-context profiles around Holiday Inn Drive, Christopher Drive, and Pinebush Road.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Cambridge profiles on Holiday Inn Drive, Christopher Drive, and Pinebush Road; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 39 },
+  { slug: 'sudbury', city: 'Sudbury', province: 'ON', title: 'Cannabis stores and dispensaries in Sudbury, Ontario', description: 'Sudbury adds a northern Ontario official-source cluster with AGCO-listed address-context profiles on Kingsway, Notre Dame Avenue, and Kathleen Street.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Sudbury profiles on Kingsway, Notre Dame Avenue, and Kathleen Street; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 40 },
 ];
 
 export const locationUtilities: LocationUtility[] = [
@@ -729,6 +731,44 @@ export const locationUtilities: LocationUtility[] = [
       'Add additional west Toronto rows only when exact city/town filtering and visible source notes remain clear.',
     ],
   },
+
+  {
+    slug: 'cambridge',
+    summary: 'Cambridge adds a Waterloo Region official-source cluster from the AGCO public status table, anchored by Holiday Inn Drive, Christopher Drive, and Pinebush Road address-context rows.',
+    directoryStatus: 'Three Cambridge rows are mapped today from exact city/town AGCO public status-table evidence. The page is a source-backed local directory starting point, not a current menu, stock, delivery, or ranking guide.',
+    searchIntent: ['cambridge cannabis store', 'cambridge dispensary', 'holiday inn drive cannabis', 'pinebush road cannabis', 'waterloo region cannabis'],
+    relatedListingSlugs: ['value-buds-cambridge', 'thisel-cambridge', 'tokyo-smoke-cambridge-pinebush'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Cambridge and broader Waterloo Region searches can overlap with Kitchener and Waterloo intent, so this page should link only to exact-city rows unless a source clearly supports a regional claim.',
+      'Three AGCO rows are not enough to claim complete Cambridge coverage or recommend one store over another.',
+      'AGCO address/status data should not be converted into current hours, stock, ordering, delivery, ratings, reviews, or availability claims.',
+    ],
+    verificationNextSteps: [
+      'Confirm richer facts such as phone, maps, and hours from visible current business sources before adding optional schema fields.',
+      'Watch future GSC rows for Cambridge brand, Holiday Inn Drive, Christopher Drive, and Pinebush Road query patterns after the URLs have crawled.',
+      'Add additional Waterloo Region rows only through the validated import workflow with exact city/town filtering.',
+    ],
+  },
+  {
+    slug: 'sudbury',
+    summary: 'Sudbury adds a northern Ontario official-source cluster from the AGCO public status table, anchored by Kingsway, Notre Dame Avenue, and Kathleen Street address-context rows.',
+    directoryStatus: 'Three Sudbury rows are mapped today from exact city/town AGCO public status-table evidence. The page is a source-backed local directory starting point, not a current menu, stock, delivery, or ranking guide.',
+    searchIntent: ['sudbury cannabis store', 'sudbury dispensary', 'kingsway cannabis', 'notre dame avenue cannabis', 'northern ontario cannabis'],
+    relatedListingSlugs: ['happy-life-sudbury', 'pops-cannabis-sudbury', 'wild-flowerz-sudbury'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Sudbury searches can mix city-wide and northern Ontario intent, so Potshops should keep this page tied to exact Sudbury public-source rows rather than implying regional completeness.',
+      'Three AGCO rows are not enough to claim complete Sudbury coverage or recommend one store over another.',
+      'AGCO address/status data should not be converted into current hours, stock, ordering, delivery, ratings, reviews, or availability claims.',
+    ],
+    verificationNextSteps: [
+      'Confirm richer facts such as phone, maps, and hours from visible current business sources before adding optional schema fields.',
+      'Watch future GSC rows for Sudbury brand, Kingsway, Notre Dame Avenue, and Kathleen Street query patterns after the URLs have crawled.',
+      'Add additional northern Ontario rows only through the validated import workflow with exact city/town filtering.',
+    ],
+  },
+
 ];
 
 export const listingSeeds: ListingSeed[] = listingSeedsImport as ListingSeed[];
