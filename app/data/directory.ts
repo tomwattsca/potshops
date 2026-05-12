@@ -96,6 +96,8 @@ export const priorityLocations: Location[] = [
   { slug: 'sudbury', city: 'Sudbury', province: 'ON', title: 'Cannabis stores and dispensaries in Sudbury, Ontario', description: 'Sudbury adds a northern Ontario official-source cluster with AGCO-listed address-context profiles on Kingsway, Notre Dame Avenue, and Kathleen Street.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Sudbury profiles on Kingsway, Notre Dame Avenue, and Kathleen Street; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 40 },
   { slug: 'north-bay', city: 'North Bay', province: 'ON', title: 'Cannabis stores and dispensaries in North Bay', description: 'North Bay now has a small official-source cluster from the AGCO status table, giving Potshops enough address-context data for a cautious northern Ontario city page.', gscEvidence: 'AGCO public status rows verified exact-city North Bay entries with Authorized to Open status on 2026-05-12; this page is source-led rather than GSC-led until crawl data accumulates.', legacyImpressions: 0, priority: 32 },
   { slug: 'sault-ste-marie', city: 'Sault Ste. Marie', province: 'ON', title: 'Cannabis stores and dispensaries in Sault Ste. Marie', description: 'Sault Ste. Marie now has official-source address-context rows from the AGCO status table, supporting a careful northern Ontario utility page without menu or availability claims.', gscEvidence: 'AGCO public status rows verified exact-city Sault Ste. Marie entries with Authorized to Open status on 2026-05-12; this page is source-led rather than GSC-led until crawl data accumulates.', legacyImpressions: 0, priority: 42 },
+  { slug: 'peterborough', city: 'Peterborough', province: 'ON', title: 'Cannabis stores and dispensaries in Peterborough, Ontario', description: 'Peterborough adds an official-source Kawarthas cluster with AGCO-listed address-context profiles around Water Street, Brock Street, and George Street North.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Peterborough profiles on Water Street, Brock Street, and George Street North; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 43 },
+  { slug: 'thunder-bay', city: 'Thunder Bay', province: 'ON', title: 'Cannabis stores and dispensaries in Thunder Bay, Ontario', description: 'Thunder Bay adds an official-source northwestern Ontario cluster with AGCO-listed address-context profiles around Algoma Street, Red River Road, and Arthur Street West.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Thunder Bay profiles on Algoma Street South, Red River Road, and Arthur Street West; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 44 },
 
 ];
 
@@ -806,6 +808,43 @@ export const locationUtilities: LocationUtility[] = [
       'Refresh the AGCO status-table query before expanding the Sault Ste. Marie cluster.',
       'Add any phone, website, hours, or storefront details only after a current official/business source supports the exact fact.',
       'Check future GSC rows for Sault Ste. Marie query/page impressions before doing another city-specific copy pass.',
+    ],
+  },
+
+  {
+    slug: 'peterborough',
+    summary: 'Peterborough gives Potshops a Kawarthas official-source cluster, with exact-city AGCO rows that can support cautious local navigation around Water, Brock, and George corridors.',
+    directoryStatus: 'Three Peterborough profiles are mapped from AGCO public status rows. Potshops treats them as address-context entries only and avoids claims about live menus, ordering, delivery, stock, prices, ratings, or hours.',
+    searchIntent: ['peterborough cannabis store', 'peterborough dispensary', 'water street cannabis', 'brock street cannabis', 'kawarthas cannabis'],
+    relatedListingSlugs: ['kawartha-leafs-peterborough-water', 'kawartha-leafs-peterborough-brock', 'peace-pipe-peterborough-george'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Peterborough and broader Kawarthas searches can overlap with regional intent, so this page should stay anchored to exact Peterborough city rows unless a source clearly supports a wider regional claim.',
+      'AGCO status-table evidence supports name, address, city, postal code, and public status context, but it does not support current hours, product availability, prices, delivery, reviews, or ordering details.',
+      'The first cluster is intentionally small, so the page should be framed as a source-backed starting point rather than a complete city directory.',
+    ],
+    verificationNextSteps: [
+      'Refresh the AGCO public status table before expanding the Peterborough cluster.',
+      'Add phone, website, hours, map, or storefront facts only after a current official/business source supports the exact fact.',
+      'Monitor future GSC rows for Peterborough, Kawartha Leafs, Peace Pipe, Water Street, Brock Street, and George Street query patterns after the URLs have crawled.',
+    ],
+  },
+  {
+    slug: 'thunder-bay',
+    summary: 'Thunder Bay extends the Potshops footprint into northwestern Ontario with exact-city AGCO rows rather than generic northern Ontario copy.',
+    directoryStatus: 'Three Thunder Bay profiles are mapped from AGCO public status rows. Potshops records official address context only and does not infer live menus, stock, ordering, delivery, prices, ratings, or hours.',
+    searchIntent: ['thunder bay cannabis store', 'thunder bay dispensary', 'red river road cannabis', 'algoma street cannabis', 'northwestern ontario cannabis'],
+    relatedListingSlugs: ['high-society-thunder-bay-algoma', 'cannabis-near-me-thunder-bay-red-river', 'toke-house-thunder-bay-mall'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Thunder Bay searches can mix city-wide and northwestern Ontario intent, so Potshops should keep exact-city source rows separate from broader regional claims.',
+      'AGCO evidence is strong enough for public name/address/status context, not for current commerce claims such as open-now, order, delivery, in-stock, menus, or licensed-store promotional copy.',
+      'Three AGCO rows are not enough to claim complete Thunder Bay coverage or recommend one profile over another.',
+    ],
+    verificationNextSteps: [
+      'Refresh the AGCO status-table query before adding more Thunder Bay rows.',
+      'Look for visible current business sources before adding optional schema fields such as telephone or website.',
+      'Watch future GSC rows for Thunder Bay, Algoma, Red River, Arthur Street, and Toke House query/page impressions after the sitemap is recrawled.',
     ],
   },
 

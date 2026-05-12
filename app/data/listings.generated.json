@@ -2078,5 +2078,131 @@
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sault+Ste.+Marie",
     "sourceNote": "AGCO public status table lists Due North Cannabis Co. in Sault Ste. Marie with an address at 150 Churchill Blvd Unit C001 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "kawartha-leafs-peterborough-water",
+    "name": "Kawartha Leafs Peterborough Water Street",
+    "legacyPath": "/listing/kawartha-leafs-peterborough-water/",
+    "locationHint": "Peterborough, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "1535 Water St Unit 2",
+    "city": "Peterborough",
+    "province": "ON",
+    "postalCode": "K9H 0C6",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Peterborough",
+    "sourceNote": "AGCO public status table lists Kawartha Leafs in Peterborough with an address at 1535 Water St Unit 2 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "kawartha-leafs-peterborough-brock",
+    "name": "Kawartha Leafs Peterborough Brock Street",
+    "legacyPath": "/listing/kawartha-leafs-peterborough-brock/",
+    "locationHint": "Peterborough, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "223 Brock St",
+    "city": "Peterborough",
+    "province": "ON",
+    "postalCode": "K9H 2P6",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Peterborough",
+    "sourceNote": "AGCO public status table lists Kawartha Leafs in Peterborough with an address at 223 Brock St and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "peace-pipe-peterborough-george",
+    "name": "The Peace Pipe Peterborough George Street",
+    "legacyPath": "/listing/peace-pipe-peterborough-george/",
+    "locationHint": "Peterborough, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "408 George St N",
+    "city": "Peterborough",
+    "province": "ON",
+    "postalCode": "K9H 3R5",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Peterborough",
+    "sourceNote": "AGCO public status table lists The Peace Pipe in Peterborough with an address at 408 George St N and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "high-society-thunder-bay-algoma",
+    "name": "High Society Thunder Bay Algoma",
+    "legacyPath": "/listing/high-society-thunder-bay-algoma/",
+    "locationHint": "Thunder Bay, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "210 Algoma St S Suite 101A",
+    "city": "Thunder Bay",
+    "province": "ON",
+    "postalCode": "P7B 3C2",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Thunder+Bay",
+    "sourceNote": "AGCO public status table lists High Society in Thunder Bay with an address at 210 Algoma St S Suite 101A and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "cannabis-near-me-thunder-bay-red-river",
+    "name": "Cannabis Near Me Thunder Bay Red River",
+    "legacyPath": "/listing/cannabis-near-me-thunder-bay-red-river/",
+    "locationHint": "Thunder Bay, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "236 Red River Rd",
+    "city": "Thunder Bay",
+    "province": "ON",
+    "postalCode": "P7B 1A6",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Thunder+Bay",
+    "sourceNote": "AGCO public status table lists Cannabis Near Me Thunder Bay in Thunder Bay with an address at 236 Red River Rd and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "toke-house-thunder-bay-mall",
+    "name": "Toke House Thunder Bay Mall",
+    "legacyPath": "/listing/toke-house-thunder-bay-mall/",
+    "locationHint": "Thunder Bay, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "1105 Arthur Street West Unit 2",
+    "city": "Thunder Bay",
+    "province": "ON",
+    "postalCode": "P7E 5S2",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Thunder+Bay",
+    "sourceNote": "AGCO public status table lists Toke House Thunder Bay Mall in Thunder Bay with an address at 1105 Arthur Street West Unit 2 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
   }
 ]
