@@ -26,6 +26,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   const hasCurrentSource = listing.verificationStatus === 'current_source';
   const relatedLocation = priorityLocations.find((location) => location.city === listing.city && location.province === listing.province);
   const relatedCategories = listing.categories?.map((slug) => getCategory(slug)).filter((category) => Boolean(category)) ?? [];
+  const addressLine = [listing.address, listing.city, [listing.province, listing.postalCode].filter(Boolean).join(' ')].filter(Boolean).join(', ');
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
@@ -78,7 +79,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
         <section className="card">
           <h2>Verified public-source facts</h2>
           <ul className="clean">
-            {listing.address && <li>Address: {listing.address}, {listing.city}, {listing.province} {listing.postalCode}</li>}
+            {addressLine && <li>Address: {addressLine}</li>}
             {listing.phone && <li>Phone listed by source: {listing.phone}</li>}
             <li>Source: <a href={listing.sourceUrl ?? '#'} rel="nofollow noopener">{listing.sourceName}</a></li>
             <li>Status: {hasCurrentSource ? 'official public-source address context; Potshops still withholds hours, menus, stock, ordering, and service claims until further review.' : 'historical/public-source verification only; current regulatory and operating status still needs confirmation.'}</li>
