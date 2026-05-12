@@ -1952,5 +1952,131 @@
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sudbury",
     "sourceNote": "AGCO public status table lists Wild Flowerz Sudbury in Sudbury with an address at 533 Kathleen St Unit B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "happy-life-north-bay",
+    "name": "Happy Life North Bay",
+    "legacyPath": "/listing/happy-life-north-bay/",
+    "locationHint": "North Bay, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "1307 Algonquin Ave Suite 1",
+    "city": "North Bay",
+    "province": "ON",
+    "postalCode": "P1B 4Y4",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=North+Bay",
+    "sourceNote": "AGCO public status table lists Happy Life in North Bay with an address at 1307 Algonquin Ave Suite 1 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "budssmoke-north-bay",
+    "name": "BUDSSMOKE North Bay",
+    "legacyPath": "/listing/budssmoke-north-bay/",
+    "locationHint": "North Bay, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "1236 Algonquin Ave Unit B",
+    "city": "North Bay",
+    "province": "ON",
+    "postalCode": "P1B 4Y2",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=North+Bay",
+    "sourceNote": "AGCO public status table lists BUDSSMOKE in North Bay with an address at 1236 Algonquin Ave Unit B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "sessions-north-bay-lakeshore",
+    "name": "Sessions Cannabis North Bay Lakeshore",
+    "legacyPath": "/listing/sessions-north-bay-lakeshore/",
+    "locationHint": "North Bay, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "319 Lakeshore Dr",
+    "city": "North Bay",
+    "province": "ON",
+    "postalCode": "P1A 2B9",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=North+Bay",
+    "sourceNote": "AGCO public status table lists Sessions Cannabis North Bay - Lakeshore with an address at 319 Lakeshore Dr and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "sessions-sault-ste-marie-hillside",
+    "name": "Sessions Cannabis Sault Ste. Marie Hillside",
+    "legacyPath": "/listing/sessions-sault-ste-marie-hillside/",
+    "locationHint": "Sault Ste. Marie, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "248 Northern Ave E Unit 15B",
+    "city": "Sault Ste. Marie",
+    "province": "ON",
+    "postalCode": "P6B 4H6",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sault+Ste.+Marie",
+    "sourceNote": "AGCO public status table lists Sessions Cannabis - Sault Ste Marie (Hillside) in Sault Ste. Marie with an address at 248 Northern Ave E Unit 15B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "happy-life-sault-ste-marie",
+    "name": "Happy Life Sault Ste. Marie",
+    "legacyPath": "/listing/happy-life-sault-ste-marie/",
+    "locationHint": "Sault Ste. Marie, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "41 Great Northern Rd Unit 2",
+    "city": "Sault Ste. Marie",
+    "province": "ON",
+    "postalCode": "P6B 4Y7",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sault+Ste.+Marie",
+    "sourceNote": "AGCO public status table lists Happy Life in Sault Ste. Marie with an address at 41 Great Northern Rd Unit 2 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "due-north-sault-ste-marie-churchill",
+    "name": "Due North Cannabis Co. Sault Ste. Marie Churchill",
+    "legacyPath": "/listing/due-north-sault-ste-marie-churchill/",
+    "locationHint": "Sault Ste. Marie, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "150 Churchill Blvd Unit C001",
+    "city": "Sault Ste. Marie",
+    "province": "ON",
+    "postalCode": "P6A 3Z9",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sault+Ste.+Marie",
+    "sourceNote": "AGCO public status table lists Due North Cannabis Co. in Sault Ste. Marie with an address at 150 Churchill Blvd Unit C001 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
   }
 ]

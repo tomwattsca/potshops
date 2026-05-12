@@ -310,7 +310,7 @@
       "https://www.mapquest.com/ca/ontario/leagle-dreams-marijuana-dispensary-429548106"
     ],
     "source_name": "MapQuest public business listing",
-    "source_note": "Public business listing identifies L\u2019Eagle Dreams in Shannonville and lists Old Highway 2 address context plus phone. Potshops treats this as historical directory evidence until current regulatory and operating status are verified.",
+    "source_note": "Public business listing identifies L’Eagle Dreams in Shannonville and lists Old Highway 2 address context plus phone. Potshops treats this as historical directory evidence until current regulatory and operating status are verified.",
     "last_verified_at": "2026-05-10",
     "legacy_path": "/listing/leagle-dreams/",
     "location_hint": "Shannonville, ON",
@@ -388,7 +388,7 @@
       "https://weedsfarm.com/store/mr-greens/"
     ],
     "source_name": "WeedsFarm public directory",
-    "source_note": "Public directory page lists Mr. Green\u2019s in Nanaimo with Nicol Street address and phone context. Treat as historical profile recovery until current public-source status is rechecked.",
+    "source_note": "Public directory page lists Mr. Green’s in Nanaimo with Nicol Street address and phone context. Treat as historical profile recovery until current public-source status is rechecked.",
     "last_verified_at": "2026-05-10",
     "legacy_path": "/listing/mr-greens/",
     "location_hint": "Nanaimo, BC",
@@ -571,7 +571,7 @@
       "https://www.minicounsel.ca/2022/01/17/r-v-morrison-and-raguette-2022-onsc-17/"
     ],
     "source_name": "Ontario court decision summary",
-    "source_note": "Court-decision summary identifies \u201cPiff\u201d at 3449 Dundas Street West in Toronto in historical enforcement/search-warrant context. Potshops uses this only as profile-recovery evidence, not a current service or availability claim.",
+    "source_note": "Court-decision summary identifies “Piff” at 3449 Dundas Street West in Toronto in historical enforcement/search-warrant context. Potshops uses this only as profile-recovery evidence, not a current service or availability claim.",
     "last_verified_at": "2026-05-10",
     "legacy_path": "/listing/piff-express/",
     "location_hint": "Toronto, ON",
@@ -677,7 +677,7 @@
       "https://weedsfarm.com/store/the-kootenays-medicine-tree/"
     ],
     "source_name": "WeedsFarm public directory",
-    "source_note": "Public directory page lists The Kootenay\u2019s Medicine Tree in Nelson with Front Street address and phone context. Keep the row as historical source-backed evidence until fresher current-status sources are found.",
+    "source_note": "Public directory page lists The Kootenay’s Medicine Tree in Nelson with Front Street address and phone context. Keep the row as historical source-backed evidence until fresher current-status sources are found.",
     "last_verified_at": "2026-05-10",
     "legacy_path": "/listing/the-kootenays-medicine-tree/",
     "location_hint": "Nelson, BC",
@@ -2327,6 +2327,120 @@
     ],
     "source_name": "AGCO public cannabis retail application status table",
     "source_note": "AGCO public status table lists Wild Flowerz Sudbury in Sudbury with an address at 533 Kathleen St Unit B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-12",
+    "commercial_claims": []
+  },
+  {
+    "slug": "happy-life-north-bay",
+    "name": "Happy Life North Bay",
+    "status": "current_source",
+    "address": "1307 Algonquin Ave Suite 1",
+    "city": "North Bay",
+    "province": "ON",
+    "postal_code": "P1B 4Y4",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=North+Bay"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Happy Life in North Bay with an address at 1307 Algonquin Ave Suite 1 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-12",
+    "commercial_claims": []
+  },
+  {
+    "slug": "budssmoke-north-bay",
+    "name": "BUDSSMOKE North Bay",
+    "status": "current_source",
+    "address": "1236 Algonquin Ave Unit B",
+    "city": "North Bay",
+    "province": "ON",
+    "postal_code": "P1B 4Y2",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=North+Bay"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists BUDSSMOKE in North Bay with an address at 1236 Algonquin Ave Unit B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-12",
+    "commercial_claims": []
+  },
+  {
+    "slug": "sessions-north-bay-lakeshore",
+    "name": "Sessions Cannabis North Bay Lakeshore",
+    "status": "current_source",
+    "address": "319 Lakeshore Dr",
+    "city": "North Bay",
+    "province": "ON",
+    "postal_code": "P1A 2B9",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=North+Bay"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Sessions Cannabis North Bay - Lakeshore with an address at 319 Lakeshore Dr and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-12",
+    "commercial_claims": []
+  },
+  {
+    "slug": "sessions-sault-ste-marie-hillside",
+    "name": "Sessions Cannabis Sault Ste. Marie Hillside",
+    "status": "current_source",
+    "address": "248 Northern Ave E Unit 15B",
+    "city": "Sault Ste. Marie",
+    "province": "ON",
+    "postal_code": "P6B 4H6",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sault+Ste.+Marie"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Sessions Cannabis - Sault Ste Marie (Hillside) in Sault Ste. Marie with an address at 248 Northern Ave E Unit 15B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-12",
+    "commercial_claims": []
+  },
+  {
+    "slug": "happy-life-sault-ste-marie",
+    "name": "Happy Life Sault Ste. Marie",
+    "status": "current_source",
+    "address": "41 Great Northern Rd Unit 2",
+    "city": "Sault Ste. Marie",
+    "province": "ON",
+    "postal_code": "P6B 4Y7",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sault+Ste.+Marie"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Happy Life in Sault Ste. Marie with an address at 41 Great Northern Rd Unit 2 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-05-12",
+    "commercial_claims": []
+  },
+  {
+    "slug": "due-north-sault-ste-marie-churchill",
+    "name": "Due North Cannabis Co. Sault Ste. Marie Churchill",
+    "status": "current_source",
+    "address": "150 Churchill Blvd Unit C001",
+    "city": "Sault Ste. Marie",
+    "province": "ON",
+    "postal_code": "P6A 3Z9",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sault+Ste.+Marie"
+    ],
+    "source_name": "AGCO public cannabis retail application status table",
+    "source_note": "AGCO public status table lists Due North Cannabis Co. in Sault Ste. Marie with an address at 150 Churchill Blvd Unit C001 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
     "last_verified_at": "2026-05-12",
     "commercial_claims": []
   }

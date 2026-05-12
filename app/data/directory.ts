@@ -94,6 +94,9 @@ export const priorityLocations: Location[] = [
   { slug: 'etobicoke', city: 'Etobicoke', province: 'ON', title: 'Cannabis stores and dispensaries in Etobicoke, Ontario', description: 'Etobicoke adds an official-source west Toronto cluster with AGCO-listed address-context profiles across Mimico Avenue, Lake Shore Boulevard West, and Woodbine Downs.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Etobicoke profiles on Mimico Avenue, Lake Shore Boulevard West, and Woodbine Downs Boulevard; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 38 },
   { slug: 'cambridge', city: 'Cambridge', province: 'ON', title: 'Cannabis stores and dispensaries in Cambridge, Ontario', description: 'Cambridge adds a Waterloo Region official-source cluster with AGCO-listed address-context profiles around Holiday Inn Drive, Christopher Drive, and Pinebush Road.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Cambridge profiles on Holiday Inn Drive, Christopher Drive, and Pinebush Road; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 39 },
   { slug: 'sudbury', city: 'Sudbury', province: 'ON', title: 'Cannabis stores and dispensaries in Sudbury, Ontario', description: 'Sudbury adds a northern Ontario official-source cluster with AGCO-listed address-context profiles on Kingsway, Notre Dame Avenue, and Kathleen Street.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Sudbury profiles on Kingsway, Notre Dame Avenue, and Kathleen Street; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 40 },
+  { slug: 'north-bay', city: 'North Bay', province: 'ON', title: 'Cannabis stores and dispensaries in North Bay', description: 'North Bay now has a small official-source cluster from the AGCO status table, giving Potshops enough address-context data for a cautious northern Ontario city page.', gscEvidence: 'AGCO public status rows verified exact-city North Bay entries with Authorized to Open status on 2026-05-12; this page is source-led rather than GSC-led until crawl data accumulates.', legacyImpressions: 0, priority: 32 },
+  { slug: 'sault-ste-marie', city: 'Sault Ste. Marie', province: 'ON', title: 'Cannabis stores and dispensaries in Sault Ste. Marie', description: 'Sault Ste. Marie now has official-source address-context rows from the AGCO status table, supporting a careful northern Ontario utility page without menu or availability claims.', gscEvidence: 'AGCO public status rows verified exact-city Sault Ste. Marie entries with Authorized to Open status on 2026-05-12; this page is source-led rather than GSC-led until crawl data accumulates.', legacyImpressions: 0, priority: 42 },
+
 ];
 
 export const locationUtilities: LocationUtility[] = [
@@ -766,6 +769,43 @@ export const locationUtilities: LocationUtility[] = [
       'Confirm richer facts such as phone, maps, and hours from visible current business sources before adding optional schema fields.',
       'Watch future GSC rows for Sudbury brand, Kingsway, Notre Dame Avenue, and Kathleen Street query patterns after the URLs have crawled.',
       'Add additional northern Ontario rows only through the validated import workflow with exact city/town filtering.',
+    ],
+  },
+
+  {
+    slug: 'north-bay',
+    summary: 'North Bay extends the Potshops official-source footprint into northern Ontario with several exact-city AGCO rows rather than a single generic city placeholder.',
+    directoryStatus: 'Three North Bay profiles are mapped from AGCO public status rows. Potshops treats them as address-context entries only: useful for local research, not proof of menus, stock, hours, ordering, or ongoing service details.',
+    searchIntent: ['north bay cannabis store', 'north bay dispensary', 'cannabis stores north bay'],
+    relatedListingSlugs: ['happy-life-north-bay', 'budssmoke-north-bay', 'sessions-north-bay-lakeshore'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'North Bay and surrounding Nipissing-area searches can include stores, reserve/community results, and broader northern Ontario intent; Potshops should keep exact-city source rows separate from neighbouring community rows.',
+      'AGCO status-table evidence supports address context and status wording from the public table, but it does not provide current hours, product availability, prices, delivery, reviews, or ordering details.',
+      'Do not infer a comprehensive North Bay directory from this first three-row cluster; show the mapped profiles and explain that more verification is needed.',
+    ],
+    verificationNextSteps: [
+      'Recheck the AGCO public status table before adding more North Bay rows or updating status language.',
+      'Look for official business pages or municipal/public directory sources before adding phone, website, hours, or map-specific facts.',
+      'Monitor GSC for whether northern Ontario queries start landing on the North Bay location page after the new sitemap URLs are crawled.',
+    ],
+  },
+  {
+    slug: 'sault-ste-marie',
+    summary: 'Sault Ste. Marie gives Potshops a second northern Ontario official-source cluster, with exact-city AGCO rows that can support cautious local navigation and internal links.',
+    directoryStatus: 'Three Sault Ste. Marie profiles are mapped from AGCO public status rows. The page intentionally records official address context only and avoids claims about live menus, ordering, delivery, stock, prices, ratings, or hours.',
+    searchIntent: ['sault ste marie cannabis store', 'sault ste marie dispensary', 'cannabis stores sault ste marie'],
+    relatedListingSlugs: ['sessions-sault-ste-marie-hillside', 'happy-life-sault-ste-marie', 'due-north-sault-ste-marie-churchill'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Sault Ste. Marie rows should be kept separate from other northern Ontario cities; exact city matching matters because broad AGCO queries can return nearby or street-name matches.',
+      'AGCO source evidence is strong enough for name/address/status context, but it does not support commercial claims such as open-now, order, delivery, in-stock, or licensed-store promotional copy.',
+      'The first cluster is intentionally small, so the page should be framed as a source-backed starting point rather than a complete city directory.',
+    ],
+    verificationNextSteps: [
+      'Refresh the AGCO status-table query before expanding the Sault Ste. Marie cluster.',
+      'Add any phone, website, hours, or storefront details only after a current official/business source supports the exact fact.',
+      'Check future GSC rows for Sault Ste. Marie query/page impressions before doing another city-specific copy pass.',
     ],
   },
 
