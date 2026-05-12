@@ -1574,5 +1574,131 @@
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Scarborough",
     "sourceNote": "AGCO public status table lists BUDSSMOKE in Scarborough with an address at 1133 Markham Rd Unit 3 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "montrose-pickering",
+    "name": "Montrose Pickering",
+    "legacyPath": "/listing/montrose-pickering/",
+    "locationHint": "Pickering, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "1755 Pickering Pkwy Unit A-021B",
+    "city": "Pickering",
+    "province": "ON",
+    "postalCode": "L1V 6K5",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Pickering",
+    "sourceNote": "AGCO public status table lists Montrose in Pickering with an address at 1755 Pickering Pkwy Unit A-021B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "holland-daze-pickering",
+    "name": "HOLLAND DAZE Pickering",
+    "legacyPath": "/listing/holland-daze-pickering/",
+    "locationHint": "Pickering, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "981 Brock Rd Unit 2",
+    "city": "Pickering",
+    "province": "ON",
+    "postalCode": "L1W 3A4",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Pickering",
+    "sourceNote": "AGCO public status table lists HOLLAND DAZE in Pickering with an address at 981 Brock Rd Unit 2 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "cannabis-xpress-pickering",
+    "name": "CANNABIS XPRESS Pickering",
+    "legacyPath": "/listing/cannabis-xpress-pickering/",
+    "locationHint": "Pickering, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "1692 Central St Unit 1",
+    "city": "Pickering",
+    "province": "ON",
+    "postalCode": "L1Y 1B3",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Pickering",
+    "sourceNote": "AGCO public status table lists CANNABIS XPRESS in Pickering with an address at 1692 Central St Unit 1 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "the-6ix-cannabis-ajax",
+    "name": "The 6ix Cannabis Ajax",
+    "legacyPath": "/listing/the-6ix-cannabis-ajax/",
+    "locationHint": "Ajax, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "475 Westney Rd N Unit 13",
+    "city": "Ajax",
+    "province": "ON",
+    "postalCode": "L1T 3H4",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ajax",
+    "sourceNote": "AGCO public status table lists The 6ix Cannabis in Ajax with an address at 475 Westney Rd N Unit 13 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "one-plant-ajax",
+    "name": "One Plant Ajax",
+    "legacyPath": "/listing/one-plant-ajax/",
+    "locationHint": "Ajax, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "20 Kingston Rd W Unit 3A",
+    "city": "Ajax",
+    "province": "ON",
+    "postalCode": "L1T 4K8",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ajax",
+    "sourceNote": "AGCO public status table lists One Plant in Ajax with an address at 20 Kingston Rd W Unit 3A and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+  },
+  {
+    "slug": "cannaverse-ajax",
+    "name": "Cannaverse Ajax",
+    "legacyPath": "/listing/cannaverse-ajax/",
+    "locationHint": "Ajax, ON",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "314 Harwood Ave S Unit 16",
+    "city": "Ajax",
+    "province": "ON",
+    "postalCode": "L1S 2J1",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "lastVerified": "2026-05-12",
+    "sourceName": "AGCO public cannabis retail application status table",
+    "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ajax",
+    "sourceNote": "AGCO public status table lists Cannaverse in Ajax with an address at 314 Harwood Ave S Unit 16 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
   }
 ]

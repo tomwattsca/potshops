@@ -88,6 +88,8 @@ export const priorityLocations: Location[] = [
   { slug: 'st-catharines', city: 'St. Catharines', province: 'ON', title: 'Cannabis stores and dispensaries in St. Catharines, Ontario', description: 'St. Catharines adds an official-source Niagara Region city cluster with AGCO-listed address-context profiles across Glendale, Scott, and Glenridge corridors.', gscEvidence: 'New-source acquisition on 2026-05-11 used the AGCO public status table, exact-city filtering, and exclusion of a cancelled duplicate row to add St. Catharines profiles; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 32 },
   { slug: 'niagara-falls', city: 'Niagara Falls', province: 'ON', title: 'Cannabis stores and dispensaries in Niagara Falls, Ontario', description: 'Niagara Falls adds an official-source Niagara Region city cluster with AGCO-listed address-context profiles across Drummond, Portage, and McLeod corridors.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact-city filtering to add Niagara Falls profiles on Drummond Road, Portage Road, and McLeod Road; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 33 },
   { slug: 'scarborough', city: 'Scarborough', province: 'ON', title: 'Cannabis stores and dispensaries in Scarborough, Ontario', description: 'Scarborough adds an official-source east Toronto cluster with AGCO-listed address-context profiles on Markham Road and Lapsley Road.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Scarborough profiles; query results can include Markham Road street-name matches, so rows are filtered by the city/town field rather than query text alone.', legacyImpressions: 0, priority: 34 },
+  { slug: 'pickering', city: 'Pickering', province: 'ON', title: 'Cannabis stores and dispensaries in Pickering, Ontario', description: 'Pickering adds an official-source Durham Region cluster with AGCO-listed address-context profiles across Pickering Parkway, Brock Road, and Central Street.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Pickering profiles on Pickering Parkway, Brock Road, and Central Street; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 35 },
+  { slug: 'ajax', city: 'Ajax', province: 'ON', title: 'Cannabis stores and dispensaries in Ajax, Ontario', description: 'Ajax adds an official-source Durham Region cluster with AGCO-listed address-context profiles across Westney, Kingston Road, and Harwood corridors.', gscEvidence: 'New-source acquisition on 2026-05-12 used the AGCO public status table and exact city/town filtering to add Ajax profiles on Westney Road, Kingston Road, and Harwood Avenue; use them as cautious local directory depth, not menu or availability claims.', legacyImpressions: 0, priority: 36 },
 ];
 
 export const locationUtilities: LocationUtility[] = [
@@ -651,6 +653,42 @@ export const locationUtilities: LocationUtility[] = [
       'Add additional Kingston-area rows only through the import workflow with official or business-source evidence.',
       'Confirm richer facts such as phone or hours from a source that visibly supports them before adding schema fields.',
       'Use GSC monitoring to decide whether Kingston deserves deeper neighbourhood copy or should remain a compact utility page.',
+    ],
+  },
+  {
+    slug: 'pickering',
+    summary: 'Pickering adds a Durham Region official-source cluster from the AGCO public status table, anchored by Pickering Parkway, Brock Road, and Central Street address-context rows.',
+    directoryStatus: 'Three Pickering rows are mapped today from exact city/town AGCO public status-table evidence. The page is useful as a source-backed local directory starting point, not as a complete city guide.',
+    searchIntent: ['pickering cannabis store', 'pickering dispensary', 'pickering parkway cannabis', 'brock road cannabis', 'durham region dispensary'],
+    relatedListingSlugs: ['montrose-pickering', 'holland-daze-pickering', 'cannabis-xpress-pickering'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Pickering and Ajax sit close together in Durham Region, so Potshops should keep exact city/town evidence separate rather than blending regional rows.',
+      'Three AGCO rows are not enough to claim complete local coverage or rank stores by quality.',
+      'AGCO address/status data should not be converted into current hours, stock, ordering, delivery, ratings, reviews, or availability claims.',
+    ],
+    verificationNextSteps: [
+      'Confirm richer facts such as phone, maps, and hours from visible current business sources before adding optional schema fields.',
+      'Use future GSC rows to decide whether Pickering deserves neighbourhood or corridor copy around Pickering Parkway, Brock Road, or Central Street.',
+      'Add additional Durham Region rows only when exact city filtering and visible source notes remain clear.',
+    ],
+  },
+  {
+    slug: 'ajax',
+    summary: 'Ajax adds a Durham Region official-source cluster from the AGCO public status table, anchored by Westney Road, Kingston Road, and Harwood Avenue address-context rows.',
+    directoryStatus: 'Three Ajax rows are mapped today from exact city/town AGCO public status-table evidence. The page deliberately stays factual and avoids implying store rankings, availability, or ordering options.',
+    searchIntent: ['ajax cannabis store', 'ajax dispensary', 'westney road cannabis', 'kingston road ajax cannabis', 'harwood avenue cannabis'],
+    relatedListingSlugs: ['the-6ix-cannabis-ajax', 'one-plant-ajax', 'cannaverse-ajax'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'Ajax/Pickering searches can overlap geographically, so each page should link only to exact-city rows unless a source clearly supports broader Durham context.',
+      'AGCO status-table rows provide address context, not live inventory, hours, reviews, delivery options, or ordering availability.',
+      'This page should remain a compact source-backed utility until GSC shows which Ajax corridors or brand queries deserve deeper copy.',
+    ],
+    verificationNextSteps: [
+      'Confirm richer facts such as phone, maps, and hours from visible current business sources before adding optional schema fields.',
+      'Watch future GSC rows for Ajax brand, Westney, Kingston Road, and Harwood Avenue query patterns after the URLs have crawled.',
+      'Add additional Ajax rows only through the validated import workflow with exact city/town filtering.',
     ],
   },
 ];
