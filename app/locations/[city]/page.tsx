@@ -82,6 +82,19 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
       </div>
 
       {utility && (
+        <section className="card source-action-strip" aria-label={`${location.city} update shortcut`}>
+          <div>
+            <p className="eyebrow">Source-backed corrections</p>
+            <h2>Help verify {location.city} coverage</h2>
+            <p>Have a public source for a missing profile, corrected address context, or a clearer historical note? Send the evidence before Potshops adds any stronger city-level claims.</p>
+          </div>
+          <p className="cta-row">
+            <Link className="button secondary" href="/updates" data-event="listing_update_click" data-cta-location="location_top">Send {location.city} source evidence</Link>
+          </p>
+        </section>
+      )}
+
+      {utility && (
         <>
           <section className="card">
             <h2>{location.city} search intent Potshops should satisfy</h2>
@@ -121,7 +134,7 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
           </section>
 
           <section className="card">
-            <h2>Mapped listings and internal links</h2>
+            <h2>{relatedListings.length === 1 ? 'Mapped listing and internal links' : 'Mapped listings and internal links'}</h2>
             {relatedListings.length > 0 ? (
               <ul className="clean">
                 {relatedListings.map((listing) => listing && (
@@ -134,9 +147,12 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
               <p>No listing seeds have been mapped to this city yet.</p>
             )}
             {relatedCategories.length > 0 && (
-              <p className="meta">Related hubs: {relatedCategories.map((category, index) => category && (
-                <span key={category.slug}>{index > 0 ? ', ' : ''}<Link href={`/categories/${category.slug}`}>{category.title}</Link></span>
-              ))}</p>
+              <div className="related-hub-row" aria-label={`${location.city} related category hubs`}>
+                <span className="meta">Related hubs:</span>
+                {relatedCategories.map((category) => category && (
+                  <Link className="hub-pill" key={category.slug} href={`/categories/${category.slug}`}>{category.title}</Link>
+                ))}
+              </div>
             )}
           </section>
 

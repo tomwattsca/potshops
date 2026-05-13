@@ -74,14 +74,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="nav-links">
               <Link href="/#locations">Priority locations</Link>
               <Link href="/#listings">Legacy listings</Link>
-              <Link href="/updates">Suggest an update</Link>
+              <Link href="/updates" className="nav-cta" data-event="listing_update_click" data-cta-location="global_nav">Suggest an update</Link>
             </div>
           </nav>
         </header>
         {children}
         <footer className="footer">
           <div className="footer-inner">
-            <p><strong>Potshops.ca</strong> is being rebuilt as an independent Canadian cannabis directory. Listings should be source-verified before publication, updates, or advertising. <Link href="/updates">Suggest a source-backed correction</Link>.</p>
+            <p><strong>Potshops.ca</strong> is being rebuilt as an independent Canadian cannabis directory. Listings should be source-verified before publication, updates, or advertising. <Link href="/updates" data-event="listing_update_click" data-cta-location="global_footer">Suggest a source-backed correction</Link>.</p>
           </div>
         </footer>
       </body>
