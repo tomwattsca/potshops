@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Script from 'next/script';
 import './globals.css';
 
 const siteUrl = 'https://potshops.ca';
@@ -11,6 +12,44 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
   openGraph: { title: 'Potshops.ca', description: 'Canadian cannabis store and dispensary directory.', url: siteUrl, siteName: 'Potshops.ca', type: 'website' },
 };
+
+function GoogleAnalytics() {
+  const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
+  if (!measurementId) {
+    return null;
+  }
+
+  return (
+    <>
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`} strategy="afterInteractive" />
+      <Script id="potshops-ga4" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', '${measurementId}', { anonymize_ip: true });
+        `}
+      </Script>
+      <Script id="potshops-cta-events" strategy="afterInteractive">
+        {`
+          document.addEventListener('click', function (event) {
+            var target = event.target && event.target.closest ? event.target.closest('[data-event]') : null;
+            if (!target || typeof window.gtag !== 'function') return;
+            var eventName = target.getAttribute('data-event');
+            if (!eventName) return;
+            window.gtag('event', eventName, {
+              cta_location: target.getAttribute('data-cta-location') || undefined,
+              link_url: target.href || undefined,
+              page_location: window.location.href
+            });
+          });
+        `}
+      </Script>
+    </>
+  );
+}
 
 function SiteSchema() {
   const schema = {
@@ -27,6 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-CA">
       <body>
+        <GoogleAnalytics />
         <SiteSchema />
         <header className="site-header">
           <nav className="nav" aria-label="Main navigation">
