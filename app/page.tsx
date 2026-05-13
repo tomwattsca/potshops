@@ -10,6 +10,22 @@ const gscVisibleListings = gscVisibleListingSlugs.map((slug) => listingSeeds.fin
 const gscVisibleCategories = gscVisibleCategorySlugs.map((slug) => getCategory(slug)).filter((category) => Boolean(category));
 const sourceBackedListingCount = listingSeeds.filter((listing) => listing.sourceName).length;
 const currentSourceListingCount = listingSeeds.filter((listing) => listing.verificationStatus === 'current_source').length;
+const provinceNames: Record<string, string> = {
+  AB: 'Alberta',
+  BC: 'British Columbia',
+  NB: 'New Brunswick',
+  NS: 'Nova Scotia',
+  ON: 'Ontario',
+  QC: 'Quebec',
+};
+const provinceOrder = ['ON', 'BC', 'NS', 'NB', 'QC', 'AB'];
+const locationsByProvince = provinceOrder
+  .map((province) => ({
+    province,
+    name: provinceNames[province],
+    locations: priorityLocations.filter((location) => location.province === province),
+  }))
+  .filter((group) => group.locations.length > 0);
 
 export default function Home() {
   return (
@@ -18,7 +34,7 @@ export default function Home() {
         <div className="hero-inner">
           <div className="eyebrow">Canadian cannabis directory rebuild</div>
           <h1>Find Canadian cannabis stores by city, province, and legacy Potshops demand.</h1>
-          <p className="lede">Potshops.ca is being rebuilt from scratch using Google Search Console evidence from the old site. The first launch focuses on the locations and store pages that already showed search demand.</p>
+          <p className="lede">Potshops.ca is being rebuilt from scratch as a source-backed Canadian dispensary list using Google Search Console evidence from the old site. Start by province, city, or profile, and treat every page as directory context rather than a claim about current menus, stock, delivery, or hours.</p>
           <div className="cta-row">
             <a className="button" href="#locations">Browse priority cities</a>
             <Link className="button secondary" href="/updates" data-event="listing_update_click" data-cta-location="home_hero">Suggest a listing update</Link>
@@ -66,10 +82,32 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="card province-directory-panel" aria-labelledby="province-directory">
+          <div>
+            <div className="eyebrow">Canadian dispensary list by province</div>
+            <h2 id="province-directory">Browse rebuilt Potshops city pages by province</h2>
+            <p>Search Console is now showing broad Canadian directory queries as well as city and brand searches. This province view makes the existing city pages easier to scan without adding new URLs or implying complete provincial coverage.</p>
+          </div>
+          <div className="province-grid">
+            {locationsByProvince.map((group) => (
+              <article className="mini-card province-card" key={group.province}>
+                <h3>{group.name}</h3>
+                <p className="meta">{group.locations.length} source-led city page{group.locations.length === 1 ? '' : 's'} in the current rebuild</p>
+                <div className="province-links">
+                  {group.locations.map((location) => (
+                    <Link key={location.slug} href={`/locations/${location.slug}`}>{location.city}</Link>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+          <p className="source-excerpt"><strong>Source limit:</strong> this is a rebuilt directory map, not a guarantee that every city has complete coverage or that any listed business is currently operating.</p>
+        </section>
+
         <section id="locations">
           <div className="eyebrow">GSC-led information architecture</div>
           <h2>Priority location pages</h2>
-          <p>These are the first city pages because they appeared in Potshops.ca query/page data from 2025-01-02 to 2026-05-03.</p>
+          <p>These are the first city pages because they appeared in Potshops.ca query/page data from 2025-01-02 to 2026-05-03 or because official public-source rows support a cautious local directory page.</p>
           <div className="grid">
             {priorityLocations.map((location) => (
               <article className="card" key={location.slug}>

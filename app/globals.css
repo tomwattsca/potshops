@@ -59,6 +59,14 @@ ul.clean { padding-left:18px; color:var(--muted); line-height:1.7; }
 .stats-row strong { color:var(--green); }
 @media (max-width: 860px) { .signal-grid { grid-template-columns:1fr; } }
 
+.province-directory-panel { display:grid; gap:20px; margin:0 0 42px; }
+.province-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.province-card { display:flex; flex-direction:column; gap:10px; }
+.province-card h3, .province-card p { margin:0; }
+.province-links { display:flex; flex-wrap:wrap; gap:8px; margin-top:4px; }
+.province-links a { border:1px solid var(--line); border-radius:999px; padding:7px 10px; background:white; font-size:.9rem; font-weight:700; }
+@media (max-width: 860px) { .province-grid { grid-template-columns:1fr; } }
+
 .location-proof-card { display:grid; gap:18px; }
 .profile-grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); }
 .profile-card { border:1px solid var(--line); border-radius:16px; padding:16px; background:#fbfdfb; }
