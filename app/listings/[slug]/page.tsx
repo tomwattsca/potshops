@@ -27,31 +27,82 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   const relatedLocation = priorityLocations.find((location) => location.city === listing.city && location.province === listing.province);
   const relatedCategories = listing.categories?.map((slug) => getCategory(slug)).filter((category) => Boolean(category)) ?? [];
   const addressLine = [listing.address, listing.city, [listing.province, listing.postalCode].filter(Boolean).join(' ')].filter(Boolean).join(', ');
+  const statusLabel = hasCurrentSource ? 'Official/public address context' : listing.sourceName ? 'Historical public-source context' : 'Needs source verification';
+  const sourceLimit = hasCurrentSource
+    ? 'Address context only; no hours, menus, stock, ordering, delivery, ratings, or service details.'
+    : listing.sourceName
+      ? 'Useful legacy/profile evidence only; not proof of current licensing, availability, or operation.'
+      : 'The old Potshops record has demand, but stronger public-source facts are still missing.';
+  const sourceSummary = listing.sourceName
+    ? `${listing.sourceName} checked ${listing.lastVerified ?? 'during rebuild'}`
+    : 'No source has been attached to this listing yet';
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    '@id': `https://potshops.ca/listings/${listing.slug}#localbusiness`,
-    name: listing.name,
-    url: `https://potshops.ca/listings/${listing.slug}`,
-    areaServed: listing.locationHint,
-    ...(listing.verificationStatus === 'current_source' && listing.address ? {
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: listing.address,
-        addressLocality: listing.city,
-        addressRegion: listing.province,
-        postalCode: listing.postalCode,
-        addressCountry: 'CA',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': `https://potshops.ca/listings/${listing.slug}#webpage`,
+        url: `https://potshops.ca/listings/${listing.slug}`,
+        name: `${listing.name} source-backed Potshops profile`,
+        description: listing.sourceNote ?? `Legacy Potshops profile for ${listing.name} with Search Console recovery context.`,
+        isPartOf: { '@id': 'https://potshops.ca/#website' },
       },
-      ...(listing.phone ? { telephone: listing.phone } : {}),
-    } : {}),
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `https://potshops.ca/listings/${listing.slug}#breadcrumbs`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Potshops.ca', item: 'https://potshops.ca/' },
+          { '@type': 'ListItem', position: 2, name: listing.name, item: `https://potshops.ca/listings/${listing.slug}` },
+        ],
+      },
+      {
+        '@type': 'LocalBusiness',
+        '@id': `https://potshops.ca/listings/${listing.slug}#localbusiness`,
+        name: listing.name,
+        url: `https://potshops.ca/listings/${listing.slug}`,
+        areaServed: listing.locationHint,
+        ...(listing.verificationStatus === 'current_source' && listing.address ? {
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: listing.address,
+            addressLocality: listing.city,
+            addressRegion: listing.province,
+            postalCode: listing.postalCode,
+            addressCountry: 'CA',
+          },
+          ...(listing.phone ? { telephone: listing.phone } : {}),
+        } : {}),
+      },
+    ],
   };
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <p className="eyebrow">Legacy listing recovery</p>
       <h1>{listing.name}</h1>
-      <p className="lede">This Potshops.ca profile is queued for rebuild because its old WordPress URL had measurable Search Console demand.</p>
+      <p className="lede">This Potshops.ca profile is queued for rebuild because its old WordPress URL had measurable Search Console demand. The summary below separates what is source-backed from what Potshops is still not claiming.</p>
+      <section className="card listing-evidence-card">
+        <div>
+          <p className="eyebrow">Evidence at a glance</p>
+          <h2>Source status and rebuild priority</h2>
+          <p>Use this page as a conservative profile note: it records visible public-source context and routes users to city/category pages without implying current store operations.</p>
+        </div>
+        <div className="listing-proof-grid" aria-label="Listing evidence summary">
+          <div className="mini-card">
+            <strong>{statusLabel}</strong>
+            <span>{sourceSummary}</span>
+          </div>
+          <div className="mini-card">
+            <strong>{listing.gscImpressions.toLocaleString()} legacy impressions</strong>
+            <span>{listing.gscClicks.toLocaleString()} clicks, average position {listing.averagePosition.toFixed(1)}</span>
+          </div>
+          <div className="mini-card">
+            <strong>{relatedLocation ? `${relatedLocation.city} context mapped` : 'City context not mapped'}</strong>
+            <span>{relatedCategories.length ? `${relatedCategories.length} category link${relatedCategories.length === 1 ? '' : 's'} available` : 'No category hub attached yet'}</span>
+          </div>
+        </div>
+        <p className="source-excerpt"><strong>Limit:</strong> {sourceLimit}</p>
+      </section>
       <div className="split">
         <section className="card">
           <h2>Search demand evidence</h2>
@@ -76,14 +127,38 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
         </aside>
       </div>
       {listing.sourceName && (
-        <section className="card">
-          <h2>Verified public-source facts</h2>
-          <ul className="clean">
-            {addressLine && <li>Address: {addressLine}</li>}
-            {listing.phone && <li>Phone listed by source: {listing.phone}</li>}
-            <li>Source: <a href={listing.sourceUrl ?? '#'} rel="nofollow noopener">{listing.sourceName}</a></li>
-            <li>Status: {hasCurrentSource ? 'official public-source address context; Potshops still withholds hours, menus, stock, ordering, and service claims until further review.' : 'historical/public-source verification only; current regulatory and operating status still needs confirmation.'}</li>
-          </ul>
+        <section className="card source-facts-card">
+          <div>
+            <p className="eyebrow">Source-backed facts</p>
+            <h2>What the visible source supports</h2>
+            <p>This section keeps the source note scannable for visitors coming from brand or city searches while avoiding unsupported regulated claims.</p>
+          </div>
+          <dl className="fact-list">
+            {addressLine && (
+              <div>
+                <dt>Address context</dt>
+                <dd>{addressLine}</dd>
+              </div>
+            )}
+            {listing.phone && (
+              <div>
+                <dt>Phone listed by source</dt>
+                <dd>{listing.phone}</dd>
+              </div>
+            )}
+            <div>
+              <dt>Source reviewed</dt>
+              <dd><a href={listing.sourceUrl ?? '#'} rel="nofollow noopener">{listing.sourceName}</a>{listing.lastVerified ? ` · ${listing.lastVerified}` : ''}</dd>
+            </div>
+            <div>
+              <dt>Status label</dt>
+              <dd>{hasCurrentSource ? 'Official public-source address context; Potshops still withholds hours, menus, stock, ordering, and service claims until further review.' : 'Historical/public-source verification only; current regulatory and operating status still needs confirmation.'}</dd>
+            </div>
+            <div>
+              <dt>Source note</dt>
+              <dd>{listing.sourceNote}</dd>
+            </div>
+          </dl>
         </section>
       )}
 
