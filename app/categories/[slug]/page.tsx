@@ -24,6 +24,12 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     .slice(0, 10);
   const sourceBackedCount = categoryListings.filter((listing) => listing.sourceName).length;
   const currentSourceCount = categoryListings.filter((listing) => listing.verificationStatus === 'current_source').length;
+  const historicalSourceCount = categoryListings.filter((listing) => listing.verificationStatus === 'historical_source').length;
+  const statusLabel = (status?: string) => {
+    if (status === 'current_source') return 'Official address-context source';
+    if (status === 'historical_source') return 'Historical public-source context';
+    return 'Verification queued';
+  };
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -42,6 +48,17 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           { '@type': 'ListItem', position: 2, name: category.title, item: `https://potshops.ca/categories/${category.slug}` },
         ],
       },
+      ...(visibleListings.length > 0 ? [{
+        '@type': 'ItemList',
+        name: `${category.title} source-backed Potshops profiles`,
+        numberOfItems: visibleListings.length,
+        itemListElement: visibleListings.map((listing, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          url: `https://potshops.ca/listings/${listing.slug}`,
+          name: listing.name,
+        })),
+      }] : []),
     ],
   };
   return (
@@ -50,32 +67,46 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
       <p className="eyebrow">Priority category #{category.priority}</p>
       <h1>{category.title}</h1>
       <p className="lede">{category.description}</p>
-      <div className="split">
-        <section className="card">
-          <h2>Search demand evidence</h2>
+      <section className="card category-evidence-card">
+        <div>
+          <p className="eyebrow">Category evidence at a glance</p>
+          <h2>What this {category.slug === 'dispensary' ? 'dispensary' : 'delivery'} hub can safely prove</h2>
           <p>{category.gscEvidence}</p>
-          <p>Legacy demand signal: {category.legacyImpressions.toLocaleString()} impressions on the old category URL before the rebuild.</p>
-          <p>This hub now connects {categoryListings.length.toLocaleString()} mapped listing profiles, including {sourceBackedCount.toLocaleString()} source-backed rows and {currentSourceCount.toLocaleString()} official public-source address-context rows.</p>
-        </section>
-        <aside className="notice">
-          <h3>Compliance-first publishing rule</h3>
-          <p>Potshops keeps this category informational. It does not verify current hours, menus, stock, ordering, delivery, prices, reviews, ratings, or whether a storefront is operating today.</p>
-        </aside>
-      </div>
+        </div>
+        <div className="listing-proof-grid" aria-label={`${category.title} source-backed coverage summary`}>
+          <div className="mini-card">
+            <strong>{category.legacyImpressions.toLocaleString()} legacy impressions</strong>
+            <span>Old category-path demand before the Potshops rebuild; current GSC still shows broad cannabis-store and dispensary queries.</span>
+          </div>
+          <div className="mini-card">
+            <strong>{categoryListings.length.toLocaleString()} mapped profiles</strong>
+            <span>{sourceBackedCount.toLocaleString()} source-backed rows: {currentSourceCount.toLocaleString()} official/current-source and {historicalSourceCount.toLocaleString()} historical-source.</span>
+          </div>
+          <div className="mini-card">
+            <strong>{linkedLocations.length.toLocaleString()} city paths linked</strong>
+            <span>Internal links point to exact city pages that have mapped profile evidence, not generic doorway copy.</span>
+          </div>
+        </div>
+        <p className="source-excerpt"><strong>Limit:</strong> Potshops keeps this category informational. It does not verify current hours, menus, stock, ordering, delivery, prices, reviews, ratings, licensing, or whether a storefront is operating today.</p>
+      </section>
 
-      <section className="card">
-        <h2>Source-backed profiles in this category</h2>
-        <p>These internal links make the category page useful for visitors and crawlers without adding unsupported cannabis commerce claims. Each profile explains what the public source does and does not support.</p>
-        <ul className="clean directory-list">
+      <section className="card category-profile-card">
+        <div>
+          <p className="eyebrow">Source-backed profiles</p>
+          <h2>Start with verifiable listing evidence</h2>
+          <p>These cards make the category page easier to scan for visitors and crawlers without adding unsupported cannabis commerce claims. Each profile explains what the public source does and does not support.</p>
+        </div>
+        <div className="profile-grid">
           {visibleListings.map((listing) => (
-            <li key={listing.slug}>
-              <Link href={`/listings/${listing.slug}`}>{listing.name}</Link>
-              <span> — {listing.city && listing.province ? `${listing.city}, ${listing.province}` : listing.locationHint}</span>
-              <span>; {listing.sourceName ? (listing.verificationStatus === 'current_source' ? 'official address-context source' : 'historical/public-source context') : 'verification queued'}</span>
-              <span>; {listing.gscImpressions.toLocaleString()} legacy impressions.</span>
-            </li>
+            <article className="profile-card" key={listing.slug}>
+              <p className={`status-badge ${listing.verificationStatus === 'current_source' ? 'status-current' : 'status-historical'}`}>{statusLabel(listing.verificationStatus)}</p>
+              <h3><Link href={`/listings/${listing.slug}`}>{listing.name}</Link></h3>
+              <p className="meta">{listing.city && listing.province ? `${listing.city}, ${listing.province}` : listing.locationHint} · {listing.gscImpressions.toLocaleString()} legacy impressions</p>
+              {listing.sourceName ? <p>Source: {listing.sourceName}</p> : <p>Source verification still queued.</p>}
+              {listing.sourceNote && <p className="source-excerpt">{listing.sourceNote}</p>}
+            </article>
           ))}
-        </ul>
+        </div>
       </section>
 
       <section>
