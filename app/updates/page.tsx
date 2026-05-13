@@ -3,7 +3,19 @@ import Link from 'next/link';
 
 const siteUrl = 'https://potshops.ca';
 const updateEmail = 'updates@potshops.ca';
-const mailtoHref = `mailto:${updateEmail}?subject=Potshops.ca%20listing%20update&body=Listing%20or%20city%3A%0ASource%20URL%3A%0AWhat%20changed%3A%0A`; 
+const mailtoHref = `mailto:${updateEmail}?subject=Potshops.ca%20listing%20update&body=Listing%20or%20city%3A%0ASource%20URL%3A%0AWhat%20changed%3A%0ARelationship%20to%20the%20listing%20%28owner%2Fstaff%2Freader%29%3A%0A`;
+
+const acceptedExamples = [
+  'Official regulator or public registry page showing the business name and address.',
+  'Business website or public profile that supports a name, address, or closure correction.',
+  'Dated public directory, archived page, or news/document source for historical context.',
+];
+
+const notAcceptedExamples = [
+  'Menu, stock, price, delivery, or ordering claims without compliance review.',
+  'Promotional claims such as best, cheapest, ratings/reviews, medical, or guaranteed availability.',
+  'Nearby-town evidence used as if it proves a different exact city or storefront.',
+];
 
 export const metadata: Metadata = {
   title: 'Suggest a cannabis listing update',
@@ -51,6 +63,14 @@ function UpdatesSchema() {
               text: 'Vendors can identify themselves, but Potshops treats corrections and source quality first. Any future sponsorship must remain clearly labelled and cannot override the conservative source-backed listing rules.',
             },
           },
+          {
+            '@type': 'Question',
+            name: 'What happens after an update is submitted?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Potshops manually reviews the source URL, checks whether the fact is public and specific to the listing or city, and may publish a conservative update if the evidence supports it. Unsupported commerce, availability, rating, medical, or promotional claims are rejected or held for further review.',
+            },
+          },
         ],
       },
     ],
@@ -65,6 +85,11 @@ export default function UpdatesPage() {
       <p className="eyebrow">Source-backed corrections</p>
       <h1>Suggest a Potshops.ca listing update</h1>
       <p className="lede">Help Potshops improve cannabis directory coverage with public-source corrections, official address context, and city-page suggestions. The directory stays conservative: source evidence comes first, and commerce claims are not accepted without compliance review.</p>
+      <p className="cta-row hero-update-actions">
+        <a className="button" href={mailtoHref} data-event="listing_update_click" data-cta-location="updates_top">Submit an update by email</a>
+        <Link className="button secondary" href="/#locations">Find the city or listing first</Link>
+      </p>
+      <p className="meta">Prefer to copy the address? <a href={`mailto:${updateEmail}`}>{updateEmail}</a></p>
 
       <div className="split">
         <section className="card">
@@ -77,7 +102,7 @@ export default function UpdatesPage() {
           </ul>
           <p className="cta-row">
             <a className="button" href={mailtoHref} data-event="listing_update_click" data-cta-location="updates_hero">Email a source-backed update</a>
-            <Link className="button secondary" href="/#locations">Browse city pages first</Link>
+            <Link className="button secondary" href="/#locations">Find the city or listing first</Link>
           </p>
         </section>
         <aside className="notice">
@@ -104,10 +129,45 @@ export default function UpdatesPage() {
         </div>
       </section>
 
+      <section className="card update-process-card">
+        <p className="eyebrow">Manual review workflow</p>
+        <h2>What happens after you send an update</h2>
+        <div className="process-steps" aria-label="Potshops update review workflow">
+          <div>
+            <strong>1. Source check</strong>
+            <p>Potshops opens the public source URL and checks whether it supports the exact listing, city, or category fact.</p>
+          </div>
+          <div>
+            <strong>2. Conservative edit</strong>
+            <p>If the fact is usable, the listing is updated with limited wording that explains what the source does and does not prove.</p>
+          </div>
+          <div>
+            <strong>3. Unsupported claims rejected</strong>
+            <p>Availability, ordering, delivery, price, rating, medical, or promotional claims are held back unless compliance review supports them.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="split examples-split" aria-label="Examples of accepted and rejected Potshops updates">
+        <div className="card good-source-card">
+          <h2>Good source-backed updates</h2>
+          <ul className="clean">
+            {acceptedExamples.map((example) => <li key={example}>{example}</li>)}
+          </ul>
+        </div>
+        <div className="card rejected-source-card">
+          <h2>Updates Potshops will not publish as-is</h2>
+          <ul className="clean">
+            {notAcceptedExamples.map((example) => <li key={example}>{example}</li>)}
+          </ul>
+        </div>
+      </section>
+
       <section className="card">
         <h2>For store owners and sponsors</h2>
-        <p>Potshops is rebuilding trust before paid placement. If you represent a store, send the same source-backed update first. Sponsorship conversations can follow only after the public facts are accurate, visibly labelled, and compliant.</p>
-        <p><a href={mailtoHref} data-event="listing_update_click" data-cta-location="updates_sponsor_note">Send a source-backed correction or ownership note</a></p>
+        <p>Potshops is rebuilding trust before paid placement. If you represent a store, send the same source-backed update first and include an official business website, regulator/public registry URL, or other public evidence that supports the exact factual correction.</p>
+        <p>Ownership notes are welcome, but ownership does not guarantee promotional placement, current-service claims, or sponsorship treatment.</p>
+        <p className="cta-row"><a className="button" href={mailtoHref} data-event="listing_update_click" data-cta-location="updates_owner_path">Send an ownership note</a></p>
       </section>
     </main>
   );
