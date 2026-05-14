@@ -118,3 +118,7 @@ ul.clean { padding-left:18px; color:var(--muted); line-height:1.7; }
 .profile-card-actions { display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 0; }
 .profile-card-actions a { border:1px solid var(--line); border-radius:999px; padding:7px 10px; background:white; font-size:.9rem; font-weight:700; }
 @media (max-width: 860px) { .location-status-grid { grid-template-columns:1fr; } }
+
+.listing-intent-card { margin:28px 0; border-color:#b8d8bd; background:linear-gradient(180deg,#ffffff 0%,#f7fbf7 100%); }
+.listing-intent-card h2 { margin-top:.2rem; }
+.listing-intent-card .clean { margin-bottom:0; }

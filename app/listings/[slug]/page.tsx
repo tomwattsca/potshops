@@ -3,12 +3,26 @@ import Link from 'next/link';
 import { getCategory, getListing, listingSeeds, priorityLocations } from '../../data/directory';
 
 const recentSearchIntentBySlug: Record<string, string[]> = {
+  'cannabis-culture-920-davie': ['cannabis culture dispensary', 'cannabis culture', 'cannibis culture', 'canna culture', 'cannabis culture vancouver'],
   'green-leaf': ['green leaf kahnawake', 'kahnawake dispensary', 'kahnawake weed', 'weed dispensary kahnawake'],
   'green-essence-head-shop-dispensary': ['green essence', 'green essence penticton'],
   'compassion-in-motion': ['compassion in motion'],
   'remedy-ice-cream': ['remedy ice cream'],
   'the-herb-co-mount-pleasant': ['herb company'],
   '420-delivery': ['420 delivery', 'Greater Vancouver cannabis service context'],
+};
+
+
+const listingPageFocusBySlug: Record<string, { title: string; summary: string; bullets: string[] }> = {
+  'cannabis-culture-920-davie': {
+    title: 'Davie Street Cannabis Culture legacy profile status',
+    summary: 'Fresh Search Console still surfaces the old singular /listing/ Cannabis Culture URL and brand/dispensary variants. This canonical profile keeps that legacy demand recoverable while making the source limits more explicit.',
+    bullets: [
+      'Canonical path: /listings/cannabis-culture-920-davie; the old /listing/cannabis-culture-920-davie/ path redirects here.',
+      'Current evidence is a public directory record for the historical Davie Street listing, not proof of current licensing, menus, stock, delivery, hours, or storefront operation.',
+      'Use the Vancouver city page and dispensary category hub for broader context before assuming the profile represents a current Cannabis Culture store.',
+    ],
+  },
 };
 
 export function generateStaticParams() { return listingSeeds.map((listing) => ({ slug: listing.slug })); }
@@ -46,6 +60,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
     ? `${listing.sourceName} checked ${listing.lastVerified ?? 'during rebuild'}`
     : 'No source has been attached to this listing yet';
   const recentSearchIntent = recentSearchIntentBySlug[listing.slug] ?? [];
+  const listingPageFocus = listingPageFocusBySlug[listing.slug];
   const locationLabel = listing.city && listing.province ? `${listing.city}, ${listing.province}` : listing.locationHint;
   const schema = {
     '@context': 'https://schema.org',
@@ -144,6 +159,18 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
           )}
         </aside>
       </div>
+      {listingPageFocus && (
+        <section className="card listing-intent-card">
+          <p className="eyebrow">GSC-led profile focus</p>
+          <h2>{listingPageFocus.title}</h2>
+          <p>{listingPageFocus.summary}</p>
+          <ul className="clean">
+            {listingPageFocus.bullets.map((bullet) => (
+              <li key={bullet}>{bullet}</li>
+            ))}
+          </ul>
+        </section>
+      )}
       {listing.sourceName && (
         <section className="card source-facts-card">
           <div>
