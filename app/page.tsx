@@ -1,9 +1,28 @@
 import Link from 'next/link';
 import { getCategory, getLocation, listingSeeds, priorityCategories, priorityLocations } from './data/directory';
 
-const gscVisibleLocationSlugs = ['nelson', 'kahnawake', 'penticton'];
-const gscVisibleListingSlugs = ['green-leaf', 'green-essence-head-shop-dispensary', 'compassion-in-motion'];
+const gscVisibleLocationSlugs = ['calgary', 'nelson', 'kahnawake', 'penticton'];
+const gscVisibleListingSlugs = [
+  'green-leaf',
+  'green-essence-head-shop-dispensary',
+  'compassion-in-motion',
+  'rocket-chronic-2',
+  'remedy-ice-cream',
+  'gulf-island-organics',
+  '420-delivery',
+  'the-herb-co-mount-pleasant',
+];
 const gscVisibleCategorySlugs = ['dispensary', 'in-town-delivery'];
+const recentQueryNotesBySlug: Record<string, string> = {
+  'green-leaf': 'recent Kahnawake and dispensary query rows',
+  'green-essence-head-shop-dispensary': 'recent Green Essence and Penticton query rows',
+  'compassion-in-motion': 'recent brand query row',
+  'rocket-chronic-2': 'recent Rocket Chronic Canada query rows landing on the homepage',
+  'remedy-ice-cream': 'recent Remedy Ice Cream query row and Calgary location context',
+  'gulf-island-organics': 'recent existing-profile page row',
+  '420-delivery': 'recent existing-profile page row',
+  'the-herb-co-mount-pleasant': 'recent herb company query row',
+};
 
 const gscVisibleLocations = gscVisibleLocationSlugs.map((slug) => getLocation(slug)).filter((location) => Boolean(location));
 const gscVisibleListings = gscVisibleListingSlugs.map((slug) => listingSeeds.find((listing) => listing.slug === slug)).filter((listing) => Boolean(listing));
@@ -46,7 +65,7 @@ export default function Home() {
           <div>
             <div className="eyebrow">Current search signals</div>
             <h2 id="current-search-signals">Start with the Potshops pages already showing in Google data</h2>
-            <p>The latest final-data Search Console sample still shows the homepage, Nelson, Green Leaf, Green Essence, Compassion in Motion, and broad dispensary/category intent. This section gives visitors and crawlers a shorter path to those existing pages before the full directory grid.</p>
+            <p>The latest final-data Search Console sample still shows the apex homepage, legacy www homepage, Calgary and Nelson location rows, and a wider set of existing profile queries. This section gives visitors and crawlers a shorter path to those already-built pages before the full directory grid.</p>
           </div>
           <div className="signal-grid">
             <article className="mini-card">
@@ -58,10 +77,13 @@ export default function Home() {
               </ul>
             </article>
             <article className="mini-card">
-              <h3>GSC-visible profiles</h3>
+              <h3>GSC-visible profiles and recovered brand queries</h3>
               <ul className="clean">
                 {gscVisibleListings.map((listing) => listing && (
-                  <li key={listing.slug}><Link href={`/listings/${listing.slug}`}>{listing.name}</Link> <span className="meta">({listing.locationHint})</span></li>
+                  <li key={listing.slug}>
+                    <Link href={`/listings/${listing.slug}`}>{listing.name}</Link> <span className="meta">({listing.locationHint})</span>
+                    {recentQueryNotesBySlug[listing.slug] && <span className="signal-note"> — {recentQueryNotesBySlug[listing.slug]}</span>}
+                  </li>
                 ))}
               </ul>
             </article>

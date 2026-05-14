@@ -55,6 +55,7 @@ ul.clean { padding-left:18px; color:var(--muted); line-height:1.7; }
 .evidence-panel { margin-bottom:42px; }
 .signal-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-top:22px; }
 .mini-card { border:1px solid var(--line); border-radius:16px; padding:16px; background:#fbfdfb; }
+.signal-note { display:block; margin-top:2px; color:var(--muted); font-size:.88rem; line-height:1.45; }
 .stats-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
 .stats-row span { border:1px solid var(--line); border-radius:999px; padding:8px 12px; background:white; color:var(--muted); font-size:.9rem; }
 .stats-row strong { color:var(--green); }
