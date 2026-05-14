@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getCategory, getListing, getLocation, getLocationUtility, priorityLocations } from '../../data/directory';
 
+type ProfileSourceFact = { label: string; value: string; tone?: 'strong' | 'muted' };
+
 export function generateStaticParams() { return priorityLocations.map((location) => ({ city: location.slug })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ city: string }> }): Promise<Metadata> {
@@ -29,6 +31,14 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
     if (status === 'current_source') return 'Official public-source address context';
     if (status === 'historical_source') return 'Historical public-source context';
     return 'Verification queued';
+  };
+  const sourceFactsFor = (listing: NonNullable<(typeof relatedListings)[number]>): ProfileSourceFact[] => {
+    const facts: ProfileSourceFact[] = [
+      { label: 'Profile evidence', value: listing.sourceName ? `${listing.sourceName}${listing.lastVerified ? ` · checked ${listing.lastVerified}` : ''}` : 'Public-source review still queued', tone: listing.sourceName ? 'strong' : 'muted' },
+      { label: 'Current operation', value: listing.verificationStatus === 'current_source' ? 'Official public-source address context only; Potshops still does not claim hours, menus, stock, delivery, or ordering.' : 'Not confirmed from this historical source; treat as recovery context, not an open-store claim.' },
+      { label: 'User action', value: 'Open the listing evidence or send a source-backed correction before relying on broader city-level details.' },
+    ];
+    return facts;
   };
   const schemaGraph = {
     '@context': 'https://schema.org',
@@ -97,8 +107,8 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
       {utility && (
         <>
           <section className="card">
-            <h2>{location.city} search intent Potshops should satisfy</h2>
-            <p>These phrases are used as directional demand signals from Search Console and should guide safe enrichment, not unsupported commercial claims.</p>
+            <h2>Searches this page is meant to clarify</h2>
+            <p>People are already finding Potshops with these location phrases. The page uses them to explain what is known, what is historical, and what still needs source-backed verification.</p>
             <ul className="clean">
               {utility.searchIntent.map((intent) => <li key={intent}>{intent}</li>)}
             </ul>
@@ -116,6 +126,20 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
               </p>
               <p className="meta">Use these cards to inspect the exact evidence behind this location page before relying on broader city-level wording.</p>
             </div>
+            <div className="location-status-grid" aria-label={`${location.city} source status summary`}>
+              <div className="mini-card">
+                <strong>{relatedListings.length}</strong>
+                <span>{relatedListings.length === 1 ? 'mapped profile' : 'mapped profiles'} on this city page</span>
+              </div>
+              <div className="mini-card">
+                <strong>{currentSourceCount}</strong>
+                <span>official/current-source rows; no unsupported hours, menu, stock, delivery, or ordering claims</span>
+              </div>
+              <div className="mini-card">
+                <strong>{historicalSourceCount}</strong>
+                <span>historical-source rows that need fresh public confirmation before stronger city claims</span>
+              </div>
+            </div>
             {relatedListings.length > 0 ? (
               <div className="profile-grid">
                 {relatedListings.map((listing) => listing && (
@@ -123,8 +147,27 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
                     <p className={`status-badge ${listing.verificationStatus === 'current_source' ? 'status-current' : 'status-historical'}`}>{statusLabel(listing.verificationStatus)}</p>
                     <h3><Link href={`/listings/${listing.slug}`}>{listing.name}</Link></h3>
                     <p className="meta">{listing.locationHint}</p>
-                    {listing.sourceName && <p>Source note: {listing.sourceName}</p>}
+                    {listing.sourceName && (
+                      <p>
+                        Source note:{' '}
+                        {listing.sourceUrl ? (
+                          <a href={listing.sourceUrl} rel="nofollow noreferrer" target="_blank">{listing.sourceName}</a>
+                        ) : listing.sourceName}
+                      </p>
+                    )}
                     {listing.sourceNote && <p className="source-excerpt">{listing.sourceNote}</p>}
+                    <dl className="profile-source-facts">
+                      {sourceFactsFor(listing).map((fact) => (
+                        <div key={fact.label} className={fact.tone === 'strong' ? 'source-fact-strong' : undefined}>
+                          <dt>{fact.label}</dt>
+                          <dd>{fact.value}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                    <p className="profile-card-actions">
+                      <Link href={`/listings/${listing.slug}`}>View listing evidence</Link>
+                      <Link href="/updates" data-event="listing_update_click" data-cta-location="location_profile_card">Send correction</Link>
+                    </p>
                   </article>
                 ))}
               </div>

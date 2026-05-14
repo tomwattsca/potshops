@@ -54,7 +54,7 @@ export type ListingSeed = {
 };
 
 export const priorityLocations: Location[] = [
-  { slug: 'kahnawake', city: 'Kahnawake', province: 'QC', title: 'Cannabis stores and dispensaries in Kahnawake', description: 'Kahnawake generated the clearest local cannabis intent in Potshops Search Console data, including weed store, cannabis store, and dispensary searches.', gscEvidence: 'Queries included “weed shop kahnawake”, “kahnawake dispensary”, and “weed dispensary kahnawake”.', legacyImpressions: 1475, priority: 1 },
+  { slug: 'kahnawake', city: 'Kahnawake', province: 'QC', title: 'Kahnawake cannabis directory status and source notes', description: 'Kahnawake keeps surfacing in Search Console for cannabis, weed, and dispensary searches, but Potshops currently maps one historical-source Green Leaf profile, so this page separates search demand from confirmed current-store facts.', gscEvidence: 'Fresh and legacy rows include “green leaf kahnawake”, “kahnawake dispensary”, “kahnawake weed”, “cannabis kahnawake”, and “weed dispensary kahnawake”.', legacyImpressions: 1475, priority: 1 },
   { slug: 'halifax', city: 'Halifax', province: 'NS', title: 'Cannabis stores and dispensaries in Halifax', description: 'Halifax has repeat city-level searches for dispensaries, cannabis stores, and delivery-adjacent terms.', gscEvidence: 'Queries included “cannabis dispensary halifax”, “dispensaries halifax”, and “halifax dispensaries”.', legacyImpressions: 543, priority: 2 },
   { slug: 'fredericton', city: 'Fredericton', province: 'NB', title: 'Cannabis stores and dispensaries in Fredericton', description: 'Fredericton appears in both city page and store-level legacy URLs, making it a useful early rebuild target.', gscEvidence: 'Queries included “cannabis store fredericton”, “dispensary fredericton”, and “weed dispensary fredericton”.', legacyImpressions: 326, priority: 3 },
   { slug: 'shannonville', city: 'Shannonville', province: 'ON', title: 'Cannabis stores and dispensaries in Shannonville', description: 'Shannonville is now a source-backed recovery page because the Leagle Dreams legacy listing has address and phone context from a public directory.', gscEvidence: 'GSC listing demand showed Leagle Dreams with 562 impressions and 11 clicks; source-backed enrichment mapped the row to Old Highway 2 in Shannonville.', legacyImpressions: 562, priority: 4 },
@@ -104,15 +104,15 @@ export const priorityLocations: Location[] = [
 export const locationUtilities: LocationUtility[] = [
   {
     slug: 'kahnawake',
-    summary: 'Kahnawake is the clearest city-level recovery opportunity in the current Potshops data because searches use direct local language rather than only legacy brand names.',
+    summary: 'Kahnawake remains a high-priority recovery page because fresh Search Console rows still use direct local language around Green Leaf, Kahnawake dispensary, Kahnawake weed, and cannabis Kahnawake queries.',
     directoryStatus: 'One high-demand legacy profile is mapped to Kahnawake today. It is labelled historical because the available source confirms local reporting context, not a current licence or storefront status.',
-    searchIntent: ['weed shop kahnawake', 'kahnawake dispensary', 'weed dispensary kahnawake'],
+    searchIntent: ['green leaf kahnawake', 'kahnawake dispensary', 'kahnawake weed', 'cannabis kahnawake', 'weed dispensary kahnawake'],
     relatedListingSlugs: ['green-leaf'],
     internalCategorySlugs: ['dispensary'],
     localCaveats: [
-      'Kahnawake cannabis search results can mix community businesses, historical enforcement coverage, and current-store intent; Potshops should separate those facts clearly.',
+      'Fresh Kahnawake query impressions can mean brand research, local directory research, or current-store intent; Potshops should keep those meanings separate instead of implying open storefront coverage.',
       'Do not treat historical local reporting as proof that a store is currently open, licensed, or accepting orders.',
-      'Priority enrichment should verify address, operating status, and source date before adding maps, hours, or commercial links.',
+      'Priority enrichment should verify address, operating status, source date, and official/current public evidence before adding maps, hours, contact details, or commercial links.',
     ],
     verificationNextSteps: [
       'Confirm whether each Kahnawake profile has an official/current public source.',
