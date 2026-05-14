@@ -46,6 +46,48 @@ const locationsByProvince = provinceOrder
   }))
   .filter((group) => group.locations.length > 0);
 
+const homepageFaqs = [
+  {
+    question: 'Does Potshops.ca sell cannabis?',
+    answer: 'No. Potshops.ca is an independent directory rebuild. It does not sell cannabis, take orders, verify menus, or guarantee stock, delivery, hours, or current operating status.',
+  },
+  {
+    question: 'How should I use the Canadian cannabis store directory?',
+    answer: 'Start with the province, city, or profile pages that are already rebuilt. Each page separates source-backed facts from items Potshops still needs to verify.',
+  },
+  {
+    question: 'What if a listing is incomplete or outdated?',
+    answer: 'Use the source-backed update path to send regulator, business, or public-directory evidence. Potshops reviews source quality before changing address, category, owner-note, or current-status wording.',
+  },
+];
+
+function HomepageSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': 'https://potshops.ca/#webpage',
+        url: 'https://potshops.ca/',
+        name: 'Potshops.ca Canadian Cannabis Store Directory',
+        description: 'A source-backed Canadian cannabis directory rebuild that routes broad searches into existing province, city, category, and listing pages while avoiding unsupported current-commerce claims.',
+        isPartOf: { '@id': 'https://potshops.ca/#website' },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://potshops.ca/#homepage-faq',
+        mainEntity: homepageFaqs.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: { '@type': 'Answer', text: item.answer },
+        })),
+      },
+    ],
+  };
+
+  return <script id="potshops-homepage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
+}
+
 export default function Home() {
   return (
     <>
@@ -58,9 +100,27 @@ export default function Home() {
             <a className="button" href="#locations">Browse priority cities</a>
             <Link className="button secondary" href="/updates" data-event="listing_update_click" data-cta-location="home_hero">Suggest a listing update</Link>
           </div>
+          <div className="homepage-search-guide" aria-label="How Potshops handles cannabis store searches">
+            <article>
+              <span className="guide-step">1</span>
+              <h2>Search by province or city</h2>
+              <p>Use the rebuilt province and city pages as a directory map, especially for broad searches like Canadian dispensary list or cannabis store Canada.</p>
+            </article>
+            <article>
+              <span className="guide-step">2</span>
+              <h2>Read the source notes first</h2>
+              <p>Profile pages show what public sources support and what Potshops is not claiming yet, including current operation, menus, stock, delivery, hours, or licences.</p>
+            </article>
+            <article>
+              <span className="guide-step">3</span>
+              <h2>Send evidence, not promotions</h2>
+              <p>Corrections should include regulator, business, or public-directory sources. Promotional, medical, quality, ordering, or availability claims stay out until they are independently supportable.</p>
+            </article>
+          </div>
         </div>
       </section>
       <main>
+        <HomepageSchema />
         <section className="card evidence-panel" aria-labelledby="current-search-signals">
           <div>
             <div className="eyebrow">Current search signals</div>
@@ -124,6 +184,23 @@ export default function Home() {
             ))}
           </div>
           <p className="source-excerpt"><strong>Source limit:</strong> this is a rebuilt directory map, not a guarantee that every city has complete coverage or that any listed business is currently operating.</p>
+        </section>
+
+
+        <section className="card homepage-faq-panel" aria-labelledby="homepage-directory-faq">
+          <div>
+            <div className="eyebrow">Search intent and source limits</div>
+            <h2 id="homepage-directory-faq">How to use Potshops.ca without over-reading the directory</h2>
+            <p>Recent Search Console rows include broad directory phrases and a few searchers who may be looking for store context. Potshops keeps the homepage useful for those searches while making the limits clear before anyone clicks into a city or listing page.</p>
+          </div>
+          <div className="faq-grid">
+            {homepageFaqs.map((item) => (
+              <article className="mini-card" key={item.question}>
+                <h3>{item.question}</h3>
+                <p>{item.answer}</p>
+              </article>
+            ))}
+          </div>
         </section>
 
         <section id="locations">
