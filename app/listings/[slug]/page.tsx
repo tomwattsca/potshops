@@ -2,6 +2,15 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getCategory, getListing, listingSeeds, priorityLocations } from '../../data/directory';
 
+const recentSearchIntentBySlug: Record<string, string[]> = {
+  'green-leaf': ['green leaf kahnawake', 'kahnawake dispensary', 'kahnawake weed', 'weed dispensary kahnawake'],
+  'green-essence-head-shop-dispensary': ['green essence', 'green essence penticton'],
+  'compassion-in-motion': ['compassion in motion'],
+  'remedy-ice-cream': ['remedy ice cream'],
+  'the-herb-co-mount-pleasant': ['herb company'],
+  '420-delivery': ['420 delivery', 'Greater Vancouver cannabis service context'],
+};
+
 export function generateStaticParams() { return listingSeeds.map((listing) => ({ slug: listing.slug })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -36,6 +45,8 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   const sourceSummary = listing.sourceName
     ? `${listing.sourceName} checked ${listing.lastVerified ?? 'during rebuild'}`
     : 'No source has been attached to this listing yet';
+  const recentSearchIntent = recentSearchIntentBySlug[listing.slug] ?? [];
+  const locationLabel = listing.city && listing.province ? `${listing.city}, ${listing.province}` : listing.locationHint;
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -80,6 +91,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <p className="eyebrow">Legacy listing recovery</p>
       <h1>{listing.name}</h1>
+      <p className="profile-location-note">{locationLabel} source notes and search-recovery context</p>
       <p className="lede">This Potshops.ca profile is queued for rebuild because its old WordPress URL had measurable Search Console demand. The summary below separates what is source-backed from what Potshops is still not claiming.</p>
       <section className="card listing-evidence-card">
         <div>
@@ -94,7 +106,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
           </div>
           <div className="mini-card">
             <strong>{listing.gscImpressions.toLocaleString()} legacy impressions</strong>
-            <span>{listing.gscClicks.toLocaleString()} clicks, average position {listing.averagePosition.toFixed(1)}</span>
+            <span>{listing.gscClicks.toLocaleString()} legacy clicks, average legacy position {listing.averagePosition.toFixed(1)}</span>
           </div>
           <div className="mini-card">
             <strong>{relatedLocation ? `${relatedLocation.city} context mapped` : 'City context not mapped'}</strong>
@@ -111,8 +123,14 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
             <li>Location hint: {listing.locationHint}</li>
             <li>Legacy impressions: {listing.gscImpressions.toLocaleString()}</li>
             <li>Legacy clicks: {listing.gscClicks.toLocaleString()}</li>
-            <li>Average position: {listing.averagePosition.toFixed(1)}</li>
+            <li>Average legacy position: {listing.averagePosition.toFixed(1)}</li>
+            {recentSearchIntent.length > 0 && (
+              <li>Recent final-data query fit: {recentSearchIntent.join(', ')}</li>
+            )}
           </ul>
+          {recentSearchIntent.length > 0 && (
+            <p className="source-excerpt"><strong>Snippet focus:</strong> these recent low-row Search Console terms are now exposed on the page so visitors can quickly connect the listing to its city/brand context while Potshops keeps the source limits visible.</p>
+          )}
         </section>
         <aside className="notice">
           <h3>{listing.sourceName ? (hasCurrentSource ? 'Official-source verification' : 'Public-source verification') : 'Claim or verify this listing'}</h3>
