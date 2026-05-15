@@ -145,7 +145,7 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
                 {relatedListings.map((listing) => listing && (
                   <article className="profile-card" key={listing.slug}>
                     <p className={`status-badge ${listing.verificationStatus === 'current_source' ? 'status-current' : 'status-historical'}`}>{statusLabel(listing.verificationStatus)}</p>
-                    <h3><Link href={`/listings/${listing.slug}`}>{listing.name}</Link></h3>
+                    <h3><Link href={`/listings/${listing.slug}`} data-event="internal_link_click" data-cta-location="location_profile_heading">{listing.name}</Link></h3>
                     <p className="meta">{listing.locationHint}</p>
                     {listing.sourceName && (
                       <p>
@@ -165,7 +165,7 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
                       ))}
                     </dl>
                     <p className="profile-card-actions">
-                      <Link href={`/listings/${listing.slug}`}>View listing evidence</Link>
+                      <Link href={`/listings/${listing.slug}`} data-event="internal_link_click" data-cta-location="location_profile_card">View listing evidence</Link>
                       <Link href="/updates" data-event="listing_update_click" data-cta-location="location_profile_card">Send correction</Link>
                     </p>
                   </article>
@@ -182,7 +182,7 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
               <ul className="clean">
                 {relatedListings.map((listing) => listing && (
                   <li key={listing.slug}>
-                    <Link href={`/listings/${listing.slug}`}>{listing.name}</Link> — {listing.locationHint}; {listing.sourceName ? `source note from ${listing.sourceName}` : 'verification queued'}; {listing.gscImpressions.toLocaleString()} legacy impressions.
+                    <Link href={`/listings/${listing.slug}`} data-event="internal_link_click" data-cta-location="location_mapped_listing">{listing.name}</Link> — {listing.locationHint}; {listing.sourceName ? `source note from ${listing.sourceName}` : 'verification queued'}; {listing.gscImpressions.toLocaleString()} legacy impressions.
                   </li>
                 ))}
               </ul>
@@ -193,7 +193,7 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
               <div className="related-hub-row" aria-label={`${location.city} related category hubs`}>
                 <span className="meta">Related hubs:</span>
                 {relatedCategories.map((category) => category && (
-                  <Link className="hub-pill" key={category.slug} href={`/categories/${category.slug}`}>{category.title}</Link>
+                  <Link className="hub-pill" key={category.slug} href={`/categories/${category.slug}`} data-event="internal_link_click" data-cta-location="location_related_category">{category.title}</Link>
                 ))}
               </div>
             )}

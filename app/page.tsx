@@ -134,7 +134,7 @@ export default function Home() {
               <h3>GSC-visible city pages</h3>
               <ul className="clean">
                 {gscVisibleLocations.map((location) => location && (
-                  <li key={location.slug}><Link href={`/locations/${location.slug}`}>{location.city}, {location.province} cannabis directory notes</Link></li>
+                  <li key={location.slug}><Link href={`/locations/${location.slug}`} data-event="internal_link_click" data-cta-location="home_signal_location">{location.city}, {location.province} cannabis directory notes</Link></li>
                 ))}
               </ul>
             </article>
@@ -143,7 +143,7 @@ export default function Home() {
               <ul className="clean">
                 {gscVisibleListings.map((listing) => listing && (
                   <li key={listing.slug}>
-                    <Link href={`/listings/${listing.slug}`}>{listing.name}</Link> <span className="meta">({listing.locationHint})</span>
+                    <Link href={`/listings/${listing.slug}`} data-event="internal_link_click" data-cta-location="home_signal_listing">{listing.name}</Link> <span className="meta">({listing.locationHint})</span>
                     {recentQueryNotesBySlug[listing.slug] && <span className="signal-note"> — {recentQueryNotesBySlug[listing.slug]}</span>}
                   </li>
                 ))}
@@ -153,7 +153,7 @@ export default function Home() {
               <h3>Category hubs to browse next</h3>
               <ul className="clean">
                 {gscVisibleCategories.map((category) => category && (
-                  <li key={category.slug}><Link href={`/categories/${category.slug}`}>{category.title}</Link></li>
+                  <li key={category.slug}><Link href={`/categories/${category.slug}`} data-event="internal_link_click" data-cta-location="home_signal_category">{category.title}</Link></li>
                 ))}
               </ul>
             </article>
@@ -179,7 +179,7 @@ export default function Home() {
                 <p className="meta">{group.locations.length} source-led city page{group.locations.length === 1 ? '' : 's'} in the current rebuild</p>
                 <div className="province-links">
                   {group.locations.map((location) => (
-                    <Link key={location.slug} href={`/locations/${location.slug}`}>{location.city}</Link>
+                    <Link key={location.slug} href={`/locations/${location.slug}`} data-event="internal_link_click" data-cta-location="home_province_location">{location.city}</Link>
                   ))}
                 </div>
               </article>
@@ -212,7 +212,7 @@ export default function Home() {
           <div className="grid">
             {priorityLocations.map((location) => (
               <article className="card" key={location.slug}>
-                <h3><Link href={`/locations/${location.slug}`}>{location.city}, {location.province}</Link></h3>
+                <h3><Link href={`/locations/${location.slug}`} data-event="internal_link_click" data-cta-location="home_location_grid">{location.city}, {location.province}</Link></h3>
                 <p>{location.description}</p>
                 <p className="meta">Priority {location.priority} · {location.legacyImpressions.toLocaleString()} legacy impressions signal</p>
               </article>
@@ -226,7 +226,7 @@ export default function Home() {
           <div className="grid">
             {priorityCategories.map((category) => (
               <article className="card" key={category.slug}>
-                <h3><Link href={`/categories/${category.slug}`}>{category.title}</Link></h3>
+                <h3><Link href={`/categories/${category.slug}`} data-event="internal_link_click" data-cta-location="home_category_grid">{category.title}</Link></h3>
                 <p>{category.description}</p>
                 <p className="meta">Legacy path: <code>{category.legacyPath}</code> · {category.legacyImpressions.toLocaleString()} impressions</p>
               </article>
@@ -240,7 +240,7 @@ export default function Home() {
           <div className="grid">
             {listingSeeds.map((listing) => (
               <article className="card" key={listing.slug}>
-                <h3><Link href={`/listings/${listing.slug}`}>{listing.name}</Link></h3>
+                <h3><Link href={`/listings/${listing.slug}`} data-event="internal_link_click" data-cta-location="home_listing_grid">{listing.name}</Link></h3>
                 <p className="meta">{listing.locationHint} · {listing.gscImpressions.toLocaleString()} impressions · {listing.gscClicks.toLocaleString()} clicks</p>
                 <p>Legacy path: <code>{listing.legacyPath}</code></p>
               </article>

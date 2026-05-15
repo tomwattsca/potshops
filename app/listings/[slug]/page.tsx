@@ -233,12 +233,12 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
         <p>Use these internal links to review the city and category context behind this listing. Potshops keeps the links informational until a public source supports stronger business details.</p>
         <ul className="clean">
           {relatedLocation ? (
-            <li>City context: <Link href={`/locations/${relatedLocation.slug}`}>{relatedLocation.city}, {relatedLocation.province} cannabis directory notes</Link></li>
+            <li>City context: <Link href={`/locations/${relatedLocation.slug}`} data-event="internal_link_click" data-cta-location="listing_related_location">{relatedLocation.city}, {relatedLocation.province} cannabis directory notes</Link></li>
           ) : (
             <li>City context: {listing.locationHint} is recorded on the listing, but a dedicated city page is not mapped yet.</li>
           )}
           {relatedCategories.map((category) => category && (
-            <li key={category.slug}>Category hub: <Link href={`/categories/${category.slug}`}>{category.title}</Link></li>
+            <li key={category.slug}>Category hub: <Link href={`/categories/${category.slug}`} data-event="internal_link_click" data-cta-location="listing_related_category">{category.title}</Link></li>
           ))}
         </ul>
       </section>

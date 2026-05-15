@@ -38,11 +38,23 @@ function GoogleAnalytics() {
             var target = event.target && event.target.closest ? event.target.closest('[data-event]') : null;
             if (!target || typeof window.gtag !== 'function') return;
             var eventName = target.getAttribute('data-event');
-            if (!eventName) return;
+            var allowedEvents = { listing_update_click: true, internal_link_click: true };
+            if (!eventName || !allowedEvents[eventName]) return;
+            var linkUrl;
+            if (target.href) {
+              try {
+                var parsed = new URL(target.href, window.location.origin);
+                if (parsed.origin === window.location.origin) {
+                  linkUrl = parsed.pathname + parsed.search;
+                }
+              } catch (error) {
+                linkUrl = undefined;
+              }
+            }
             window.gtag('event', eventName, {
               cta_location: target.getAttribute('data-cta-location') || undefined,
-              link_url: target.href || undefined,
-              page_location: window.location.href
+              link_url: linkUrl,
+              page_location: window.location.pathname
             });
           });
         `}
