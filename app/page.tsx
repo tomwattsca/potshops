@@ -3,6 +3,7 @@ import { getCategory, getLocation, listingSeeds, priorityCategories, priorityLoc
 
 const gscVisibleLocationSlugs = ['calgary', 'nelson', 'kahnawake', 'penticton'];
 const gscVisibleListingSlugs = [
+  'cannabis-culture-920-davie',
   'green-leaf',
   'green-essence-head-shop-dispensary',
   'compassion-in-motion',
@@ -14,6 +15,7 @@ const gscVisibleListingSlugs = [
 ];
 const gscVisibleCategorySlugs = ['dispensary', 'in-town-delivery'];
 const recentQueryNotesBySlug: Record<string, string> = {
+  'cannabis-culture-920-davie': 'top non-homepage row: old /listing/ URL plus Cannabis Culture brand variants',
   'green-leaf': 'recent Kahnawake and dispensary query rows',
   'green-essence-head-shop-dispensary': 'recent Green Essence and Penticton query rows',
   'compassion-in-motion': 'recent brand query row',
@@ -125,7 +127,7 @@ export default function Home() {
           <div>
             <div className="eyebrow">Current search signals</div>
             <h2 id="current-search-signals">Start with the Potshops pages already showing in Google data</h2>
-            <p>The latest final-data Search Console sample still shows the apex homepage, legacy www homepage, Calgary and Nelson location rows, and a wider set of existing profile queries. This section gives visitors and crawlers a shorter path to those already-built pages before the full directory grid.</p>
+            <p>The latest final-data Search Console sample still shows the apex homepage, legacy www homepage, the old singular Cannabis Culture listing URL, Calgary and Nelson location rows, and a wider set of existing profile queries. This section gives visitors and crawlers a shorter path to those already-built canonical pages before the full directory grid.</p>
           </div>
           <div className="signal-grid">
             <article className="mini-card">
