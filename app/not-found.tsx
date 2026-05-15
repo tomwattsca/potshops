@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
 const highSignalListings = [
-  { href: '/listings/cannabis-culture-920-davie', label: 'Cannabis Culture - 920 Davie', note: 'legacy singular listing path still appears in Search Console' },
-  { href: '/listings/green-leaf', label: 'Green Leaf', note: 'Kahnawake profile with historical-source context' },
-  { href: '/listings/green-essence-head-shop-dispensary', label: 'Green Essence Head Shop and Dispensary', note: 'Penticton profile with source-limit notes' },
-  { href: '/listings/compassion-in-motion', label: 'Compassion in Motion', note: 'existing profile row in recent Search Console data' },
+  { href: '/listings/cannabis-culture-920-davie', label: 'Cannabis Culture - 920 Davie', note: 'legacy singular listing path still appears in Search Console', ctaLocation: 'not_found_recovered_cannabis_culture' },
+  { href: '/listings/green-leaf', label: 'Green Leaf', note: 'Kahnawake profile with historical-source context', ctaLocation: 'not_found_recovered_green_leaf' },
+  { href: '/listings/green-essence-head-shop-dispensary', label: 'Green Essence Head Shop and Dispensary', note: 'Penticton profile with source-limit notes', ctaLocation: 'not_found_recovered_green_essence' },
+  { href: '/listings/compassion-in-motion', label: 'Compassion in Motion', note: 'existing profile row in recent Search Console data', ctaLocation: 'not_found_recovered_compassion' },
 ];
 
 export default function NotFound() {
@@ -32,7 +32,7 @@ export default function NotFound() {
           </article>
         </div>
         <div className="cta-row">
-          <Link className="button" href="/">Browse the rebuilt directory</Link>
+          <Link className="button" href="/" data-event="internal_link_click" data-cta-location="not_found_home" data-link-target="/">Browse the rebuilt directory</Link>
           <Link className="button secondary" href="/updates" data-event="listing_update_click" data-cta-location="not_found">Suggest a source-backed correction</Link>
         </div>
       </section>
@@ -43,7 +43,7 @@ export default function NotFound() {
         <div className="signal-grid">
           {highSignalListings.map((listing) => (
             <article className="mini-card" key={listing.href}>
-              <h3><Link href={listing.href}>{listing.label}</Link></h3>
+              <h3><Link href={listing.href} data-event="internal_link_click" data-cta-location={listing.ctaLocation} data-link-target={listing.href}>{listing.label}</Link></h3>
               <p>{listing.note}</p>
             </article>
           ))}
