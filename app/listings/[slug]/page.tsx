@@ -24,6 +24,24 @@ const listingPageFocusBySlug: Record<string, { title: string; summary: string; b
       'Use the Vancouver city page and dispensary category hub for broader context before assuming the profile represents a current Cannabis Culture store.',
     ],
   },
+  'green-essence-head-shop-dispensary': {
+    title: 'Penticton Green Essence profile and source limits',
+    summary: 'Fresh Search Console keeps showing Green Essence and Penticton-specific demand for this existing canonical listing. The page now makes the Penticton/source-backed context explicit without implying current store operations.',
+    bullets: [
+      'Search fit: recent final-data rows include green essence and green essence penticton, so the profile should quickly connect the brand to Penticton, BC.',
+      'Source posture: the 409 Martin Street address is third-party public-directory evidence, not proof of current licensing, menus, stock, delivery, hours, or storefront operation.',
+      'Next step for users: review the Penticton location page and dispensary category hub, then send stronger public sources through /updates if this record needs correction.',
+    ],
+  },
+  'green-leaf': {
+    title: 'Kahnawake Green Leaf profile and historical-source context',
+    summary: 'Fresh Search Console still surfaces Green Leaf and Kahnawake query variants for this existing canonical listing. The page now highlights what is known from local reporting and what remains unverified.',
+    bullets: [
+      'Search fit: recent final-data rows include green leaf kahnawake, kahnawake dispensary, and cannabis kahnawake, so the profile should clearly route readers to the Kahnawake directory context.',
+      'Source posture: local reporting identifies Green Leaf in Kahnawake and enforcement history, but Potshops has not verified a current public operating address, licence, menu, stock, delivery, hours, or availability.',
+      'Next step for users: use the Kahnawake location page for mapped historical-source context, and use /updates for regulator or business sources that can improve the record.',
+    ],
+  },
 };
 
 export const dynamicParams = false;
