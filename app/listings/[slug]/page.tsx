@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import { getCategory, getListing, listingSeeds, priorityLocations } from '../../data/directory';
 
 const recentSearchIntentBySlug: Record<string, string[]> = {
@@ -25,12 +26,14 @@ const listingPageFocusBySlug: Record<string, { title: string; summary: string; b
   },
 };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() { return listingSeeds.map((listing) => ({ slug: listing.slug })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
   const listing = getListing(resolvedParams.slug);
-  if (!listing) return { title: 'Listing not found' };
+  if (!listing) return { title: 'Listing not found', robots: { index: false, follow: true } };
   const hasCurrentSource = listing.verificationStatus === 'current_source';
   const description = listing.sourceName
     ? hasCurrentSource
@@ -45,7 +48,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function ListingPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
   const listing = getListing(resolvedParams.slug);
-  if (!listing) return <main><h1>Listing not found</h1></main>;
+  if (!listing) notFound();
   const hasCurrentSource = listing.verificationStatus === 'current_source';
   const relatedLocation = priorityLocations.find((location) => location.city === listing.city && location.province === listing.province);
   const relatedCategories = listing.categories?.map((slug) => getCategory(slug)).filter((category) => Boolean(category)) ?? [];
