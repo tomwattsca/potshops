@@ -10,7 +10,7 @@ const recentSearchIntentBySlug: Record<string, string[]> = {
   'compassion-in-motion': ['compassion in motion'],
   'rocket-chronic-2': ['rocket chronic canada'],
   'remedy-ice-cream': ['remedy ice cream'],
-  'the-herb-co-mount-pleasant': ['herb company'],
+  'the-herb-co-mount-pleasant': ['the herb co', 'herb company', 'the herb co mount pleasant'],
   '420-delivery': ['420 delivery', 'Greater Vancouver cannabis service context'],
 };
 
@@ -41,6 +41,15 @@ const listingPageFocusBySlug: Record<string, { title: string; summary: string; b
       'Search fit: recent final-data rows include green leaf kahnawake, kahnawake dispensary, and cannabis kahnawake, so the profile should clearly route readers to the Kahnawake directory context.',
       'Source posture: local reporting identifies Green Leaf in Kahnawake and enforcement history, but Potshops has not verified a current public operating address, licence, menu, stock, delivery, hours, or availability.',
       'Next step for users: use the Kahnawake location page for mapped historical-source context, and use /updates for regulator or business sources that can improve the record.',
+    ],
+  },
+  'the-herb-co-mount-pleasant': {
+    title: 'Mount Pleasant Herb Co profile and historical address context',
+    summary: 'Fresh Search Console shows The Herb Co Mount Pleasant still receiving brand and generic herb-company impressions. This canonical listing now separates the Vancouver address evidence from any unsupported current-store, menu, licence, or availability claims.',
+    bullets: [
+      'Search fit: recent final-data rows include the herb co and herb company variants, while the existing page also has anonymized listing-level impressions that should land on this canonical profile rather than broad homepage copy.',
+      'Source posture: public third-party directory evidence associates The Herb Co Mount Pleasant with 1193 Main St in Vancouver, but Potshops has not verified current licensing, menus, stock, delivery, hours, ordering, or storefront operation.',
+      'Next step for users: use the Vancouver location page and dispensary category hub for broader source-backed context, then send regulator, business, or public-directory evidence through /updates if the record should be corrected.',
     ],
   },
   'rocket-chronic-2': {
