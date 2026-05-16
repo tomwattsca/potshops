@@ -11,6 +11,9 @@ const recentSearchIntentBySlug: Record<string, string[]> = {
   'rocket-chronic-2': ['rocket chronic canada'],
   'remedy-ice-cream': ['remedy ice cream'],
   'the-herb-co-mount-pleasant': ['the herb co', 'herb company', 'the herb co mount pleasant'],
+  'the-cannabist-shop-king-kitchener': ['the cannabist shop king kitchener', 'king kitchener cannabis retail address context'],
+  'canna-cabana-woodlawn-guelph': ['canna cabana guelph woodlawn', 'woodlawn guelph cannabis retail address context'],
+  'wild-flowerz-sudbury': ['wild flowerz sudbury', 'sudbury cannabis retail address context'],
   '420-delivery': ['420 delivery', 'Greater Vancouver cannabis service context'],
 };
 
@@ -59,6 +62,33 @@ const listingPageFocusBySlug: Record<string, { title: string; summary: string; b
       'Search fit: recent final-data rows include rocket chronic canada, with most sampled impressions landing on the homepage rather than this canonical profile.',
       'Source posture: Potshops has historical/public-source brand-region evidence only, not a verified current address, licence, menu, stock, delivery, hours, ordering path, or storefront operation.',
       'Next step for users: review this profile as Greater Vancouver context, then use /updates for stronger regulator, business, or public-directory evidence if the record should change.',
+    ],
+  },
+  'the-cannabist-shop-king-kitchener': {
+    title: 'King Kitchener Cannabist Shop official-source context',
+    summary: 'Fresh Search Console surfaced the old singular The Cannabist Shop King Kitchener URL even though a canonical official-source profile already exists. This page now makes the Kitchener/King Street source context easier to scan without adding current-store or commerce claims.',
+    bullets: [
+      'Search fit: recent final-data rows include the legacy /listing/the-cannabist-shop-king-kitchener path, so the canonical profile should clearly identify the King Street West Kitchener record.',
+      'Source posture: AGCO public status-table evidence supports official address context only; Potshops is not claiming current hours, menus, stock, delivery, ordering, pricing, or storefront-operation details.',
+      'Next step for users: use the Kitchener location page and dispensary category hub for nearby source-backed context, then send updated regulator or business sources through /updates if the record should change.',
+    ],
+  },
+  'canna-cabana-woodlawn-guelph': {
+    title: 'Woodlawn Guelph Canna Cabana official-source context',
+    summary: 'Fresh Search Console showed a Canna Cabana Woodlawn Guelph query landing on this existing canonical listing. The page now aligns that brand/location intent with source limits and routes users to existing Guelph directory context.',
+    bullets: [
+      'Search fit: recent final-data rows include canna cabana guelph woodlawn for this canonical profile.',
+      'Source posture: AGCO public status-table evidence supports the Woodlawn Road West address context only; Potshops is not claiming current hours, menus, stock, delivery, ordering, pricing, or availability.',
+      'Next step for users: review the Guelph location page and dispensary category hub, then use /updates if stronger public evidence should change the listing.',
+    ],
+  },
+  'wild-flowerz-sudbury': {
+    title: 'Wild Flowerz Sudbury official-source context',
+    summary: 'Fresh Search Console showed the old singular Wild Flowerz Sudbury path still receiving impressions. This canonical listing now makes the Sudbury/Kathleen Street source-backed context explicit while keeping regulated-store claims limited.',
+    bullets: [
+      'Search fit: recent final-data rows include the legacy /listing/wild-flowerz-sudbury path, so the canonical profile should answer the brand and city context quickly.',
+      'Source posture: AGCO public status-table evidence supports address context only; Potshops is not claiming current hours, menus, stock, delivery, ordering, pricing, or storefront-operation details.',
+      'Next step for users: use the Sudbury location page for mapped official-source context, and send newer regulator or business evidence through /updates if this record needs correction.',
     ],
   },
 };
