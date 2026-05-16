@@ -8,6 +8,7 @@ const recentSearchIntentBySlug: Record<string, string[]> = {
   'green-leaf': ['green leaf kahnawake', 'kahnawake dispensary', 'kahnawake weed', 'weed dispensary kahnawake'],
   'green-essence-head-shop-dispensary': ['green essence', 'green essence penticton'],
   'compassion-in-motion': ['compassion in motion'],
+  'rocket-chronic-2': ['rocket chronic canada'],
   'remedy-ice-cream': ['remedy ice cream'],
   'the-herb-co-mount-pleasant': ['herb company'],
   '420-delivery': ['420 delivery', 'Greater Vancouver cannabis service context'],
@@ -40,6 +41,15 @@ const listingPageFocusBySlug: Record<string, { title: string; summary: string; b
       'Search fit: recent final-data rows include green leaf kahnawake, kahnawake dispensary, and cannabis kahnawake, so the profile should clearly route readers to the Kahnawake directory context.',
       'Source posture: local reporting identifies Green Leaf in Kahnawake and enforcement history, but Potshops has not verified a current public operating address, licence, menu, stock, delivery, hours, or availability.',
       'Next step for users: use the Kahnawake location page for mapped historical-source context, and use /updates for regulator or business sources that can improve the record.',
+    ],
+  },
+  'rocket-chronic-2': {
+    title: 'Rocket Chronic Canada profile and homepage query handoff',
+    summary: 'Fresh Search Console shows Rocket Chronic Canada searches landing on the homepage even though a canonical source-backed profile already exists. This page now makes the brand/source context explicit so the homepage can hand that demand to the profile without adding new directory rows.',
+    bullets: [
+      'Search fit: recent final-data rows include rocket chronic canada, with most sampled impressions landing on the homepage rather than this canonical profile.',
+      'Source posture: Potshops has historical/public-source brand-region evidence only, not a verified current address, licence, menu, stock, delivery, hours, ordering path, or storefront operation.',
+      'Next step for users: review this profile as Greater Vancouver context, then use /updates for stronger regulator, business, or public-directory evidence if the record should change.',
     ],
   },
 };
