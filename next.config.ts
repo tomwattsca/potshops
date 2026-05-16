@@ -12,6 +12,11 @@ const nextConfig: NextConfig = {
         destination: 'https://potshops.ca/:path*',
         permanent: true,
       },
+      {
+        source: '/add-listing',
+        destination: '/updates',
+        permanent: true,
+      },
       ...listingSeeds.map((listing) => ({
         source: listing.legacyPath.replace(/\/$/, ""),
         destination: `/listings/${listing.slug}`,
