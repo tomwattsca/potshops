@@ -112,6 +112,15 @@ const listingPageFocusBySlug: Record<string, { title: string; summary: string; b
       'Next step for users: use the Sudbury location page for mapped official-source context, and send newer regulator or business evidence through /updates if this record needs correction.',
     ],
   },
+  '420-delivery': {
+    title: '420 Delivery Greater Vancouver source-limit context',
+    summary: 'Fresh Search Console now shows the canonical 420 Delivery listing appearing for the exact 420 delivery query. This existing profile should make the brand-region evidence useful while avoiding any claim that Potshops has verified active delivery service, ordering, stock, contact, or availability.',
+    bullets: [
+      'Search fit: the 2026-04-03..2026-05-17 sample shows /listings/420-delivery with an exact 420 delivery query impression around position 5, while the historical GSC seed carried 353 impressions and 7 clicks.',
+      'Source posture: Call 420 public-website evidence supports Greater Vancouver brand/region context only; Potshops has not verified current delivery availability, licence, menus, stock, ordering path, hours, contact details, or storefront operation.',
+      'Next step for users: review the Vancouver location page and in-town-delivery category context, then use /updates if regulator, business, or public-directory evidence can improve this record.',
+    ],
+  },
   'compassion-in-motion': {
     title: 'Greater Vancouver Compassion in Motion source context',
     summary: 'Fresh Search Console and GA4 rows show this existing canonical profile still receives low-row brand interest. The page now separates Compassion in Motion brand-region context from unsupported current address, licence, menu, delivery, hours, ordering, or availability claims.',
