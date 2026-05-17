@@ -54,7 +54,8 @@ function GoogleAnalytics() {
             window.gtag('event', eventName, {
               cta_location: target.getAttribute('data-cta-location') || undefined,
               link_url: linkUrl,
-              page_location: window.location.pathname
+              page_location: window.location.pathname,
+              transport_type: 'beacon'
             });
           });
         `}
