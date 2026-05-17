@@ -6,7 +6,7 @@ import { getCategory, getListing, listingSeeds, priorityLocations } from '../../
 const recentSearchIntentBySlug: Record<string, string[]> = {
   'cannabis-culture-920-davie': ['cannabis culture dispensary', 'cannabis culture', 'cannibis culture', 'canna culture', 'cannabis culture vancouver'],
   'green-leaf': ['green leaf kahnawake', 'kahnawake dispensary', 'kahnawake weed', 'weed dispensary kahnawake', 'canabis kanawake', 'cannabis dispensary near me'],
-  'green-essence-head-shop-dispensary': ['green essence', 'green essence penticton'],
+  'green-essence-head-shop-dispensary': ['green essence', 'green essence penticton', 'green essence penticton bc', 'Green Essence Head Shop', 'Martin Street Penticton source context'],
   'rocket-chronic-2': ['rocket chronic canada'],
   'remedy-ice-cream': ['remedy ice cream'],
   'the-herb-co-mount-pleasant': ['the herb co', 'herb company', 'the herb co mount pleasant'],
@@ -32,12 +32,12 @@ const listingPageFocusBySlug: Record<string, { title: string; summary: string; b
     ],
   },
   'green-essence-head-shop-dispensary': {
-    title: 'Penticton Green Essence profile and source limits',
-    summary: 'Fresh Search Console keeps showing Green Essence and Penticton-specific demand for this existing canonical listing. The page now makes the Penticton/source-backed context explicit without implying current store operations.',
+    title: 'Penticton Green Essence source-limit context',
+    summary: 'Fresh Search Console now makes Green Essence the strongest non-Green-Leaf canonical listing signal in the Potshops sample. This existing profile should answer Green Essence / Penticton variants quickly while keeping the 409 Martin Street evidence framed as third-party historical context.',
     bullets: [
-      'Search fit: recent final-data rows include green essence and green essence penticton, so the profile should quickly connect the brand to Penticton, BC.',
-      'Source posture: the 409 Martin Street address is third-party public-directory evidence, not proof of current licensing, menus, stock, delivery, hours, or storefront operation.',
-      'Next step for users: review the Penticton location page and dispensary category hub, then send stronger public sources through /updates if this record needs correction.',
+      'Search fit: the 2026-04-03..2026-05-17 sample shows /listings/green-essence-head-shop-dispensary with 20 impressions, including 15 for green essence penticton plus broader green essence variants.',
+      'Source posture: the 409 Martin Street Penticton address comes from third-party public-directory evidence; Potshops is not claiming current licensing, menus, stock, delivery, hours, ordering, availability, or storefront operation.',
+      'Next step for users: review the Penticton location page and dispensary category hub, then send regulator, business, or public-directory sources through /updates if this record needs correction.',
     ],
   },
   'green-leaf': {
