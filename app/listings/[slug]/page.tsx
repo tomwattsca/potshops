@@ -5,9 +5,8 @@ import { getCategory, getListing, listingSeeds, priorityLocations } from '../../
 
 const recentSearchIntentBySlug: Record<string, string[]> = {
   'cannabis-culture-920-davie': ['cannabis culture dispensary', 'cannabis culture', 'cannibis culture', 'canna culture', 'cannabis culture vancouver'],
-  'green-leaf': ['green leaf kahnawake', 'kahnawake dispensary', 'kahnawake weed', 'weed dispensary kahnawake'],
+  'green-leaf': ['green leaf kahnawake', 'kahnawake dispensary', 'kahnawake weed', 'weed dispensary kahnawake', 'canabis kanawake', 'cannabis dispensary near me'],
   'green-essence-head-shop-dispensary': ['green essence', 'green essence penticton'],
-  'compassion-in-motion': ['compassion in motion'],
   'rocket-chronic-2': ['rocket chronic canada'],
   'remedy-ice-cream': ['remedy ice cream'],
   'the-herb-co-mount-pleasant': ['the herb co', 'herb company', 'the herb co mount pleasant'],
@@ -15,6 +14,8 @@ const recentSearchIntentBySlug: Record<string, string[]> = {
   'canna-cabana-woodlawn-guelph': ['canna cabana guelph woodlawn', 'woodlawn guelph cannabis retail address context'],
   'wild-flowerz-sudbury': ['wild flowerz sudbury', 'sudbury cannabis retail address context'],
   '420-delivery': ['420 delivery', 'Greater Vancouver cannabis service context'],
+  'compassion-in-motion': ['compassion in motion', 'Greater Vancouver cannabis source context'],
+  'farm-the-original-farmacy-downtown': ['farmacy victoria', 'The Original Farm Victoria', 'Douglas Street Victoria source context'],
 };
 
 
@@ -39,10 +40,10 @@ const listingPageFocusBySlug: Record<string, { title: string; summary: string; b
   },
   'green-leaf': {
     title: 'Kahnawake Green Leaf profile and historical-source context',
-    summary: 'Fresh Search Console still surfaces Green Leaf and Kahnawake query variants for this existing canonical listing. The page now highlights what is known from local reporting and what remains unverified.',
+    summary: 'Fresh Search Console now makes Green Leaf the strongest canonical listing row in the Potshops sample. This existing profile needs to answer Green Leaf/Kahnawake variants quickly while staying clear that the source evidence is historical and not proof of current cannabis-store operation.',
     bullets: [
-      'Search fit: recent final-data rows include green leaf kahnawake, kahnawake dispensary, and cannabis kahnawake, so the profile should clearly route readers to the Kahnawake directory context.',
-      'Source posture: local reporting identifies Green Leaf in Kahnawake and enforcement history, but Potshops has not verified a current public operating address, licence, menu, stock, delivery, hours, or availability.',
+      'Search fit: the 2026-04-02..2026-05-17 sample shows /listings/green-leaf with 82 impressions, including green leaf kahnawake, cannabis kahnawake, canabis kanawake, and near-me-style dispensary wording.',
+      'Source posture: local reporting identifies Green Leaf in Kahnawake and enforcement history, but Potshops has not verified a current public operating address, licence, menu, stock, delivery, hours, ordering path, or availability.',
       'Next step for users: use the Kahnawake location page for mapped historical-source context, and use /updates for regulator or business sources that can improve the record.',
     ],
   },
@@ -89,6 +90,24 @@ const listingPageFocusBySlug: Record<string, { title: string; summary: string; b
       'Search fit: recent final-data rows include the legacy /listing/wild-flowerz-sudbury path, so the canonical profile should answer the brand and city context quickly.',
       'Source posture: AGCO public status-table evidence supports address context only; Potshops is not claiming current hours, menus, stock, delivery, ordering, pricing, or storefront-operation details.',
       'Next step for users: use the Sudbury location page for mapped official-source context, and send newer regulator or business evidence through /updates if this record needs correction.',
+    ],
+  },
+  'compassion-in-motion': {
+    title: 'Greater Vancouver Compassion in Motion source context',
+    summary: 'Fresh Search Console and GA4 rows show this existing canonical profile still receives low-row brand interest. The page now separates Compassion in Motion brand-region context from unsupported current address, licence, menu, delivery, hours, ordering, or availability claims.',
+    bullets: [
+      'Search fit: the 2026-04-04..2026-05-17 sample showed /listings/compassion-in-motion with 3 impressions and one GA4 page view, making a profile-context update preferable to new rows.',
+      'Source posture: public websites support broad Compassion in Motion / Greater Vancouver context only; Potshops has not verified a current public storefront address or regulated retail-operation details.',
+      'Next step for users: use the Vancouver location page, related category context, and /updates if regulator, business, or public-directory evidence can improve the record.',
+    ],
+  },
+  'farm-the-original-farmacy-downtown': {
+    title: 'Victoria Original Farmacy source-limit context',
+    summary: 'Fresh Search Console showed farmacy victoria demand on this existing canonical listing. The page now explains the Farm/Farmacy/Douglas Street Victoria context while treating the public directory evidence as stale until stronger current sources are reviewed.',
+    bullets: [
+      'Search fit: recent final-data rows include farmacy victoria, and the canonical listing has low-row impressions around page-one average position.',
+      'Source posture: third-party public directory pages associate Farm: The Original Farmacy Downtown with 1402 Douglas St in Victoria, but those sources are stale and do not verify current licensing, menus, stock, delivery, hours, ordering, or availability.',
+      'Next step for users: use the Victoria location page and /updates for stronger regulator, business, or public-directory evidence if the profile should be corrected.',
     ],
   },
 };
