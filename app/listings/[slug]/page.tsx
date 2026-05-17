@@ -12,6 +12,8 @@ const recentSearchIntentBySlug: Record<string, string[]> = {
   'the-herb-co-mount-pleasant': ['the herb co', 'herb company', 'the herb co mount pleasant'],
   'the-cannabist-shop-king-kitchener': ['the cannabist shop king kitchener', 'king kitchener cannabis retail address context'],
   'canna-cabana-woodlawn-guelph': ['canna cabana guelph woodlawn', 'woodlawn guelph cannabis retail address context'],
+  'discounted-cannabis-windsor': ['discount cannabis windsor', 'discounted cannabis', 'discounted cannabis Windsor address context'],
+  'greentown-cannabis-discount-hut-windsor': ['greentown discount hut drouillard', 'greentown drouillard', 'Windsor Drouillard Road cannabis address context'],
   'wild-flowerz-sudbury': ['wild flowerz sudbury', 'sudbury cannabis retail address context'],
   '420-delivery': ['420 delivery', 'Greater Vancouver cannabis service context'],
   'compassion-in-motion': ['compassion in motion', 'Greater Vancouver cannabis source context'],
@@ -81,6 +83,24 @@ const listingPageFocusBySlug: Record<string, { title: string; summary: string; b
       'Search fit: recent final-data rows include canna cabana guelph woodlawn for this canonical profile.',
       'Source posture: AGCO public status-table evidence supports the Woodlawn Road West address context only; Potshops is not claiming current hours, menus, stock, delivery, ordering, pricing, or availability.',
       'Next step for users: review the Guelph location page and dispensary category hub, then use /updates if stronger public evidence should change the listing.',
+    ],
+  },
+  'discounted-cannabis-windsor': {
+    title: 'Wyandotte Windsor Discounted Cannabis official-source context',
+    summary: 'Fresh Search Console now shows this existing canonical Windsor listing earning low-row impressions for Discounted Cannabis terms. The page should answer the brand/Wyandotte context while keeping the AGCO evidence limited to official address context.',
+    bullets: [
+      'Search fit: the 2026-04-03..2026-05-17 sample shows /listings/discounted-cannabis-windsor with 8 impressions, including discount cannabis windsor, discounted cannabis, and discounted query variants.',
+      'Source posture: AGCO public status-table evidence supports the Wyandotte Street West address context only; Potshops is not claiming current hours, menus, stock, delivery, ordering, pricing, availability, or storefront-operation details.',
+      'Next step for users: use the Windsor location page and dispensary category hub for nearby source-backed context, then send regulator or business updates through /updates if this record needs correction.',
+    ],
+  },
+  'greentown-cannabis-discount-hut-windsor': {
+    title: 'Drouillard Windsor Greentown Discount Hut official-source context',
+    summary: 'Fresh Search Console also surfaces Greentown Discount Hut and Drouillard Road variants. This existing canonical listing now makes the Windsor official-source address context easier to scan without adding unsupported commerce claims.',
+    bullets: [
+      'Search fit: recent final-data rows include greentown discount hut drouillard and greentown drouillard for this canonical profile.',
+      'Source posture: AGCO public status-table evidence supports Drouillard Road address context only; Potshops is not claiming current hours, menus, stock, delivery, ordering, pricing, availability, or storefront-operation details.',
+      'Next step for users: review the Windsor location page and source-backed dispensary category context, then use /updates for stronger public evidence if the listing should change.',
     ],
   },
   'wild-flowerz-sudbury': {
