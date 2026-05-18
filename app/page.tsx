@@ -14,6 +14,32 @@ const gscVisibleListingSlugs = [
   'the-herb-co-mount-pleasant',
 ];
 const gscVisibleCategorySlugs = ['dispensary', 'in-town-delivery'];
+const homepageQuickLinks = [
+  {
+    href: '#province-directory',
+    label: 'Browse by province',
+    detail: 'Start with Ontario, British Columbia, Nova Scotia, New Brunswick, Quebec, or Alberta.',
+    ctaLocation: 'home_quick_province',
+  },
+  {
+    href: '#locations',
+    label: 'Find a city page',
+    detail: 'Use rebuilt city pages to check which source-backed profiles are mapped locally.',
+    ctaLocation: 'home_quick_city',
+  },
+  {
+    href: '#listings',
+    label: 'Look up a store profile',
+    detail: 'Open canonical profiles and read the source notes before relying on any store detail.',
+    ctaLocation: 'home_quick_listing',
+  },
+  {
+    href: '/updates',
+    label: 'Submit an update',
+    detail: 'Send regulator, business, or public-directory evidence for a correction or owner note.',
+    ctaLocation: 'home_quick_update',
+  },
+];
 const recentQueryNotesBySlug: Record<string, string> = {
   'cannabis-culture-920-davie': 'top non-homepage row: old /listing/ URL plus Cannabis Culture brand variants',
   'green-leaf': 'recent Kahnawake and dispensary query rows',
@@ -96,11 +122,41 @@ export default function Home() {
       <section className="hero">
         <div className="hero-inner">
           <div className="eyebrow">Canadian cannabis directory rebuild</div>
-          <h1>Find Canadian cannabis stores by city, province, and legacy Potshops demand.</h1>
-          <p className="lede">Potshops.ca is being rebuilt from scratch as a source-backed Canadian dispensary list using Google Search Console evidence from the old site. Start by province, city, or profile, and treat every page as directory context rather than a claim about current menus, stock, delivery, or hours.</p>
+          <h1>Find source-backed Canadian cannabis directory pages by city, province, or store name.</h1>
+          <p className="lede">Potshops.ca helps visitors navigate rebuilt cannabis directory profiles while keeping source limits clear. Start with an existing province, city, or store profile, then verify current menus, stock, delivery, hours, licensing, and operation with official sources before relying on any detail.</p>
           <div className="cta-row">
-            <a className="button" href="#locations">Browse priority cities</a>
+            <a className="button" href="#province-directory" data-event="internal_link_click" data-cta-location="home_hero_browse">Find a city or profile</a>
             <Link className="button secondary" href="/updates" data-event="listing_update_click" data-cta-location="home_hero">Suggest a listing update</Link>
+          </div>
+          <div className="hero-quick-find" aria-labelledby="hero-quick-find-title">
+            <div>
+              <div className="eyebrow">Quick find</div>
+              <h2 id="hero-quick-find-title">Start with the page type you need</h2>
+              <p>Potshops does not guess live store details. These shortcuts take you to existing source-backed directory pages, where each profile or city page explains what is supported and what still needs verification.</p>
+            </div>
+            <div className="quick-link-grid">
+              {homepageQuickLinks.map((item) => (
+                item.href.startsWith('/') ? (
+                  <Link key={item.href} href={item.href} data-event="listing_update_click" data-cta-location={item.ctaLocation}>
+                    <strong>{item.label}</strong>
+                    <span>{item.detail}</span>
+                  </Link>
+                ) : (
+                  <a key={item.href} href={item.href} data-event="internal_link_click" data-cta-location={item.ctaLocation}>
+                    <strong>{item.label}</strong>
+                    <span>{item.detail}</span>
+                  </a>
+                )
+              ))}
+            </div>
+            <div className="popular-shortcuts" aria-label="Popular rebuilt pages">
+              <span>Popular rebuilt paths:</span>
+              <Link href="/locations/calgary" data-event="internal_link_click" data-cta-location="home_quick_popular">Calgary</Link>
+              <Link href="/locations/nelson" data-event="internal_link_click" data-cta-location="home_quick_popular">Nelson</Link>
+              <Link href="/listings/cannabis-culture-920-davie" data-event="internal_link_click" data-cta-location="home_quick_popular">Cannabis Culture Davie</Link>
+              <Link href="/listings/green-leaf" data-event="internal_link_click" data-cta-location="home_quick_popular">Green Leaf</Link>
+              <Link href="/updates" data-event="listing_update_click" data-cta-location="home_quick_popular_update">Send evidence</Link>
+            </div>
           </div>
           <div className="homepage-search-guide" aria-label="How Potshops handles cannabis store searches">
             <article>
@@ -126,12 +182,12 @@ export default function Home() {
         <section className="card evidence-panel" aria-labelledby="current-search-signals">
           <div>
             <div className="eyebrow">Current search signals</div>
-            <h2 id="current-search-signals">Start with the Potshops pages already showing in Google data</h2>
-            <p>The latest final-data Search Console sample still shows the apex homepage, legacy www homepage, the old singular Cannabis Culture listing URL, Calgary and Nelson location rows, and a wider set of existing profile queries. This section gives visitors and crawlers a shorter path to those already-built canonical pages before the full directory grid.</p>
+            <h2 id="current-search-signals">Start with rebuilt pages people are already trying to find</h2>
+            <p>Recent search data points to the homepage, older Potshops URLs, city searches, and store-name searches. This section translates those signals into plain-language shortcuts to existing canonical pages before the full directory grid.</p>
           </div>
           <div className="signal-grid">
             <article className="mini-card">
-              <h3>GSC-visible city pages</h3>
+              <h3>City pages with recent search demand</h3>
               <ul className="clean">
                 {gscVisibleLocations.map((location) => location && (
                   <li key={location.slug}><Link href={`/locations/${location.slug}`} data-event="internal_link_click" data-cta-location="home_signal_location">{location.city}, {location.province} cannabis directory notes</Link></li>
@@ -139,7 +195,7 @@ export default function Home() {
               </ul>
             </article>
             <article className="mini-card">
-              <h3>GSC-visible profiles and recovered brand queries</h3>
+              <h3>Store profiles people are looking for</h3>
               <ul className="clean">
                 {gscVisibleListings.map((listing) => listing && (
                   <li key={listing.slug}>
@@ -170,7 +226,7 @@ export default function Home() {
           <div>
             <div className="eyebrow">Canadian dispensary list by province</div>
             <h2 id="province-directory">Browse rebuilt Potshops city pages by province</h2>
-            <p>Search Console is now showing broad Canadian directory queries as well as city and brand searches. This province view makes the existing city pages easier to scan without adding new URLs or implying complete provincial coverage.</p>
+            <p>Use this province view when you know the market but not the exact profile name. It only links to existing rebuilt city pages and does not imply complete provincial coverage or current store availability.</p>
           </div>
           <div className="province-grid">
             {locationsByProvince.map((group) => (
