@@ -18,6 +18,7 @@ const recentSearchIntentBySlug: Record<string, string[]> = {
   '420-delivery': ['420 delivery', 'Greater Vancouver cannabis service context'],
   'compassion-in-motion': ['compassion in motion', 'Greater Vancouver cannabis source context'],
   'farm-the-original-farmacy-downtown': ['farmacy victoria', 'The Original Farm Victoria', 'Douglas Street Victoria source context'],
+  'gulf-island-organics': ['gulf island organics', 'Gulf Island Organics Victoria', 'Fort Street Victoria historical source context'],
 };
 
 
@@ -137,6 +138,15 @@ const listingPageFocusBySlug: Record<string, { title: string; summary: string; b
       'Search fit: recent final-data rows include farmacy victoria, and the canonical listing has low-row impressions around page-one average position.',
       'Source posture: third-party public directory pages associate Farm: The Original Farmacy Downtown with 1402 Douglas St in Victoria, but those sources are stale and do not verify current licensing, menus, stock, delivery, hours, ordering, or availability.',
       'Next step for users: use the Victoria location page and /updates for stronger regulator, business, or public-directory evidence if the profile should be corrected.',
+    ],
+  },
+  'gulf-island-organics': {
+    title: 'Victoria Gulf Island Organics historical-source context',
+    summary: 'Fresh Search Console now shows the existing Gulf Island Organics canonical listing in the sampled page set. This profile should answer Gulf Island Organics / Victoria intent while making the permanently-closed public-source label and source limits clear.',
+    bullets: [
+      'Search fit: the 2026-04-03..2026-05-17 sample shows /listings/gulf-island-organics with 2 impressions around average position 5.5, while the historical seed carried 190 impressions and 8 clicks.',
+      'Source posture: public Google result evidence supports the Fort Street Victoria address/phone context and labels the business permanently closed; Potshops is not claiming current licensing, menus, stock, delivery, hours, ordering, availability, contact accuracy, or storefront operation.',
+      'Next step for users: use the Victoria location page and dispensary category hub for broader source-backed context, then use /updates if regulator, business, or public-directory evidence can improve this record.',
     ],
   },
 };
