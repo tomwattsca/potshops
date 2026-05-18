@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HomeLookup from './HomeLookup';
 import { getCategory, getLocation, listingSeeds, priorityCategories, priorityLocations } from './data/directory';
 
 const gscVisibleLocationSlugs = ['calgary', 'nelson', 'kahnawake', 'penticton'];
@@ -74,6 +75,33 @@ const locationsByProvince = provinceOrder
   }))
   .filter((group) => group.locations.length > 0);
 
+const homepageLookupItems = [
+  ...priorityLocations.map((location) => ({
+    href: `/locations/${location.slug}`,
+    label: `${location.city}, ${location.province}`,
+    detail: location.description,
+    kind: 'City' as const,
+    status: location.legacyImpressions > 0 ? `${location.legacyImpressions} legacy impressions in the rebuild data` : 'Source-backed city page in the current rebuild',
+    keywords: [location.city, location.province, provinceNames[location.province] ?? '', location.title, location.gscEvidence],
+  })),
+  ...listingSeeds.map((listing) => ({
+    href: `/listings/${listing.slug}`,
+    label: listing.name,
+    detail: listing.locationHint,
+    kind: 'Store profile' as const,
+    status: listing.verificationStatus === 'current_source' ? 'Official/public-source address context' : 'Historical or public-source context',
+    keywords: [listing.name, listing.slug, listing.city ?? '', listing.province ?? '', (listing.categories ?? []).join(' '), listing.sourceName ?? '', listing.sourceNote ?? ''],
+  })),
+  ...priorityCategories.map((category) => ({
+    href: `/categories/${category.slug}`,
+    label: category.title,
+    detail: category.description,
+    kind: 'Category' as const,
+    status: `${category.legacyImpressions} legacy impressions in the rebuild data`,
+    keywords: [category.title, category.slug, category.description],
+  })),
+];
+
 const homepageFaqs = [
   {
     question: 'Does Potshops.ca sell cannabis?',
@@ -125,9 +153,11 @@ export default function Home() {
           <h1>Find source-backed Canadian cannabis directory pages by city, province, or store name.</h1>
           <p className="lede">Potshops.ca helps visitors navigate rebuilt cannabis directory profiles while keeping source limits clear. Start with an existing province, city, or store profile, then verify current menus, stock, delivery, hours, licensing, and operation with official sources before relying on any detail.</p>
           <div className="cta-row">
-            <a className="button" href="#province-directory" data-event="internal_link_click" data-cta-location="home_hero_browse">Find a city or profile</a>
+            <a className="button" href="#homepage-lookup-title" data-event="internal_link_click" data-cta-location="home_hero_lookup">Search existing pages</a>
+            <a className="button secondary" href="#province-directory" data-event="internal_link_click" data-cta-location="home_hero_browse">Browse by province</a>
             <Link className="button secondary" href="/updates" data-event="listing_update_click" data-cta-location="home_hero">Suggest a listing update</Link>
           </div>
+          <HomeLookup items={homepageLookupItems} />
           <div className="hero-quick-find" aria-labelledby="hero-quick-find-title">
             <div>
               <div className="eyebrow">Quick find</div>
