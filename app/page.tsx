@@ -74,6 +74,11 @@ const locationsByProvince = provinceOrder
     locations: priorityLocations.filter((location) => location.province === province),
   }))
   .filter((group) => group.locations.length > 0);
+const featuredLocationSlugs = ['calgary', 'nelson', 'kahnawake', 'penticton', 'vancouver', 'toronto', 'windsor', 'duncan'];
+const featuredLocations = featuredLocationSlugs
+  .map((slug) => getLocation(slug))
+  .filter((location) => Boolean(location));
+const remainingLocations = priorityLocations.filter((location) => !featuredLocationSlugs.includes(location.slug));
 
 const homepageLookupItems = [
   ...priorityLocations.map((location) => ({
@@ -284,19 +289,32 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="locations">
-          <div className="eyebrow">City directory index</div>
-          <h2>City pages with source notes</h2>
-          <p>Use these city pages as local directory maps. They explain which profiles have source notes and where Potshops still needs better evidence.</p>
-          <div className="grid">
-            {priorityLocations.map((location) => (
+        <section id="locations" className="directory-index-section">
+          <div className="section-heading-row">
+            <div>
+              <div className="eyebrow">City directory index</div>
+              <h2>Start with these city pages</h2>
+              <p>These city pages cover the most common starting points and source-note examples. Use the province browser or full city list when you need another area.</p>
+            </div>
+            <a className="section-jump-link" href="#province-directory" data-event="internal_link_click" data-cta-location="home_city_index_province_jump">Browse all provinces</a>
+          </div>
+          <div className="grid featured-city-grid">
+            {featuredLocations.map((location) => location && (
               <article className="card" key={location.slug}>
-                <h3><Link href={`/locations/${location.slug}`} data-event="internal_link_click" data-cta-location="home_location_grid">{location.city}, {location.province}</Link></h3>
+                <h3><Link href={`/locations/${location.slug}`} data-event="internal_link_click" data-cta-location="home_location_featured_grid">{location.city}, {location.province}</Link></h3>
                 <p>{location.description}</p>
                 <p className="meta">City directory page · source notes included where available</p>
               </article>
             ))}
           </div>
+          <details className="full-index-details city-index-details">
+            <summary>Show all city page links</summary>
+            <div className="index-link-cloud">
+              {remainingLocations.map((location) => (
+                <Link key={location.slug} href={`/locations/${location.slug}`} data-event="internal_link_click" data-cta-location="home_location_details_index">{location.city}, {location.province}</Link>
+              ))}
+            </div>
+          </details>
         </section>
         <section id="categories">
           <div className="eyebrow">Category hubs</div>
