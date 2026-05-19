@@ -37,8 +37,8 @@ export default function HomeLookup({ items }: HomeLookupProps) {
     <section className="homepage-lookup" aria-labelledby="homepage-lookup-title">
       <div className="lookup-copy">
         <div className="eyebrow">Directory lookup</div>
-        <h2 id="homepage-lookup-title">Search the existing directory</h2>
-        <p>Search by city, province, store name, or category. Results stay inside the existing Potshops directory, and your search text is not sent to analytics.</p>
+        <h2 id="homepage-lookup-title">Search the directory</h2>
+        <p>Search by city, province, store name, or category. Your search text stays in the browser and is not sent to analytics.</p>
       </div>
       <label className="lookup-search-label" htmlFor="homepage-lookup-input">Search by city, province, store, or category</label>
       <div className="lookup-search-row">
@@ -57,7 +57,7 @@ export default function HomeLookup({ items }: HomeLookupProps) {
       <div className="lookup-results" aria-live="polite">
         <div className="lookup-results-heading">
           <strong>{showingSearchResults ? `${results.length} matching existing page${results.length === 1 ? '' : 's'}` : 'Common starting points'}</strong>
-          <span>{showingSearchResults ? 'Open a result, then read the source-limit notes on that page.' : 'Useful source-backed pages to start with.'}</span>
+          <span>{showingSearchResults ? 'Open a result, then read the source notes on that page.' : 'Useful pages to start with.'}</span>
         </div>
         {results.length > 0 ? (
           <div className="lookup-result-grid">
@@ -71,14 +71,14 @@ export default function HomeLookup({ items }: HomeLookupProps) {
               >
                 <span className="lookup-kind">{item.kind}</span>
                 <strong>{item.label}</strong>
-                <span>{item.detail}</span>
-                {item.status && <em>{item.status}</em>}
+                {showingSearchResults && <span>{item.detail}</span>}
+                {showingSearchResults && item.status && <em>{item.status}</em>}
               </Link>
             ))}
           </div>
         ) : (
           <div className="lookup-empty" role="status">
-            <strong>No rebuilt page found for that search yet.</strong>
+            <strong>No directory page found for that search yet.</strong>
             <span>Try a province, city, or known profile name, or send public-source evidence for Potshops to review.</span>
             <Link href="/updates" data-event="listing_update_click" data-cta-location="home_lookup_empty_update">Suggest an update</Link>
           </div>
