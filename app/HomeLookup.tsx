@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { FormEvent, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 
 type LookupItem = {
@@ -25,6 +25,8 @@ function matchesQuery(item: LookupItem, query: string) {
 
 export default function HomeLookup({ items }: HomeLookupProps) {
   const [query, setQuery] = useState('');
+  const inputRef = useRef<HTMLInputElement>(null);
+  const resultsRef = useRef<HTMLDivElement>(null);
   const featuredItems = items.slice(0, 6);
   const results = useMemo(() => {
     const trimmed = query.trim();
@@ -33,6 +35,15 @@ export default function HomeLookup({ items }: HomeLookupProps) {
   }, [featuredItems, items, query]);
   const showingSearchResults = query.trim().length > 0;
 
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!query.trim()) {
+      inputRef.current?.focus();
+      return;
+    }
+    resultsRef.current?.focus();
+  }
+
   return (
     <section className="homepage-lookup" aria-labelledby="homepage-lookup-title">
       <div className="lookup-copy">
@@ -40,21 +51,25 @@ export default function HomeLookup({ items }: HomeLookupProps) {
         <h2 id="homepage-lookup-title">Search the directory</h2>
         <p>Search by city, province, store name, or category. Your search text stays in the browser and is not sent to analytics.</p>
       </div>
-      <label className="lookup-search-label" htmlFor="homepage-lookup-input">Search by city, province, store, or category</label>
-      <div className="lookup-search-row">
-        <input
-          id="homepage-lookup-input"
-          type="search"
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-          placeholder="Try Calgary, Green Leaf, Windsor, delivery..."
-          autoComplete="off"
-        />
-        {query && (
-          <button type="button" onClick={() => setQuery('')} aria-label="Clear directory lookup">Clear</button>
-        )}
-      </div>
-      <div className="lookup-results" aria-live="polite">
+      <form className="lookup-search-form" onSubmit={handleSubmit}>
+        <label className="lookup-search-label" htmlFor="homepage-lookup-input">Search by city, province, store, or category</label>
+        <div className="lookup-search-row">
+          <input
+            ref={inputRef}
+            id="homepage-lookup-input"
+            type="search"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Try Calgary, Green Leaf, Windsor, delivery..."
+            autoComplete="off"
+          />
+          <button className="lookup-submit-button" type="submit">Find listings</button>
+          {query && (
+            <button className="lookup-clear-button" type="button" onClick={() => setQuery('')} aria-label="Clear directory lookup">Clear</button>
+          )}
+        </div>
+      </form>
+      <div className="lookup-results" aria-live="polite" tabIndex={-1} ref={resultsRef}>
         <div className="lookup-results-heading">
           <strong>{showingSearchResults ? `${results.length} matching existing page${results.length === 1 ? '' : 's'}` : 'Common starting points'}</strong>
           <span>{showingSearchResults ? 'Open a result, then read the source notes on that page.' : 'Useful pages to start with.'}</span>
