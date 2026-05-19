@@ -8,8 +8,9 @@ const siteUrl = 'https://potshops.ca';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: { default: 'Potshops.ca | Canadian Cannabis Store Directory', template: '%s | Potshops.ca' },
-  description: 'A rebuilt Canadian cannabis store directory guided by Potshops.ca Search Console demand data.',
+  description: 'A source-backed Canadian cannabis directory for existing city, province, category, and store-profile pages.',
   alternates: { canonical: '/' },
+  icons: { icon: '/favicon.svg' },
   openGraph: { title: 'Potshops.ca', description: 'Canadian cannabis store and dispensary directory.', url: siteUrl, siteName: 'Potshops.ca', type: 'website' },
 };
 
@@ -83,10 +84,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteSchema />
         <header className="site-header">
           <nav className="nav" aria-label="Main navigation">
-            <Link href="/" className="logo">Potshops.ca</Link>
+            <Link href="/" className="logo" aria-label="Potshops.ca home"><span className="logo-mark" aria-hidden="true">P</span><span>Potshops.ca</span></Link>
             <div className="nav-links">
-              <Link href="/#locations">Priority locations</Link>
-              <Link href="/#listings">Legacy listings</Link>
+              <Link href="/#province-directory">Browse provinces</Link>
+              <Link href="/#listings">Store profiles</Link>
               <Link href="/updates" className="nav-cta" data-event="listing_update_click" data-cta-location="global_nav">Suggest an update</Link>
             </div>
           </nav>

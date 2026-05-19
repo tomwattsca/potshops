@@ -37,10 +37,10 @@ export default function HomeLookup({ items }: HomeLookupProps) {
     <section className="homepage-lookup" aria-labelledby="homepage-lookup-title">
       <div className="lookup-copy">
         <div className="eyebrow">Directory lookup</div>
-        <h2 id="homepage-lookup-title">Search existing city, profile, and category pages</h2>
-        <p>Type a city, province, store name, or category. Results stay inside the existing Potshops directory and do not send your search text to analytics.</p>
+        <h2 id="homepage-lookup-title">Search the existing directory</h2>
+        <p>Search by city, province, store name, or category. Results stay inside the existing Potshops directory, and your search text is not sent to analytics.</p>
       </div>
-      <label className="lookup-search-label" htmlFor="homepage-lookup-input">Search Potshops pages</label>
+      <label className="lookup-search-label" htmlFor="homepage-lookup-input">Search by city, province, store, or category</label>
       <div className="lookup-search-row">
         <input
           id="homepage-lookup-input"
@@ -56,8 +56,8 @@ export default function HomeLookup({ items }: HomeLookupProps) {
       </div>
       <div className="lookup-results" aria-live="polite">
         <div className="lookup-results-heading">
-          <strong>{showingSearchResults ? `${results.length} matching existing page${results.length === 1 ? '' : 's'}` : 'Suggested starting points'}</strong>
-          <span>{showingSearchResults ? 'Open a result, then read the source-limit notes on that page.' : 'Popular paths from recent Search Console and source-backed rebuild work.'}</span>
+          <strong>{showingSearchResults ? `${results.length} matching existing page${results.length === 1 ? '' : 's'}` : 'Common starting points'}</strong>
+          <span>{showingSearchResults ? 'Open a result, then read the source-limit notes on that page.' : 'Useful source-backed pages to start with.'}</span>
         </div>
         {results.length > 0 ? (
           <div className="lookup-result-grid">

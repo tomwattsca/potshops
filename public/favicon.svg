@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Potshops.ca">
+  <rect width="64" height="64" rx="16" fill="#115e35"/>
+  <path d="M20 44V16h15.5c7.1 0 11.8 4.2 11.8 10.5S42.6 37 35.5 37H29v7h-9Zm9-15h5.8c2.5 0 4.1-1.1 4.1-2.8 0-1.8-1.6-2.9-4.1-2.9H29V29Z" fill="#fffaf0"/>
+  <path d="M42 42c4.5-1.7 7.7-5.4 8.6-10.4-4.8.7-8.8 3.7-10.8 8.1L42 42Z" fill="#9be7b4"/>
+</svg>

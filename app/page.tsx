@@ -148,62 +148,55 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <div className="hero-inner">
-          <div className="eyebrow">Canadian cannabis directory rebuild</div>
-          <h1>Find source-backed Canadian cannabis directory pages by city, province, or store name.</h1>
-          <p className="lede">Potshops.ca helps visitors navigate rebuilt cannabis directory profiles while keeping source limits clear. Start with an existing province, city, or store profile, then verify current menus, stock, delivery, hours, licensing, and operation with official sources before relying on any detail.</p>
-          <div className="cta-row">
-            <a className="button" href="#homepage-lookup-title" data-event="internal_link_click" data-cta-location="home_hero_lookup">Search existing pages</a>
-            <a className="button secondary" href="#province-directory" data-event="internal_link_click" data-cta-location="home_hero_browse">Browse by province</a>
-            <Link className="button secondary" href="/updates" data-event="listing_update_click" data-cta-location="home_hero">Suggest a listing update</Link>
+        <div className="hero-inner hero-layout">
+          <div className="hero-copy">
+            <div className="eyebrow">Canadian cannabis directory rebuild</div>
+            <h1>Search source-backed Canadian cannabis directory pages.</h1>
+            <p className="lede">Find existing Potshops city, province, category, and store-profile pages. Every page is written conservatively: verify menus, stock, delivery, hours, licences, and operation with official sources before relying on any detail.</p>
+            <div className="cta-row hero-actions">
+              <a className="button" href="#homepage-lookup-title" data-event="internal_link_click" data-cta-location="home_hero_lookup">Search the directory</a>
+              <a className="button secondary" href="#province-directory" data-event="internal_link_click" data-cta-location="home_hero_browse">Browse by province</a>
+              <Link className="button ghost" href="/updates" data-event="listing_update_click" data-cta-location="home_hero">Suggest an update</Link>
+            </div>
+            <div className="hero-trust-strip" aria-label="Potshops directory trust summary">
+              <span><strong>{listingSeeds.length}</strong> rebuilt profiles</span>
+              <span><strong>{sourceBackedListingCount}</strong> with source notes</span>
+              <span><strong>{currentSourceListingCount}</strong> current-source address-context profiles</span>
+              <span>No ordering, stock, menu, or licence guarantees</span>
+            </div>
           </div>
           <HomeLookup items={homepageLookupItems} />
-          <div className="hero-quick-find" aria-labelledby="hero-quick-find-title">
-            <div>
-              <div className="eyebrow">Quick find</div>
-              <h2 id="hero-quick-find-title">Start with the page type you need</h2>
-              <p>Potshops does not guess live store details. These shortcuts take you to existing source-backed directory pages, where each profile or city page explains what is supported and what still needs verification.</p>
-            </div>
-            <div className="quick-link-grid">
-              {homepageQuickLinks.map((item) => (
-                item.href.startsWith('/') ? (
-                  <Link key={item.href} href={item.href} data-event="listing_update_click" data-cta-location={item.ctaLocation}>
-                    <strong>{item.label}</strong>
-                    <span>{item.detail}</span>
-                  </Link>
-                ) : (
-                  <a key={item.href} href={item.href} data-event="internal_link_click" data-cta-location={item.ctaLocation}>
-                    <strong>{item.label}</strong>
-                    <span>{item.detail}</span>
-                  </a>
-                )
-              ))}
-            </div>
-            <div className="popular-shortcuts" aria-label="Popular rebuilt pages">
-              <span>Popular rebuilt paths:</span>
-              <Link href="/locations/calgary" data-event="internal_link_click" data-cta-location="home_quick_popular">Calgary</Link>
-              <Link href="/locations/nelson" data-event="internal_link_click" data-cta-location="home_quick_popular">Nelson</Link>
-              <Link href="/listings/cannabis-culture-920-davie" data-event="internal_link_click" data-cta-location="home_quick_popular">Cannabis Culture Davie</Link>
-              <Link href="/listings/green-leaf" data-event="internal_link_click" data-cta-location="home_quick_popular">Green Leaf</Link>
-              <Link href="/updates" data-event="listing_update_click" data-cta-location="home_quick_popular_update">Send evidence</Link>
-            </div>
+        </div>
+      </section>
+      <section className="top-paths-band" aria-labelledby="hero-quick-find-title">
+        <div className="top-paths-inner">
+          <div className="top-paths-copy">
+            <div className="eyebrow">Quick paths</div>
+            <h2 id="hero-quick-find-title">Start with a search, a province, or a correction.</h2>
+            <p>Potshops does not guess live store details. These shortcuts only point to existing pages and explain where source-backed evidence ends.</p>
           </div>
-          <div className="homepage-search-guide" aria-label="How Potshops handles cannabis store searches">
-            <article>
-              <span className="guide-step">1</span>
-              <h2>Search by province or city</h2>
-              <p>Use the rebuilt province and city pages as a directory map, especially for broad searches like Canadian dispensary list or cannabis store Canada.</p>
-            </article>
-            <article>
-              <span className="guide-step">2</span>
-              <h2>Read the source notes first</h2>
-              <p>Profile pages show what public sources support and what Potshops is not claiming yet, including current operation, menus, stock, delivery, hours, or licences.</p>
-            </article>
-            <article>
-              <span className="guide-step">3</span>
-              <h2>Send evidence, not promotions</h2>
-              <p>Corrections should include regulator, business, or public-directory sources. Promotional, medical, quality, ordering, or availability claims stay out until they are independently supportable.</p>
-            </article>
+          <div className="quick-link-grid">
+            {homepageQuickLinks.map((item) => (
+              item.href.startsWith('/') ? (
+                <Link key={item.href} href={item.href} data-event="listing_update_click" data-cta-location={item.ctaLocation}>
+                  <strong>{item.label}</strong>
+                  <span>{item.detail}</span>
+                </Link>
+              ) : (
+                <a key={item.href} href={item.href} data-event="internal_link_click" data-cta-location={item.ctaLocation}>
+                  <strong>{item.label}</strong>
+                  <span>{item.detail}</span>
+                </a>
+              )
+            ))}
+          </div>
+          <div className="popular-shortcuts" aria-label="Popular rebuilt pages">
+            <span>Popular starting points:</span>
+            <Link href="/locations/calgary" data-event="internal_link_click" data-cta-location="home_quick_popular">Calgary</Link>
+            <Link href="/locations/nelson" data-event="internal_link_click" data-cta-location="home_quick_popular">Nelson</Link>
+            <Link href="/listings/cannabis-culture-920-davie" data-event="internal_link_click" data-cta-location="home_quick_popular">Cannabis Culture Davie</Link>
+            <Link href="/listings/green-leaf" data-event="internal_link_click" data-cta-location="home_quick_popular">Green Leaf</Link>
+            <Link href="/updates" data-event="listing_update_click" data-cta-location="home_quick_popular_update">Send evidence</Link>
           </div>
         </div>
       </section>
@@ -211,9 +204,9 @@ export default function Home() {
         <HomepageSchema />
         <section className="card evidence-panel" aria-labelledby="current-search-signals">
           <div>
-            <div className="eyebrow">Current search signals</div>
-            <h2 id="current-search-signals">Start with rebuilt pages people are already trying to find</h2>
-            <p>Recent search data points to the homepage, older Potshops URLs, city searches, and store-name searches. This section translates those signals into plain-language shortcuts to existing canonical pages before the full directory grid.</p>
+            <div className="eyebrow">Popular searches</div>
+            <h2 id="current-search-signals">Pages people are already trying to find</h2>
+            <p>Recent search data points to the homepage, older Potshops URLs, city searches, and store-name searches. These shortcuts route visitors to existing canonical pages before the larger directory index.</p>
           </div>
           <div className="signal-grid">
             <article className="mini-card">
@@ -292,9 +285,9 @@ export default function Home() {
         </section>
 
         <section id="locations">
-          <div className="eyebrow">GSC-led information architecture</div>
-          <h2>Priority location pages</h2>
-          <p>These are the first city pages because they appeared in Potshops.ca query/page data from 2025-01-02 to 2026-05-03 or because official public-source rows support a cautious local directory page.</p>
+          <div className="eyebrow">City directory index</div>
+          <h2>Source-led location pages</h2>
+          <p>Use these existing city pages as local directory maps. They explain which mapped profiles are source-backed and where Potshops still needs better evidence.</p>
           <div className="grid">
             {priorityLocations.map((location) => (
               <article className="card" key={location.slug}>
@@ -306,9 +299,9 @@ export default function Home() {
           </div>
         </section>
         <section id="categories">
-          <div className="eyebrow">Commercial-intent recovery</div>
-          <h2>Priority category pages</h2>
-          <p>These legacy category URLs had Search Console demand and now act as hubs to city and listing pages while Potshops verifies commercial data.</p>
+          <div className="eyebrow">Category hubs</div>
+          <h2>Browse by directory category</h2>
+          <p>These existing category hubs group source-backed profiles and city pages without implying live availability, ordering, delivery, menus, or complete coverage.</p>
           <div className="grid">
             {priorityCategories.map((category) => (
               <article className="card" key={category.slug}>
@@ -320,11 +313,11 @@ export default function Home() {
           </div>
         </section>
         <section id="listings">
-          <div className="eyebrow">Legacy URL recovery</div>
-          <h2>Store profiles to verify first</h2>
-          <p>These listing URLs had the most Search Console impressions on the unavailable WordPress site. Rebuilding them first helps recover existing demand while seed data is verified.</p>
-          <div className="grid">
-            {listingSeeds.map((listing) => (
+          <div className="eyebrow">Store profile index</div>
+          <h2>Store profiles with source notes</h2>
+          <p>Start with the most visible rebuilt profiles, or use the directory search above to find a specific store name. Profile pages separate source-backed facts from unverified current-store details.</p>
+          <div className="grid compact-grid">
+            {listingSeeds.slice(0, 24).map((listing) => (
               <article className="card" key={listing.slug}>
                 <h3><Link href={`/listings/${listing.slug}`} data-event="internal_link_click" data-cta-location="home_listing_grid">{listing.name}</Link></h3>
                 <p className="meta">{listing.locationHint} · {listing.gscImpressions.toLocaleString()} impressions · {listing.gscClicks.toLocaleString()} clicks</p>
@@ -332,6 +325,14 @@ export default function Home() {
               </article>
             ))}
           </div>
+          <details className="full-index-details">
+            <summary>Show all rebuilt profile links</summary>
+            <div className="index-link-cloud">
+              {listingSeeds.slice(24).map((listing) => (
+                <Link key={listing.slug} href={`/listings/${listing.slug}`} data-event="internal_link_click" data-cta-location="home_listing_details_index">{listing.name}</Link>
+              ))}
+            </div>
+          </details>
         </section>
         <section id="claim" className="split">
           <div>
