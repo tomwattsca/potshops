@@ -334,14 +334,23 @@ export default function Home() {
           <div className="eyebrow">Store profile index</div>
           <h2>Store profiles with source notes</h2>
           <p>Start with visible store profiles, or use the directory search above to find a specific store name. Profile pages separate source-backed facts from unverified current-store details.</p>
-          <div className="grid compact-grid">
-            {listingSeeds.slice(0, 24).map((listing) => (
-              <article className="card" key={listing.slug}>
-                <h3><Link href={`/listings/${listing.slug}`} data-event="internal_link_click" data-cta-location="home_listing_grid">{listing.name}</Link></h3>
-                <p className="meta">{listing.locationHint}</p>
-                <p>{listing.verificationStatus === 'current_source' ? 'Public-source address context; verify all current operating details directly.' : 'Historical/public-source context; current operating details are not guaranteed.'}</p>
-              </article>
-            ))}
+          <div className="profile-index-note" role="note">
+            <strong>Source note:</strong> profile cards are starting points, not current-store guarantees. Open a profile for source details and verify menus, stock, delivery, hours, licensing, and operation directly with official sources.
+          </div>
+          <div className="grid compact-grid profile-card-grid">
+            {listingSeeds.slice(0, 24).map((listing) => {
+              const isCurrentSource = listing.verificationStatus === 'current_source';
+              return (
+                <article className="card home-profile-card" key={listing.slug}>
+                  <h3><Link href={`/listings/${listing.slug}`} data-event="internal_link_click" data-cta-location="home_listing_grid">{listing.name}</Link></h3>
+                  <p className="meta">{listing.locationHint}</p>
+                  <div className="profile-status-row" aria-label={isCurrentSource ? 'Public-source address context; current details require verification' : 'Historical source context; current status unverified'}>
+                    <span className={`status-badge ${isCurrentSource ? 'status-current' : 'status-historical'}`}>{isCurrentSource ? 'Public-source address' : 'Historical source'}</span>
+                    <span className="profile-status-meta">Current details unverified</span>
+                  </div>
+                </article>
+              );
+            })}
           </div>
           <details className="full-index-details">
             <summary>Show all profile links</summary>

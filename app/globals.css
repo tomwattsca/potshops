@@ -44,6 +44,14 @@ ul.clean { padding-left:18px; color:var(--muted); line-height:1.7; }
 .top-paths-copy h2 { margin:6px 0 8px; font-size:clamp(1.35rem,2vw,1.9rem); }
 .top-paths-copy p { margin:0; }
 .compact-grid { grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
+
+.profile-index-note { margin:18px 0 8px; border:1px solid rgba(17,94,53,.18); border-radius:16px; padding:14px 16px; background:#f3faf5; color:#30473a; line-height:1.58; }
+.profile-index-note strong { color:var(--green-strong); }
+.profile-card-grid { margin-top:18px; }
+.home-profile-card { display:flex; flex-direction:column; gap:10px; }
+.home-profile-card h3, .home-profile-card p { margin:0; }
+.profile-status-row { display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-top:auto; }
+.profile-status-meta { display:inline-flex; align-items:center; border-radius:999px; padding:6px 10px; background:#f8faf8; color:var(--muted); font-size:.78rem; font-weight:800; }
 .directory-index-section { margin-bottom:42px; }
 .section-heading-row { display:flex; justify-content:space-between; gap:24px; align-items:flex-end; margin-bottom:22px; }
 .section-heading-row p { max-width:760px; margin-bottom:0; }
