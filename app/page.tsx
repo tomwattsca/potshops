@@ -222,16 +222,31 @@ export default function Home() {
                 ))}
               </ul>
             </article>
-            <article className="mini-card">
-              <h3>Popular store profiles</h3>
-              <ul className="clean">
-                {gscVisibleListings.map((listing) => listing && (
+            <article className="mini-card signal-profile-card">
+              <div className="signal-card-heading">
+                <h3>Popular store profiles</h3>
+                <span>Top profile shortcuts</span>
+              </div>
+              <ul className="clean signal-profile-list">
+                {gscVisibleListings.slice(0, 5).map((listing) => listing && (
                   <li key={listing.slug}>
-                    <Link href={`/listings/${listing.slug}`} data-event="internal_link_click" data-cta-location="home_signal_listing">{listing.name}</Link> <span className="meta">({listing.locationHint})</span>
-                    {recentQueryNotesBySlug[listing.slug] && <span className="signal-note"> — {recentQueryNotesBySlug[listing.slug]}</span>}
+                    <Link href={`/listings/${listing.slug}`} data-event="internal_link_click" data-cta-location="home_signal_listing">{listing.name}</Link>
+                    <span className="meta">{listing.locationHint}</span>
+                    {recentQueryNotesBySlug[listing.slug] && <span className="signal-note">{recentQueryNotesBySlug[listing.slug]}</span>}
                   </li>
                 ))}
               </ul>
+              <details className="signal-more-details">
+                <summary>Show more profile shortcuts</summary>
+                <ul className="clean signal-profile-list signal-profile-list-secondary">
+                  {gscVisibleListings.slice(5).map((listing) => listing && (
+                    <li key={listing.slug}>
+                      <Link href={`/listings/${listing.slug}`} data-event="internal_link_click" data-cta-location="home_signal_listing_more">{listing.name}</Link>
+                      <span className="meta">{listing.locationHint}</span>
+                    </li>
+                  ))}
+                </ul>
+              </details>
             </article>
             <article className="mini-card">
               <h3>Browse common categories</h3>
