@@ -177,6 +177,7 @@ ul.clean { padding-left:18px; color:var(--muted); line-height:1.7; }
 .fact-list dd { margin:0; color:var(--muted); line-height:1.6; }
 @media (max-width: 860px) { .listing-proof-grid { grid-template-columns:1fr; } .listing-summary-head { flex-direction:column; } .listing-summary-head .button { width:100%; } }
 
+.category-hero-actions { margin-top:20px; margin-bottom:24px; }
 .category-evidence-card, .category-profile-card { display:grid; gap:18px; margin:28px 0 32px; }
 .category-profile-card .profile-card { display:flex; flex-direction:column; gap:8px; }
 .category-profile-card .profile-card p { margin:0; }

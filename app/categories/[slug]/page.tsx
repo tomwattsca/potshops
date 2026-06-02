@@ -30,6 +30,11 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     if (status === 'historical_source') return 'Historical public-source context';
     return 'Verification queued';
   };
+  const publicLocationDescription = (description: string) => description
+    .replace(/source-backed recovery page/gi, 'source-backed city page')
+    .replace(/recovery page/gi, 'directory page')
+    .replace(/legacy listing/gi, 'historical listing')
+    .replace(/legacy profile/gi, 'historical profile');
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -64,44 +69,49 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <p className="eyebrow">Priority category #{category.priority}</p>
+      <p className="eyebrow">Source-backed category hub</p>
       <h1>{category.title}</h1>
       <p className="lede">{category.description}</p>
+      <p className="cta-row category-hero-actions">
+        <Link className="button" href="#category-cities" data-event="internal_link_click" data-cta-location="category_hero_cities">Browse city pages</Link>
+        <Link className="button secondary" href="#category-profiles" data-event="internal_link_click" data-cta-location="category_hero_profiles">View source-backed profiles</Link>
+        <Link className="button ghost" href="/updates" data-event="listing_update_click" data-cta-location="category_hero_update">Suggest a correction</Link>
+      </p>
       <section className="card category-evidence-card">
         <div>
-          <p className="eyebrow">Category evidence at a glance</p>
-          <h2>What this {category.slug === 'dispensary' ? 'dispensary' : 'delivery'} hub can safely prove</h2>
+          <p className="eyebrow">Directory coverage at a glance</p>
+          <h2>Use this page to find sourced profiles, not live store guarantees</h2>
           <p>{category.gscEvidence}</p>
         </div>
         <div className="listing-proof-grid" aria-label={`${category.title} source-backed coverage summary`}>
           <div className="mini-card">
-            <strong>{category.legacyImpressions.toLocaleString()} legacy impressions</strong>
-            <span>Old category-path demand before the Potshops rebuild; current GSC still shows broad cannabis-store and dispensary queries.</span>
+            <strong>{category.legacyImpressions.toLocaleString()} historical search signals</strong>
+            <span>Older category demand helped decide which public directory paths to preserve and clarify.</span>
           </div>
           <div className="mini-card">
-            <strong>{categoryListings.length.toLocaleString()} mapped profiles</strong>
-            <span>{sourceBackedCount.toLocaleString()} source-backed rows: {currentSourceCount.toLocaleString()} official/current-source and {historicalSourceCount.toLocaleString()} historical-source.</span>
+            <strong>{categoryListings.length.toLocaleString()} profile links</strong>
+            <span>{sourceBackedCount.toLocaleString()} profiles have public-source notes: {currentSourceCount.toLocaleString()} official address-context and {historicalSourceCount.toLocaleString()} historical-source.</span>
           </div>
           <div className="mini-card">
-            <strong>{linkedLocations.length.toLocaleString()} city paths linked</strong>
-            <span>Internal links point to exact city pages that have mapped profile evidence, not generic doorway copy.</span>
+            <strong>{linkedLocations.length.toLocaleString()} city pages</strong>
+            <span>City links only appear where this category has mapped profile evidence.</span>
           </div>
         </div>
         <p className="source-excerpt"><strong>Limit:</strong> Potshops keeps this category informational. It does not verify current hours, menus, stock, ordering, delivery, prices, reviews, ratings, licensing, or whether a storefront is operating today.</p>
       </section>
 
-      <section className="card category-profile-card">
+      <section id="category-profiles" className="card category-profile-card">
         <div>
           <p className="eyebrow">Source-backed profiles</p>
           <h2>Start with verifiable listing evidence</h2>
-          <p>These cards make the category page easier to scan for visitors and crawlers without adding unsupported cannabis commerce claims. Each profile explains what the public source does and does not support.</p>
+          <p>Each card links to an existing profile and states the public source behind it. Potshops does not turn these sources into current hours, menu, stock, ordering, delivery, licence, price, rating, or operation claims.</p>
         </div>
         <div className="profile-grid">
           {visibleListings.map((listing) => (
             <article className="profile-card" key={listing.slug}>
               <p className={`status-badge ${listing.verificationStatus === 'current_source' ? 'status-current' : 'status-historical'}`}>{statusLabel(listing.verificationStatus)}</p>
               <h3><Link href={`/listings/${listing.slug}`}>{listing.name}</Link></h3>
-              <p className="meta">{listing.city && listing.province ? `${listing.city}, ${listing.province}` : listing.locationHint} · {listing.gscImpressions.toLocaleString()} legacy impressions</p>
+              <p className="meta">{listing.city && listing.province ? `${listing.city}, ${listing.province}` : listing.locationHint} · {listing.gscImpressions.toLocaleString()} historical search signals</p>
               {listing.sourceName ? <p>Source: {listing.sourceName}</p> : <p>Source verification still queued.</p>}
               {listing.sourceNote && <p className="source-excerpt">{listing.sourceNote}</p>}
             </article>
@@ -109,14 +119,14 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         </div>
       </section>
 
-      <section>
+      <section id="category-cities">
         <h2>Start with city pages</h2>
-        <p>Category coverage is strongest where Potshops has mapped listing evidence into a city page. These are informational paths, not availability or ordering claims.</p>
+        <p>Category coverage is clearest where Potshops can connect sourced profiles to an existing city page. These are browse paths for public-source context, not availability or ordering claims.</p>
         <div className="grid">
           {linkedLocations.map((location) => (
             <article className="card" key={location.slug}>
               <h3><Link href={`/locations/${location.slug}`}>{location.city}, {location.province}</Link></h3>
-              <p>{location.description}</p>
+              <p>{publicLocationDescription(location.description)}</p>
             </article>
           ))}
         </div>
@@ -132,7 +142,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           <Link className="button" href="/updates" data-event="listing_update_click" data-cta-location="category_detail">Suggest a source-backed update</Link>
         </p>
       </section>
-      <p><Link href="/">Back to Potshops.ca rebuild priorities</Link></p>
+      <p><Link href="/">Back to Potshops.ca directory home</Link></p>
     </main>
   );
 }
