@@ -187,8 +187,12 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   const sourceSummary = listing.sourceName
     ? `${listing.sourceName} checked ${listing.lastVerified ?? 'during directory update'}`
     : 'No source has been attached to this listing yet';
+  const profilePurpose = hasCurrentSource
+    ? 'A public-source address profile, not a menu, licence, hours, delivery, or availability check.'
+    : listing.sourceName
+      ? 'A historical public-source profile, not confirmation that this location operates today.'
+      : 'A limited legacy profile waiting for stronger public evidence before Potshops adds more detail.';
   const recentSearchIntent = recentSearchIntentBySlug[listing.slug] ?? [];
-  const listingPageFocus = listingPageFocusBySlug[listing.slug];
   const locationLabel = listing.city && listing.province ? `${listing.city}, ${listing.province}` : listing.locationHint;
   const schema = {
     '@context': 'https://schema.org',
@@ -232,70 +236,84 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <p className="eyebrow">Source-backed profile</p>
+      <p className="eyebrow">Public-source profile</p>
       <h1>{listing.name}</h1>
-      <p className="profile-location-note">{locationLabel} profile notes and public-source limits</p>
-      <p className="lede">Use this Potshops.ca profile to check the public-source context behind {listing.name}. The page separates verified facts from what Potshops is not claiming about current cannabis-store operation.</p>
-      <section className="card listing-evidence-card">
-        <div>
-          <p className="eyebrow">Evidence at a glance</p>
-          <h2>Source status and public context</h2>
-          <p>Use this page as a conservative profile note: it records visible public-source context and routes users to city/category pages without implying current store operations.</p>
+      <p className="profile-location-note">{locationLabel} · {statusLabel}</p>
+      <p className="lede">Use this page to understand what public sources currently support for {listing.name} — and what Potshops is deliberately not claiming about menus, hours, delivery, stock, licences, or whether a storefront operates today.</p>
+
+      <section className="card listing-evidence-card" aria-labelledby="profile-summary">
+        <div className="listing-summary-head">
+          <div>
+            <p className="eyebrow">Profile summary</p>
+            <h2 id="profile-summary">What you can safely take from this page</h2>
+            <p>{profilePurpose}</p>
+          </div>
+          <Link className="button secondary" href="/updates" data-event="listing_update_click" data-cta-location="listing_summary">Send a better source</Link>
         </div>
         <div className="listing-proof-grid" aria-label="Listing evidence summary">
           <div className="mini-card">
+            <span>Source status</span>
             <strong>{statusLabel}</strong>
-            <span>{sourceSummary}</span>
+            <small>{sourceSummary}</small>
           </div>
           <div className="mini-card">
-            <strong>{listing.gscImpressions.toLocaleString()} historic search impressions</strong>
-            <span>{listing.gscClicks.toLocaleString()} historic clicks helped prioritize this source-limit profile</span>
+            <span>Public location context</span>
+            <strong>{addressLine || listing.locationHint}</strong>
+            <small>{relatedLocation ? `Also mapped to the ${relatedLocation.city} directory page.` : 'A dedicated city page is not mapped yet.'}</small>
           </div>
           <div className="mini-card">
-            <strong>{relatedLocation ? `${relatedLocation.city} context mapped` : 'City context not mapped'}</strong>
-            <span>{relatedCategories.length ? `${relatedCategories.length} category link${relatedCategories.length === 1 ? '' : 's'} available` : 'No category hub attached yet'}</span>
+            <span>Important limit</span>
+            <strong>No current-store claims</strong>
+            <small>{sourceLimit}</small>
           </div>
         </div>
-        <p className="source-excerpt"><strong>Limit:</strong> {sourceLimit}</p>
       </section>
+
       <div className="split">
-        <section className="card">
-          <h2>Why this profile exists</h2>
+        <section className="card profile-use-card">
+          <h2>How to use this profile</h2>
           <ul className="clean">
-            <li>Old URL now consolidated here: <code>{listing.legacyPath}</code></li>
-            <li>Location hint: {listing.locationHint}</li>
-            <li>Historic search impressions: {listing.gscImpressions.toLocaleString()}</li>
-            <li>Historic search clicks: {listing.gscClicks.toLocaleString()}</li>
-            <li>Historic average search position: {listing.averagePosition.toFixed(1)}</li>
+            <li>Check the source-backed name and location context first.</li>
+            <li>Use the related city or category links for broader directory context.</li>
+            <li>If you have a regulator, business, or public-directory source, send it through the update path so Potshops can improve the profile.</li>
             {recentSearchIntent.length > 0 && (
-              <li>Recent final-data query fit: {recentSearchIntent.join(', ')}</li>
+              <li>Search context people use for this profile: {recentSearchIntent.slice(0, 4).join(', ')}.</li>
             )}
           </ul>
-          {recentSearchIntent.length > 0 && (
-            <p className="source-excerpt"><strong>Snippet focus:</strong> these recent low-row search terms help visitors connect the listing to its city/brand context while Potshops keeps the source limits visible.</p>
-          )}
+          <details className="technical-context">
+            <summary>Why Potshops keeps this page</summary>
+            <ul className="clean">
+              <li>Old URL now resolves here: <code>{listing.legacyPath}</code></li>
+              <li>Historic search interest: {listing.gscImpressions.toLocaleString()} impressions and {listing.gscClicks.toLocaleString()} clicks.</li>
+              <li>Average historical search position: {listing.averagePosition.toFixed(1)}.</li>
+            </ul>
+          </details>
         </section>
-        <aside className="notice">
-          <h3>{listing.sourceName ? (hasCurrentSource ? 'Official-source verification' : 'Public-source verification') : 'Claim or verify this listing'}</h3>
+        <aside className="notice profile-source-note">
+          <h3>{listing.sourceName ? (hasCurrentSource ? 'Source checked' : 'Historical source checked') : 'Claim or verify this listing'}</h3>
           {listing.sourceName ? (
             <>
               <p><strong>Last checked:</strong> {listing.lastVerified}</p>
               <p>{listing.sourceNote}</p>
             </>
           ) : (
-            <p>The directory update needs source-backed address, city, category, and compliance-friendly context before any stronger current-status or commercial promotion.</p>
+            <p>Potshops needs public-source address, city, category, and compliance-friendly context before adding stronger current-status detail.</p>
           )}
         </aside>
       </div>
-      {listingPageFocus && (
+      {recentSearchIntent.length > 0 && (
         <section className="card listing-intent-card">
-          <p className="eyebrow">Visitor search context</p>
-          <h2>{listingPageFocus.title}</h2>
-          <p>{listingPageFocus.summary}</p>
+          <p className="eyebrow">Search context</p>
+          <h2>Search terms this profile can help clarify</h2>
+          <p>People may arrive here through brand, city, or address searches such as {recentSearchIntent.slice(0, 5).join(', ')}. Potshops uses those phrases only to route visitors to the relevant public-source profile; they are not proof of current store operation, licensing, menus, stock, ordering, delivery, or availability.</p>
           <ul className="clean">
-            {listingPageFocus.bullets.map((bullet) => (
-              <li key={bullet}>{bullet}</li>
-            ))}
+            {relatedLocation && (
+              <li>For broader local context, use the {relatedLocation.city} directory page.</li>
+            )}
+            {relatedCategories.length > 0 && (
+              <li>For category context, use the related Potshops category hub below.</li>
+            )}
+            <li>If a public source is missing or outdated, use the correction path so Potshops can update this profile without guessing.</li>
           </ul>
         </section>
       )}
@@ -303,8 +321,8 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
         <section className="card source-facts-card">
           <div>
             <p className="eyebrow">Source-backed facts</p>
-            <h2>What the visible source supports</h2>
-            <p>This section keeps the source note scannable for visitors coming from brand or city searches while avoiding unsupported regulated claims.</p>
+            <h2>Source-backed facts on this profile</h2>
+            <p>These are the facts Potshops can show from the cited public source. Missing fields are omitted rather than filled with guesses.</p>
           </div>
           <dl className="fact-list">
             {addressLine && (
@@ -321,7 +339,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
             )}
             <div>
               <dt>Source reviewed</dt>
-              <dd><a href={listing.sourceUrl ?? '#'} rel="nofollow noopener">{listing.sourceName}</a>{listing.lastVerified ? ` · ${listing.lastVerified}` : ''}</dd>
+              <dd><a href={listing.sourceUrl ?? '#'} target="_blank" rel="nofollow noopener noreferrer">{listing.sourceName}</a>{listing.lastVerified ? ` · ${listing.lastVerified}` : ''}</dd>
             </div>
             <div>
               <dt>Status label</dt>
@@ -336,8 +354,8 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
       )}
 
       <section className="card">
-        <h2>Related Potshops pages for this profile</h2>
-        <p>Use these internal links to review the city and category context behind this listing. Potshops keeps the links informational until a public source supports stronger business details.</p>
+        <h2>Browse related Potshops context</h2>
+        <p>These links stay informational: they help you compare city and category context without turning this profile into a menu, ordering, delivery, licence, or availability claim.</p>
         <ul className="clean">
           {relatedLocation ? (
             <li>City context: <Link href={`/locations/${relatedLocation.slug}`} data-event="internal_link_click" data-cta-location="listing_related_location">{relatedLocation.city}, {relatedLocation.province} cannabis directory notes</Link></li>
@@ -351,8 +369,8 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
       </section>
 
       <section className="card">
-        <h2>What Potshops is not claiming yet</h2>
-        <p>This profile is intentionally limited to source-backed directory context. It does not verify current hours, menus, stock, ordering, delivery, prices, reviews, ratings, licensing, contact details, or whether a storefront is operating today.</p>
+        <h2>What this page does not verify</h2>
+        <p>Potshops has not verified current hours, menus, stock, ordering, delivery, prices, reviews, ratings, licensing, contact details, or whether a storefront is operating today. Treat this as public-source directory context, not a shopping or availability page.</p>
       </section>
 
       <section className="card update-card">
