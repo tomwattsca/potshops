@@ -30,6 +30,16 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     if (status === 'historical_source') return 'Historical public-source context';
     return 'Verification queued';
   };
+  const statusLimit = (status?: string) => {
+    if (status === 'current_source') return 'Address-context source only; current hours, menus, stock, ordering, delivery, pricing, availability, and operation are not verified here.';
+    if (status === 'historical_source') return 'Historical context only; current operation, licence, hours, menus, stock, delivery, ordering, and availability are not verified here.';
+    return 'Source verification still queued; do not treat this as a current-store claim.';
+  };
+  const sourceSummary = (note?: string) => {
+    if (!note) return 'Open the profile for source notes and current verification limits.';
+    const firstSentence = note.includes('. ') ? `${note.split('. ')[0]}.` : note;
+    return firstSentence.length > 185 ? `${firstSentence.slice(0, 182)}…` : firstSentence;
+  };
   const publicLocationDescription = (description: string) => description
     .replace(/source-backed recovery page/gi, 'source-backed city page')
     .replace(/recovery page/gi, 'directory page')
@@ -106,14 +116,33 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           <h2>Start with verifiable listing evidence</h2>
           <p>Each card links to an existing profile and states the public source behind it. Potshops does not turn these sources into current hours, menu, stock, ordering, delivery, licence, price, rating, or operation claims.</p>
         </div>
-        <div className="profile-grid">
+        <div className="profile-grid category-profile-grid">
           {visibleListings.map((listing) => (
-            <article className="profile-card" key={listing.slug}>
+            <article className="profile-card category-source-card" key={listing.slug}>
               <p className={`status-badge ${listing.verificationStatus === 'current_source' ? 'status-current' : 'status-historical'}`}>{statusLabel(listing.verificationStatus)}</p>
               <h3><Link href={`/listings/${listing.slug}`}>{listing.name}</Link></h3>
-              <p className="meta">{listing.city && listing.province ? `${listing.city}, ${listing.province}` : listing.locationHint} · {listing.gscImpressions.toLocaleString()} historical search signals</p>
-              {listing.sourceName ? <p>Source: {listing.sourceName}</p> : <p>Source verification still queued.</p>}
-              {listing.sourceNote && <p className="source-excerpt">{listing.sourceNote}</p>}
+              <dl className="category-profile-facts">
+                <div>
+                  <dt>Location context</dt>
+                  <dd>{listing.city && listing.province ? `${listing.city}, ${listing.province}` : listing.locationHint}</dd>
+                </div>
+                <div>
+                  <dt>Source</dt>
+                  <dd>{listing.sourceName || 'Verification still queued'}</dd>
+                </div>
+                <div>
+                  <dt>Search context</dt>
+                  <dd>{listing.gscImpressions.toLocaleString()} historical search signals</dd>
+                </div>
+                <div>
+                  <dt>Important limit</dt>
+                  <dd>{statusLimit(listing.verificationStatus)}</dd>
+                </div>
+              </dl>
+              <p className="source-excerpt category-source-summary">{sourceSummary(listing.sourceNote)}</p>
+              <p className="profile-card-actions category-profile-actions">
+                <Link className="profile-action-primary" href={`/listings/${listing.slug}`} data-event="internal_link_click" data-cta-location="category_profile_card">View profile</Link>
+              </p>
             </article>
           ))}
         </div>
