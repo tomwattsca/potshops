@@ -7,14 +7,21 @@ type ProfileSourceFact = { label: string; value: string; tone?: 'strong' | 'mute
 const publicCopy = (copy: string) => copy
   .replace(/Search Console impressions?/gi, 'recent search visibility')
   .replace(/Search Console rows?/gi, 'recent search signals')
+  .replace(/Search Console hints?/gi, 'recent search signals')
   .replace(/Search Console evidence/gi, 'recent search evidence')
+  .replace(/Search Console/gi, 'search data')
   .replace(/GSC rows?/g, 'recent search signals')
   .replace(/GSC visibility/g, 'recent search visibility')
   .replace(/GSC page data/g, 'recent search data')
   .replace(/query-page rows?/gi, 'search phrase signals')
   .replace(/location-page signal/gi, 'location-page interest')
   .replace(/location-page signals/gi, 'location-page interest')
+  .replace(/fresh recent search signals/gi, 'recent search signals')
+  .replace(/fresh recent search visibility/gi, 'recent search visibility')
   .replace(/legacy impressions?/gi, 'historic discovery signals')
+  .replace(/legacy/gi, 'older')
+  .replace(/rebuild target/gi, 'directory context page')
+  .replace(/recovery profile/gi, 'source-backed profile')
   .replace(/recovery page/gi, 'source-limit page');
 
 export function generateStaticParams() { return priorityLocations.map((location) => ({ city: location.slug })); }
@@ -130,7 +137,7 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
         </section>
         <aside className="notice">
           <h3>{utility ? `${location.city} directory status` : 'Verification needed'}</h3>
-          <p>{utility ? utility.directoryStatus : 'Potshops needs source-backed store names, addresses, and context before publishing stronger local directory claims.'}</p>
+          <p>{utility ? publicCopy(utility.directoryStatus) : 'Potshops needs source-backed store names, addresses, and context before publishing stronger local directory claims.'}</p>
         </aside>
       </div>
 
@@ -252,7 +259,7 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
             <aside className="notice">
               <h3>Verification next steps</h3>
               <ul className="clean">
-                {utility.verificationNextSteps.map((step) => <li key={step}>{step}</li>)}
+                {utility.verificationNextSteps.map((step) => <li key={step}>{publicCopy(step)}</li>)}
               </ul>
             </aside>
           </div>
