@@ -30,10 +30,15 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     if (status === 'historical_source') return 'Past public-source context';
     return 'Verification queued';
   };
-  const statusLimit = (status?: string) => {
-    if (status === 'current_source') return 'Official or public address context is available; current store details are not verified here.';
-    if (status === 'historical_source') return 'Past public-source context is available; current store details are not verified here.';
-    return 'Source verification is still queued; do not treat this as a current-store claim.';
+  const directoryRole = (impressions: number) => {
+    if (impressions >= 1000) return 'High-interest existing profile with source notes.';
+    if (impressions > 0) return 'Existing profile preserved with source notes.';
+    return 'Existing source-backed profile in this category.';
+  };
+  const currentDetailsLimit = (status?: string) => {
+    if (status === 'current_source') return 'Address context is sourced; live details still need confirmation.';
+    if (status === 'historical_source') return 'Older public context is sourced; live details still need confirmation.';
+    return 'Verification is queued; do not treat this as a live-store record.';
   };
   const sourceSummary = (note?: string) => {
     if (!note) return 'Open the profile for source notes and current verification limits.';
@@ -107,8 +112,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         </div>
         <div className="listing-proof-grid" aria-label={`${category.title} coverage summary`}>
           <div className="mini-card">
-            <strong>{category.legacyImpressions.toLocaleString()} historical search signals</strong>
-            <span>Older category demand helped decide which public directory paths to preserve and clarify.</span>
+            <strong>{category.legacyImpressions.toLocaleString()} older directory signals</strong>
+            <span>Older directory demand helped decide which public paths to preserve and clarify.</span>
           </div>
           <div className="mini-card">
             <strong>{categoryListings.length.toLocaleString()} profile links</strong>
@@ -144,12 +149,12 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                   <dd>{listing.sourceName || 'Verification still queued'}</dd>
                 </div>
                 <div>
-                  <dt>Search context</dt>
-                  <dd>{listing.gscImpressions.toLocaleString()} historical search signals</dd>
+                  <dt>Directory role</dt>
+                  <dd>{directoryRole(listing.gscImpressions)}</dd>
                 </div>
                 <div className="category-current-limit">
-                  <dt>Current-store check</dt>
-                  <dd>{statusLimit(listing.verificationStatus)}</dd>
+                  <dt>Live details</dt>
+                  <dd>{currentDetailsLimit(listing.verificationStatus)}</dd>
                 </div>
               </dl>
               <p className="source-excerpt category-source-summary">{sourceSummary(listing.sourceNote)}</p>
@@ -166,9 +171,12 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         <p>Category coverage is clearest where Potshops can connect sourced profiles to an existing city page. These are browse paths for public-source context, not availability or ordering claims.</p>
         <div className="grid">
           {linkedLocations.map((location) => (
-            <article className="card" key={location.slug}>
+            <article className="card category-city-card" key={location.slug}>
               <h3><Link href={`/locations/${location.slug}`}>{location.city}, {location.province}</Link></h3>
               <p>{publicLocationDescription(location.description)}</p>
+              <p className="profile-card-actions category-profile-actions">
+                <Link className="profile-action-primary" href={`/locations/${location.slug}`} data-event="internal_link_click" data-cta-location="category_city_card">View city page</Link>
+              </p>
             </article>
           ))}
         </div>

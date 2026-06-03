@@ -193,6 +193,11 @@ ul.clean { padding-left:18px; color:var(--muted); line-height:1.7; }
 .category-source-summary { border-top:1px solid var(--line); padding-top:10px; }
 .category-profile-actions { margin-top:auto; padding-top:4px; }
 .category-profile-actions .profile-action-primary { background:var(--green); border-color:var(--green); color:white; }
+.category-city-card { display:flex; flex-direction:column; }
+.category-city-card p { margin-top:0; }
+.category-city-card .category-profile-actions { margin-top:auto; }
+.category-city-card .profile-action-primary { width:max-content; }
+
 
 .location-status-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
 .location-status-grid .mini-card { display:flex; flex-direction:column; gap:6px; }
