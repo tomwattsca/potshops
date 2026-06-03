@@ -41,12 +41,21 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     return firstSentence.length > 185 ? `${firstSentence.slice(0, 182)}…` : firstSentence;
   };
   const publicLocationDescription = (description: string) => description
-    .replace(/source-backed recovery page/gi, 'source-backed city page')
-    .replace(/recovery page/gi, 'directory page')
+    .replace(/Search Console rows?/gi, 'recent search signals')
+    .replace(/Search Console impressions?/gi, 'recent search visibility')
+    .replace(/Search Console/gi, 'search')
+    .replace(/legacy location-page impressions?/gi, 'older location-page discovery signals')
+    .replace(/legacy location-page/gi, 'older location page')
+    .replace(/legacy URLs?/gi, 'older directory paths')
     .replace(/legacy listing/gi, 'historical listing')
     .replace(/legacy profile/gi, 'historical profile')
+    .replace(/source-backed recovery page/gi, 'source-backed city page')
+    .replace(/recovery page/gi, 'directory page')
     .replace(/recovery profile/gi, 'source-backed profile')
-    .replace(/rebuild target/gi, 'directory context page');
+    .replace(/rebuild target/gi, 'directory context page')
+    .replace(/source-backed Tribal ReLeaf profile/gi, 'public-source Tribal ReLeaf profile')
+    .replace(/source-backed Mr\. Green’s source-backed profile/gi, 'public-source Mr. Green’s profile')
+    .replace(/source-backed Mr\. Green's source-backed profile/gi, "public-source Mr. Green's profile");
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
