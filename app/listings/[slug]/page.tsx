@@ -293,7 +293,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
             <li>Use the related city or category links for broader directory context.</li>
             <li>If you have a regulator, business, or public-directory source, send it through the update path so Potshops can improve the profile.</li>
             {recentSearchIntent.length > 0 && (
-              <li>Search context people use for this profile: {recentSearchIntent.slice(0, 4).join(', ')}.</li>
+              <li>Visitor phrases people use for this profile: {recentSearchIntent.slice(0, 4).join(', ')}.</li>
             )}
           </ul>
         </section>
@@ -311,7 +311,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
       </div>
       {recentSearchIntent.length > 0 && (
         <section className="card listing-intent-card">
-          <p className="eyebrow">Search context</p>
+          <p className="eyebrow">Visitor context</p>
           <h2>Search terms this profile can help clarify</h2>
           <p>People may arrive here through brand, city, or address searches such as {recentSearchIntent.slice(0, 5).join(', ')}. Potshops uses those phrases to help visitors find the right source-backed profile; they are not proof of current store operation, licensing, menus, stock, ordering, delivery, or availability.</p>
           <ul className="clean">
