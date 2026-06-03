@@ -283,9 +283,13 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
           <details className="technical-context">
             <summary>Why Potshops keeps this page</summary>
             <ul className="clean">
-              <li>Old URL now resolves here: <code>{listing.legacyPath}</code></li>
-              <li>Historic search interest: {listing.gscImpressions.toLocaleString()} impressions and {listing.gscClicks.toLocaleString()} clicks.</li>
-              <li>Average historical search position: {listing.averagePosition.toFixed(1)}.</li>
+              {listing.legacyPath && (
+                <li>Older Potshops links for this profile now resolve to this page.</li>
+              )}
+              {listing.gscImpressions > 0 && (
+                <li>People still search for this store or local profile, so Potshops keeps a conservative source-backed page here.</li>
+              )}
+              <li>This page is for source context only; verify current operation, licensing, hours, menus, stock, delivery, ordering, and availability with official or business sources before relying on it.</li>
             </ul>
           </details>
         </section>
@@ -305,7 +309,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
         <section className="card listing-intent-card">
           <p className="eyebrow">Search context</p>
           <h2>Search terms this profile can help clarify</h2>
-          <p>People may arrive here through brand, city, or address searches such as {recentSearchIntent.slice(0, 5).join(', ')}. Potshops uses those phrases only to route visitors to the relevant public-source profile; they are not proof of current store operation, licensing, menus, stock, ordering, delivery, or availability.</p>
+          <p>People may arrive here through brand, city, or address searches such as {recentSearchIntent.slice(0, 5).join(', ')}. Potshops uses those phrases to help visitors find the right source-backed profile; they are not proof of current store operation, licensing, menus, stock, ordering, delivery, or availability.</p>
           <ul className="clean">
             {relatedLocation && (
               <li>For broader local context, use the {relatedLocation.city} directory page.</li>
