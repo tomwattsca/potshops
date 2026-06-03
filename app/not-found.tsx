@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const highSignalListings = [
   { href: '/listings/cannabis-culture-920-davie', label: 'Cannabis Culture - 920 Davie', note: 'older Potshops listing path now resolves to this profile', ctaLocation: 'not_found_recovered_cannabis_culture' },
-  { href: '/listings/green-leaf', label: 'Green Leaf', note: 'Kahnawake profile with historical-source context', ctaLocation: 'not_found_recovered_green_leaf' },
+  { href: '/listings/green-leaf', label: 'Green Leaf', note: 'Kahnawake profile with older public-source context', ctaLocation: 'not_found_recovered_green_leaf' },
   { href: '/listings/green-essence-head-shop-dispensary', label: 'Green Essence Head Shop and Dispensary', note: 'Penticton profile with source-limit notes', ctaLocation: 'not_found_recovered_green_essence' },
   { href: '/listings/compassion-in-motion', label: 'Compassion in Motion', note: 'existing profile with recent search interest', ctaLocation: 'not_found_recovered_compassion' },
 ];
@@ -39,7 +39,7 @@ export default function NotFound() {
 
       <section className="card" aria-labelledby="recovered-records-title">
         <p className="eyebrow">Useful listing paths</p>
-        <h2 id="recovered-records-title">Try these source-backed profiles</h2>
+        <h2 id="recovered-records-title">Try these profiles with source notes</h2>
         <div className="signal-grid">
           {highSignalListings.map((listing) => (
             <article className="mini-card" key={listing.href}>
@@ -48,7 +48,7 @@ export default function NotFound() {
             </article>
           ))}
         </div>
-        <p className="source-excerpt"><strong>Source limit:</strong> source-backed profiles separate source-backed context from unsupported current-operation, licence, menu, stock, delivery, hours, and ordering claims.</p>
+        <p className="source-excerpt"><strong>Source limit:</strong> Potshops profiles separate public-source context from unsupported current-operation, licence, menu, stock, delivery, hours, and ordering claims.</p>
       </section>
     </main>
   );

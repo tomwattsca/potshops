@@ -43,11 +43,11 @@ const homepageQuickLinks = [
 ];
 const recentQueryNotesBySlug: Record<string, string> = {
   'cannabis-culture-920-davie': 'Davie Street / Vancouver profile with a redirected older Potshops URL',
-  'green-leaf': 'Kahnawake profile with historical-source context',
+  'green-leaf': 'Kahnawake profile with older public-source context',
   'green-essence-head-shop-dispensary': 'Penticton profile with source-limit notes',
   'compassion-in-motion': 'Vancouver-area profile with source notes',
   'rocket-chronic-2': 'Greater Vancouver profile with source notes',
-  'remedy-ice-cream': 'Calgary profile with historical-source context',
+  'remedy-ice-cream': 'Calgary profile with older public-source context',
   'gulf-island-organics': 'Victoria profile marked with historical/source-limit context',
   '420-delivery': 'Greater Vancouver profile with cautious delivery-source context',
   'the-herb-co-mount-pleasant': 'Mount Pleasant / Vancouver profile with source notes',
@@ -94,7 +94,7 @@ const homepageLookupItems = [
     label: listing.name,
     detail: listing.locationHint,
     kind: 'Store profile' as const,
-    status: listing.verificationStatus === 'current_source' ? 'Official/public-source address context' : 'Historical or public-source context',
+    status: listing.verificationStatus === 'current_source' ? 'Official/public-source address context' : 'Older or public-source context',
     keywords: [listing.name, listing.slug, listing.city ?? '', listing.province ?? '', (listing.categories ?? []).join(' '), listing.sourceName ?? '', listing.sourceNote ?? ''],
   })),
   ...priorityCategories.map((category) => ({
@@ -128,6 +128,7 @@ function publicDirectoryCopy(value: string) {
     .replace(/legacy page/gi, 'older page')
     .replace(/legacy URLs?/gi, 'older URLs')
     .replace(/legacy/gi, 'older')
+    .replace(/historical-source/gi, 'older public-source')
     .replace(/rebuild target/gi, 'directory context page')
     .replace(/recovery profile/gi, 'source-backed profile')
     .replace(/recovery page/gi, 'source-backed page')
@@ -285,7 +286,7 @@ export default function Home() {
               </ul>
             </article>
           </div>
-          <div className="stats-row" aria-label="Potshops source-backed coverage summary">
+          <div className="stats-row" aria-label="Potshops coverage summary">
             <span><strong>{listingSeeds.length}</strong> searchable profiles</span>
             <span><strong>{sourceBackedListingCount}</strong> profiles with source notes</span>
             <span><strong>{currentSourceListingCount}</strong> profiles with public-source address context</span>
@@ -362,7 +363,7 @@ export default function Home() {
         <section id="categories">
           <div className="eyebrow">Category hubs</div>
           <h2>Browse by directory category</h2>
-          <p>These existing category hubs group source-backed profiles and city pages without implying live availability, ordering, delivery, menus, or complete coverage.</p>
+          <p>These category pages group profiles with source notes and city pages without implying live availability, ordering, delivery, menus, or complete coverage.</p>
           <div className="grid">
             {priorityCategories.map((category) => (
               <article className="card" key={category.slug}>
@@ -387,8 +388,8 @@ export default function Home() {
                 <article className="card home-profile-card" key={listing.slug}>
                   <h3><Link href={`/listings/${listing.slug}`} data-event="internal_link_click" data-cta-location="home_listing_grid">{listing.name}</Link></h3>
                   <p className="meta">{listing.locationHint}</p>
-                  <div className="profile-status-row" aria-label={isCurrentSource ? 'Public-source address context; current details require verification' : 'Historical source context; current status unverified'}>
-                    <span className={`status-badge ${isCurrentSource ? 'status-current' : 'status-historical'}`}>{isCurrentSource ? 'Public-source address' : 'Historical source'}</span>
+                  <div className="profile-status-row" aria-label={isCurrentSource ? 'Public-source address context; current details require verification' : 'Older public-source context; current status unverified'}>
+                    <span className={`status-badge ${isCurrentSource ? 'status-current' : 'status-historical'}`}>{isCurrentSource ? 'Public-source address' : 'Older public source'}</span>
                     <span className="profile-status-meta">Current details unverified</span>
                   </div>
                 </article>

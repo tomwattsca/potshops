@@ -27,12 +27,12 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   const historicalSourceCount = categoryListings.filter((listing) => listing.verificationStatus === 'historical_source').length;
   const statusLabel = (status?: string) => {
     if (status === 'current_source') return 'Official address-context source';
-    if (status === 'historical_source') return 'Historical public-source context';
+    if (status === 'historical_source') return 'Past public-source context';
     return 'Verification queued';
   };
   const statusLimit = (status?: string) => {
     if (status === 'current_source') return 'Official or public address context is available; current store details are not verified here.';
-    if (status === 'historical_source') return 'Historical source context is available; current store details are not verified here.';
+    if (status === 'historical_source') return 'Past public-source context is available; current store details are not verified here.';
     return 'Source verification is still queued; do not treat this as a current-store claim.';
   };
   const sourceSummary = (note?: string) => {
@@ -49,6 +49,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     .replace(/legacy URLs?/gi, 'older directory paths')
     .replace(/legacy listing/gi, 'historical listing')
     .replace(/legacy profile/gi, 'historical profile')
+    .replace(/historical-source/gi, 'older public-source')
     .replace(/source-backed recovery page/gi, 'source-backed city page')
     .replace(/recovery page/gi, 'directory page')
     .replace(/recovery profile/gi, 'source-backed profile')
@@ -76,7 +77,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
       },
       ...(visibleListings.length > 0 ? [{
         '@type': 'ItemList',
-        name: `${category.title} source-backed Potshops profiles`,
+        name: `${category.title} Potshops profiles with source notes`,
         numberOfItems: visibleListings.length,
         itemListElement: visibleListings.map((listing, index) => ({
           '@type': 'ListItem',
@@ -90,12 +91,12 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <p className="eyebrow">Source-backed category hub</p>
+      <p className="eyebrow">Directory category</p>
       <h1>{category.title}</h1>
       <p className="lede">{category.description}</p>
       <p className="cta-row category-hero-actions">
         <Link className="button" href="#category-cities" data-event="internal_link_click" data-cta-location="category_hero_cities">Browse city pages</Link>
-        <Link className="button secondary" href="#category-profiles" data-event="internal_link_click" data-cta-location="category_hero_profiles">View source-backed profiles</Link>
+        <Link className="button secondary" href="#category-profiles" data-event="internal_link_click" data-cta-location="category_hero_profiles">View profiles with source notes</Link>
         <Link className="button ghost" href="/updates" data-event="listing_update_click" data-cta-location="category_hero_update">Suggest a correction</Link>
       </p>
       <section className="card category-evidence-card">
@@ -104,14 +105,14 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           <h2>Use this page to find sourced profiles, not live store guarantees</h2>
           <p>{category.gscEvidence}</p>
         </div>
-        <div className="listing-proof-grid" aria-label={`${category.title} source-backed coverage summary`}>
+        <div className="listing-proof-grid" aria-label={`${category.title} coverage summary`}>
           <div className="mini-card">
             <strong>{category.legacyImpressions.toLocaleString()} historical search signals</strong>
             <span>Older category demand helped decide which public directory paths to preserve and clarify.</span>
           </div>
           <div className="mini-card">
             <strong>{categoryListings.length.toLocaleString()} profile links</strong>
-            <span>{sourceBackedCount.toLocaleString()} profiles have public-source notes: {currentSourceCount.toLocaleString()} official address-context and {historicalSourceCount.toLocaleString()} historical-source.</span>
+            <span>{sourceBackedCount.toLocaleString()} profiles include public-source notes: {currentSourceCount.toLocaleString()} have official address context and {historicalSourceCount.toLocaleString()} rely on older public sources.</span>
           </div>
           <div className="mini-card">
             <strong>{linkedLocations.length.toLocaleString()} city pages</strong>
@@ -123,7 +124,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
       <section id="category-profiles" className="card category-profile-card">
         <div>
-          <p className="eyebrow">Source-backed profiles</p>
+          <p className="eyebrow">Profiles with source notes</p>
           <h2>Start with verifiable listing evidence</h2>
           <p>Each card links to an existing profile and states the public source behind it. Potshops does not turn these sources into current hours, menu, stock, ordering, delivery, licence, price, rating, or operation claims.</p>
           <p className="category-shared-limit"><strong>Shared source limit:</strong> profile cards show public-source context only. Current hours, menus, stock, ordering, delivery, prices, ratings, licensing, availability, and storefront operation still need independent confirmation.</p>

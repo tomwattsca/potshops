@@ -8,7 +8,7 @@ const siteUrl = 'https://potshops.ca';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: { default: 'Potshops.ca | Canadian Cannabis Store Directory', template: '%s | Potshops.ca' },
-  description: 'A source-backed Canadian cannabis directory for existing city, province, category, and store-profile pages.',
+  description: 'A Canadian cannabis directory for existing city, province, category, and store-profile pages with public-source notes.',
   alternates: { canonical: '/' },
   icons: { icon: '/favicon.svg' },
   openGraph: { title: 'Potshops.ca', description: 'Canadian cannabis store and dispensary directory.', url: siteUrl, siteName: 'Potshops.ca', type: 'website' },
@@ -95,7 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <footer className="footer">
           <div className="footer-inner">
-            <p><strong>Potshops.ca</strong> is an independent Canadian cannabis directory that separates public-source context from unverified current-store claims. Listings should be source-verified before publication, updates, or advertising. <Link href="/updates" data-event="listing_update_click" data-cta-location="global_footer">Suggest a source-backed correction</Link>.</p>
+            <p><strong>Potshops.ca</strong> is an independent Canadian cannabis directory that separates public-source context from unverified current-store claims. Listings should be source-verified before publication, updates, or advertising. <Link href="/updates" data-event="listing_update_click" data-cta-location="global_footer">Suggest a correction</Link>.</p>
           </div>
         </footer>
       </body>

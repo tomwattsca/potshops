@@ -191,7 +191,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   const relatedLocation = priorityLocations.find((location) => location.city === listing.city && location.province === listing.province);
   const relatedCategories = listing.categories?.map((slug) => getCategory(slug)).filter((category) => Boolean(category)) ?? [];
   const addressLine = [listing.address, listing.city, [listing.province, listing.postalCode].filter(Boolean).join(' ')].filter(Boolean).join(', ');
-  const statusLabel = hasCurrentSource ? 'Official/public address context' : listing.sourceName ? 'Historical public-source context' : 'Needs source verification';
+  const statusLabel = hasCurrentSource ? 'Official/public address context' : listing.sourceName ? 'Older public-source context' : 'Needs source verification';
   const sourceLimit = hasCurrentSource
     ? 'Address context only; no hours, menus, stock, ordering, delivery, ratings, or service details.'
     : listing.sourceName
@@ -249,7 +249,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <p className="eyebrow">Public-source profile</p>
+      <p className="eyebrow">Store profile</p>
       <h1>{listing.name}</h1>
       <p className="profile-location-note">{locationLabel} · {statusLabel}</p>
       <p className="lede">Use this page to understand what public sources currently support for {listing.name} — and what Potshops is deliberately not claiming about menus, hours, delivery, stock, licences, or whether a storefront operates today.</p>
@@ -307,7 +307,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
           </details>
         </section>
         <aside className="notice profile-source-note">
-          <h3>{listing.sourceName ? (hasCurrentSource ? 'Source checked' : 'Historical source checked') : 'Claim or verify this listing'}</h3>
+          <h3>{listing.sourceName ? (hasCurrentSource ? 'Source checked' : 'Older source checked') : 'Claim or verify this listing'}</h3>
           {listing.sourceName ? (
             <>
               <p><strong>Last checked:</strong> {listing.lastVerified}</p>
@@ -360,7 +360,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
             </div>
             <div>
               <dt>Status label</dt>
-              <dd>{hasCurrentSource ? 'Official public-source address context; Potshops still withholds hours, menus, stock, ordering, and service claims until further review.' : 'Historical/public-source verification only; current regulatory and operating status still needs confirmation.'}</dd>
+              <dd>{hasCurrentSource ? 'Official public-source address context; Potshops still withholds hours, menus, stock, ordering, and service claims until further review.' : 'Older public-source verification only; current regulatory and operating status still needs confirmation.'}</dd>
             </div>
             <div>
               <dt>Source note</dt>

@@ -165,7 +165,7 @@ export default function UpdatesPage() {
 
       <section className="card">
         <h2>For store owners and sponsors</h2>
-        <p>Potshops is rebuilding trust before paid placement. If you represent a store, send the same source-backed update first and include an official business website, regulator/public registry URL, or other public evidence that supports the exact factual correction.</p>
+        <p>Potshops reviews public evidence before paid placement. If you represent a store, send the same source-backed update first and include an official business website, regulator/public registry URL, or other public evidence that supports the exact factual correction.</p>
         <p>Ownership notes are welcome, but ownership does not guarantee promotional placement, current-service claims, or sponsorship treatment.</p>
         <p className="cta-row"><a className="button" href={mailtoHref} data-event="listing_update_click" data-cta-location="updates_owner_path">Send an ownership note</a></p>
       </section>
