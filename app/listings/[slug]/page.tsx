@@ -151,6 +151,19 @@ const listingPageFocusBySlug: Record<string, { title: string; summary: string; b
   },
 };
 
+
+function publicListingCopy(value: string) {
+  return value
+    .replace(/recent final-data rows?/gi, 'recent search signals')
+    .replace(/final-data rows?/gi, 'search signals')
+    .replace(/low-row impressions?/gi, 'limited impressions')
+    .replace(/low-row brand interest/gi, 'limited brand interest')
+    .replace(/page-one average position/gi, 'strong search visibility')
+    .replace(/GA4 rows?/gi, 'analytics signals')
+    .replace(/GSC rows?/gi, 'search signals')
+    .replace(/GSC/gi, 'search data');
+}
+
 export const dynamicParams = false;
 
 export function generateStaticParams() { return listingSeeds.map((listing) => ({ slug: listing.slug })); }

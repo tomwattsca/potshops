@@ -84,10 +84,10 @@ const homepageLookupItems = [
   ...priorityLocations.map((location) => ({
     href: `/locations/${location.slug}`,
     label: `${location.city}, ${location.province}`,
-    detail: location.description,
+    detail: publicDirectoryCopy(location.description),
     kind: 'City' as const,
     status: 'City directory page with source notes',
-    keywords: [location.city, location.province, provinceNames[location.province] ?? '', location.title, location.gscEvidence],
+    keywords: [location.city, location.province, provinceNames[location.province] ?? '', location.title, publicDirectoryCopy(location.gscEvidence)],
   })),
   ...listingSeeds.map((listing) => ({
     href: `/listings/${listing.slug}`,
@@ -100,12 +100,36 @@ const homepageLookupItems = [
   ...priorityCategories.map((category) => ({
     href: `/categories/${category.slug}`,
     label: category.title,
-    detail: category.description,
+    detail: publicDirectoryCopy(category.description),
     kind: 'Category' as const,
     status: 'Category hub for existing directory profiles',
-    keywords: [category.title, category.slug, category.description],
+    keywords: [category.title, category.slug, publicDirectoryCopy(category.description)],
   })),
 ];
+
+
+function publicDirectoryCopy(value: string) {
+  return value
+    .replace(/Search Console hints?/gi, 'recent search signals')
+    .replace(/Search Console rows?/gi, 'recent search signals')
+    .replace(/Search Console impressions?/gi, 'recent search visibility')
+    .replace(/Search Console/gi, 'search data')
+    .replace(/GSC listing demand showed/gi, 'Older directory demand highlighted')
+    .replace(/GSC page data showed/gi, 'Older search data highlighted')
+    .replace(/GSC/gi, 'search data')
+    .replace(/fresh low-row/gi, 'recent')
+    .replace(/low-row/gi, 'limited')
+    .replace(/legacy impressions/gi, 'older search visibility')
+    .replace(/legacy location-page impressions/gi, 'older location-page visibility')
+    .replace(/legacy store/gi, 'older store')
+    .replace(/legacy page/gi, 'older page')
+    .replace(/legacy URLs?/gi, 'older URLs')
+    .replace(/rebuild target/gi, 'directory context page')
+    .replace(/recovery profile/gi, 'source-backed profile')
+    .replace(/recovery page/gi, 'source-backed page')
+    .replace(/source-backed recovery/gi, 'source-backed')
+    .replace(/until crawl data accumulates/gi, 'until more public search data is available');
+}
 
 const homepageFaqs = [
   {
@@ -317,7 +341,7 @@ export default function Home() {
             {featuredLocations.map((location) => location && (
               <article className="card" key={location.slug}>
                 <h3><Link href={`/locations/${location.slug}`} data-event="internal_link_click" data-cta-location="home_location_featured_grid">{location.city}, {location.province}</Link></h3>
-                <p>{location.description}</p>
+                <p>{publicDirectoryCopy(location.description)}</p>
                 <p className="meta">City directory page · source notes included where available</p>
               </article>
             ))}
@@ -339,7 +363,7 @@ export default function Home() {
             {priorityCategories.map((category) => (
               <article className="card" key={category.slug}>
                 <h3><Link href={`/categories/${category.slug}`} data-event="internal_link_click" data-cta-location="home_category_grid">{category.title}</Link></h3>
-                <p>{category.description}</p>
+                <p>{publicDirectoryCopy(category.description)}</p>
                 <p className="meta">Links only to existing source-noted profiles and city pages.</p>
               </article>
             ))}
