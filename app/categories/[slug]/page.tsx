@@ -31,9 +31,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     return 'Verification queued';
   };
   const statusLimit = (status?: string) => {
-    if (status === 'current_source') return 'Address-context source only; current hours, menus, stock, ordering, delivery, pricing, availability, and operation are not verified here.';
-    if (status === 'historical_source') return 'Historical context only; current operation, licence, hours, menus, stock, delivery, ordering, and availability are not verified here.';
-    return 'Source verification still queued; do not treat this as a current-store claim.';
+    if (status === 'current_source') return 'Official or public address context is available; current store details are not verified here.';
+    if (status === 'historical_source') return 'Historical source context is available; current store details are not verified here.';
+    return 'Source verification is still queued; do not treat this as a current-store claim.';
   };
   const sourceSummary = (note?: string) => {
     if (!note) return 'Open the profile for source notes and current verification limits.';
@@ -44,7 +44,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     .replace(/source-backed recovery page/gi, 'source-backed city page')
     .replace(/recovery page/gi, 'directory page')
     .replace(/legacy listing/gi, 'historical listing')
-    .replace(/legacy profile/gi, 'historical profile');
+    .replace(/legacy profile/gi, 'historical profile')
+    .replace(/recovery profile/gi, 'source-backed profile')
+    .replace(/rebuild target/gi, 'directory context page');
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -115,6 +117,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           <p className="eyebrow">Source-backed profiles</p>
           <h2>Start with verifiable listing evidence</h2>
           <p>Each card links to an existing profile and states the public source behind it. Potshops does not turn these sources into current hours, menu, stock, ordering, delivery, licence, price, rating, or operation claims.</p>
+          <p className="category-shared-limit"><strong>Shared source limit:</strong> profile cards show public-source context only. Current hours, menus, stock, ordering, delivery, prices, ratings, licensing, availability, and storefront operation still need independent confirmation.</p>
         </div>
         <div className="profile-grid category-profile-grid">
           {visibleListings.map((listing) => (
@@ -134,8 +137,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                   <dt>Search context</dt>
                   <dd>{listing.gscImpressions.toLocaleString()} historical search signals</dd>
                 </div>
-                <div>
-                  <dt>Important limit</dt>
+                <div className="category-current-limit">
+                  <dt>Current-store check</dt>
                   <dd>{statusLimit(listing.verificationStatus)}</dd>
                 </div>
               </dl>
