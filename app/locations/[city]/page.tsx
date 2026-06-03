@@ -20,8 +20,11 @@ const publicCopy = (copy: string) => copy
   .replace(/fresh recent search visibility/gi, 'recent search visibility')
   .replace(/legacy impressions?/gi, 'historic discovery signals')
   .replace(/legacy/gi, 'older')
-  .replace(/rebuild target/gi, 'directory context page')
-  .replace(/recovery profile/gi, 'source-backed profile')
+  .replace(/source-backed rebuild work/gi, 'public-source notes')
+    .replace(/rebuild target/gi, 'directory context page')
+  .replace(/legacy URL recovery/gi, 'older directory links')
+    .replace(/profile recovery/gi, 'profile context')
+    .replace(/recovery profile/gi, 'source-backed profile')
   .replace(/recovery page/gi, 'source-limit page');
 
 export function generateStaticParams() { return priorityLocations.map((location) => ({ city: location.slug })); }

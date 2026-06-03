@@ -95,7 +95,7 @@ const homepageLookupItems = [
     detail: listing.locationHint,
     kind: 'Store profile' as const,
     status: listing.verificationStatus === 'current_source' ? 'Official/public-source address context' : 'Older or public-source context',
-    keywords: [listing.name, listing.slug, listing.city ?? '', listing.province ?? '', (listing.categories ?? []).join(' '), listing.sourceName ?? '', listing.sourceNote ?? ''],
+    keywords: [listing.name, listing.slug, listing.city ?? '', listing.province ?? '', (listing.categories ?? []).join(' '), listing.sourceName ?? '', listing.sourceNote ? publicDirectoryCopy(listing.sourceNote) : ''],
   })),
   ...priorityCategories.map((category) => ({
     href: `/categories/${category.slug}`,
@@ -117,6 +117,8 @@ function publicDirectoryCopy(value: string) {
     .replace(/GSC listing demand showed/gi, 'Older directory demand highlighted')
     .replace(/GSC page data showed/gi, 'Older search data highlighted')
     .replace(/GSC/gi, 'search data')
+    .replace(/fresh final-data rows?/gi, 'recent search signals')
+    .replace(/final-data rows?/gi, 'search signals')
     .replace(/fresh recent search signals/gi, 'recent search signals')
     .replace(/fresh recent search visibility/gi, 'recent search visibility')
     .replace(/fresh low-row/gi, 'recent')
@@ -129,7 +131,10 @@ function publicDirectoryCopy(value: string) {
     .replace(/legacy URLs?/gi, 'older URLs')
     .replace(/legacy/gi, 'older')
     .replace(/historical-source/gi, 'older public-source')
+    .replace(/source-backed rebuild work/gi, 'public-source notes')
     .replace(/rebuild target/gi, 'directory context page')
+    .replace(/legacy URL recovery/gi, 'older directory links')
+    .replace(/profile recovery/gi, 'profile context')
     .replace(/recovery profile/gi, 'source-backed profile')
     .replace(/recovery page/gi, 'source-backed page')
     .replace(/source-backed recovery/gi, 'source-backed')
@@ -147,7 +152,7 @@ const homepageFaqs = [
   },
   {
     question: 'What if a listing is incomplete or outdated?',
-    answer: 'Use the source-backed update path to send regulator, business, or public-directory evidence. Potshops reviews source quality before changing address, category, owner-note, or current-status wording.',
+    answer: 'Use the public-source update path to send regulator, business, or public-directory evidence. Potshops reviews source quality before changing address, category, owner-note, or current-status wording.',
   },
 ];
 
@@ -408,14 +413,14 @@ export default function Home() {
         <section id="claim" className="split">
           <div>
             <div className="eyebrow">Corrections and owner notes</div>
-            <h2>Suggest a source-backed cannabis listing update</h2>
+            <h2>Suggest a public-source cannabis listing update</h2>
             <p>Potshops can grow faster when store owners and readers send official-source corrections, but the public directory stays conservative until facts are verified.</p>
             <ul className="clean">
               <li>Address and city corrections backed by regulator, business, or public directory sources.</li>
               <li>Clearly labelled owner notes before any sponsorship conversation.</li>
               <li>No hours, menus, ordering, delivery, availability, rating, or promotional claims without exact source and compliance review.</li>
             </ul>
-            <p><Link className="button" href="/updates" data-event="listing_update_click" data-cta-location="home_update_section">Send a source-backed update</Link></p>
+            <p><Link className="button" href="/updates" data-event="listing_update_click" data-cta-location="home_update_section">Send a public-source update</Link></p>
           </div>
           <aside className="notice">
             <h3>Data quality note</h3>

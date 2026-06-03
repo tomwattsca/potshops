@@ -161,7 +161,9 @@ function publicListingCopy(value: string) {
     .replace(/page-one average position/gi, 'strong search visibility')
     .replace(/GA4 rows?/gi, 'analytics signals')
     .replace(/GSC rows?/gi, 'search signals')
-    .replace(/GSC/gi, 'search data');
+    .replace(/GSC/gi, 'search data')
+    .replace(/fresh final-data rows?/gi, 'recent search signals')
+    .replace(/final-data rows?/gi, 'search signals');
 }
 
 export const dynamicParams = false;
@@ -200,6 +202,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   const sourceSummary = listing.sourceName
     ? `${listing.sourceName} checked ${listing.lastVerified ?? 'during directory update'}`
     : 'No source has been attached to this listing yet';
+  const publicSourceNote = listing.sourceNote ? publicListingCopy(listing.sourceNote) : undefined;
   const profilePurpose = hasCurrentSource
     ? 'A public-source address profile, not a menu, licence, hours, delivery, or availability check.'
     : listing.sourceName
@@ -215,7 +218,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
         '@id': `https://potshops.ca/listings/${listing.slug}#webpage`,
         url: `https://potshops.ca/listings/${listing.slug}`,
         name: `${listing.name} source-backed Potshops profile`,
-        description: listing.sourceNote ?? `Conservative Potshops profile for ${listing.name} with source-backed context and visible claim limits.`,
+        description: publicSourceNote ?? `Conservative Potshops profile for ${listing.name} with public-source context and visible claim limits.`,
         isPartOf: { '@id': 'https://potshops.ca/#website' },
       },
       {
@@ -293,25 +296,13 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
               <li>Search context people use for this profile: {recentSearchIntent.slice(0, 4).join(', ')}.</li>
             )}
           </ul>
-          <details className="technical-context">
-            <summary>Why Potshops keeps this page</summary>
-            <ul className="clean">
-              {listing.legacyPath && (
-                <li>Older Potshops links for this profile now resolve to this page.</li>
-              )}
-              {listing.gscImpressions > 0 && (
-                <li>People still search for this store or local profile, so Potshops keeps a conservative source-backed page here.</li>
-              )}
-              <li>This page is for source context only; verify current operation, licensing, hours, menus, stock, delivery, ordering, and availability with official or business sources before relying on it.</li>
-            </ul>
-          </details>
         </section>
         <aside className="notice profile-source-note">
           <h3>{listing.sourceName ? (hasCurrentSource ? 'Source checked' : 'Older source checked') : 'Claim or verify this listing'}</h3>
           {listing.sourceName ? (
             <>
               <p><strong>Last checked:</strong> {listing.lastVerified}</p>
-              <p>{listing.sourceNote}</p>
+              <p>{publicSourceNote}</p>
             </>
           ) : (
             <p>Potshops needs public-source address, city, category, and compliance-friendly context before adding stronger current-status detail.</p>
@@ -338,8 +329,8 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
         <section className="card source-facts-card">
           <div>
             <p className="eyebrow">Source-backed facts</p>
-            <h2>Source-backed facts on this profile</h2>
-            <p>These are the facts Potshops can show from the cited public source. Missing fields are omitted rather than filled with guesses.</p>
+            <h2>Public-source facts on this profile</h2>
+            <p>These are the facts Potshops can show from the cited public source. Missing fields are left out rather than guessed.</p>
           </div>
           <dl className="fact-list">
             {addressLine && (
@@ -364,7 +355,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
             </div>
             <div>
               <dt>Source note</dt>
-              <dd>{listing.sourceNote}</dd>
+              <dd>{publicSourceNote}</dd>
             </div>
           </dl>
         </section>
@@ -397,7 +388,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
           <p>Send Potshops a regulator, business, or public-directory source so this listing can improve without adding unsupported hours, menu, delivery, availability, licence, rating, or promotional claims.</p>
         </div>
         <p className="cta-row">
-          <Link className="button" href="/updates" data-event="listing_update_click" data-cta-location="listing_detail">Suggest a source-backed correction</Link>
+          <Link className="button" href="/updates" data-event="listing_update_click" data-cta-location="listing_detail">Suggest a public-source correction</Link>
         </p>
       </section>
       <p><Link href="/">← Back to Potshops.ca directory home</Link></p>

@@ -12,8 +12,8 @@ export default function NotFound() {
     <main>
       <section className="card not-found-card" aria-labelledby="missing-record-title">
         <p className="eyebrow">Directory record not found</p>
-        <h1 id="missing-record-title">This Potshops page is not in the source-backed directory.</h1>
-        <p className="lede">Some old WordPress listing URLs and unsupported slugs still receive visits. Potshops now returns a true 404 for those paths instead of showing an unverified cannabis profile.</p>
+        <h1 id="missing-record-title">This Potshops page is not available yet.</h1>
+        <p className="lede">Some older Potshops links point to records that are not ready to show publicly. Potshops hides those pages rather than guessing about a cannabis store.</p>
         <div className="homepage-search-guide not-found-guide" aria-label="Missing Potshops record options">
           <article>
             <span className="guide-step">1</span>
@@ -22,8 +22,8 @@ export default function NotFound() {
           </article>
           <article>
             <span className="guide-step">2</span>
-            <h2>Use rebuilt records first</h2>
-            <p>Start with existing source-backed city, category, and listing pages before relying on old search-result URLs.</p>
+            <h2>Use available records first</h2>
+            <p>Start with available city, category, and listing pages that show clear public-source limits.</p>
           </article>
           <article>
             <span className="guide-step">3</span>
@@ -33,13 +33,13 @@ export default function NotFound() {
         </div>
         <div className="cta-row">
           <Link className="button" href="/" data-event="internal_link_click" data-cta-location="not_found_home" data-link-target="/">Browse the directory</Link>
-          <Link className="button secondary" href="/updates" data-event="listing_update_click" data-cta-location="not_found">Suggest a source-backed correction</Link>
+          <Link className="button secondary" href="/updates" data-event="listing_update_click" data-cta-location="not_found">Suggest a public-source correction</Link>
         </div>
       </section>
 
       <section className="card" aria-labelledby="recovered-records-title">
         <p className="eyebrow">Useful listing paths</p>
-        <h2 id="recovered-records-title">Try these profiles with source notes</h2>
+        <h2 id="recovered-records-title">Try these useful profile pages</h2>
         <div className="signal-grid">
           {highSignalListings.map((listing) => (
             <article className="mini-card" key={listing.href}>
