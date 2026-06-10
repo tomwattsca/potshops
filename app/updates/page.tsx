@@ -21,6 +21,13 @@ export const metadata: Metadata = {
   title: 'Suggest a cannabis listing update',
   description: 'Send Potshops.ca source-backed cannabis listing corrections, official-source updates, and city coverage suggestions without making unsupported commerce claims.',
   alternates: { canonical: '/updates' },
+  openGraph: {
+    title: 'Potshops.ca',
+    description: 'Canadian cannabis store and dispensary directory.',
+    url: 'https://potshops.ca/updates',
+    siteName: 'Potshops.ca',
+    type: 'website',
+  },
 };
 
 function UpdatesSchema() {

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getCategory, getListing, listingSeeds, priorityLocations } from '../../data/directory';
+import { getCategory, getListing, getStoreBackboneSource, isRegulatorBackedStore, listingSeeds, priorityLocations } from '../../data/directory';
 
 const recentSearchIntentBySlug: Record<string, string[]> = {
   'cannabis-culture-920-davie': ['cannabis culture dispensary', 'cannabis culture', 'cannibis culture', 'canna culture', 'cannabis culture vancouver'],
@@ -42,12 +42,12 @@ const listingPageFocusBySlug: Record<string, { title: string; summary: string; b
     ],
   },
   'green-leaf': {
-    title: 'Kahnawake Green Leaf profile and historical-source context',
-    summary: 'Recent search evidence now makes Green Leaf the strongest canonical listing row in the Potshops sample. This existing profile needs to answer Green Leaf/Kahnawake variants quickly while staying clear that the source evidence is historical and not proof of current cannabis-store operation.',
+    title: 'Kahnawake Green Leaf public-source context page',
+    summary: 'Green Leaf in Kahnawake still carries strong query demand, so Potshops keeps this profile as a single recovered route with strict source limits and no unsupported current-operation claims.',
     bullets: [
       'Visitor search context: the 2026-04-02..2026-05-17 sample shows /listings/green-leaf with 82 impressions, including green leaf kahnawake, cannabis kahnawake, canabis kanawake, and near-me-style dispensary wording.',
-      'Source posture: local reporting identifies Green Leaf in Kahnawake and enforcement history, but Potshops has not verified a current public operating address, licence, menu, stock, delivery, hours, ordering path, or availability.',
-      'Next step for users: use the Kahnawake location page for mapped historical-source context, and use /updates for regulator or business sources that can improve the record.',
+      'Source posture: public reporting identifies Green Leaf in Kahnawake and documents enforcement history, but there is no confirmed active business webpage or current operating/licence evidence in this record.',
+      'Next step for users: use the Kahnawake location page for mapped source-context, and use /updates for regulator or business-page sources that can improve the record.',
     ],
   },
   'the-herb-co-mount-pleasant': {
@@ -132,11 +132,11 @@ const listingPageFocusBySlug: Record<string, { title: string; summary: string; b
     ],
   },
   'farm-the-original-farmacy-downtown': {
-    title: 'Victoria Original Farmacy source-limit context',
-    summary: 'Recent search evidence showed farmacy victoria demand on this existing canonical listing. The page now explains the Farm/Farmacy/Douglas Street Victoria context while treating the public directory evidence as stale until stronger current sources are reviewed.',
+    title: 'Victoria Original Farmacy official-source context',
+    summary: 'Recent search evidence showed farmacy victoria demand on this existing canonical listing. The page now explains the Farm/Farmacy/Douglas Street Victoria context using BC public legal-retailer evidence while avoiding live commerce claims.',
     bullets: [
       'Visitor search context: recent final-data rows include farmacy victoria, and the canonical listing has low-row impressions around page-one average position.',
-      'Source posture: third-party public directory pages associate Farm: The Original Farmacy Downtown with 1402 Douglas St in Victoria, but those sources are stale and do not verify current licensing, menus, stock, delivery, hours, ordering, or availability.',
+      'Source posture: BC public legal-retailer spreadsheet evidence supports The Original FARM at 1402 Douglas St in Victoria; Potshops still does not claim current hours, menus, stock, delivery, ordering, or availability.',
       'Next step for users: use the Victoria location page and /updates for stronger regulator, business, or public-directory evidence if the profile should be corrected.',
     ],
   },
@@ -154,16 +154,27 @@ const listingPageFocusBySlug: Record<string, { title: string; summary: string; b
 
 function publicListingCopy(value: string) {
   return value
+    .replace(/visitor search context:\s*/gi, '')
+    .replace(/sampled impressions?/gi, 'search visibility')
     .replace(/recent final-data rows?/gi, 'recent search signals')
     .replace(/final-data rows?/gi, 'search signals')
+    .replace(/analytics rows?/gi, 'analytics signals')
     .replace(/low-row impressions?/gi, 'limited impressions')
     .replace(/low-row brand interest/gi, 'limited brand interest')
+    .replace(/low-row/gi, 'limited')
     .replace(/page-one average position/gi, 'strong search visibility')
+    .replace(/GA4 page views?/gi, 'analytics visits')
     .replace(/GA4 rows?/gi, 'analytics signals')
     .replace(/GSC rows?/gi, 'search signals')
     .replace(/GSC/gi, 'search data')
     .replace(/fresh final-data rows?/gi, 'recent search signals')
-    .replace(/final-data rows?/gi, 'search signals');
+    .replace(/final-data rows?/gi, 'search signals')
+    .replace(/old singular/gi, 'older')
+    .replace(/old \/listing\//gi, 'older /listing/')
+    .replace(/legacy profile/gi, 'older profile')
+    .replace(/legacy listing/gi, 'older listing')
+    .replace(/legacy URL/gi, 'older URL')
+    .replace(/legacy/gi, 'older');
 }
 
 export const dynamicParams = false;
@@ -175,14 +186,34 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const listing = getListing(resolvedParams.slug);
   if (!listing) return { title: 'Listing not found', robots: { index: false, follow: true } };
   const hasCurrentSource = listing.verificationStatus === 'current_source';
+  const storeBackboneSource = getStoreBackboneSource(listing);
+  const shouldIndex = storeBackboneSource === 'regulator';
   const description = listing.sourceName
     ? hasCurrentSource
       ? `${listing.name} has official public-source address facts from ${listing.sourceName}. Potshops shows source-backed context without hours, menu, stock, ordering, or service claims.`
-      : `${listing.name} has public-source listing facts from ${listing.sourceName}. Potshops labels these as historical until current licensing is confirmed.`
+      : `${listing.name} has public-source listing facts from ${listing.sourceName}. Potshops treats these as context-only until current licensing is confirmed.`
     : `${listing.name} is a conservative Potshops.ca profile. Source-backed facts are still limited, so the page avoids current-store, menu, ordering, delivery, hours, or availability claims.`;
   const locationLabel = listing.city && listing.province ? `${listing.city}, ${listing.province}` : listing.locationHint;
-  const titleSuffix = hasCurrentSource ? 'source-backed cannabis profile' : 'historical cannabis listing';
-  return { title: `${listing.name} in ${locationLabel} | ${titleSuffix}`, description, alternates: { canonical: `/listings/${listing.slug}` } };
+  const titleSuffix = hasCurrentSource ? 'source-backed cannabis profile' : 'source-context cannabis listing';
+  const pageTitle = `${listing.name} in ${locationLabel} | ${titleSuffix}`;
+  const canonical = `/listings/${listing.slug}`;
+  const url = `https://potshops.ca${canonical}`;
+  return {
+    title: pageTitle,
+    description,
+    alternates: { canonical },
+    openGraph: {
+      title: pageTitle,
+      description,
+      url,
+      siteName: 'Potshops.ca',
+      type: 'website',
+    },
+    robots: {
+      index: shouldIndex,
+      follow: true,
+    },
+  };
 }
 
 export default async function ListingPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -190,26 +221,40 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   const listing = getListing(resolvedParams.slug);
   if (!listing) notFound();
   const hasCurrentSource = listing.verificationStatus === 'current_source';
+  const storeBackboneSource = getStoreBackboneSource(listing);
+  const hasRegulatorBackbone = isRegulatorBackedStore(listing);
   const relatedLocation = priorityLocations.find((location) => location.city === listing.city && location.province === listing.province);
   const relatedCategories = listing.categories?.map((slug) => getCategory(slug)).filter((category) => Boolean(category)) ?? [];
+  const focusTemplate = listingPageFocusBySlug[listing.slug];
   const addressLine = [listing.address, listing.city, [listing.province, listing.postalCode].filter(Boolean).join(' ')].filter(Boolean).join(', ');
-  const statusLabel = hasCurrentSource ? 'Official/public address context' : listing.sourceName ? 'Older public-source context' : 'Needs source verification';
+  const statusLabel = hasCurrentSource ? 'Official/public address context' : listing.sourceName ? 'Public-source context' : 'Needs source verification';
+  const backboneLabel = hasRegulatorBackbone ? 'Regulator-backed store data' : 'Non-regulator source context';
   const sourceLimit = hasCurrentSource
     ? 'Address context only; no hours, menus, stock, ordering, delivery, ratings, or service details.'
     : listing.sourceName
-      ? 'Useful historical/profile evidence only; not proof of current licensing, availability, or operation.'
+      ? 'Useful source context only; not proof of current licensing, availability, or active operation.'
       : 'The old Potshops record has demand, but stronger public-source facts are still missing.';
   const sourceSummary = listing.sourceName
     ? `${listing.sourceName} checked ${listing.lastVerified ?? 'during directory update'}`
     : 'No source has been attached to this listing yet';
   const publicSourceNote = listing.sourceNote ? publicListingCopy(listing.sourceNote) : undefined;
+  const allSourceUrls = listing.sourceUrls && listing.sourceUrls.length > 0
+    ? listing.sourceUrls
+    : listing.sourceUrl
+      ? [listing.sourceUrl]
+      : [];
+  const uniqueSourceUrls = [...new Set(allSourceUrls)];
+  const sourcePrimaryUrl = uniqueSourceUrls[0];
   const profilePurpose = hasCurrentSource
     ? 'A public-source address profile, not a menu, licence, hours, delivery, or availability check.'
     : listing.sourceName
       ? 'A historical public-source profile, not confirmation that this location operates today.'
-      : 'A limited legacy profile waiting for stronger public evidence before Potshops adds more detail.';
+      : 'A limited older profile waiting for stronger public evidence before Potshops adds more detail.';
+  const businessPageUrl = listing.website?.trim();
+  const hasResearchWebsite = Boolean(listing.website && listing.website.trim().length > 0);
   const recentSearchIntent = recentSearchIntentBySlug[listing.slug] ?? [];
   const locationLabel = listing.city && listing.province ? `${listing.city}, ${listing.province}` : listing.locationHint;
+  const shouldEmitLocalBusinessSchema = hasRegulatorBackbone && Boolean(listing.address);
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -229,24 +274,22 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
           { '@type': 'ListItem', position: 2, name: listing.name, item: `https://potshops.ca/listings/${listing.slug}` },
         ],
       },
-      {
+      ...(shouldEmitLocalBusinessSchema ? [{
         '@type': 'LocalBusiness',
         '@id': `https://potshops.ca/listings/${listing.slug}#localbusiness`,
         name: listing.name,
         url: `https://potshops.ca/listings/${listing.slug}`,
         areaServed: listing.locationHint,
-        ...(listing.verificationStatus === 'current_source' && listing.address ? {
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: listing.address,
-            addressLocality: listing.city,
-            addressRegion: listing.province,
-            postalCode: listing.postalCode,
-            addressCountry: 'CA',
-          },
-          ...(listing.phone ? { telephone: listing.phone } : {}),
-        } : {}),
-      },
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: listing.address,
+          addressLocality: listing.city,
+          addressRegion: listing.province,
+          postalCode: listing.postalCode,
+          addressCountry: 'CA',
+        },
+        ...(listing.phone ? { telephone: listing.phone } : {}),
+      }] : []),
     ],
   };
   return (
@@ -255,6 +298,16 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
       <p className="eyebrow">Store profile</p>
       <h1>{listing.name}</h1>
       <p className="profile-location-note">{locationLabel} · {statusLabel}</p>
+      {focusTemplate && (
+        <section className="card listing-focus-card">
+          <p className="eyebrow">High-traffic listing profile context</p>
+          <h2>{publicListingCopy(focusTemplate.title)}</h2>
+          <p>{publicListingCopy(focusTemplate.summary)}</p>
+          <ul className="clean">
+            {focusTemplate.bullets.map((bullet) => <li key={bullet}>{publicListingCopy(bullet)}</li>)}
+          </ul>
+        </section>
+      )}
       <p className="lede">Use this page to understand what public sources currently support for {listing.name} — and what Potshops is deliberately not claiming about menus, hours, delivery, stock, licences, or whether a storefront operates today.</p>
 
       <section className="card listing-evidence-card" aria-labelledby="profile-summary">
@@ -267,15 +320,25 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
           <Link className="button secondary" href="/updates" data-event="listing_update_click" data-cta-location="listing_summary">Send a better source</Link>
         </div>
         <div className="listing-proof-grid" aria-label="Listing evidence summary">
-          <div className="mini-card">
+            <div className="mini-card">
             <span>Source status</span>
             <strong>{statusLabel}</strong>
             <small>{sourceSummary}</small>
           </div>
           <div className="mini-card">
+            <span>Store backbone</span>
+            <strong>{hasRegulatorBackbone ? 'Regulator backed' : 'Public-source only'}</strong>
+            <small>{storeBackboneSource === 'needs_verification' ? 'Backbone status pending' : backboneLabel}</small>
+          </div>
+          <div className="mini-card">
             <span>Public location context</span>
             <strong>{addressLine || listing.locationHint}</strong>
             <small>{relatedLocation ? `Also mapped to the ${relatedLocation.city} directory page.` : 'A dedicated city page is not mapped yet.'}</small>
+          </div>
+          <div className="mini-card">
+            <span>Business webpage</span>
+            <strong>{hasResearchWebsite ? 'Source-linked business page' : 'Business webpage not confirmed'}</strong>
+            <small>{hasResearchWebsite ? businessPageUrl : 'No active business website is confirmed from the cited source-backed record.'}</small>
           </div>
           <div className="mini-card">
             <span>Important limit</span>
@@ -298,11 +361,23 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
           </ul>
         </section>
         <aside className="notice profile-source-note">
-          <h3>{listing.sourceName ? (hasCurrentSource ? 'Source checked' : 'Older source checked') : 'Claim or verify this listing'}</h3>
+            <h3>{listing.sourceName ? (hasCurrentSource ? 'Source checked' : 'Source context only') : 'Claim or verify this listing'}</h3>
+            {hasRegulatorBackbone && (
+              <p><strong>Store data backbone:</strong> This profile is backed by regulator table evidence and used as the active Potshops store record for this name.</p>
+            )}
           {listing.sourceName ? (
             <>
               <p><strong>Last checked:</strong> {listing.lastVerified}</p>
               <p>{publicSourceNote}</p>
+              {businessPageUrl && (
+                <p>
+                  <strong>Website from research:</strong>{' '}
+                  <a href={businessPageUrl} target="_blank" rel="nofollow noopener noreferrer">{businessPageUrl}</a>
+                </p>
+              )}
+              {!businessPageUrl && (
+                <p><strong>Business webpage:</strong> Not confirmed by this source-backed record.</p>
+              )}
             </>
           ) : (
             <p>Potshops needs public-source address, city, category, and compliance-friendly context before adding stronger current-status detail.</p>
@@ -339,6 +414,14 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
                 <dd>{addressLine}</dd>
               </div>
             )}
+            <div>
+              <dt>Business webpage</dt>
+              <dd>{businessPageUrl ? (
+                <a href={businessPageUrl} target="_blank" rel="nofollow noopener noreferrer">{businessPageUrl}</a>
+              ) : (
+                <span>No business webpage confirmed from source-backed evidence.</span>
+              )}</dd>
+            </div>
             {listing.phone && (
               <div>
                 <dt>Phone listed by source</dt>
@@ -347,8 +430,51 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
             )}
             <div>
               <dt>Source reviewed</dt>
-              <dd><a href={listing.sourceUrl ?? '#'} target="_blank" rel="nofollow noopener noreferrer">{listing.sourceName}</a>{listing.lastVerified ? ` · ${listing.lastVerified}` : ''}</dd>
+              <dd>
+                {sourcePrimaryUrl ? (
+                  <a href={sourcePrimaryUrl} target="_blank" rel="nofollow noopener noreferrer">{listing.sourceName || sourcePrimaryUrl}</a>
+                ) : (
+                  <span>{listing.sourceName}</span>
+                )}
+                {listing.lastVerified ? ` · ${listing.lastVerified}` : ''}
+              </dd>
             </div>
+            {listing.observedAt && (
+              <div>
+                <dt>Evidence observed</dt>
+                <dd>{listing.observedAt}</dd>
+              </div>
+            )}
+            {listing.confidence && (
+              <div>
+                <dt>Promotion confidence</dt>
+                <dd>{listing.confidence}</dd>
+              </div>
+            )}
+            {listing.missingReasons && listing.missingReasons.length > 0 && (
+              <div>
+                <dt>Still missing</dt>
+                <dd>
+                  <ul className="clean">
+                    {listing.missingReasons.map((reason) => <li key={reason}>{reason}</li>)}
+                  </ul>
+                </dd>
+              </div>
+            )}
+            {uniqueSourceUrls.length > 1 && (
+              <div>
+                <dt>Additional source URLs</dt>
+                <dd>
+                  <ul className="clean">
+                    {uniqueSourceUrls.slice(1).map((sourceUrl) => (
+                      <li key={sourceUrl}>
+                        <a href={sourceUrl} target="_blank" rel="nofollow noopener noreferrer">{sourceUrl}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </dd>
+              </div>
+            )}
             <div>
               <dt>Status label</dt>
               <dd>{hasCurrentSource ? 'Official public-source address context; Potshops still withholds hours, menus, stock, ordering, and service claims until further review.' : 'Older public-source verification only; current regulatory and operating status still needs confirmation.'}</dd>

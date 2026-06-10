@@ -1,6 +1,20 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import HomeLookup from './HomeLookup';
 import { getCategory, getLocation, listingSeeds, priorityCategories, priorityLocations } from './data/directory';
+
+export const metadata: Metadata = {
+  title: 'Potshops.ca | Canadian Cannabis Store Directory',
+  description: 'A Canadian cannabis directory for existing city, province, category, and store-profile pages with public-source notes.',
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Potshops.ca',
+    description: 'Canadian cannabis store and dispensary directory.',
+    url: 'https://potshops.ca/',
+    siteName: 'Potshops.ca',
+    type: 'website',
+  },
+};
 
 const gscVisibleLocationSlugs = ['calgary', 'nelson', 'kahnawake', 'penticton'];
 const gscVisibleListingSlugs = [
@@ -58,6 +72,7 @@ const gscVisibleListings = gscVisibleListingSlugs.map((slug) => listingSeeds.fin
 const gscVisibleCategories = gscVisibleCategorySlugs.map((slug) => getCategory(slug)).filter((category) => Boolean(category));
 const sourceBackedListingCount = listingSeeds.filter((listing) => listing.sourceName).length;
 const currentSourceListingCount = listingSeeds.filter((listing) => listing.verificationStatus === 'current_source').length;
+const directoryPageCount = listingSeeds.length + priorityLocations.length + priorityCategories.length + 1;
 const provinceNames: Record<string, string> = {
   AB: 'Alberta',
   BC: 'British Columbia',
@@ -107,6 +122,19 @@ const homepageLookupItems = [
   })),
 ];
 
+const homepageFeaturedLookupHrefs = [
+  '/listings/green-leaf',
+  '/locations/kahnawake',
+  '/listings/cannabis-culture-920-davie',
+  '/locations/calgary',
+  '/listings/green-essence-head-shop-dispensary',
+  '/categories/dispensary',
+];
+
+const homepageFeaturedLookupItems = homepageFeaturedLookupHrefs
+  .map((href) => homepageLookupItems.find((item) => item.href === href))
+  .filter((item): item is (typeof homepageLookupItems)[number] => Boolean(item));
+
 
 function publicDirectoryCopy(value: string) {
   return value
@@ -145,6 +173,10 @@ const homepageFaqs = [
   {
     question: 'Does Potshops.ca sell cannabis?',
     answer: 'No. Potshops.ca is an independent cannabis directory. It does not sell cannabis, take orders, verify menus, or guarantee stock, delivery, hours, or current operating status.',
+  },
+  {
+    question: 'Are there Potshops user reviews or ratings?',
+    answer: 'No. Potshops does not host, collect, or guarantee reviews or ratings. The site only presents source-backed directory context and directs users to official evidence for verification.',
   },
   {
     question: 'How should I use the Canadian cannabis store directory?',
@@ -201,10 +233,10 @@ export default function Home() {
               <span><strong>{listingSeeds.length}</strong> store profiles to search</span>
               <span><strong>{sourceBackedListingCount}</strong> profiles include source notes</span>
               <span><strong>{currentSourceListingCount}</strong> profiles have current public-source address context</span>
-              <span>Always verify menus, stock, hours, delivery, and licences directly</span>
+              <span>Potshops provides source notes, not live menus, stock, reviews, or guarantees.</span>
             </div>
           </div>
-          <HomeLookup items={homepageLookupItems} />
+          <HomeLookup items={homepageLookupItems} featuredItems={homepageFeaturedLookupItems} />
         </div>
       </section>
       <section className="top-paths-band" aria-labelledby="hero-quick-find-title">
@@ -295,7 +327,7 @@ export default function Home() {
             <span><strong>{listingSeeds.length}</strong> searchable profiles</span>
             <span><strong>{sourceBackedListingCount}</strong> profiles with source notes</span>
             <span><strong>{currentSourceListingCount}</strong> profiles with public-source address context</span>
-            <span><strong>153</strong> directory pages available</span>
+            <span><strong>{directoryPageCount}</strong> directory pages available</span>
           </div>
         </section>
 

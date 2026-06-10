@@ -14,6 +14,7 @@ type LookupItem = {
 
 type HomeLookupProps = {
   items: LookupItem[];
+  featuredItems?: LookupItem[];
 };
 
 function matchesQuery(item: LookupItem, query: string) {
@@ -23,16 +24,16 @@ function matchesQuery(item: LookupItem, query: string) {
   return normalizedQuery.split(/\s+/).every((term) => haystack.includes(term));
 }
 
-export default function HomeLookup({ items }: HomeLookupProps) {
+export default function HomeLookup({ items, featuredItems }: HomeLookupProps) {
   const [query, setQuery] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
   const resultsRef = useRef<HTMLDivElement>(null);
-  const featuredItems = items.slice(0, 6);
+  const defaultItems = featuredItems?.length ? featuredItems : items.slice(0, 6);
   const results = useMemo(() => {
     const trimmed = query.trim();
-    if (!trimmed) return featuredItems;
+    if (!trimmed) return defaultItems;
     return items.filter((item) => matchesQuery(item, trimmed)).slice(0, 8);
-  }, [featuredItems, items, query]);
+  }, [defaultItems, items, query]);
   const showingSearchResults = query.trim().length > 0;
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -86,15 +87,31 @@ export default function HomeLookup({ items }: HomeLookupProps) {
               >
                 <span className="lookup-kind">{item.kind}</span>
                 <strong>{item.label}</strong>
-                {showingSearchResults && <span>{item.detail}</span>}
-                {showingSearchResults && item.status && <em>{item.status}</em>}
+                <span>{item.detail}</span>
+                {item.status && <em>{item.status}</em>}
               </Link>
             ))}
           </div>
         ) : (
           <div className="lookup-empty" role="status">
             <strong>No directory page found for that search yet.</strong>
-            <span>Try a province, city, or known profile name, or send public-source evidence for Potshops to review.</span>
+            <span>Try a province, city, or known profile name, or use one of these existing starting points.</span>
+            <div className="lookup-result-grid" aria-label="Existing directory starting points">
+              {defaultItems.slice(0, 4).map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  data-event="internal_link_click"
+                  data-cta-location="home_lookup_empty_fallback"
+                  className="lookup-result-card"
+                >
+                  <span className="lookup-kind">{item.kind}</span>
+                  <strong>{item.label}</strong>
+                  <span>{item.detail}</span>
+                  {item.status && <em>{item.status}</em>}
+                </Link>
+              ))}
+            </div>
             <Link href="/updates" data-event="listing_update_click" data-cta-location="home_lookup_empty_update">Suggest an update</Link>
           </div>
         )}

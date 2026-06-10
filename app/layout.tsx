@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'A Canadian cannabis directory for existing city, province, category, and store-profile pages with public-source notes.',
   alternates: { canonical: '/' },
   icons: { icon: '/favicon.svg' },
-  openGraph: { title: 'Potshops.ca', description: 'Canadian cannabis store and dispensary directory.', url: siteUrl, siteName: 'Potshops.ca', type: 'website' },
+  openGraph: { title: 'Potshops.ca', description: 'Canadian cannabis store and dispensary directory.', siteName: 'Potshops.ca', type: 'website' },
 };
 
 function GoogleAnalytics() {

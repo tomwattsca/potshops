@@ -16,10 +16,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://weedsfarm.com/store/cannabis-culture-920-davie/"
+    ],
     "lastVerified": "2026-05-06",
     "sourceName": "WeedsFarm public directory",
     "sourceUrl": "https://weedsfarm.com/store/cannabis-culture-920-davie/",
-    "sourceNote": "Public directory page lists address and phone for the historical Davie Street listing; current licensing and operating status still needs official confirmation."
+    "sourceNote": "Public directory page lists address and phone for the historical Davie Street listing; current licensing and operating status still needs official confirmation.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "king-canna-fredericton-2",
@@ -37,10 +41,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.cannaconnection.com/shops/1010-hanwell-rd/fredericton/new-brunswick/king-canna-fredericton"
+    ],
     "lastVerified": "2026-05-06",
     "sourceName": "CannaConnection public shop directory",
     "sourceUrl": "https://www.cannaconnection.com/shops/1010-hanwell-rd/fredericton/new-brunswick/king-canna-fredericton",
-    "sourceNote": "Public shop directory lists the Hanwell Road address; current licensing and operating status still needs official confirmation."
+    "sourceNote": "Public shop directory lists the Hanwell Road address; current licensing and operating status still needs official confirmation.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "green-leaf",
@@ -56,10 +64,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://easterndoor.com/article/green-leaf-dispensary-raided-for-the-fifth-time"
+    ],
     "lastVerified": "2026-05-06",
     "sourceName": "The Eastern Door",
     "sourceUrl": "https://easterndoor.com/article/green-leaf-dispensary-raided-for-the-fifth-time",
-    "sourceNote": "Local reporting identifies Green Leaf as a Kahnawake dispensary and notes enforcement history; no current public operating address was verified in this pass."
+    "sourceNote": "Local reporting identifies Green Leaf as a Kahnawake dispensary and notes enforcement history; no current public operating address was verified in this pass.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "the-green-leaf-society",
@@ -77,10 +89,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://opengovca.com/vancouver-business/10-192137"
+    ],
     "lastVerified": "2026-05-06",
     "sourceName": "OpenGovCA / City of Vancouver business licence dataset",
     "sourceUrl": "https://opengovca.com/vancouver-business/10-192137",
-    "sourceNote": "Public licence dataset lists Green Leaf Cannabis Cafe Society at 1191 Victoria Drive with cancelled historical licence status; treat as legacy context, not a current operating claim."
+    "sourceNote": "Public licence dataset lists Green Leaf Cannabis Cafe Society at 1191 Victoria Drive with cancelled historical licence status; treat as legacy context, not a current operating claim.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "healing-health-compassion",
@@ -99,10 +115,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://weedsfarm.com/store/healing-health-compassion/"
+    ],
     "lastVerified": "2026-05-06",
     "sourceName": "WeedsFarm public directory",
     "sourceUrl": "https://weedsfarm.com/store/healing-health-compassion/",
-    "sourceNote": "Public directory page lists address and phone; current licensing and operating status still needs confirmation from an official source."
+    "sourceNote": "Public directory page lists address and phone; current licensing and operating status still needs confirmation from an official source.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "rocket-chronic-2",
@@ -118,10 +138,15 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://rocketchronic.com/contact/",
+      "https://www.bbb.org/ca/bc/vancouver/profile/marijuana-products/rocket-chronic-0037-2396387"
+    ],
     "lastVerified": "2026-05-07",
     "sourceName": "Rocket Chronic contact page and BBB public profile",
     "sourceUrl": "https://rocketchronic.com/contact/",
-    "sourceNote": "Public sources associate Rocket Chronic with Canada and Vancouver, BC, but no street address was verified from accessible source text during this check. Treat as directory evidence only; current licensing and operating status still need confirmation."
+    "sourceNote": "Public sources associate Rocket Chronic with Canada and Vancouver, BC, but no street address was verified from accessible source text during this check. Treat as directory evidence only; current licensing and operating status still need confirmation.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "farm-the-original-farmacy-downtown",
@@ -135,14 +160,21 @@
     "city": "Victoria",
     "province": "BC",
     "postalCode": "V8W 2G1",
-    "verificationStatus": "historical_source",
+    "verificationStatus": "current_source",
+    "website": "https://originalfarm.com",
     "categories": [
       "dispensary"
     ],
-    "lastVerified": "2026-05-07",
-    "sourceName": "VictoriaDirect, Leafly, and TrustedBud public directory pages",
-    "sourceUrl": "https://the-original-farm.victoriadirect.ca/",
-    "sourceNote": "Public third-party directory pages associate The Original Farm / Farm - The Original Farmacy with 1402 Douglas St, Victoria, BC V8W 2G1. Leafly data was visibly stale, so treat operating details as historical until independently reverified."
+    "sourceUrls": [
+      "https://www2.gov.bc.ca/assets/gov/employment-business-and-economic-development/business-management/liquor-regulation-licensing/reports/cannabis_retail_stores_in_bc.xlsx",
+      "https://the-original-farm.victoriadirect.ca/",
+      "https://originalfarm.com"
+    ],
+    "lastVerified": "2026-06-10",
+    "sourceName": "BC legal cannabis retailers spreadsheet and Original Farm public sources",
+    "sourceUrl": "https://www2.gov.bc.ca/assets/gov/employment-business-and-economic-development/business-management/liquor-regulation-licensing/reports/cannabis_retail_stores_in_bc.xlsx",
+    "sourceNote": "BC public legal-retailer spreadsheet lists THE ORIGINAL FARM DOWNTOWN LTD. as The Original FARM at 1402 Douglas St, Victoria, BC V8W2G1; Potshops records address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "mountain-greenery",
@@ -159,10 +191,16 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://mountaingreenery420.com/",
+      "https://cannawayz.com/dispensaries/mountain-greenery",
+      "https://cannabisontario.net/stores/mountain-greenery-420/"
+    ],
     "lastVerified": "2026-05-07",
     "sourceName": "Mountain Greenery website and public directory pages",
     "sourceUrl": "https://mountaingreenery420.com/",
-    "sourceNote": "The Mountain Greenery website publicly associates the name with Hamilton, Ontario; a third-party Cannawayz page lists 478 Upper Wellington Street. Verify address and compliance details before any promotion."
+    "sourceNote": "The Mountain Greenery website publicly associates the name with Hamilton, Ontario; a third-party Cannawayz page lists 478 Upper Wellington Street. Verify address and compliance details before any promotion.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "green-essence-head-shop-dispensary",
@@ -180,10 +218,15 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://penticton-bc.findstorenearme.ca/green-essence-head-shop-inc/",
+      "https://cannawayz.com/dispensaries/green-essence-dispensary"
+    ],
     "lastVerified": "2026-05-07",
     "sourceName": "FindStoreNearMe and Cannawayz public directory pages",
     "sourceUrl": "https://penticton-bc.findstorenearme.ca/green-essence-head-shop-inc/",
-    "sourceNote": "Third-party public directory pages list Green Essence Head Shop Inc. / Green Essence Head Shop & Dispensary at 409 Martin Street in Penticton, BC. Use as public directory evidence only; not a claim of current licensing or availability."
+    "sourceNote": "Third-party public directory pages list Green Essence Head Shop Inc. / Green Essence Head Shop & Dispensary at 409 Martin Street in Penticton, BC. Use as public directory evidence only; not a claim of current licensing or availability.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "ahuevo-premium-marijuana",
@@ -199,10 +242,16 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://cannawayz.com/deliveries/ahuevo",
+      "https://tokey.ca/listing/ahuevo/",
+      "https://www.breken.com/ylm/ylm_comp_detail.aspx?comp_id=643926&f=elgin"
+    ],
     "lastVerified": "2026-05-07",
     "sourceName": "Cannawayz, Tokey, and Breken public directory pages",
     "sourceUrl": "https://cannawayz.com/deliveries/ahuevo",
-    "sourceNote": "Public third-party directory pages associate Ahuevo / Ahuevo Premium Marijuana with Vancouver-area locations, but sources conflict on street address. Use only as historical directory evidence and avoid current-status claims."
+    "sourceNote": "Public third-party directory pages associate Ahuevo / Ahuevo Premium Marijuana with Vancouver-area locations, but sources conflict on street address. Use only as historical directory evidence and avoid current-status claims.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "mount-zion-rastafarian-church",
@@ -221,10 +270,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://weedsfarm.com/store/mount-zion-rastafarian-church/"
+    ],
     "lastVerified": "2026-05-10",
     "sourceName": "WeedsFarm public directory",
     "sourceUrl": "https://weedsfarm.com/store/mount-zion-rastafarian-church/",
-    "sourceNote": "Public directory page lists Mount Zion Rastafarian Church in Toronto with Annette Street address and phone context. Potshops treats this as historical directory evidence until current regulatory and storefront status are confirmed."
+    "sourceNote": "Public directory page lists Mount Zion Rastafarian Church in Toronto with Annette Street address and phone context. Potshops treats this as historical directory evidence until current regulatory and storefront status are confirmed.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "leagle-dreams",
@@ -242,10 +295,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.mapquest.com/ca/ontario/leagle-dreams-marijuana-dispensary-429548106"
+    ],
     "lastVerified": "2026-05-10",
     "sourceName": "MapQuest public business listing",
     "sourceUrl": "https://www.mapquest.com/ca/ontario/leagle-dreams-marijuana-dispensary-429548106",
-    "sourceNote": "Public business listing identifies L’Eagle Dreams in Shannonville and lists Old Highway 2 address context plus phone. Potshops treats this as historical directory evidence until current regulatory and operating status are verified."
+    "sourceNote": "Public business listing identifies L’Eagle Dreams in Shannonville and lists Old Highway 2 address context plus phone. Potshops treats this as historical directory evidence until current regulatory and operating status are verified.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "maritime-medicinal",
@@ -264,10 +321,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://weedsfarm.com/store/maritime-medicinal/"
+    ],
     "lastVerified": "2026-05-10",
     "sourceName": "WeedsFarm public directory",
     "sourceUrl": "https://weedsfarm.com/store/maritime-medicinal/",
-    "sourceNote": "Public directory page lists Maritime Medicinal in Bible Hill with Main Street address and phone context. Use this as historical Nova Scotia directory evidence, not a current-store or service claim."
+    "sourceNote": "Public directory page lists Maritime Medicinal in Bible Hill with Main Street address and phone context. Use this as historical Nova Scotia directory evidence, not a current-store or service claim.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "clone-corner",
@@ -286,10 +347,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://weedsfarm.com/store/clone-corner/"
+    ],
     "lastVerified": "2026-05-10",
     "sourceName": "WeedsFarm public directory",
     "sourceUrl": "https://weedsfarm.com/store/clone-corner/",
-    "sourceNote": "Public directory page lists Clone Corner in Duncan with Sahilton Road address and phone. Current licence, hours, and operating status still need official confirmation."
+    "sourceNote": "Public directory page lists Clone Corner in Duncan with Sahilton Road address and phone. Current licence, hours, and operating status still need official confirmation.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "mr-greens",
@@ -308,10 +373,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://weedsfarm.com/store/mr-greens/"
+    ],
     "lastVerified": "2026-05-10",
     "sourceName": "WeedsFarm public directory",
     "sourceUrl": "https://weedsfarm.com/store/mr-greens/",
-    "sourceNote": "Public directory page lists Mr. Green’s in Nanaimo with Nicol Street address and phone context. Treat as historical profile recovery until current public-source status is rechecked."
+    "sourceNote": "Public directory page lists Mr. Green’s in Nanaimo with Nicol Street address and phone context. Treat as historical profile recovery until current public-source status is rechecked.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "gulf-island-organics",
@@ -330,10 +399,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.google.com/search?q=%22Gulf+Island+Organics%22+cannabis"
+    ],
     "lastVerified": "2026-05-10",
     "sourceName": "Google Business Profile result",
     "sourceUrl": "https://www.google.com/search?q=%22Gulf+Island+Organics%22+cannabis",
-    "sourceNote": "Public Google result identifies Gulf Island Organics Cannabis Dispensary in Victoria, shows a Fort Street address and phone, and labels the profile permanently closed. Potshops keeps the row historical and avoids current-store claims."
+    "sourceNote": "Public Google result identifies Gulf Island Organics Cannabis Dispensary in Victoria, shows a Fort Street address and phone, and labels the profile permanently closed. Potshops keeps the row historical and avoids current-store claims.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "remedy-ice-cream",
@@ -349,10 +422,196 @@
     "categories": [
       "in-town-delivery"
     ],
+    "sourceUrls": [
+      "https://www.cbc.ca"
+    ],
     "lastVerified": "2026-05-10",
     "sourceName": "CBC Calgary reporting",
-    "sourceUrl": "https://www.cbc.ca/news/canada/calgary/remedy-ice-cream-cannabis-1.4059691",
-    "sourceNote": "CBC reporting identified Remedy Ice Cream as a Calgary-made cannabis-infused ice cream operation in 2017 and noted legality concerns at the time. Potshops keeps this row historical and does not add contact, availability, or commerce claims."
+    "sourceUrl": "https://www.cbc.ca",
+    "sourceNote": "CBC reporting identified Remedy Ice Cream as a Calgary-made cannabis-infused ice cream operation in 2017 and noted legality concerns at the time. Potshops keeps this row historical and does not add contact, availability, or commerce claims.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "canna-cabana-17-ave-sw-calgary",
+    "name": "Canna Cabana – 17 Avenue SW",
+    "legacyPath": "/listing/canna-cabana-17-ave-sw-calgary/",
+    "locationHint": "Calgary, AB",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "10-5308 17 AVE SW",
+    "city": "Calgary",
+    "province": "AB",
+    "postalCode": "T3E 6S6",
+    "phone": "(403) 686-0630",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1"
+    ],
+    "lastVerified": "2026-06-03",
+    "sourceName": "AGLC Cannabis Licensee Search",
+    "sourceUrl": "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1",
+    "sourceNote": "AGLC licensee search includes this Calgary location with address, phone, and online-sales flag marked Yes; Potshops records it as official address-context data only and does not assert hours, ordering, stock, availability, or service details.",
+    "storeBackbone": "regulator"
+  },
+  {
+    "slug": "co-op-cannabis-hamptons-calgary",
+    "name": "Co-op Cannabis Hamptons",
+    "legacyPath": "/listing/co-op-cannabis-hamptons-calgary/",
+    "locationHint": "Calgary, AB",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "614-1000 HAMPTONS DR NW",
+    "city": "Calgary",
+    "province": "AB",
+    "postalCode": "T3A 6A7",
+    "phone": "(403) 455-3132",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1"
+    ],
+    "lastVerified": "2026-06-03",
+    "sourceName": "AGLC Cannabis Licensee Search",
+    "sourceUrl": "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1",
+    "sourceNote": "AGLC licensee search includes this Calgary location with address, phone, and online-sales flag marked Yes; Potshops records it as official address-context data only and does not assert hours, ordering, stock, availability, or service details.",
+    "storeBackbone": "regulator"
+  },
+  {
+    "slug": "bud-mart-61-st-se-calgary",
+    "name": "Bud Mart 61 St SE",
+    "legacyPath": "/listing/bud-mart-61-st-se-calgary/",
+    "locationHint": "Calgary, AB",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "1-1704 61 ST SE",
+    "city": "Calgary",
+    "province": "AB",
+    "postalCode": "T2A 4V5",
+    "phone": "(403) 899-6313",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1"
+    ],
+    "lastVerified": "2026-06-03",
+    "sourceName": "AGLC Cannabis Licensee Search",
+    "sourceUrl": "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1",
+    "sourceNote": "AGLC licensee search includes this Calgary location with address, phone, and online-sales flag marked Yes; Potshops records it as official address-context data only and does not assert hours, ordering, stock, availability, or service details.",
+    "storeBackbone": "regulator"
+  },
+  {
+    "slug": "calgary-co-op-cannabis-seton",
+    "name": "Calgary Co-op Cannabis Seton",
+    "legacyPath": "/listing/calgary-co-op-cannabis-seton/",
+    "locationHint": "Calgary, AB",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "3945 MARKET ST SE",
+    "city": "Calgary",
+    "province": "AB",
+    "postalCode": "T3M 2W9",
+    "phone": "(587) 391-0880",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1"
+    ],
+    "lastVerified": "2026-06-03",
+    "sourceName": "AGLC Cannabis Licensee Search",
+    "sourceUrl": "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1",
+    "sourceNote": "AGLC licensee search includes this Calgary location with address, phone, and online-sales flag marked Yes; Potshops records it as official address-context data only and does not assert hours, ordering, stock, availability, or service details.",
+    "storeBackbone": "regulator"
+  },
+  {
+    "slug": "canna-cabana-19-st-nw-calgary",
+    "name": "Canna Cabana 19 St NW",
+    "legacyPath": "/listing/canna-cabana-19-st-nw-calgary/",
+    "locationHint": "Calgary, AB",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "1535 19 ST NW",
+    "city": "Calgary",
+    "province": "AB",
+    "postalCode": "T2N 2K2",
+    "phone": "(587) 392-4720",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1"
+    ],
+    "lastVerified": "2026-06-03",
+    "sourceName": "AGLC Cannabis Licensee Search",
+    "sourceUrl": "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1",
+    "sourceNote": "AGLC licensee search includes this Calgary location with address, phone, and online-sales flag marked Yes; Potshops records it as official address-context data only and does not assert hours, ordering, stock, availability, or service details.",
+    "storeBackbone": "regulator"
+  },
+  {
+    "slug": "co-op-cannabis-richmond-road-calgary",
+    "name": "Co-op Cannabis Richmond Road",
+    "legacyPath": "/listing/co-op-cannabis-richmond-road-calgary/",
+    "locationHint": "Calgary, AB",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "4938 RICHMOND RD SW",
+    "city": "Calgary",
+    "province": "AB",
+    "postalCode": "T3E 6K4",
+    "phone": "(403) 299-4026",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1"
+    ],
+    "lastVerified": "2026-06-03",
+    "sourceName": "AGLC Cannabis Licensee Search",
+    "sourceUrl": "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1",
+    "sourceNote": "AGLC licensee search includes this Calgary location with address, phone, and online-sales flag marked Yes; Potshops records it as official address-context data only and does not assert hours, ordering, stock, availability, or service details.",
+    "storeBackbone": "regulator"
+  },
+  {
+    "slug": "co-op-cannabis-crowfoot-calgary",
+    "name": "Co-op Cannabis Crowfoot",
+    "legacyPath": "/listing/co-op-cannabis-crowfoot-calgary/",
+    "locationHint": "Calgary, AB",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "41 CROWFOOT WAY NW",
+    "city": "Calgary",
+    "province": "AB",
+    "postalCode": "T3G 2L4",
+    "phone": "(403) 453-9127",
+    "verificationStatus": "current_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1"
+    ],
+    "lastVerified": "2026-06-03",
+    "sourceName": "AGLC Cannabis Licensee Search",
+    "sourceUrl": "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1",
+    "sourceNote": "AGLC licensee search includes this Calgary location with address, phone, and online-sales flag marked Yes; Potshops records it as official address-context data only and does not assert hours, ordering, stock, availability, or service details.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "tpd-boutique",
@@ -371,10 +630,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://weedsfarm.com/store/tpd-boutique/"
+    ],
     "lastVerified": "2026-05-10",
     "sourceName": "WeedsFarm public directory",
     "sourceUrl": "https://weedsfarm.com/store/tpd-boutique/",
-    "sourceNote": "Public directory page lists TPD Boutique in Penticton with Front Street address and phone context. Potshops keeps this as historical source-backed data until current details are independently confirmed."
+    "sourceNote": "Public directory page lists TPD Boutique in Penticton with Front Street address and phone context. Potshops keeps this as historical source-backed data until current details are independently confirmed.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "420-delivery",
@@ -391,10 +654,14 @@
       "dispensary",
       "in-town-delivery"
     ],
+    "sourceUrls": [
+      "https://call420delivery.io/"
+    ],
     "lastVerified": "2026-05-11",
     "sourceName": "Call 420 public website",
     "sourceUrl": "https://call420delivery.io/",
-    "sourceNote": "Public website metadata identifies Call 420 as a Greater Vancouver-area cannabis brand. Potshops records this as brand and region context only, not current availability, licence, or contact proof."
+    "sourceNote": "Public website metadata identifies Call 420 as a Greater Vancouver-area cannabis brand. Potshops records this as brand and region context only, not current availability, licence, or contact proof.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "blessed-herbs-cafe",
@@ -413,10 +680,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://weedsfarm.com/store/blessed-herbs-cafe/"
+    ],
     "lastVerified": "2026-05-10",
     "sourceName": "WeedsFarm public directory",
     "sourceUrl": "https://weedsfarm.com/store/blessed-herbs-cafe/",
-    "sourceNote": "Public directory page lists Blessed Herbs Cafe in Toronto with Annette Street address and phone context. This overlaps with another historical Annette Street row, so the profile should stay caveated until entity history is verified."
+    "sourceNote": "Public directory page lists Blessed Herbs Cafe in Toronto with Annette Street address and phone context. This overlaps with another historical Annette Street row, so the profile should stay caveated until entity history is verified.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "tribal-releaf",
@@ -435,10 +706,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://weedsfarm.com/store/tribal-releaf/"
+    ],
     "lastVerified": "2026-05-10",
     "sourceName": "WeedsFarm public directory",
     "sourceUrl": "https://weedsfarm.com/store/tribal-releaf/",
-    "sourceNote": "Public directory page lists Tribal ReLeaf in Tobique Narrows with NB-105 address and phone. Current licence, hours, and operating status still need official confirmation."
+    "sourceNote": "Public directory page lists Tribal ReLeaf in Tobique Narrows with NB-105 address and phone. Current licence, hours, and operating status still need official confirmation.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "piff-express",
@@ -455,10 +730,14 @@
     "categories": [
       "in-town-delivery"
     ],
+    "sourceUrls": [
+      "https://www.minicounsel.ca/2022/01/17/r-v-morrison-and-raguette-2022-onsc-17/"
+    ],
     "lastVerified": "2026-05-10",
     "sourceName": "Ontario court decision summary",
     "sourceUrl": "https://www.minicounsel.ca/2022/01/17/r-v-morrison-and-raguette-2022-onsc-17/",
-    "sourceNote": "Court-decision summary identifies “Piff” at 3449 Dundas Street West in Toronto in historical enforcement/search-warrant context. Potshops uses this only as profile-recovery evidence, not a current service or availability claim."
+    "sourceNote": "Court-decision summary identifies “Piff” at 3449 Dundas Street West in Toronto in historical enforcement/search-warrant context. Potshops uses this only as profile-recovery evidence, not a current service or availability claim.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "compassion-in-motion",
@@ -474,10 +753,15 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://compassioninmotion.io/",
+      "https://compassioninmotion.wordpress.com/"
+    ],
     "lastVerified": "2026-05-11",
     "sourceName": "Compassion in Motion public websites",
     "sourceUrl": "https://compassioninmotion.io/",
-    "sourceNote": "Public websites identify Compassion in Motion with Greater Vancouver-area cannabis context and long-running service history. Potshops records this as brand and region context only, not current availability, licence, or contact proof."
+    "sourceNote": "Public websites identify Compassion in Motion with Greater Vancouver-area cannabis context and long-running service history. Potshops records this as brand and region context only, not current availability, licence, or contact proof.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "eden",
@@ -496,10 +780,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://weedsfarm.com/store/eden/"
+    ],
     "lastVerified": "2026-05-10",
     "sourceName": "WeedsFarm public directory",
     "sourceUrl": "https://weedsfarm.com/store/eden/",
-    "sourceNote": "Public directory page lists Eden in Salmon Arm with Lakeshore Drive address and phone context. Potshops treats this as historical directory evidence and does not infer current availability or service details."
+    "sourceNote": "Public directory page lists Eden in Salmon Arm with Lakeshore Drive address and phone context. Potshops treats this as historical directory evidence and does not infer current availability or service details.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "the-herb-co-mount-pleasant",
@@ -517,10 +805,15 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://thecbd.co/listing/the-herb-co-mount-pleasant/",
+      "https://humidify.co/listing/the-herb-co-mount-pleasant/"
+    ],
     "lastVerified": "2026-05-07",
     "sourceName": "TheCBD and Humidify historical directory pages",
     "sourceUrl": "https://thecbd.co/listing/the-herb-co-mount-pleasant/",
-    "sourceNote": "Historical third-party directory pages list The Herb Co. Mount Pleasant at 1193 Main St, Vancouver, BC V6A 4B6. Use as historical public-source evidence only; not a claim of current licensing or availability."
+    "sourceNote": "Historical third-party directory pages list The Herb Co. Mount Pleasant at 1193 Main St, Vancouver, BC V6A 4B6. Use as historical public-source evidence only; not a claim of current licensing or availability.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "the-kootenays-medicine-tree",
@@ -539,10 +832,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://weedsfarm.com/store/the-kootenays-medicine-tree/"
+    ],
     "lastVerified": "2026-05-10",
     "sourceName": "WeedsFarm public directory",
     "sourceUrl": "https://weedsfarm.com/store/the-kootenays-medicine-tree/",
-    "sourceNote": "Public directory page lists The Kootenay’s Medicine Tree in Nelson with Front Street address and phone context. Keep the row as historical source-backed evidence until fresher current-status sources are found."
+    "sourceNote": "Public directory page lists The Kootenay’s Medicine Tree in Nelson with Front Street address and phone context. Keep the row as historical source-backed evidence until fresher current-status sources are found.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "cannabis-convenience",
@@ -561,10 +858,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://weedsfarm.com/store/cannabis-convenience/"
+    ],
     "lastVerified": "2026-05-11",
     "sourceName": "WeedsFarm public directory",
     "sourceUrl": "https://weedsfarm.com/store/cannabis-convenience/",
-    "sourceNote": "Public directory page lists Deseronto, Ontario address and phone context for the historical Cannabis Convenience profile; current licensing and operating status still needs official confirmation."
+    "sourceNote": "Public directory page lists Deseronto, Ontario address and phone context for the historical Cannabis Convenience profile; current licensing and operating status still needs official confirmation.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "okanagan-cannabinoid-therapy-vernon",
@@ -583,10 +884,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://weedsfarm.com/store/okanagan-cannabinoid-therapy-vernon/"
+    ],
     "lastVerified": "2026-05-11",
     "sourceName": "WeedsFarm public directory",
     "sourceUrl": "https://weedsfarm.com/store/okanagan-cannabinoid-therapy-vernon/",
-    "sourceNote": "Public directory page lists Vernon, BC address and phone context for the historical Okanagan Cannabinoid Therapy profile; current licensing and operating status still needs official confirmation."
+    "sourceNote": "Public directory page lists Vernon, BC address and phone context for the historical Okanagan Cannabinoid Therapy profile; current licensing and operating status still needs official confirmation.",
+    "storeBackbone": "public_source"
   },
   {
     "slug": "village-cannabis-co-hamilton",
@@ -601,13 +906,18 @@
     "province": "ON",
     "postalCode": "L8N 1B9",
     "verificationStatus": "current_source",
+    "website": "https://villagecannabisco.ca",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Hamilton"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Hamilton",
-    "sourceNote": "AGCO public status table lists Village Cannabis Co. in Hamilton with King Street East address and an active public status entry; Potshops records the address from that official table without adding hours, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Village Cannabis Co. in Hamilton with King Street East address and an active public status entry; Potshops records the address from that official table without adding hours, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "neku-cannabis-hamilton",
@@ -622,13 +932,18 @@
     "province": "ON",
     "postalCode": "L9C 3A4",
     "verificationStatus": "current_source",
+    "website": "https://nekucannabis.com/",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Hamilton"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Hamilton",
-    "sourceNote": "AGCO public status table lists Neku Cannabis in Hamilton with Upper James Street address and an active public status entry; Potshops keeps this to official address context only, with no hours, ordering, stock, or service claims."
+    "sourceNote": "AGCO public status table lists Neku Cannabis in Hamilton with Upper James Street address and an active public status entry; Potshops keeps this to official address context only, with no hours, ordering, stock, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "canna-savanna-toronto",
@@ -643,13 +958,18 @@
     "province": "ON",
     "postalCode": "M6J 1J4",
     "verificationStatus": "current_source",
+    "website": "https://www.cannasavanna.com/",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Toronto"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Toronto",
-    "sourceNote": "AGCO public status table lists Canna Savanna in Toronto with Queen Street West address and an active public status entry; Potshops records the official address context without adding hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Canna Savanna in Toronto with Queen Street West address and an active public status entry; Potshops records the official address context without adding hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "fogtown-flower-toronto",
@@ -664,13 +984,18 @@
     "province": "ON",
     "postalCode": "M4S 2A8",
     "verificationStatus": "current_source",
+    "website": "https://fogtown.ca",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Toronto"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Toronto",
-    "sourceNote": "AGCO public status table lists Fogtown Flower in Toronto with Yonge Street address and an active public status entry; Potshops records the official address context only and does not add hours, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Fogtown Flower in Toronto with Yonge Street address and an active public status entry; Potshops records the official address context only and does not add hours, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "true-north-cannabis-belleville",
@@ -685,13 +1010,18 @@
     "province": "ON",
     "postalCode": "K8P 1H7",
     "verificationStatus": "current_source",
+    "website": "https://tncc.ca",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Belleville"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Belleville",
-    "sourceNote": "AGCO public status table lists True North Cannabis Co. in Belleville with Bridge Street West address and an active public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists True North Cannabis Co. in Belleville with Bridge Street West address and an active public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "pakalolo-ottawa",
@@ -706,13 +1036,18 @@
     "province": "ON",
     "postalCode": "K1S 4N6",
     "verificationStatus": "current_source",
+    "website": "https://www.shoppakalolo.com",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ottawa"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ottawa",
-    "sourceNote": "AGCO public status table lists Pakalolo in Ottawa with Preston Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Pakalolo in Ottawa with Preston Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "buzzed-buds-ottawa",
@@ -727,13 +1062,18 @@
     "province": "ON",
     "postalCode": "K1N 1J8",
     "verificationStatus": "current_source",
+    "website": "https://www.buzzedbuds.co/",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ottawa"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ottawa",
-    "sourceNote": "AGCO public status table lists Buzzed Buds in Ottawa with George Street address and a current public status entry; Potshops records official address context only and avoids hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Buzzed Buds in Ottawa with George Street address and a current public status entry; Potshops records official address context only and avoids hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "electrical-banana-ottawa",
@@ -748,13 +1088,18 @@
     "province": "ON",
     "postalCode": "K1R 6P5",
     "verificationStatus": "current_source",
+    "website": "https://www.electricalbanana.ca",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ottawa"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ottawa",
-    "sourceNote": "AGCO public status table lists Electrical Banana in Ottawa with Somerset Street West address and a current public status entry; Potshops keeps this to official address context without adding hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Electrical Banana in Ottawa with Somerset Street West address and a current public status entry; Potshops keeps this to official address context without adding hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "710-kingston",
@@ -769,13 +1114,18 @@
     "province": "ON",
     "postalCode": "K7L 1C3",
     "verificationStatus": "current_source",
+    "website": "https://710kingston.com/",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kingston"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kingston",
-    "sourceNote": "AGCO public status table lists 710 Kingston in Kingston with Princess Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists 710 Kingston in Kingston with Princess Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "giggles-cannabis-kingston",
@@ -793,10 +1143,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kingston"
+    ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kingston",
-    "sourceNote": "AGCO public status table lists Giggles Cannabis in Kingston with Princess Street address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Giggles Cannabis in Kingston with Princess Street address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "mary-js-cannabis-kingston",
@@ -811,13 +1165,18 @@
     "province": "ON",
     "postalCode": "K7L 3M6",
     "verificationStatus": "current_source",
+    "website": "https://www.maryjcannabis.ca/",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kingston"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kingston",
-    "sourceNote": "AGCO public status table lists Mary J's Cannabis in Kingston with Division Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Mary J's Cannabis in Kingston with Division Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "cannabist-shop-wharncliffe-london",
@@ -832,13 +1191,18 @@
     "province": "ON",
     "postalCode": "N6H 2A3",
     "verificationStatus": "current_source",
+    "website": "https://www.cannabistshop.ca/cannabis-dispensaries",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=London"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=London",
-    "sourceNote": "AGCO public status table lists The Cannabist Shop - Wharncliffe N in London with Wharncliffe Road address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists The Cannabist Shop - Wharncliffe N in London with Wharncliffe Road address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "holy-cannabis-london",
@@ -853,13 +1217,18 @@
     "province": "ON",
     "postalCode": "N5Y 2N1",
     "verificationStatus": "current_source",
+    "website": "https://holycannabis.ca",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=London"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=London",
-    "sourceNote": "AGCO public status table lists Holy Cannabis in London with Adelaide Street address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Holy Cannabis in London with Adelaide Street address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "cost-cannabis-london",
@@ -874,13 +1243,18 @@
     "province": "ON",
     "postalCode": "N5W 3G3",
     "verificationStatus": "current_source",
+    "website": "https://costcan.ca/",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=London"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=London",
-    "sourceNote": "AGCO public status table lists Cost Cannabis in London with Dundas Street East address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Cost Cannabis in London with Dundas Street East address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "value-buds-windsor",
@@ -895,13 +1269,18 @@
     "province": "ON",
     "postalCode": "N9C 2L4",
     "verificationStatus": "current_source",
+    "website": "https://www.valuebuds.com",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Windsor"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Windsor",
-    "sourceNote": "AGCO public status table lists Value Buds in Windsor with Huron Church Road address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Value Buds in Windsor with Huron Church Road address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "discounted-cannabis-windsor",
@@ -916,13 +1295,18 @@
     "province": "ON",
     "postalCode": "N9A 5X3",
     "verificationStatus": "current_source",
+    "website": "https://www.discountedcannabis.ca",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Windsor"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Windsor",
-    "sourceNote": "AGCO public status table lists Discounted Cannabis in Windsor with Wyandotte Street West address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Discounted Cannabis in Windsor with Wyandotte Street West address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "greentown-cannabis-discount-hut-windsor",
@@ -940,10 +1324,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Windsor"
+    ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Windsor",
-    "sourceNote": "AGCO public status table lists Greentown Cannabis Discount Hut in Windsor with Drouillard Road address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Greentown Cannabis Discount Hut in Windsor with Drouillard Road address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "wed-cannabis-mississauga",
@@ -961,10 +1349,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Mississauga"
+    ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Mississauga",
-    "sourceNote": "AGCO public status table lists WE'D Cannabis in Mississauga with a Dundas Street West address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists WE'D Cannabis in Mississauga with a Dundas Street West address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "canna-cabana-hurontario-mississauga",
@@ -979,13 +1371,18 @@
     "province": "ON",
     "postalCode": "L5B 1M8",
     "verificationStatus": "current_source",
+    "website": "https://cannacabana.com/",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Mississauga"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Mississauga",
-    "sourceNote": "AGCO public status table lists Canna Cabana in Mississauga with a Hurontario Street address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Canna Cabana in Mississauga with a Hurontario Street address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "kindling-cannabis-port-credit-mississauga",
@@ -1000,13 +1397,18 @@
     "province": "ON",
     "postalCode": "L5G 1G8",
     "verificationStatus": "current_source",
+    "website": "https://shopkindling.ca/",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Mississauga"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Mississauga",
-    "sourceNote": "AGCO public status table lists Kindling Cannabis Port Credit in Mississauga with a Lakeshore Road East address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Kindling Cannabis Port Credit in Mississauga with a Lakeshore Road East address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "pops-cannabis-barrie",
@@ -1021,13 +1423,18 @@
     "province": "ON",
     "postalCode": "L4M 5A2",
     "verificationStatus": "current_source",
+    "website": "https://popscannabis.ca/shop",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Barrie"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Barrie",
-    "sourceNote": "AGCO public status table lists Pop's Cannabis Co. in Barrie with a Bayfield Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Pop's Cannabis Co. in Barrie with a Bayfield Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "spiritleaf-park-place-barrie",
@@ -1042,13 +1449,18 @@
     "province": "ON",
     "postalCode": "L4N 6P1",
     "verificationStatus": "current_source",
+    "website": "https://spiritleaf.ca/collections/spiritleaf-park-place",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Barrie"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Barrie",
-    "sourceNote": "AGCO public status table lists Spiritleaf Park Place in Barrie with a Park Place Boulevard address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Spiritleaf Park Place in Barrie with a Park Place Boulevard address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "emerald-cannabis-barrie",
@@ -1063,13 +1475,18 @@
     "province": "ON",
     "postalCode": "L4M 3A8",
     "verificationStatus": "current_source",
+    "website": "https://emeraldcannabisco.com/barrie/",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Barrie"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Barrie",
-    "sourceNote": "AGCO public status table lists Emerald Cannabis Co in Barrie with a Bayfield Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Emerald Cannabis Co in Barrie with a Bayfield Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "the-nug-co-oshawa",
@@ -1084,13 +1501,18 @@
     "province": "ON",
     "postalCode": "L1H 5K4",
     "verificationStatus": "current_source",
+    "website": "https://www.thenugco.ca",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Oshawa"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Oshawa",
-    "sourceNote": "AGCO public status table lists The Nug Co. in Oshawa with a Ritson Road South address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists The Nug Co. in Oshawa with a Ritson Road South address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "spiritleaf-taunton-oshawa",
@@ -1105,13 +1527,18 @@
     "province": "ON",
     "postalCode": "L1G 7T1",
     "verificationStatus": "current_source",
+    "website": "https://spiritleaf.ca/collections/spiritleaf-taunton",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Oshawa"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Oshawa",
-    "sourceNote": "AGCO public status table lists Spiritleaf in Oshawa with a Taunton Road East address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Spiritleaf in Oshawa with a Taunton Road East address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "budget-bud-oshawa",
@@ -1126,13 +1553,18 @@
     "province": "ON",
     "postalCode": "L1H 1G5",
     "verificationStatus": "current_source",
+    "website": "https://budget-bud.com/oshawa/",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Oshawa"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Oshawa",
-    "sourceNote": "AGCO public status table lists Budget Bud Oshawa with a King Street East address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Budget Bud Oshawa with a King Street East address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "value-buds-waterloo",
@@ -1147,13 +1579,18 @@
     "province": "ON",
     "postalCode": "N2V 0C7",
     "verificationStatus": "current_source",
+    "website": "https://www.valuebuds.com",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Waterloo"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Waterloo",
-    "sourceNote": "AGCO public status table lists Value Buds in Waterloo with a King Street North address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Value Buds in Waterloo with a King Street North address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "growers-retail-waterloo",
@@ -1168,13 +1605,18 @@
     "province": "ON",
     "postalCode": "N2L 2R5",
     "verificationStatus": "current_source",
+    "website": "https://www.growersretailcannabis.ca",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Waterloo"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Waterloo",
-    "sourceNote": "AGCO public status table lists Growers Retail in Waterloo with a Westmount Road North address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Growers Retail in Waterloo with a Westmount Road North address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "phoenix-cannabis-waterloo",
@@ -1192,10 +1634,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Waterloo"
+    ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Waterloo",
-    "sourceNote": "AGCO public status table lists Phoenix Cannabis in Waterloo with an Albert Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Phoenix Cannabis in Waterloo with an Albert Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "highland-cannabis-kitchener",
@@ -1210,13 +1656,18 @@
     "province": "ON",
     "postalCode": "N2M 5J9",
     "verificationStatus": "current_source",
+    "website": "https://highlandonhighland.com/",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kitchener"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kitchener",
-    "sourceNote": "AGCO public status table lists Highland Cannabis in Kitchener with a Highland Road West address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Highland Cannabis in Kitchener with a Highland Road West address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "the-cannabist-shop-king-kitchener",
@@ -1231,13 +1682,18 @@
     "province": "ON",
     "postalCode": "N2G 1B1",
     "verificationStatus": "current_source",
+    "website": "https://www.cannabistshop.ca/cannabis-dispensaries",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kitchener"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kitchener",
-    "sourceNote": "AGCO public status table lists The Cannabist Shop - King in Kitchener with a King Street West address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists The Cannabist Shop - King in Kitchener with a King Street West address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "canna-cabana-weber-kitchener",
@@ -1252,13 +1708,18 @@
     "province": "ON",
     "postalCode": "N2A 3Y7",
     "verificationStatus": "current_source",
+    "website": "https://cannacabana.com/",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kitchener"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Kitchener",
-    "sourceNote": "AGCO public status table lists Canna Cabana in Kitchener with a Weber Street East address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Canna Cabana in Kitchener with a Weber Street East address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "value-buds-guelph",
@@ -1273,13 +1734,18 @@
     "province": "ON",
     "postalCode": "N1H 4H5",
     "verificationStatus": "current_source",
+    "website": "https://www.valuebuds.com",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Guelph"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Guelph",
-    "sourceNote": "AGCO public status table lists Value Buds in Guelph with a Gordon Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Value Buds in Guelph with a Gordon Street address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "canna-cabana-woodlawn-guelph",
@@ -1294,13 +1760,18 @@
     "province": "ON",
     "postalCode": "N1H 1G8",
     "verificationStatus": "current_source",
+    "website": "https://cannacabana.com/",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Guelph"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Guelph",
-    "sourceNote": "AGCO public status table lists Canna Cabana in Guelph with a Woodlawn Road West address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Canna Cabana in Guelph with a Woodlawn Road West address and a current public status entry; Potshops keeps this to official address context only and does not add hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "spiritleaf-guelph",
@@ -1315,13 +1786,18 @@
     "province": "ON",
     "postalCode": "N1G 4Z1",
     "verificationStatus": "current_source",
+    "website": "https://spiritleaf.ca/collections/spiritleaf-south-guelph",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Guelph"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Guelph",
-    "sourceNote": "AGCO public status table lists Spiritleaf Guelph with an Edinburgh Road South address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Spiritleaf Guelph with an Edinburgh Road South address and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "moonwlkr-cannabis-brampton",
@@ -1339,10 +1815,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Brampton"
+    ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Brampton",
-    "sourceNote": "AGCO public status table lists MOONWLKR Cannabis in Brampton with an address at 11685 Mcvean Dr Unit 44 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists MOONWLKR Cannabis in Brampton with an address at 11685 Mcvean Dr Unit 44 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "value-buds-worthington-brampton",
@@ -1357,13 +1837,18 @@
     "province": "ON",
     "postalCode": "L7A 2Y7",
     "verificationStatus": "current_source",
+    "website": "https://www.valuebuds.com",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Brampton"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Brampton",
-    "sourceNote": "AGCO public status table lists Value Buds on Worthington Avenue in Brampton with an address at 17 Worthington Ave Unit 7 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Value Buds on Worthington Avenue in Brampton with an address at 17 Worthington Ave Unit 7 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "vibes-cannabis-brampton",
@@ -1378,13 +1863,18 @@
     "province": "ON",
     "postalCode": "L6R 3W4",
     "verificationStatus": "current_source",
+    "website": "https://vibescannabis.ca",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Brampton"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Brampton",
-    "sourceNote": "AGCO public status table lists Vibes Cannabis Company in Brampton with an address at 117 Inspire Blvd and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Vibes Cannabis Company in Brampton with an address at 117 Inspire Blvd and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "one-plant-st-catharines",
@@ -1399,13 +1889,18 @@
     "province": "ON",
     "postalCode": "L2T 0A1",
     "verificationStatus": "current_source",
+    "website": "https://www.oneplant.ca/locations/st-catharines",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=St.%20Catharines"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=St.%20Catharines",
-    "sourceNote": "AGCO public status table lists One Plant St. Catharines in St. Catharines with an address at 343 Glendale Ave Suite 520 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists One Plant St. Catharines in St. Catharines with an address at 343 Glendale Ave Suite 520 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "spiritleaf-st-catharines",
@@ -1420,13 +1915,18 @@
     "province": "ON",
     "postalCode": "L2M 3W4",
     "verificationStatus": "current_source",
+    "website": "https://spiritleaf.ca/collections/spiritleaf-grantham-plaza",
     "categories": [
       "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=St.%20Catharines"
     ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=St.%20Catharines",
-    "sourceNote": "AGCO public status table lists Spiritleaf St. Catharines in St. Catharines with an address at 400 Scott St Unit C2 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Spiritleaf St. Catharines in St. Catharines with an address at 400 Scott St Unit C2 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "superbud-st-catharines",
@@ -1444,10 +1944,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=St.%20Catharines"
+    ],
     "lastVerified": "2026-05-11",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=St.%20Catharines",
-    "sourceNote": "AGCO public status table lists Superbud in St. Catharines with an address at 216 Glenridge Ave Unit 11ab and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Superbud in St. Catharines with an address at 216 Glenridge Ave Unit 11ab and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "honeypot-smoke-shop-niagara-falls",
@@ -1465,10 +1969,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Niagara+Falls"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Niagara+Falls",
-    "sourceNote": "AGCO public status table lists Honeypot Smoke Shop in Niagara Falls with an address at 6832 Drummond Rd and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Honeypot Smoke Shop in Niagara Falls with an address at 6832 Drummond Rd and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "value-buds-portage-niagara-falls",
@@ -1486,10 +1994,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Niagara+Falls"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Niagara+Falls",
-    "sourceNote": "AGCO public status table lists Value Buds in Niagara Falls with an address at 3714 Portage Rd Unit 210 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Value Buds in Niagara Falls with an address at 3714 Portage Rd Unit 210 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "sparkle-cannabis-niagara-falls",
@@ -1507,10 +2019,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Niagara+Falls"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Niagara+Falls",
-    "sourceNote": "AGCO public status table lists Sparkle Cannabis Company in Niagara Falls with an address at 7000 McLeod Rd Unit 9 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Sparkle Cannabis Company in Niagara Falls with an address at 7000 McLeod Rd Unit 9 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "pufftastic-cannabis-scarborough",
@@ -1528,10 +2044,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Scarborough"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Scarborough",
-    "sourceNote": "AGCO public status table lists Pufftastic Cannabis Company in Scarborough with an address at 2830 Markham Rd and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Pufftastic Cannabis Company in Scarborough with an address at 2830 Markham Rd and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "green-merchant-scarborough",
@@ -1549,10 +2069,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Scarborough"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Scarborough",
-    "sourceNote": "AGCO public status table lists Green Merchant Cannabis Boutique in Scarborough with an address at 33 Lapsley Rd and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Green Merchant Cannabis Boutique in Scarborough with an address at 33 Lapsley Rd and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "budssmoke-scarborough",
@@ -1570,10 +2094,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Scarborough"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Scarborough",
-    "sourceNote": "AGCO public status table lists BUDSSMOKE in Scarborough with an address at 1133 Markham Rd Unit 3 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists BUDSSMOKE in Scarborough with an address at 1133 Markham Rd Unit 3 and a current public status entry; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "montrose-pickering",
@@ -1591,10 +2119,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Pickering"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Pickering",
-    "sourceNote": "AGCO public status table lists Montrose in Pickering with an address at 1755 Pickering Pkwy Unit A-021B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Montrose in Pickering with an address at 1755 Pickering Pkwy Unit A-021B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "holland-daze-pickering",
@@ -1612,10 +2144,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Pickering"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Pickering",
-    "sourceNote": "AGCO public status table lists HOLLAND DAZE in Pickering with an address at 981 Brock Rd Unit 2 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists HOLLAND DAZE in Pickering with an address at 981 Brock Rd Unit 2 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "cannabis-xpress-pickering",
@@ -1633,10 +2169,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Pickering"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Pickering",
-    "sourceNote": "AGCO public status table lists CANNABIS XPRESS in Pickering with an address at 1692 Central St Unit 1 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists CANNABIS XPRESS in Pickering with an address at 1692 Central St Unit 1 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "the-6ix-cannabis-ajax",
@@ -1654,10 +2194,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ajax"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ajax",
-    "sourceNote": "AGCO public status table lists The 6ix Cannabis in Ajax with an address at 475 Westney Rd N Unit 13 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists The 6ix Cannabis in Ajax with an address at 475 Westney Rd N Unit 13 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "one-plant-ajax",
@@ -1675,10 +2219,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ajax"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ajax",
-    "sourceNote": "AGCO public status table lists One Plant in Ajax with an address at 20 Kingston Rd W Unit 3A and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists One Plant in Ajax with an address at 20 Kingston Rd W Unit 3A and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "cannaverse-ajax",
@@ -1696,10 +2244,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ajax"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Ajax",
-    "sourceNote": "AGCO public status table lists Cannaverse in Ajax with an address at 314 Harwood Ave S Unit 16 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Cannaverse in Ajax with an address at 314 Harwood Ave S Unit 16 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "treetop-burlington",
@@ -1717,10 +2269,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Burlington"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Burlington",
-    "sourceNote": "AGCO public status table lists TreeTop Burlington in Burlington with an address at 796 Brant St and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists TreeTop Burlington in Burlington with an address at 796 Brant St and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "value-buds-appleby-burlington",
@@ -1738,10 +2294,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Burlington"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Burlington",
-    "sourceNote": "AGCO public status table lists Value Buds Appleby Line Burlington in Burlington with an address at 2485 Appleby Line Unit G1 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Value Buds Appleby Line Burlington in Burlington with an address at 2485 Appleby Line Unit G1 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "value-buds-fairview-burlington",
@@ -1759,10 +2319,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Burlington"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Burlington",
-    "sourceNote": "AGCO public status table lists Value Buds Fairview Burlington in Burlington with an address at 1235 Fairview St Unit A and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Value Buds Fairview Burlington in Burlington with an address at 1235 Fairview St Unit A and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "lakeview-cannabis-etobicoke",
@@ -1780,10 +2344,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Etobicoke"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Etobicoke",
-    "sourceNote": "AGCO public status table lists Lakeview Cannabis Etobicoke in Etobicoke with an address at 4 Mimico Ave and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Lakeview Cannabis Etobicoke in Etobicoke with an address at 4 Mimico Ave and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "herb-n-bud-etobicoke",
@@ -1801,10 +2369,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Etobicoke"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Etobicoke",
-    "sourceNote": "AGCO public status table lists HERB N BUD Etobicoke in Etobicoke with an address at 3759 Lake Shore Blvd W and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists HERB N BUD Etobicoke in Etobicoke with an address at 3759 Lake Shore Blvd W and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "purple-pineapple-etobicoke",
@@ -1822,10 +2394,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Etobicoke"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Etobicoke",
-    "sourceNote": "AGCO public status table lists Purple Pineapple Cannabis Co Etobicoke in Etobicoke with an address at 25 Woodbine Downs Blvd Unit 8 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Purple Pineapple Cannabis Co Etobicoke in Etobicoke with an address at 25 Woodbine Downs Blvd Unit 8 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "value-buds-cambridge",
@@ -1843,10 +2419,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Cambridge"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Cambridge",
-    "sourceNote": "AGCO public status table lists Value Buds Cambridge in Cambridge with an address at 150 Holiday Inn Dr Unit 111 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Value Buds Cambridge in Cambridge with an address at 150 Holiday Inn Dr Unit 111 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "thisel-cambridge",
@@ -1864,10 +2444,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Cambridge"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Cambridge",
-    "sourceNote": "AGCO public status table lists THISEL Cambridge in Cambridge with an address at 115 Christopher Dr Suite 750 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists THISEL Cambridge in Cambridge with an address at 115 Christopher Dr Suite 750 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "tokyo-smoke-cambridge-pinebush",
@@ -1885,10 +2469,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Cambridge"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Cambridge",
-    "sourceNote": "AGCO public status table lists Tokyo Smoke Cambridge Pinebush in Cambridge with an address at 75 Pinebush Rd Unit D0005 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Tokyo Smoke Cambridge Pinebush in Cambridge with an address at 75 Pinebush Rd Unit D0005 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "happy-life-sudbury",
@@ -1906,10 +2494,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sudbury"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sudbury",
-    "sourceNote": "AGCO public status table lists HAPPY LIFE Sudbury in Sudbury with an address at 1021 Kingsway Unit 3 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists HAPPY LIFE Sudbury in Sudbury with an address at 1021 Kingsway Unit 3 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "pops-cannabis-sudbury",
@@ -1927,10 +2519,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sudbury"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sudbury",
-    "sourceNote": "AGCO public status table lists Pop's Cannabis Co. Sudbury in Sudbury with an address at 450 Notre Dame Ave Unit 105B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Pop's Cannabis Co. Sudbury in Sudbury with an address at 450 Notre Dame Ave Unit 105B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "wild-flowerz-sudbury",
@@ -1948,10 +2544,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sudbury"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sudbury",
-    "sourceNote": "AGCO public status table lists Wild Flowerz Sudbury in Sudbury with an address at 533 Kathleen St Unit B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Wild Flowerz Sudbury in Sudbury with an address at 533 Kathleen St Unit B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "happy-life-north-bay",
@@ -1969,10 +2569,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=North+Bay"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=North+Bay",
-    "sourceNote": "AGCO public status table lists Happy Life in North Bay with an address at 1307 Algonquin Ave Suite 1 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Happy Life in North Bay with an address at 1307 Algonquin Ave Suite 1 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "budssmoke-north-bay",
@@ -1990,10 +2594,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=North+Bay"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=North+Bay",
-    "sourceNote": "AGCO public status table lists BUDSSMOKE in North Bay with an address at 1236 Algonquin Ave Unit B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists BUDSSMOKE in North Bay with an address at 1236 Algonquin Ave Unit B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "sessions-north-bay-lakeshore",
@@ -2011,10 +2619,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=North+Bay"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=North+Bay",
-    "sourceNote": "AGCO public status table lists Sessions Cannabis North Bay - Lakeshore with an address at 319 Lakeshore Dr and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Sessions Cannabis North Bay - Lakeshore with an address at 319 Lakeshore Dr and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "sessions-sault-ste-marie-hillside",
@@ -2032,10 +2644,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sault+Ste.+Marie"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sault+Ste.+Marie",
-    "sourceNote": "AGCO public status table lists Sessions Cannabis - Sault Ste Marie (Hillside) in Sault Ste. Marie with an address at 248 Northern Ave E Unit 15B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Sessions Cannabis - Sault Ste Marie (Hillside) in Sault Ste. Marie with an address at 248 Northern Ave E Unit 15B and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "happy-life-sault-ste-marie",
@@ -2053,10 +2669,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sault+Ste.+Marie"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sault+Ste.+Marie",
-    "sourceNote": "AGCO public status table lists Happy Life in Sault Ste. Marie with an address at 41 Great Northern Rd Unit 2 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Happy Life in Sault Ste. Marie with an address at 41 Great Northern Rd Unit 2 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "due-north-sault-ste-marie-churchill",
@@ -2074,10 +2694,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sault+Ste.+Marie"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Sault+Ste.+Marie",
-    "sourceNote": "AGCO public status table lists Due North Cannabis Co. in Sault Ste. Marie with an address at 150 Churchill Blvd Unit C001 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Due North Cannabis Co. in Sault Ste. Marie with an address at 150 Churchill Blvd Unit C001 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "kawartha-leafs-peterborough-water",
@@ -2095,10 +2719,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Peterborough"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Peterborough",
-    "sourceNote": "AGCO public status table lists Kawartha Leafs in Peterborough with an address at 1535 Water St Unit 2 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Kawartha Leafs in Peterborough with an address at 1535 Water St Unit 2 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "kawartha-leafs-peterborough-brock",
@@ -2116,10 +2744,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Peterborough"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Peterborough",
-    "sourceNote": "AGCO public status table lists Kawartha Leafs in Peterborough with an address at 223 Brock St and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Kawartha Leafs in Peterborough with an address at 223 Brock St and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "peace-pipe-peterborough-george",
@@ -2137,10 +2769,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Peterborough"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Peterborough",
-    "sourceNote": "AGCO public status table lists The Peace Pipe in Peterborough with an address at 408 George St N and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists The Peace Pipe in Peterborough with an address at 408 George St N and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "high-society-thunder-bay-algoma",
@@ -2158,10 +2794,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Thunder+Bay"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Thunder+Bay",
-    "sourceNote": "AGCO public status table lists High Society in Thunder Bay with an address at 210 Algoma St S Suite 101A and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists High Society in Thunder Bay with an address at 210 Algoma St S Suite 101A and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "cannabis-near-me-thunder-bay-red-river",
@@ -2179,10 +2819,14 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Thunder+Bay"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Thunder+Bay",
-    "sourceNote": "AGCO public status table lists Cannabis Near Me Thunder Bay in Thunder Bay with an address at 236 Red River Rd and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Cannabis Near Me Thunder Bay in Thunder Bay with an address at 236 Red River Rd and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
   },
   {
     "slug": "toke-house-thunder-bay-mall",
@@ -2200,9 +2844,543 @@
     "categories": [
       "dispensary"
     ],
+    "sourceUrls": [
+      "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Thunder+Bay"
+    ],
     "lastVerified": "2026-05-12",
     "sourceName": "AGCO public cannabis retail application status table",
     "sourceUrl": "https://www.agco.ca/en/cannabis/status-current-cannabis-retail-store-applications?combine=Thunder+Bay",
-    "sourceNote": "AGCO public status table lists Toke House Thunder Bay Mall in Thunder Bay with an address at 1105 Arthur Street West Unit 2 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims."
+    "sourceNote": "AGCO public status table lists Toke House Thunder Bay Mall in Thunder Bay with an address at 1105 Arthur Street West Unit 2 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
+    "storeBackbone": "regulator"
+  },
+  {
+    "slug": "hbb-medical-inc-dartmouth",
+    "name": "HBB Medical Inc. Dartmouth",
+    "legacyPath": "/listing/hbb-medical-inc-dartmouth/",
+    "locationHint": "Dartmouth, NS",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "73 Tacoma Drive",
+    "city": "Dartmouth",
+    "province": "NS",
+    "postalCode": "B2W 3Y6",
+    "phone": "(902) 481-2883",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://weedsfarm.com/store/hbb-medical-inc-dartmouth/"
+    ],
+    "lastVerified": "2026-06-04",
+    "sourceName": "WeedsFarm public directory",
+    "sourceUrl": "https://weedsfarm.com/store/hbb-medical-inc-dartmouth/",
+    "sourceNote": "Public directory page lists HBB Medical Inc in Dartmouth with address and phone context. Potshops uses this as historical directory evidence and not as live operating proof.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "coastal-cannapy",
+    "name": "Coastal Cannapy",
+    "legacyPath": "/listing/coastal-cannapy/",
+    "locationHint": "Halifax, NS",
+    "gscImpressions": 0,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "2411 Agricola Street",
+    "city": "Halifax",
+    "province": "NS",
+    "postalCode": "B3K 4C1",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.allbiz.ca/coastal-cannapy-delivery-service"
+    ],
+    "lastVerified": "2026-06-04",
+    "sourceName": "AllBiz business directory",
+    "sourceUrl": "https://www.allbiz.ca/coastal-cannapy-delivery-service",
+    "sourceNote": "AllBiz business page lists Coastal Cannapy at 2411 Agricola Street in Halifax. Potshops treats this as historical directory context and does not treat it as a current operations claim.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "cafe-cannabis-and-fine-edibles-harbord-st",
+    "name": "CAFE Cannabis and Fine Edibles Harbord Street",
+    "legacyPath": "/listing/cafe-cannabis-and-fine-edibles-harbord-st/",
+    "locationHint": "Toronto, ON",
+    "gscImpressions": 1263,
+    "gscClicks": 0,
+    "averagePosition": 48.94220110847189,
+    "address": "104 Harbord St",
+    "city": "Toronto",
+    "province": "ON",
+    "postalCode": "M5S 1G6",
+    "phone": "1-800-551-2965",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.iamcafe.com/locations/104-harbord-st/",
+      "https://torontolife.com/city/total-normalization-cannabis/"
+    ],
+    "lastVerified": "2026-06-09",
+    "sourceName": "CAFE location page and Toronto Life public reporting",
+    "sourceUrl": "https://www.iamcafe.com/locations/104-harbord-st/",
+    "sourceNote": "CAFE public location page identifies the Harbord Street profile with Toronto address and phone context, and Toronto Life reported on the Harbord CAFE location in 2018. Potshops records this as source-backed legacy context only.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "cafe-cannabis-and-fine-edibles-fort-york",
+    "name": "CAFE Cannabis and Fine Edibles Fort York",
+    "legacyPath": "/listing/cafe-cannabis-and-fine-edibles-fort-york/",
+    "locationHint": "Toronto, ON",
+    "gscImpressions": 1154,
+    "gscClicks": 0,
+    "averagePosition": 33.73310225303293,
+    "address": "66 Fort York Blvd",
+    "city": "Toronto",
+    "province": "ON",
+    "postalCode": "M5V 4A6",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://humidify.co/listing/cafe-cannabis-and-fine-edibles/",
+      "https://www.iamcafe.com/haze-legend-of-cafe-2025/"
+    ],
+    "lastVerified": "2026-06-09",
+    "sourceName": "Humidify public directory and CAFE historical article",
+    "sourceUrl": "https://humidify.co/listing/cafe-cannabis-and-fine-edibles/",
+    "sourceNote": "Public directory evidence links CAFE Cannabis and Fine Edibles to 66 Fort York Blvd, and CAFE's own historical article describes the Fort York location as part of its early Toronto story. Potshops records identity and address context only.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "pineapple-express-dispensary",
+    "name": "Pineapple Express Dispensary",
+    "legacyPath": "/listing/pineapple-express-dispensary/",
+    "locationHint": "Victoria, BC",
+    "gscImpressions": 865,
+    "gscClicks": 1,
+    "averagePosition": 20.44277456647399,
+    "address": "608 Esquimalt Rd",
+    "city": "Victoria",
+    "province": "BC",
+    "postalCode": "V9A 3L4",
+    "phone": "(778) 265-5250",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://cannabis.net/dispensaries/pineapple-express-dispensary",
+      "https://weedhub.ca/dispensaries/pineapple-express-dispensary-victoria/"
+    ],
+    "lastVerified": "2026-06-09",
+    "sourceName": "Cannabis.net and WeedHub public directory pages",
+    "sourceUrl": "https://cannabis.net/dispensaries/pineapple-express-dispensary",
+    "sourceNote": "Public directory pages identify Pineapple Express Dispensary in Victoria with Esquimalt Road address and phone context. Potshops uses this as historical directory evidence only.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "1tonamara",
+    "name": "1Tonamara",
+    "legacyPath": "/listing/1tonamara/",
+    "locationHint": "Toronto, ON",
+    "gscImpressions": 836,
+    "gscClicks": 1,
+    "averagePosition": 16.0933014354067,
+    "address": "202 Spadina Ave",
+    "city": "Toronto",
+    "province": "ON",
+    "postalCode": "M5T 2C2",
+    "phone": "647-544-5652",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.1tonamara.com/catalog/",
+      "https://okanaganedge.net/2018/10/17/shops-play-waiting-game/"
+    ],
+    "lastVerified": "2026-06-09",
+    "sourceName": "1Tonamara public website and Canadian Press reporting",
+    "sourceUrl": "https://www.1tonamara.com/catalog/",
+    "sourceNote": "Public website and Canadian Press reporting identify 1Tonamara as a Toronto cannabis boutique/store associated with Spadina Avenue and Fort York Boulevard. Potshops records the Spadina legacy profile as historical context only.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "peacemaker-420",
+    "name": "Peacemaker 420",
+    "legacyPath": "/listing/peacemaker-420/",
+    "locationHint": "Tyendinaga Mohawk Territory, ON",
+    "gscImpressions": 714,
+    "gscClicks": 3,
+    "averagePosition": 11.376750700280112,
+    "address": "364 York Road",
+    "city": "Tyendinaga Mohawk Territory",
+    "province": "ON",
+    "postalCode": "K0K 1X0",
+    "phone": "613-243-8857",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.allbud.com/dispensaries/ontario/ontario-tyendinaga-mohawk-territory/peacemaker420-2/edible",
+      "https://shatterizer.ca/blogs/news/welcome-to-peacemaker-420"
+    ],
+    "lastVerified": "2026-06-09",
+    "sourceName": "AllBud public directory and Shatterizer profile",
+    "sourceUrl": "https://www.allbud.com/dispensaries/ontario/ontario-tyendinaga-mohawk-territory/peacemaker420-2/edible",
+    "sourceNote": "Public pages identify Peacemaker 420 with York Road context in Tyendinaga Mohawk Territory. Potshops records address and identity evidence only, not active service details.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "the-altered-native",
+    "name": "The Altered Native",
+    "legacyPath": "/listing/the-altered-native/",
+    "locationHint": "Orangeville, ON",
+    "gscImpressions": 692,
+    "gscClicks": 1,
+    "averagePosition": 20.61416184971098,
+    "address": "218 Broadway Ave",
+    "city": "Orangeville",
+    "province": "ON",
+    "postalCode": "L9W 1K4",
+    "phone": "(519) 942-2828",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://citizen.on.ca/long-time-proponent-of-legalization-opens-altered-nation-cannabis-in-downtown-orangeville/",
+      "https://www.allbiz.ca/the-altered-native_23-519-942-2828",
+      "https://cannawayz.com/dispensaries/the-altered-native-2"
+    ],
+    "lastVerified": "2026-06-09",
+    "sourceName": "Orangeville Citizen reporting and public directory pages",
+    "sourceUrl": "https://citizen.on.ca/long-time-proponent-of-legalization-opens-altered-nation-cannabis-in-downtown-orangeville/",
+    "sourceNote": "Orangeville Citizen reporting connects The Altered Native/Altered Nation history to cannabis retail context, while public directory evidence supplies Orangeville address context. Potshops treats this as legacy identity evidence.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "the-grass-station",
+    "name": "The Grass Station",
+    "legacyPath": "/listing/the-grass-station/",
+    "locationHint": "Waterdown, ON",
+    "gscImpressions": 513,
+    "gscClicks": 0,
+    "averagePosition": 40.173489278752434,
+    "address": "53 Dundas St E, Suite 2",
+    "city": "Waterdown",
+    "province": "ON",
+    "phone": "1-84-GRASS-420",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.leafly.ca/cannabis-store/grass-station"
+    ],
+    "lastVerified": "2026-06-09",
+    "sourceName": "Leafly public directory page",
+    "sourceUrl": "https://www.leafly.ca/cannabis-store/grass-station",
+    "sourceNote": "Leafly public directory page identifies Grass Station in Waterdown with Dundas Street East address and phone context. Potshops records this as public-source directory context only.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "nelson-potorium",
+    "name": "The Nelson Potorium",
+    "legacyPath": "/listing/nelson-potorium/",
+    "locationHint": "Nelson, BC",
+    "gscImpressions": 481,
+    "gscClicks": 0,
+    "averagePosition": 16.23076923076923,
+    "address": "441 Baker St",
+    "city": "Nelson",
+    "province": "BC",
+    "postalCode": "V1L 4H7",
+    "phone": "(250) 352-6612",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.allbiz.ca/nelson-potorium-250-352-6612",
+      "https://ised-isde.canada.ca/cipo/trademark-search/1945055"
+    ],
+    "lastVerified": "2026-06-09",
+    "sourceName": "AllBiz directory and Canadian Trademarks Database",
+    "sourceUrl": "https://www.allbiz.ca/nelson-potorium-250-352-6612",
+    "sourceNote": "AllBiz identifies The Nelson Potorium with Baker Street address and phone context, and the Canadian Trademarks Database links Nelson Potorium Inc. to cannabis-related trademark goods. Potshops records historical profile context only.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "best-online-buds-store-budsandbeyond",
+    "name": "Buds and Beyond",
+    "legacyPath": "/listing/best-online-buds-store-budsandbeyond/",
+    "locationHint": "Canada",
+    "gscImpressions": 418,
+    "gscClicks": 2,
+    "averagePosition": 11.559808612440191,
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.budsandbeyond.cc/"
+    ],
+    "lastVerified": "2026-06-09",
+    "sourceName": "Buds and Beyond public website",
+    "sourceUrl": "https://www.budsandbeyond.cc/",
+    "sourceNote": "Public website identifies Buds and Beyond as a Canadian cannabis retail brand. Potshops records only legacy identity context and does not assert service area, availability, or current commercial details.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "kushklub",
+    "name": "KushKlub Vancouver",
+    "legacyPath": "/listing/kushklub/",
+    "locationHint": "Vancouver, BC",
+    "gscImpressions": 300,
+    "gscClicks": 0,
+    "averagePosition": 23.323333333333334,
+    "address": "1735 Commercial Drive",
+    "city": "Vancouver",
+    "province": "BC",
+    "postalCode": "V5N 4A4",
+    "phone": "(604) 620-0700",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://content.kushklub.ca/kushklub-vancouver/",
+      "https://www.leafly.ca/cannabis-store/kushklub---vancouver"
+    ],
+    "lastVerified": "2026-06-09",
+    "sourceName": "KushKlub Vancouver page and Leafly public directory",
+    "sourceUrl": "https://content.kushklub.ca/kushklub-vancouver/",
+    "sourceNote": "KushKlub public page and Leafly directory identify the Vancouver Commercial Drive profile with address and phone context. Potshops records source-backed profile context only.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "smoke-on-the-water-2",
+    "name": "Smoke on the Water Walpole Island",
+    "legacyPath": "/listing/smoke-on-the-water-2/",
+    "locationHint": "Walpole Island, ON",
+    "gscImpressions": 234,
+    "gscClicks": 1,
+    "averagePosition": 14.491452991452991,
+    "address": "1774 River Road North",
+    "city": "Walpole Island",
+    "province": "ON",
+    "phone": "519-999-5935",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://rezweed.com/dispensary/smoke-on-the-water-568"
+    ],
+    "lastVerified": "2026-06-09",
+    "sourceName": "RezWeed public directory page",
+    "sourceUrl": "https://rezweed.com/dispensary/smoke-on-the-water-568",
+    "sourceNote": "RezWeed public directory page identifies Smoke on the Water on Walpole Island with River Road North address and phone context. Potshops records this as public directory evidence only.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "the-port-alberni-cannabis-club",
+    "name": "The Port Alberni Cannabis Club",
+    "legacyPath": "/listing/the-port-alberni-cannabis-club/",
+    "locationHint": "Port Alberni, BC",
+    "gscImpressions": 105,
+    "gscClicks": 0,
+    "averagePosition": 30.514285714285716,
+    "address": "4824 Bute Street",
+    "city": "Port Alberni",
+    "province": "BC",
+    "postalCode": "V9Y 4X1",
+    "phone": "(778) 421-2224",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://humidify.co/listing/the-port-alberni-cannabis-club/",
+      "https://cannawayz.com/shops/the-port-alberni-cannabis-club"
+    ],
+    "lastVerified": "2026-06-09",
+    "sourceName": "Humidify and Cannawayz public directory pages",
+    "sourceUrl": "https://humidify.co/listing/the-port-alberni-cannabis-club/",
+    "sourceNote": "Public directory pages identify The Port Alberni Cannabis Club with Bute Street address and phone context. Potshops records source-backed legacy profile context only.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "grass-roots-medicinal",
+    "name": "Grass Roots Medicinal",
+    "legacyPath": "/listing/grass-roots-medicinal/",
+    "locationHint": "Squamish, BC",
+    "gscImpressions": 222,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "40437 Tantalus Road Unit 11",
+    "city": "Squamish",
+    "province": "BC",
+    "phone": "(604) 390-3334",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://cannawayz.com/dispensaries/grass-roots-medicinal",
+      "https://www.biv.com/news/economy-law-politics/province-seeking-seize-properties-associated-squamish-cannabis-dispensary-8258658"
+    ],
+    "lastVerified": "2026-06-10",
+    "observedAt": "2026-06-10T07:25:53.602Z",
+    "confidence": "medium",
+    "missingReasons": [
+      "Current operation is not confirmed.",
+      "Current licence or regulator evidence is missing.",
+      "Menu, ordering, delivery, stock, hours, and availability are intentionally not promoted."
+    ],
+    "sourceName": "Cannawayz directory page and Business in Vancouver reporting",
+    "sourceUrl": "https://cannawayz.com/dispensaries/grass-roots-medicinal",
+    "sourceNote": "POT-86 scrape evidence found public-source Grass Roots Medicinal context in Squamish, including a Cannawayz directory address and phone plus Business in Vancouver reporting that the dispensary was forced to shut indefinitely. Potshops records this as historical source context only.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "eggs-canna-nanaimo",
+    "name": "Eggs Canna Nanaimo",
+    "legacyPath": "/listing/eggs-canna-nanaimo/",
+    "locationHint": "Nanaimo, BC",
+    "gscImpressions": 215,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "51 Terminal Avenue",
+    "city": "Nanaimo",
+    "province": "BC",
+    "postalCode": "V9R 5C4",
+    "phone": "250-754-9864",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://eggscanna.ca/",
+      "https://www.allbud.com/dispensaries/british-columbia/british-columbia-nanaimo/eggs-canna-nanaimo-2"
+    ],
+    "lastVerified": "2026-06-10",
+    "observedAt": "2026-06-10T07:25:53.602Z",
+    "confidence": "medium",
+    "missingReasons": [
+      "The current Eggs Canna website did not confirm a Nanaimo location in the fetched text.",
+      "Current licence or regulator evidence is missing.",
+      "Menu, ordering, delivery, stock, hours, and availability are intentionally not promoted."
+    ],
+    "sourceName": "Eggs Canna public website and AllBud directory page",
+    "sourceUrl": "https://eggscanna.ca/",
+    "sourceNote": "POT-86 scrape evidence found the Eggs Canna public website and an AllBud Nanaimo directory record with Terminal Avenue address and phone context. Potshops records the Nanaimo row as historical public-directory context only.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "3-kings-medicinal",
+    "name": "3 Kings Medicinal",
+    "legacyPath": "/listing/3-kings-medicinal/",
+    "locationHint": "New Brunswick, Canada",
+    "gscImpressions": 182,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://www.bestmarijuanaguide.com/profile/3-kings-medicinal",
+      "https://weedsfarm.com/store-region/nb/"
+    ],
+    "lastVerified": "2026-06-10",
+    "observedAt": "2026-06-10T07:25:53.602Z",
+    "confidence": "low",
+    "missingReasons": [
+      "Address, phone, and exact city were not confirmed in the fetched source text.",
+      "Current licence or regulator evidence is missing.",
+      "Current operation, menu, ordering, delivery, stock, hours, and availability are intentionally not promoted."
+    ],
+    "sourceName": "Best Marijuana Guide profile and WeedsFarm regional directory",
+    "sourceUrl": "https://www.bestmarijuanaguide.com/profile/3-kings-medicinal",
+    "sourceNote": "POT-86 scrape evidence found a public 3 Kings Medicinal profile plus New Brunswick regional directory context. Potshops records this as a source-backed historical profile without address, phone, current operation, or licensing claims.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "777-dispensary",
+    "name": "Mohawk Cannabis Store 777B",
+    "legacyPath": "/listing/777-dispensary/",
+    "locationHint": "777B, ON",
+    "gscImpressions": 176,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "777B Highway 49",
+    "city": "777B",
+    "province": "ON",
+    "postalCode": "K0K 1X0",
+    "phone": "613-243-7283",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://rezweed.com/dispensary/mohawk-cannabis-store-777b-557",
+      "https://rezweed.com/dispensaries/all"
+    ],
+    "lastVerified": "2026-06-10",
+    "observedAt": "2026-06-10T07:25:53.602Z",
+    "confidence": "medium",
+    "missingReasons": [
+      "Current licence or regulator evidence is missing.",
+      "The legacy 777 Dispensary slug is mapped conservatively to the public-directory Mohawk Cannabis Store 777B source context.",
+      "Menu, ordering, delivery, stock, hours, and availability are intentionally not promoted."
+    ],
+    "sourceName": "RezWeed public directory pages",
+    "sourceUrl": "https://rezweed.com/dispensary/mohawk-cannabis-store-777b-557",
+    "sourceNote": "POT-86 scrape evidence mapped the old 777 Dispensary demand to RezWeed public directory context for Mohawk Cannabis Store at 777B Highway 49. Potshops records source-backed profile context only.",
+    "storeBackbone": "public_source"
+  },
+  {
+    "slug": "mary-janes-2",
+    "name": "Mary Jane's Dispensary Alderville",
+    "legacyPath": "/listing/mary-janes-2/",
+    "locationHint": "Roseneath, ON",
+    "gscImpressions": 155,
+    "gscClicks": 0,
+    "averagePosition": 0,
+    "address": "8927 Highway 45",
+    "city": "Roseneath",
+    "province": "ON",
+    "postalCode": "K0K 2X0",
+    "phone": "(905) 352-9333",
+    "verificationStatus": "historical_source",
+    "categories": [
+      "dispensary"
+    ],
+    "sourceUrls": [
+      "https://maryjanes9333.ca/",
+      "https://rezweed.com/dispensary/mary-janes-dispensary-roseneath-260",
+      "https://www.ruralroutes.com/20709.html"
+    ],
+    "lastVerified": "2026-06-10",
+    "observedAt": "2026-06-10T07:25:53.602Z",
+    "confidence": "medium",
+    "missingReasons": [
+      "Current licence or regulator evidence is missing.",
+      "Menu, ordering, delivery, stock, hours, and availability are intentionally not promoted.",
+      "Potshops has not independently verified current operating status."
+    ],
+    "sourceName": "MaryJane's public website, RezWeed, and Rural Routes directory pages",
+    "sourceUrl": "https://maryjanes9333.ca/",
+    "sourceNote": "POT-86 scrape evidence found MaryJane's Alderville public website plus RezWeed and Rural Routes directory pages with Roseneath address and phone context. Potshops records source-backed profile context only.",
+    "storeBackbone": "public_source"
   }
 ]

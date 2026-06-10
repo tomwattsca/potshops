@@ -40,6 +40,7 @@ export type ListingSeed = {
   gscImpressions: number;
   gscClicks: number;
   averagePosition: number;
+  website?: string;
   address?: string;
   city?: string;
   province?: string;
@@ -47,14 +48,64 @@ export type ListingSeed = {
   phone?: string;
   verificationStatus?: 'historical_source' | 'current_source' | 'needs_verification';
   lastVerified?: string;
+  observedAt?: string;
+  confidence?: 'high' | 'medium' | 'low';
+  missingReasons?: string[];
   categories?: string[];
+  sourceUrls?: string[];
   sourceName?: string;
   sourceUrl?: string;
   sourceNote?: string;
+  storeBackbone?: StoreBackboneSource;
 };
 
+export type StoreBackboneSource = 'regulator' | 'public_source' | 'needs_verification';
+
+const REGULATOR_SOURCE_MARKERS = [
+  /aglc/i,
+  /cannabis_retail_stores_in_bc/i,
+  /cannabis\s+licensee\s+search/i,
+  /status-current-cannabis-retail-store-applications/i,
+  /opengovca/i,
+];
+
+function isRegulatorSource(listing: ListingSeed) {
+  if (listing.verificationStatus !== 'current_source') return false;
+  const sourceName = listing.sourceName ?? '';
+  const sourceUrls = listing.sourceUrls ?? [];
+  const sourcePrimary = listing.sourceUrl ?? '';
+  const haystack = `${sourceName} ${sourcePrimary} ${sourceUrls.join(' ')}`.toLowerCase();
+  return REGULATOR_SOURCE_MARKERS.some((marker) => marker.test(haystack));
+}
+
+export function getStoreBackboneSource(listing: ListingSeed): StoreBackboneSource {
+  if (listing.storeBackbone === 'regulator' || listing.storeBackbone === 'public_source' || listing.storeBackbone === 'needs_verification') {
+    return listing.storeBackbone;
+  }
+  if (isRegulatorSource(listing)) return 'regulator';
+  if (listing.verificationStatus === 'current_source') return 'public_source';
+  if (listing.verificationStatus === 'historical_source') return 'public_source';
+  return 'needs_verification';
+}
+
+export function isRegulatorBackedStore(listing: ListingSeed) {
+  return getStoreBackboneSource(listing) === 'regulator';
+}
+
+export function getRegulatorBackedListings() {
+  return listingSeeds.filter((listing) => isRegulatorBackedStore(listing));
+}
+
+export function getRegulatorBackedListingsForCity(city: string, province: string) {
+  const normalizedCity = city.trim().toLowerCase();
+  const normalizedProvince = province.trim().toLowerCase();
+  return getRegulatorBackedListings().filter((listing) => {
+    return listing.city?.trim().toLowerCase() === normalizedCity && listing.province?.trim().toLowerCase() === normalizedProvince;
+  });
+}
+
 export const priorityLocations: Location[] = [
-  { slug: 'kahnawake', city: 'Kahnawake', province: 'QC', title: 'Kahnawake cannabis directory status and source notes', description: 'Kahnawake keeps surfacing in Search Console for cannabis, weed, and dispensary searches, but Potshops currently maps one historical-source Green Leaf profile, so this page separates search demand from confirmed current-store facts.', gscEvidence: 'Fresh and legacy rows include “green leaf kahnawake”, “kahnawake dispensary”, “kahnawake weed”, “cannabis kahnawake”, and “weed dispensary kahnawake”.', legacyImpressions: 1475, priority: 1 },
+  { slug: 'kahnawake', city: 'Kahnawake', province: 'QC', title: 'Kahnawake cannabis directory status and source notes', description: 'Kahnawake search demand maps to a single Green Leaf profile. This city page presents that profile-level public-source context and avoids claiming current business status.', gscEvidence: 'Fresh and legacy rows include “green leaf kahnawake”, “kahnawake dispensary”, “kahnawake weed”, “cannabis kahnawake”, and “weed dispensary kahnawake”.', legacyImpressions: 1475, priority: 1 },
   { slug: 'halifax', city: 'Halifax', province: 'NS', title: 'Cannabis stores and dispensaries in Halifax', description: 'Halifax has repeat city-level searches for dispensaries, cannabis stores, and delivery-adjacent terms.', gscEvidence: 'Queries included “cannabis dispensary halifax”, “dispensaries halifax”, and “halifax dispensaries”.', legacyImpressions: 543, priority: 2 },
   { slug: 'fredericton', city: 'Fredericton', province: 'NB', title: 'Cannabis stores and dispensaries in Fredericton', description: 'Fredericton appears in both city page and store-level legacy URLs, making it a useful early rebuild target.', gscEvidence: 'Queries included “cannabis store fredericton”, “dispensary fredericton”, and “weed dispensary fredericton”.', legacyImpressions: 326, priority: 3 },
   { slug: 'shannonville', city: 'Shannonville', province: 'ON', title: 'Cannabis stores and dispensaries in Shannonville', description: 'Shannonville is now a source-backed recovery page because the Leagle Dreams legacy listing has address and phone context from a public directory.', gscEvidence: 'GSC listing demand showed Leagle Dreams with 562 impressions and 11 clicks; source-backed enrichment mapped the row to Old Highway 2 in Shannonville.', legacyImpressions: 562, priority: 4 },
@@ -63,7 +114,7 @@ export const priorityLocations: Location[] = [
   { slug: 'victoria', city: 'Victoria', province: 'BC', title: 'Cannabis stores and dispensaries in Victoria', description: 'Victoria demand is tied to legacy Farmacy, Pineapple Express, and Gulf Island Organics listing searches plus downtown dispensary terms.', gscEvidence: 'Queries included “farmacy victoria”, “farm dispensary victoria”, “gulf island organics”, and downtown Victoria dispensary variants.', legacyImpressions: 3310, priority: 7 },
   { slug: 'hamilton', city: 'Hamilton', province: 'ON', title: 'Cannabis stores and dispensaries in Hamilton', description: 'Hamilton now has an importer-backed Mountain Greenery listing that can anchor cautious local utility while broader city coverage is rebuilt.', gscEvidence: 'Source-backed rebuild work mapped Mountain Greenery to Hamilton and Upper Wellington Street; use this as a local recovery clue, not a current operating claim.', legacyImpressions: 0, priority: 8 },
   { slug: 'penticton', city: 'Penticton', province: 'BC', title: 'Cannabis stores and dispensaries in Penticton', description: 'Penticton now has multiple source-backed historical profiles that support a cautious South Okanagan recovery page.', gscEvidence: 'Source-backed rebuild work mapped Green Essence to Martin Street and TPD Boutique to Front Street; use these as profile recovery clues, not current operating claims.', legacyImpressions: 0, priority: 9 },
-  { slug: 'calgary', city: 'Calgary', province: 'AB', title: 'Calgary pot shop directory status and source notes', description: 'Calgary now has fresh Search Console hints for “calgary pot” and “pot stores calgary”, but Potshops only maps one historical-source Remedy Ice Cream profile, so this page explains the current evidence limits before stronger city claims.', gscEvidence: 'Recent GSC rows included “calgary pot” and “pot stores calgary” for this page; older rebuild evidence included “calgary pot shops”, “pot shop calgary”, “dispensary calgary”, and a source-backed Remedy Ice Cream listing cluster.', legacyImpressions: 269, priority: 10 },
+  { slug: 'calgary', city: 'Calgary', province: 'AB', title: 'Calgary cannabis stores and dispensary source notes', description: 'Calgary now includes official-source storefront context from AGLC plus historical Remedy Ice Cream context. The city page remains conservative because all rows are source-context only.', gscEvidence: 'Recent GSC rows include “calgary pot” and “pot stores calgary”, and AGLC licensee rows now provide multiple Calgary storefront references.', legacyImpressions: 269, priority: 10 },
   { slug: 'nanaimo', city: 'Nanaimo', province: 'BC', title: 'Cannabis stores and pot shops in Nanaimo', description: 'Nanaimo has legacy location-page impressions, long-tail pot shop demand, and now a source-backed Mr. Green’s recovery profile.', gscEvidence: 'Queries included “pot shops nanaimo” and “nanaimo dispensaries still open”; source-backed enrichment mapped Mr. Green’s to Nicol Street.', legacyImpressions: 166, priority: 11 },
   { slug: 'nelson', city: 'Nelson', province: 'BC', title: 'Nelson dispensary directory source notes', description: 'Nelson still receives Search Console rows for “dispensary nelson”, “dispensary nelson bc”, and related Nelson dispensary wording. Potshops currently maps one historical-source profile, The Kootenay’s Medicine Tree, so this page explains the evidence limits rather than claiming complete or current store coverage.', gscEvidence: 'Fresh 2026-04-02..2026-05-15 GSC rows showed /locations/nelson with 18 impressions, including “dispensary nelson”, “dispensary nelson bc”, and “nelson bc dispensary”. The source-backed recovery profile is The Kootenay’s Medicine Tree on Front Street, but current operation is not confirmed.', legacyImpressions: 470, priority: 12 },
   { slug: 'vancouver', city: 'Vancouver', province: 'BC', title: 'Cannabis stores and dispensaries in Vancouver', description: 'Vancouver has meaningful legacy location-page impressions plus multiple high-impression legacy store and region-service profiles.', gscEvidence: 'GSC page data showed /location/vancouver/ with 512 impressions, and listing demand around The Green Leaf Society, Ahuevo, Herb Co, Compassion in Motion, Call 420, and other Vancouver-area profiles.', legacyImpressions: 512, priority: 13 },
@@ -103,20 +154,77 @@ export const priorityLocations: Location[] = [
 
 export const locationUtilities: LocationUtility[] = [
   {
+    slug: 'halifax',
+    summary: 'Halifax now has one source-backed directory profile mapped from a public listing source, so the page can be used as a concrete starting point instead of a generic placeholder.',
+    directoryStatus: 'Halifax has one historical-profile row linked from AllBiz with address context only; Potshops does not treat this as a live storefront or licensing claim.',
+    searchIntent: ['cannabis dispensary halifax', 'dispensaries halifax', 'halifax cannabis store', 'halifax weed dispensary', 'halifax pot shops'],
+    relatedListingSlugs: ['coastal-cannapy'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'One historical context row is useful evidence for a concrete profile path, but it does not make a full Halifax storefront claim.',
+      'Address context and source context are displayed as recovery evidence only and are not used as live operating proof.',
+      'Do not infer licensing, hours, ordering, delivery, stock, or current availability from this single row.',
+      'Keep broader Nova Scotia traffic tied to exact profile evidence as that source-backed data arrives.',
+    ],
+    verificationNextSteps: [
+      'Import additional official/public Halifax rows so the page can become a fuller directory utility.',
+      'Prioritise regulator, municipal, or current business sources before adding phone, maps, hours, or service-level facts.',
+      'Use neighboring mapped pages and category hubs as navigation while this city is in rebuild mode.',
+    ],
+  },
+  {
+    slug: 'dartmouth',
+    summary: 'Dartmouth now has one source-backed listing mapped from WeedsFarm, making this page a concrete reconstruction utility rather than a placeholder.',
+    directoryStatus: 'Dartmouth has one historical-source row with source-backed address and phone context; it remains a partial directory state.',
+    searchIntent: ['cannabis dispensary dartmouth', 'dartmouth dispensaries', 'dartmouth cannabis stores', 'dartmouth cannabis', 'nova scotia cannabis dartmouth'],
+    relatedListingSlugs: ['hbb-medical-inc-dartmouth'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'This one listing is a source-backed reconnection point, not confirmation of complete city coverage.',
+      'With a single mapped row, avoid claiming active operation, current hours, delivery, ordering, or stock availability.',
+      'Keep this page linked to nearby verified locations while sourcing additional Dartmouth rows.',
+    ],
+    verificationNextSteps: [
+      'Add more Dartmouth-specific rows from official/public sources before making stronger city-level coverage claims.',
+      'Validate exact city matching if any AGCO or regulator rows are imported later.',
+      'Use this page as a clear handoff into local hubs while keeping storefront claims out.',
+    ],
+  },
+  {
+    slug: 'belleville',
+    summary: 'Belleville now has one official-source profile row and uses it as a compact recovery utility rather than a complete city storefront guide.',
+    directoryStatus: 'One Belleville listing is currently mapped from AGCO public status-table evidence; it provides address-context confirmation only, not operating-hour or availability claims.',
+    searchIntent: ['belleville cannabis', 'cannabis store belleville', 'belleville dispensary', 'cannabis belleville on', 'belleville weed'],
+    relatedListingSlugs: ['true-north-cannabis-belleville'],
+    internalCategorySlugs: ['dispensary'],
+    localCaveats: [
+      'One mapped profile is useful for proof of a specific evidence path but is not enough for complete city directory claims.',
+      'Public-source status context should not be rewritten into current menu, pricing, stock, review, delivery, or service language.',
+      'Belleville phrasing should remain tied to the single mapped listing until additional verified profiles are added.',
+    ],
+    verificationNextSteps: [
+      'Recheck the AGCO source or official/public business records before expanding Belleville beyond the one-row utility.',
+      'Add additional Belleville profiles only with explicit city-matched source URLs and conservative source notes.',
+      'Keep the page focused on evidence-backed navigation rather than operational claims while compact.',
+    ],
+  },
+  {
     slug: 'kahnawake',
     summary: 'Kahnawake remains a high-priority recovery page because fresh Search Console rows still use direct local language around Green Leaf, Kahnawake dispensary, Kahnawake weed, and cannabis Kahnawake queries.',
-    directoryStatus: 'One high-demand legacy profile is mapped to Kahnawake today. It is labelled historical because the available source confirms local reporting context, not a current licence or storefront status.',
+    directoryStatus: 'One Green Leaf profile is mapped to Kahnawake today. The available source confirms local reporting context and does not confirm an active business webpage, current operation, or verified storefront details.',
     searchIntent: ['green leaf kahnawake', 'kahnawake dispensary', 'kahnawake weed', 'cannabis kahnawake', 'weed dispensary kahnawake'],
     relatedListingSlugs: ['green-leaf'],
     internalCategorySlugs: ['dispensary'],
     localCaveats: [
-      'Fresh Kahnawake query impressions can mean brand research, local directory research, or current-store intent; Potshops should keep those meanings separate instead of implying open storefront coverage.',
-      'Do not treat historical local reporting as proof that a store is currently open, licensed, or accepting orders.',
-      'Priority enrichment should verify address, operating status, source date, and official/current public evidence before adding maps, hours, contact details, or commercial links.',
+      'These visits are mostly name and intent search traffic; they do not mean the business is currently open.',
+      'Use this page to confirm source context for the Green Leaf query cluster, not to assume active storefront operation.',
+      'The current source-backed Green Leaf record does not include a confirmed business website; keep this city page non-operational until one is verified.',
+      'Only add address, hours, contact, maps, or public-business links after official/public verification is attached to this profile.',
     ],
     verificationNextSteps: [
       'Confirm whether each Kahnawake profile has an official/current public source.',
       'Add address-level facts only when they come from an official business, regulator, or current directory source.',
+      'Prioritise adding a verified business webpage source for Green Leaf Kahnawake before adding contact-level or service-level details.',
       'Keep this page as a cautious city guide until at least two verified local profiles are available.',
     ],
   },
@@ -230,22 +338,21 @@ export const locationUtilities: LocationUtility[] = [
   },
   {
     slug: 'calgary',
-    summary: 'Calgary has fresh city-level pot-shop impressions, but the rebuilt page should stay a directory-status and source-note page until more current public sources are verified.',
-    directoryStatus: 'One Calgary listing is mapped today: Remedy Ice Cream. The source is historical news coverage and does not support contact, current operation, licence, menu, delivery, or availability claims.',
-    searchIntent: ['calgary pot', 'pot stores calgary', 'remedy ice cream', 'calgary pot shops', 'pot shop calgary', 'calgary cannabis store'],
-    relatedListingSlugs: ['remedy-ice-cream'],
+    summary: 'Calgary now has official-source storefront context from AGLC rows alongside existing historical context.',
+    directoryStatus: 'Eight Calgary listings are mapped today: one historical-source Remedy Ice Cream profile plus seven AGLC-sourced locations. These rows are address-context only and do not include hours, menu, ordering, stock, availability, or service claims.',
+    searchIntent: ['calgary pot', 'pot stores calgary', 'canna cabana calgary', 'bud mart 61 st se', 'co-op cannabis', 'tumblweedz', 'cannabis calgary'],
+    relatedListingSlugs: ['remedy-ice-cream', 'canna-cabana-17-ave-sw-calgary', 'co-op-cannabis-hamptons-calgary', 'bud-mart-61-st-se-calgary', 'calgary-co-op-cannabis-seton', 'canna-cabana-19-st-nw-calgary', 'co-op-cannabis-richmond-road-calgary', 'co-op-cannabis-crowfoot-calgary'],
     internalCategorySlugs: ['in-town-delivery'],
     localCaveats: [
       'Recent Calgary query impressions are useful demand signals, not proof that Potshops has complete local coverage.',
-      'Remedy Ice Cream source coverage discussed legality concerns, so the row must stay historical and non-commercial.',
-      'Calgary city copy should not imply current delivery, sales, stock, licence, hours, or contact status from older media coverage.',
-      'Additional Calgary profiles need official/current sourcing before this becomes a broader local guide.',
+      'AGLC-sourced rows remain source-context entries and still cannot support compliance or service claims.',
+      'Remedy Ice Cream remains historical/legal-context content and is not treated as a current storefront claim.',
+      'Additional Calgary profiles should continue to come from official/public-source evidence before expanding this city as a complete guide.',
     ],
     verificationNextSteps: [
-      'Use official/current public sources for any future Calgary storefront, address, contact, or status facts.',
-      'Research additional Calgary listings through the import workflow rather than adding unsupported city boilerplate.',
-      'Keep the page useful for Calgary searchers by exposing the single mapped profile and the evidence limits before any broader city claim.',
-      'Avoid outbound commercial CTAs for historical or legality-sensitive rows.',
+      'Keep adding Calgary storefront rows only when official/public-source address context supports each row.',
+      'Review AGLC and municipal business source rows periodically, especially if online-sales flags or status fields change.',
+      'Refresh local caveats whenever source posture changes so city copy remains explicit about evidence limits.',
     ],
   },
   {

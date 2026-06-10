@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getCategory, getListing, getLocation, getLocationUtility, priorityLocations } from '../../data/directory';
+import { notFound } from 'next/navigation';
+import { getCategory, getListing, getLocation, getLocationUtility, isRegulatorBackedStore, priorityLocations } from '../../data/directory';
 
 type ProfileSourceFact = { label: string; value: string; tone?: 'strong' | 'muted' };
 
@@ -27,36 +28,62 @@ const publicCopy = (copy: string) => copy
     .replace(/recovery profile/gi, 'source-backed profile')
   .replace(/recovery page/gi, 'source-limit page');
 
+export const dynamicParams = false;
+
 export function generateStaticParams() { return priorityLocations.map((location) => ({ city: location.slug })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ city: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
   const location = getLocation(resolvedParams.city);
   const utility = location ? getLocationUtility(location.slug) : undefined;
+  const relatedListings = utility?.relatedListingSlugs.map((slug) => getListing(slug)).filter((listing) => Boolean(listing)) ?? [];
+  const shouldIndex = relatedListings.some((listing) => listing && isRegulatorBackedStore(listing));
   if (!location) return { title: 'Location not found' };
   const description = utility
     ? `${publicCopy(location.description)} ${publicCopy(utility.directoryStatus)}`
     : `${publicCopy(location.description)} ${publicCopy(location.gscEvidence)}`;
-  return { title: location.title, description, alternates: { canonical: `/locations/${location.slug}` } };
+  const canonical = `/locations/${location.slug}`;
+  const url = `https://potshops.ca${canonical}`;
+  return {
+    title: location.title,
+    description,
+    alternates: { canonical },
+    openGraph: {
+      title: location.title,
+      description,
+      url,
+      siteName: 'Potshops.ca',
+      type: 'website',
+    },
+    robots: {
+      index: shouldIndex,
+      follow: true,
+    },
+  };
 }
 
 export default async function LocationPage({ params }: { params: Promise<{ city: string }> }) {
   const resolvedParams = await params;
   const location = getLocation(resolvedParams.city);
-  if (!location) return <main><h1>Location not found</h1></main>;
+  if (!location) notFound();
   const utility = getLocationUtility(location.slug);
   const relatedListings = utility?.relatedListingSlugs.map((slug) => getListing(slug)).filter((listing) => Boolean(listing)) ?? [];
   const relatedCategories = utility?.internalCategorySlugs.map((slug) => getCategory(slug)).filter((category) => Boolean(category)) ?? [];
   const verifiedListingCount = relatedListings.filter((listing) => listing?.verificationStatus && listing.verificationStatus !== 'needs_verification').length;
   const currentSourceCount = relatedListings.filter((listing) => listing?.verificationStatus === 'current_source').length;
   const historicalSourceCount = relatedListings.filter((listing) => listing?.verificationStatus === 'historical_source').length;
+  const regulatorBackboneCount = relatedListings.filter((listing) => listing && isRegulatorBackedStore(listing)).length;
   const primaryListing = relatedListings[0];
   const publicTitle = `${location.city} cannabis directory status`;
-  const coverageSummary = relatedListings.length === 0
-    ? `Potshops has not yet mapped a source-backed profile to ${location.city}.`
-    : currentSourceCount > 0
-      ? `${location.city} currently has ${currentSourceCount} official public-source address-context ${currentSourceCount === 1 ? 'profile' : 'profiles'} and ${historicalSourceCount} historical-source ${historicalSourceCount === 1 ? 'profile' : 'profiles'} in the rebuilt directory.`
-      : `${location.city} currently has ${historicalSourceCount} historical/source-backed ${historicalSourceCount === 1 ? 'profile' : 'profiles'} in Potshops; current operation is not confirmed from these sources.`;
+  const coverageSummary = utility
+    ? (location.slug === 'kahnawake'
+      ? publicCopy(utility.directoryStatus)
+      : relatedListings.length === 0
+        ? publicCopy(utility.directoryStatus)
+        : currentSourceCount > 0
+          ? `${location.city} currently has ${currentSourceCount} official public-source address-context ${currentSourceCount === 1 ? 'profile' : 'profiles'}${regulatorBackboneCount > 0 ? ` (${regulatorBackboneCount} regulator-backed)` : ''} and ${historicalSourceCount} historical-source ${historicalSourceCount === 1 ? 'profile' : 'profiles'} in the rebuilt directory.`
+          : `${location.city} currently has ${historicalSourceCount} historical/source-backed ${historicalSourceCount === 1 ? 'profile' : 'profiles'} in Potshops; current operation is not confirmed from these sources.`)
+    : `${location.city} currently has ${historicalSourceCount} historical/source-backed ${historicalSourceCount === 1 ? 'profile' : 'profiles'} in Potshops; current operation is not confirmed from these sources.`;
   const safeLocationDescription = publicCopy(location.description);
   const safeUtilitySummary = utility ? publicCopy(utility.summary) : undefined;
   const safeLocalCaveats = utility?.localCaveats.map(publicCopy) ?? [];
@@ -66,12 +93,30 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
     return 'Verification queued';
   };
   const sourceFactsFor = (listing: NonNullable<(typeof relatedListings)[number]>): ProfileSourceFact[] => {
+    const websiteFactValue = listing.website
+      ? `Source-linked research page: ${listing.website}`
+      : 'No business webpage confirmed from source-backed evidence.';
+    if (listing.slug === 'green-leaf') {
+      return [
+        { label: 'Profile evidence', value: listing.sourceName ? `${listing.sourceName}${listing.lastVerified ? ` · checked ${listing.lastVerified}` : ''}` : 'Public-source verification still queued', tone: listing.sourceName ? 'strong' : 'muted' },
+        { label: 'Business webpage', value: websiteFactValue },
+        { label: 'Current operation', value: 'Green Leaf reporting is public-context only and does not confirm an active business page or current storefront status.' },
+        { label: 'User action', value: 'Use the linked listing page and /updates before treating this as verified local-store coverage.' },
+      ];
+    }
     const facts: ProfileSourceFact[] = [
-      { label: 'Profile evidence', value: listing.sourceName ? `${listing.sourceName}${listing.lastVerified ? ` · checked ${listing.lastVerified}` : ''}` : 'Public-source review still queued', tone: listing.sourceName ? 'strong' : 'muted' },
+      { label: 'Profile evidence', value: listing.sourceName ? `${listing.sourceName}${listing.lastVerified ? ` · checked ${listing.lastVerified}` : ''}` : 'Public-source verification still queued', tone: listing.sourceName ? 'strong' : 'muted' },
+      { label: 'Business webpage', value: websiteFactValue },
       { label: 'Current operation', value: listing.verificationStatus === 'current_source' ? 'Official public-source address context only; Potshops still does not claim current hours, menus, stock, delivery, ordering, or availability.' : 'Not confirmed from this historical source; treat as context only, not an open-store claim.' },
       { label: 'User action', value: 'Open the listing evidence or submit a source-backed correction before relying on local details.' },
     ];
     return facts;
+  };
+  const getSourceLinks = (listing: NonNullable<(typeof relatedListings)[number]>) => {
+    if (listing.sourceUrls && listing.sourceUrls.length > 0) {
+      return [...new Set(listing.sourceUrls)];
+    }
+    return listing.sourceUrl ? [listing.sourceUrl] : [];
   };
   const schemaGraph = {
     '@context': 'https://schema.org',
@@ -83,7 +128,7 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
         name: location.title,
         description: utility ? `${publicCopy(location.description)} ${publicCopy(utility.directoryStatus)}` : publicCopy(location.description),
         isPartOf: { '@id': 'https://potshops.ca/#website' },
-        about: `${location.city}, ${location.province} cannabis directory recovery status`,
+        about: `${location.city}, ${location.province} cannabis directory status`,
       },
       {
         '@type': 'BreadcrumbList',
@@ -111,10 +156,20 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
       <p className="eyebrow">City coverage status</p>
       <h1>{publicTitle}</h1>
       <p className="lede">{coverageSummary}</p>
+      {location.slug === 'kahnawake' && primaryListing ? (
+        <section className="card notice" aria-label="Kahnawake primary source profile">
+          <h2>Primary mapped profile for Kahnawake</h2>
+          <p className="meta">
+            This page is intentionally sourced-only today and maps to one local evidence record: <Link href={`/listings/${primaryListing.slug}`}>{primaryListing.name}</Link>.
+            Potshops does not treat this as a confirmed live storefront until a current public-source verification is attached.
+          </p>
+          <p><Link className="button secondary" href={`/listings/${primaryListing.slug}`} data-event="internal_link_click" data-cta-location="kahnawake_primary_listing">Open the profile evidence</Link></p>
+        </section>
+      ) : null}
       <section className="card location-summary-card" aria-label={`${location.city} coverage summary`}>
         <div>
           <p className="eyebrow">Before relying on this page</p>
-          <h2>{primaryListing ? `${primaryListing.name}: source status at a glance` : `${location.city}: verification status at a glance`}</h2>
+          <h2>{primaryListing ? `${primaryListing.name}: profile evidence at a glance` : `${location.city}: directory evidence at a glance`}</h2>
           <p>{safeLocationDescription}</p>
         </div>
         <div className="location-status-grid">
@@ -130,6 +185,10 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
             <strong>{historicalSourceCount}</strong>
             <span>historical-source profiles that need fresh public confirmation before stronger local claims</span>
           </div>
+          <div className="mini-card">
+            <strong>{regulatorBackboneCount}</strong>
+            <span>regulator-backed store records used as primary backbone rows</span>
+          </div>
         </div>
       </section>
       <div className="split">
@@ -139,7 +198,7 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
           <p className="meta">Potshops uses search demand only to decide which existing pages need clearer public-source notes. It does not turn search interest into a claim that a business is operating, licensed, stocked, open, or available for ordering.</p>
         </section>
         <aside className="notice">
-          <h3>{utility ? `${location.city} directory status` : 'Verification needed'}</h3>
+          <h3>{utility ? `${location.city} directory status` : 'Directory status in progress'}</h3>
           <p>{utility ? publicCopy(utility.directoryStatus) : 'Potshops needs source-backed store names, addresses, and context before publishing stronger local directory claims.'}</p>
         </aside>
       </div>
@@ -192,6 +251,10 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
                 <strong>{historicalSourceCount}</strong>
                 <span>historical-source rows that need fresh public confirmation before stronger city claims</span>
               </div>
+              <div className="mini-card">
+                <strong>{regulatorBackboneCount}</strong>
+                <span>regulator-backed records in this city page set</span>
+              </div>
             </div>
             {relatedListings.length > 0 ? (
               <div className="profile-grid">
@@ -203,10 +266,31 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
                     {listing.sourceName && (
                       <p>
                         Source note:{' '}
-                        {listing.sourceUrl ? (
-                          <a href={listing.sourceUrl} rel="nofollow noreferrer" target="_blank">{listing.sourceName}</a>
+                        {getSourceLinks(listing).length > 0 ? (
+                          <a href={getSourceLinks(listing)[0]} rel="nofollow noopener noreferrer" target="_blank">{listing.sourceName}</a>
                         ) : listing.sourceName}
                       </p>
+                    )}
+                    {listing.sourceName && getSourceLinks(listing).length > 1 && (
+                      <div className="source-links-list">
+                        <strong>Additional source URLs:</strong>
+                        <ul className="clean">
+                          {getSourceLinks(listing).slice(1).map((sourceUrl) => (
+                            <li key={sourceUrl}>
+                              <a href={sourceUrl} rel="nofollow noopener noreferrer" target="_blank">{sourceUrl}</a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {listing.website && (
+                      <p>
+                        <strong>Website from research:</strong>{' '}
+                        <a href={listing.website} rel="nofollow noopener noreferrer" target="_blank">{listing.website}</a>
+                      </p>
+                    )}
+                    {!listing.website && (
+                      <p><strong>Business webpage:</strong> Not confirmed by this source-backed record.</p>
                     )}
                     {listing.sourceNote && <p className="source-excerpt">{listing.sourceNote}</p>}
                     <dl className="profile-source-facts">
@@ -216,6 +300,10 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
                           <dd>{fact.value}</dd>
                         </div>
                       ))}
+                      <div>
+                        <dt>Store backbone</dt>
+                        <dd>{isRegulatorBackedStore(listing) ? 'Regulator-backed active record' : 'Public-source context only'}</dd>
+                      </div>
                     </dl>
                     <p className="profile-card-actions">
                       <Link href={`/listings/${listing.slug}`} data-event="internal_link_click" data-cta-location="location_profile_card">View listing evidence</Link>
@@ -225,7 +313,7 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
                 ))}
               </div>
             ) : (
-              <p>No listing seeds have been mapped to this city yet.</p>
+              <p>This city page is currently a compact source-backed directory utility with no mapped profile cards yet.</p>
             )}
           </section>
 
@@ -240,7 +328,7 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
                 ))}
               </ul>
             ) : (
-              <p>No listing seeds have been mapped to this city yet.</p>
+              <p>This city page is currently a compact source-backed directory utility with no mapped profile links yet.</p>
             )}
             {relatedCategories.length > 0 && (
               <div className="related-hub-row" aria-label={`${location.city} related category hubs`}>

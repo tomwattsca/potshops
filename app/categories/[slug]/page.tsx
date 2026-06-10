@@ -1,20 +1,72 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getCategory, listingSeeds, priorityCategories, priorityLocations } from '../../data/directory';
+import { notFound } from 'next/navigation';
+import { getCategory, isRegulatorBackedStore, listingSeeds, priorityCategories, priorityLocations } from '../../data/directory';
+
+export const dynamicParams = false;
 
 export function generateStaticParams() { return priorityCategories.map((category) => ({ slug: category.slug })); }
+
+function publicCategoryCopy(copy: string) {
+  return copy
+    .replace(/Search Console rows?/gi, 'recent search signals')
+    .replace(/Search Console impressions?/gi, 'recent search visibility')
+    .replace(/Search Console/gi, 'search')
+    .replace(/GSC rows?/gi, 'recent search signals')
+    .replace(/GSC visibility/gi, 'recent search visibility')
+    .replace(/GSC page data/gi, 'recent search data')
+    .replace(/GA4 rows?/gi, 'analytics signals')
+    .replace(/final-data rows?/gi, 'search signals')
+    .replace(/low-row/gi, 'limited')
+    .replace(/legacy location-page impressions?/gi, 'older location-page discovery signals')
+    .replace(/legacy location-page/gi, 'older location page')
+    .replace(/legacy URLs?/gi, 'older directory paths')
+    .replace(/legacy listing/gi, 'historical listing')
+    .replace(/legacy profile/gi, 'historical profile')
+    .replace(/legacy/gi, 'older')
+    .replace(/historical-source/gi, 'older public-source')
+    .replace(/source-backed recovery page/gi, 'source-backed city page')
+    .replace(/recovery page/gi, 'directory page')
+    .replace(/legacy URL recovery/gi, 'older directory links')
+    .replace(/profile recovery/gi, 'profile context')
+    .replace(/recovery profile/gi, 'source-backed profile')
+    .replace(/source-backed rebuild work/gi, 'public-source notes')
+    .replace(/rebuild target/gi, 'directory context page');
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
   const category = getCategory(resolvedParams.slug);
   if (!category) return { title: 'Category not found' };
-  return { title: category.title, description: `${category.description} ${category.gscEvidence}`, alternates: { canonical: `/categories/${category.slug}` } };
+  const description = `${publicCategoryCopy(category.description)} ${publicCategoryCopy(category.gscEvidence)}`;
+  const canonical = `/categories/${category.slug}`;
+  const url = `https://potshops.ca${canonical}`;
+  const categoryListings = listingSeeds
+    .filter((listing) => listing.categories?.includes(category.slug))
+    .sort((a, b) => b.gscImpressions - a.gscImpressions);
+  const shouldIndex = categoryListings.some((listing) => isRegulatorBackedStore(listing));
+  return {
+    title: category.title,
+    description,
+    alternates: { canonical },
+    openGraph: {
+      title: category.title,
+      description,
+      url,
+      siteName: 'Potshops.ca',
+      type: 'website',
+    },
+    robots: {
+      index: shouldIndex,
+      follow: true,
+    },
+  };
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
   const category = getCategory(resolvedParams.slug);
-  if (!category) return <main><h1>Category not found</h1></main>;
+  if (!category) notFound();
   const categoryListings = listingSeeds
     .filter((listing) => listing.categories?.includes(category.slug))
     .sort((a, b) => b.gscImpressions - a.gscImpressions);
@@ -25,6 +77,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   const sourceBackedCount = categoryListings.filter((listing) => listing.sourceName).length;
   const currentSourceCount = categoryListings.filter((listing) => listing.verificationStatus === 'current_source').length;
   const historicalSourceCount = categoryListings.filter((listing) => listing.verificationStatus === 'historical_source').length;
+  const regulatorBackboneCount = categoryListings.filter((listing) => isRegulatorBackedStore(listing)).length;
   const statusLabel = (status?: string) => {
     if (status === 'current_source') return 'Official address-context source';
     if (status === 'historical_source') return 'Past public-source context';
@@ -42,26 +95,16 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   };
   const sourceSummary = (note?: string) => {
     if (!note) return 'Open the profile for source notes and current verification limits.';
-    const firstSentence = note.includes('. ') ? `${note.split('. ')[0]}.` : note;
+    const firstSentence = publicCategoryCopy(note.includes('. ') ? `${note.split('. ')[0]}.` : note);
     return firstSentence.length > 185 ? `${firstSentence.slice(0, 182)}…` : firstSentence;
   };
-  const publicLocationDescription = (description: string) => description
-    .replace(/Search Console rows?/gi, 'recent search signals')
-    .replace(/Search Console impressions?/gi, 'recent search visibility')
-    .replace(/Search Console/gi, 'search')
-    .replace(/legacy location-page impressions?/gi, 'older location-page discovery signals')
-    .replace(/legacy location-page/gi, 'older location page')
-    .replace(/legacy URLs?/gi, 'older directory paths')
-    .replace(/legacy listing/gi, 'historical listing')
-    .replace(/legacy profile/gi, 'historical profile')
-    .replace(/historical-source/gi, 'older public-source')
-    .replace(/source-backed recovery page/gi, 'source-backed city page')
-    .replace(/recovery page/gi, 'directory page')
-    .replace(/legacy URL recovery/gi, 'older directory links')
-    .replace(/profile recovery/gi, 'profile context')
-    .replace(/recovery profile/gi, 'source-backed profile')
-    .replace(/source-backed rebuild work/gi, 'public-source notes')
-    .replace(/rebuild target/gi, 'directory context page')
+  const getSourceLinks = (listing: NonNullable<(typeof visibleListings)[number]>) => {
+    if (listing.sourceUrls && listing.sourceUrls.length > 0) {
+      return [...new Set(listing.sourceUrls)];
+    }
+    return listing.sourceUrl ? [listing.sourceUrl] : [];
+  };
+  const publicLocationDescription = (description: string) => publicCategoryCopy(description)
     .replace(/source-backed Tribal ReLeaf profile/gi, 'public-source Tribal ReLeaf profile')
     .replace(/source-backed Mr\. Green’s source-backed profile/gi, 'public-source Mr. Green’s profile')
     .replace(/source-backed Mr\. Green's source-backed profile/gi, "public-source Mr. Green's profile");
@@ -73,7 +116,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         '@id': `https://potshops.ca/categories/${category.slug}#webpage`,
         url: `https://potshops.ca/categories/${category.slug}`,
         name: category.title,
-        description: category.description,
+        description: publicCategoryCopy(category.description),
         isPartOf: { '@id': 'https://potshops.ca/#website' },
       },
       {
@@ -101,7 +144,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <p className="eyebrow">Directory category</p>
       <h1>{category.title}</h1>
-      <p className="lede">{category.description}</p>
+      <p className="lede">{publicCategoryCopy(category.description)}</p>
       <p className="cta-row category-hero-actions">
         <Link className="button" href="#category-cities" data-event="internal_link_click" data-cta-location="category_hero_cities">Browse city pages</Link>
         <Link className="button secondary" href="#category-profiles" data-event="internal_link_click" data-cta-location="category_hero_profiles">View profiles with source notes</Link>
@@ -111,7 +154,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         <div>
           <p className="eyebrow">Directory coverage at a glance</p>
           <h2>Use this page to find sourced profiles, not live store guarantees</h2>
-          <p>{category.gscEvidence}</p>
+          <p>{publicCategoryCopy(category.gscEvidence)}</p>
         </div>
         <div className="listing-proof-grid" aria-label={`${category.title} coverage summary`}>
           <div className="mini-card">
@@ -120,7 +163,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           </div>
           <div className="mini-card">
             <strong>{categoryListings.length.toLocaleString()} profile links</strong>
-            <span>{sourceBackedCount.toLocaleString()} profiles include public-source notes: {currentSourceCount.toLocaleString()} have official address context and {historicalSourceCount.toLocaleString()} rely on older public sources.</span>
+            <span>{sourceBackedCount.toLocaleString()} profiles include public-source notes: {currentSourceCount.toLocaleString()} have official address context, {historicalSourceCount.toLocaleString()} rely on older public sources, and {regulatorBackboneCount.toLocaleString()} are regulator-backed.</span>
           </div>
           <div className="mini-card">
             <strong>{linkedLocations.length.toLocaleString()} city pages</strong>
@@ -138,8 +181,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           <p className="category-shared-limit"><strong>Shared source limit:</strong> profile cards show public-source context only. Current hours, menus, stock, ordering, delivery, prices, ratings, licensing, availability, and storefront operation still need independent confirmation.</p>
         </div>
         <div className="profile-grid category-profile-grid">
-          {visibleListings.map((listing) => (
-            <article className="profile-card category-source-card" key={listing.slug}>
+          {visibleListings.map((listing) => {
+            const sourceLinks = getSourceLinks(listing);
+            return (
+              <article className="profile-card category-source-card" key={listing.slug}>
               <p className={`status-badge ${listing.verificationStatus === 'current_source' ? 'status-current' : 'status-historical'}`}>{statusLabel(listing.verificationStatus)}</p>
               <h3><Link href={`/listings/${listing.slug}`}>{listing.name}</Link></h3>
               <dl className="category-profile-facts">
@@ -147,25 +192,60 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                   <dt>Location context</dt>
                   <dd>{listing.city && listing.province ? `${listing.city}, ${listing.province}` : listing.locationHint}</dd>
                 </div>
-                <div>
-                  <dt>Source</dt>
-                  <dd>{listing.sourceName || 'Verification still queued'}</dd>
+                  <div>
+                    <dt>Source</dt>
+                    <dd>
+                      {listing.sourceName ? (
+                      sourceLinks.length > 0 ? (
+                        <a href={sourceLinks[0]} rel="nofollow noopener noreferrer" target="_blank">{listing.sourceName}</a>
+                      ) : (
+                        listing.sourceName
+                      )
+                    ) : (
+                      'Verification still queued'
+                    )}
+                  </dd>
                 </div>
+                {listing.sourceName && sourceLinks.length > 1 && (
+                  <div>
+                    <dt>Additional source URLs</dt>
+                    <dd>
+                      <ul className="clean">
+                        {sourceLinks.slice(1).map((sourceUrl) => (
+                          <li key={sourceUrl}>
+                            <a href={sourceUrl} rel="nofollow noopener noreferrer" target="_blank">{sourceUrl}</a>
+                          </li>
+                        ))}
+                      </ul>
+                    </dd>
+                  </div>
+                )}
+                {listing.website && (
+                  <div>
+                    <dt>Website from research</dt>
+                    <dd><a href={listing.website} rel="nofollow noopener noreferrer" target="_blank">{listing.website}</a></dd>
+                  </div>
+                )}
                 <div>
                   <dt>Directory role</dt>
                   <dd>{directoryRole(listing.gscImpressions)}</dd>
                 </div>
-                <div className="category-current-limit">
-                  <dt>Live details</dt>
-                  <dd>{currentDetailsLimit(listing.verificationStatus)}</dd>
-                </div>
-              </dl>
+                  <div className="category-current-limit">
+                    <dt>Live details</dt>
+                    <dd>{currentDetailsLimit(listing.verificationStatus)}</dd>
+                  </div>
+                  <div>
+                    <dt>Store backbone</dt>
+                    <dd>{isRegulatorBackedStore(listing) ? 'Regulator-backed profile' : 'Public-source context only'}</dd>
+                  </div>
+                </dl>
               <p className="source-excerpt category-source-summary">{sourceSummary(listing.sourceNote)}</p>
               <p className="profile-card-actions category-profile-actions">
                 <Link className="profile-action-primary" href={`/listings/${listing.slug}`} data-event="internal_link_click" data-cta-location="category_profile_card">View profile</Link>
               </p>
             </article>
-          ))}
+          );
+          })}
         </div>
       </section>
 

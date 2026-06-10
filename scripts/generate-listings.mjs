@@ -19,6 +19,14 @@ const FORBIDDEN_COMMERCIAL_TERMS = [
   /\bin stock\b/i,
 ];
 
+const REGULATOR_SOURCE_MARKERS = [
+  /aglc/i,
+  /cannabis_retail_stores_in_bc/i,
+  /cannabis\s+licensee\s+search/i,
+  /status-current-cannabis-retail-store-applications/i,
+  /opengovca/i,
+];
+
 function readRows() {
   if (!fs.existsSync(INPUT)) {
     throw new Error(`Missing import file: ${path.relative(ROOT, INPUT)}`);
@@ -30,6 +38,24 @@ function readRows() {
 
 function cleanString(value) {
   return typeof value === 'string' ? value.trim() : '';
+}
+
+function getStoreBackboneSource({
+  verificationStatus,
+  sourceName,
+  sourceUrl,
+  sourceUrls,
+}) {
+  if (verificationStatus !== 'current_source' && verificationStatus !== 'historical_source') {
+    return 'needs_verification';
+  }
+
+  const haystack = `${sourceName || ''} ${sourceUrl || ''} ${(Array.isArray(sourceUrls) ? sourceUrls.join(' ') : '')}`.toLowerCase();
+  if (REGULATOR_SOURCE_MARKERS.some((marker) => marker.test(haystack))) {
+    return 'regulator';
+  }
+
+  return 'public_source';
 }
 
 function assertUrl(url, field, errors) {
@@ -81,15 +107,27 @@ function validateRow(row, index, seen) {
   const postalCode = cleanString(row.postal_code);
   const phone = cleanString(row.phone);
   const lastVerified = cleanString(row.last_verified_at);
+  const observedAt = cleanString(row.observed_at);
+  const confidence = cleanString(row.confidence);
+  const missingReasons = Array.isArray(row.missing_reasons) ? row.missing_reasons.map(cleanString).filter(Boolean) : [];
   if (lastVerified) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(lastVerified)) {
       errors.push(`${label}: last_verified_at must use YYYY-MM-DD`);
     } else {
       const parsedDate = new Date(`${lastVerified}T00:00:00.000Z`);
       if (Number.isNaN(parsedDate.getTime()) || parsedDate.toISOString().slice(0, 10) !== lastVerified) {
-        errors.push(`${label}: last_verified_at must be a valid calendar date`);
+      errors.push(`${label}: last_verified_at must be a valid calendar date`);
       }
     }
+  }
+  if (observedAt) {
+    const parsedObservedAt = new Date(observedAt);
+    if (Number.isNaN(parsedObservedAt.getTime())) {
+      errors.push(`${label}: observed_at must be a valid timestamp`);
+    }
+  }
+  if (confidence && !['high', 'medium', 'low'].includes(confidence)) {
+    errors.push(`${label}: confidence must be high, medium, or low`);
   }
 
   if (status !== 'needs_verification' && sourceUrls.length === 0) {
@@ -128,6 +166,12 @@ function validateRow(row, index, seen) {
   if (!Number.isFinite(averagePosition) || averagePosition < 0) errors.push(`${label}: average_position must be a non-negative number`);
 
   const sourceUrl = sourceUrls[0] || undefined;
+  const storeBackbone = getStoreBackboneSource({
+    verificationStatus: status,
+    sourceName,
+    sourceUrl,
+    sourceUrls,
+  });
   const appRow = {
     slug,
     name,
@@ -142,11 +186,17 @@ function validateRow(row, index, seen) {
     ...(postalCode ? { postalCode } : {}),
     ...(phone ? { phone } : {}),
     verificationStatus: status,
+    ...(website ? { website } : {}),
     ...(categories.length > 0 ? { categories } : {}),
+    ...(sourceUrls.length > 0 ? { sourceUrls } : {}),
     ...(lastVerified ? { lastVerified } : {}),
+    ...(observedAt ? { observedAt } : {}),
+    ...(confidence ? { confidence } : {}),
+    ...(missingReasons.length > 0 ? { missingReasons } : {}),
     ...(sourceName ? { sourceName } : {}),
     ...(sourceUrl ? { sourceUrl } : {}),
     ...(sourceNote ? { sourceNote } : {}),
+    ...(storeBackbone ? { storeBackbone } : {}),
   };
 
   return { errors, warnings, appRow };

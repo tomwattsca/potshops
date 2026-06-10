@@ -159,24 +159,24 @@
   {
     "slug": "farm-the-original-farmacy-downtown",
     "name": "Farm: The Original Farmacy Downtown",
-    "status": "historical_source",
+    "status": "current_source",
     "address": "1402 Douglas St",
     "city": "Victoria",
     "province": "BC",
     "postal_code": "V8W 2G1",
-    "website": "",
+    "website": "https://originalfarm.com",
     "phone": "",
     "categories": [
       "dispensary"
     ],
     "source_urls": [
+      "https://www2.gov.bc.ca/assets/gov/employment-business-and-economic-development/business-management/liquor-regulation-licensing/reports/cannabis_retail_stores_in_bc.xlsx",
       "https://the-original-farm.victoriadirect.ca/",
-      "https://www.leafly.ca/cannabis-store/farm-the-original-farmacy-victoria-johnson",
-      "https://trustedbud.com/biz/14710-farm-the-original-farmacy-coming-soon-victoria-british-columbia"
+      "https://originalfarm.com"
     ],
-    "source_name": "VictoriaDirect, Leafly, and TrustedBud public directory pages",
-    "source_note": "Public third-party directory pages associate The Original Farm / Farm - The Original Farmacy with 1402 Douglas St, Victoria, BC V8W 2G1. Leafly data was visibly stale, so treat operating details as historical until independently reverified.",
-    "last_verified_at": "2026-05-07",
+    "source_name": "BC legal cannabis retailers spreadsheet and Original Farm public sources",
+    "source_note": "BC public legal-retailer spreadsheet lists THE ORIGINAL FARM DOWNTOWN LTD. as The Original FARM at 1402 Douglas St, Victoria, BC V8W2G1; Potshops records address context only, with no hours, menu, stock, ordering, or service claims.",
+    "last_verified_at": "2026-06-10",
     "legacy_path": "/listing/farm-the-original-farmacy-downtown/",
     "location_hint": "Victoria, BC",
     "gsc_impressions": 1974,
@@ -437,7 +437,7 @@
       "in-town-delivery"
     ],
     "source_urls": [
-      "https://www.cbc.ca/news/canada/calgary/remedy-ice-cream-cannabis-1.4059691"
+      "https://www.cbc.ca"
     ],
     "source_name": "CBC Calgary reporting",
     "source_note": "CBC reporting identified Remedy Ice Cream as a Calgary-made cannabis-infused ice cream operation in 2017 and noted legality concerns at the time. Potshops keeps this row historical and does not add contact, availability, or commerce claims.",
@@ -447,6 +447,188 @@
     "gsc_impressions": 64,
     "gsc_clicks": 8,
     "average_position": 6.3,
+    "commercial_claims": []
+  },
+  {
+    "slug": "canna-cabana-17-ave-sw-calgary",
+    "name": "Canna Cabana – 17 Avenue SW",
+    "status": "current_source",
+    "address": "10-5308 17 AVE SW",
+    "city": "Calgary",
+    "province": "AB",
+    "postal_code": "T3E 6S6",
+    "website": "",
+    "phone": "(403) 686-0630",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1"
+    ],
+    "source_name": "AGLC Cannabis Licensee Search",
+    "source_note": "AGLC licensee search includes this Calgary location with address, phone, and online-sales flag marked Yes; Potshops records it as official address-context data only and does not assert hours, ordering, stock, availability, or service details.",
+    "last_verified_at": "2026-06-03",
+    "legacy_path": "/listing/canna-cabana-17-ave-sw-calgary/",
+    "location_hint": "Calgary, AB",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "co-op-cannabis-hamptons-calgary",
+    "name": "Co-op Cannabis Hamptons",
+    "status": "current_source",
+    "address": "614-1000 HAMPTONS DR NW",
+    "city": "Calgary",
+    "province": "AB",
+    "postal_code": "T3A 6A7",
+    "website": "",
+    "phone": "(403) 455-3132",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1"
+    ],
+    "source_name": "AGLC Cannabis Licensee Search",
+    "source_note": "AGLC licensee search includes this Calgary location with address, phone, and online-sales flag marked Yes; Potshops records it as official address-context data only and does not assert hours, ordering, stock, availability, or service details.",
+    "last_verified_at": "2026-06-03",
+    "legacy_path": "/listing/co-op-cannabis-hamptons-calgary/",
+    "location_hint": "Calgary, AB",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "bud-mart-61-st-se-calgary",
+    "name": "Bud Mart 61 St SE",
+    "status": "current_source",
+    "address": "1-1704 61 ST SE",
+    "city": "Calgary",
+    "province": "AB",
+    "postal_code": "T2A 4V5",
+    "website": "",
+    "phone": "(403) 899-6313",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1"
+    ],
+    "source_name": "AGLC Cannabis Licensee Search",
+    "source_note": "AGLC licensee search includes this Calgary location with address, phone, and online-sales flag marked Yes; Potshops records it as official address-context data only and does not assert hours, ordering, stock, availability, or service details.",
+    "last_verified_at": "2026-06-03",
+    "legacy_path": "/listing/bud-mart-61-st-se-calgary/",
+    "location_hint": "Calgary, AB",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "calgary-co-op-cannabis-seton",
+    "name": "Calgary Co-op Cannabis Seton",
+    "status": "current_source",
+    "address": "3945 MARKET ST SE",
+    "city": "Calgary",
+    "province": "AB",
+    "postal_code": "T3M 2W9",
+    "website": "",
+    "phone": "(587) 391-0880",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1"
+    ],
+    "source_name": "AGLC Cannabis Licensee Search",
+    "source_note": "AGLC licensee search includes this Calgary location with address, phone, and online-sales flag marked Yes; Potshops records it as official address-context data only and does not assert hours, ordering, stock, availability, or service details.",
+    "last_verified_at": "2026-06-03",
+    "legacy_path": "/listing/calgary-co-op-cannabis-seton/",
+    "location_hint": "Calgary, AB",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "canna-cabana-19-st-nw-calgary",
+    "name": "Canna Cabana 19 St NW",
+    "status": "current_source",
+    "address": "1535 19 ST NW",
+    "city": "Calgary",
+    "province": "AB",
+    "postal_code": "T2N 2K2",
+    "website": "",
+    "phone": "(587) 392-4720",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1"
+    ],
+    "source_name": "AGLC Cannabis Licensee Search",
+    "source_note": "AGLC licensee search includes this Calgary location with address, phone, and online-sales flag marked Yes; Potshops records it as official address-context data only and does not assert hours, ordering, stock, availability, or service details.",
+    "last_verified_at": "2026-06-03",
+    "legacy_path": "/listing/canna-cabana-19-st-nw-calgary/",
+    "location_hint": "Calgary, AB",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "co-op-cannabis-richmond-road-calgary",
+    "name": "Co-op Cannabis Richmond Road",
+    "status": "current_source",
+    "address": "4938 RICHMOND RD SW",
+    "city": "Calgary",
+    "province": "AB",
+    "postal_code": "T3E 6K4",
+    "website": "",
+    "phone": "(403) 299-4026",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1"
+    ],
+    "source_name": "AGLC Cannabis Licensee Search",
+    "source_note": "AGLC licensee search includes this Calgary location with address, phone, and online-sales flag marked Yes; Potshops records it as official address-context data only and does not assert hours, ordering, stock, availability, or service details.",
+    "last_verified_at": "2026-06-03",
+    "legacy_path": "/listing/co-op-cannabis-richmond-road-calgary/",
+    "location_hint": "Calgary, AB",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "co-op-cannabis-crowfoot-calgary",
+    "name": "Co-op Cannabis Crowfoot",
+    "status": "current_source",
+    "address": "41 CROWFOOT WAY NW",
+    "city": "Calgary",
+    "province": "AB",
+    "postal_code": "T3G 2L4",
+    "website": "",
+    "phone": "(403) 453-9127",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://aglc.ca/cannabis/retail-cannabis/cannabis-licensee-search?type=1"
+    ],
+    "source_name": "AGLC Cannabis Licensee Search",
+    "source_note": "AGLC licensee search includes this Calgary location with address, phone, and online-sales flag marked Yes; Potshops records it as official address-context data only and does not assert hours, ordering, stock, availability, or service details.",
+    "last_verified_at": "2026-06-03",
+    "legacy_path": "/listing/co-op-cannabis-crowfoot-calgary/",
+    "location_hint": "Calgary, AB",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
     "commercial_claims": []
   },
   {
@@ -980,7 +1162,7 @@
     "city": "Kingston",
     "province": "ON",
     "postal_code": "K7L 1E5",
-    "website": "https://kingstongiggles.ca",
+    "website": "",
     "phone": "",
     "categories": [
       "dispensary"
@@ -2556,6 +2738,551 @@
     "source_name": "AGCO public cannabis retail application status table",
     "source_note": "AGCO public status table lists Toke House Thunder Bay Mall in Thunder Bay with an address at 1105 Arthur Street West Unit 2 and an Authorized to Open status; Potshops records official address context only, with no hours, menu, stock, ordering, or service claims.",
     "last_verified_at": "2026-05-12",
+    "commercial_claims": []
+  },
+  {
+    "slug": "hbb-medical-inc-dartmouth",
+    "name": "HBB Medical Inc. Dartmouth",
+    "status": "historical_source",
+    "address": "73 Tacoma Drive",
+    "city": "Dartmouth",
+    "province": "NS",
+    "postal_code": "B2W 3Y6",
+    "website": "",
+    "phone": "(902) 481-2883",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://weedsfarm.com/store/hbb-medical-inc-dartmouth/"
+    ],
+    "source_name": "WeedsFarm public directory",
+    "source_note": "Public directory page lists HBB Medical Inc in Dartmouth with address and phone context. Potshops uses this as historical directory evidence and not as live operating proof.",
+    "last_verified_at": "2026-06-04",
+    "legacy_path": "/listing/hbb-medical-inc-dartmouth/",
+    "location_hint": "Dartmouth, NS",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "coastal-cannapy",
+    "name": "Coastal Cannapy",
+    "status": "historical_source",
+    "address": "2411 Agricola Street",
+    "city": "Halifax",
+    "province": "NS",
+    "postal_code": "B3K 4C1",
+    "website": "",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.allbiz.ca/coastal-cannapy-delivery-service"
+    ],
+    "source_name": "AllBiz business directory",
+    "source_note": "AllBiz business page lists Coastal Cannapy at 2411 Agricola Street in Halifax. Potshops treats this as historical directory context and does not treat it as a current operations claim.",
+    "last_verified_at": "2026-06-04",
+    "legacy_path": "/listing/coastal-cannapy/",
+    "location_hint": "Halifax, NS",
+    "gsc_impressions": 0,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "cafe-cannabis-and-fine-edibles-harbord-st",
+    "name": "CAFE Cannabis and Fine Edibles Harbord Street",
+    "status": "historical_source",
+    "address": "104 Harbord St",
+    "city": "Toronto",
+    "province": "ON",
+    "postal_code": "M5S 1G6",
+    "website": "",
+    "phone": "1-800-551-2965",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.iamcafe.com/locations/104-harbord-st/",
+      "https://torontolife.com/city/total-normalization-cannabis/"
+    ],
+    "source_name": "CAFE location page and Toronto Life public reporting",
+    "source_note": "CAFE public location page identifies the Harbord Street profile with Toronto address and phone context, and Toronto Life reported on the Harbord CAFE location in 2018. Potshops records this as source-backed legacy context only.",
+    "last_verified_at": "2026-06-09",
+    "legacy_path": "/listing/cafe-cannabis-and-fine-edibles-harbord-st/",
+    "location_hint": "Toronto, ON",
+    "gsc_impressions": 1263,
+    "gsc_clicks": 0,
+    "average_position": 48.94220110847189,
+    "commercial_claims": []
+  },
+  {
+    "slug": "cafe-cannabis-and-fine-edibles-fort-york",
+    "name": "CAFE Cannabis and Fine Edibles Fort York",
+    "status": "historical_source",
+    "address": "66 Fort York Blvd",
+    "city": "Toronto",
+    "province": "ON",
+    "postal_code": "M5V 4A6",
+    "website": "",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://humidify.co/listing/cafe-cannabis-and-fine-edibles/",
+      "https://www.iamcafe.com/haze-legend-of-cafe-2025/"
+    ],
+    "source_name": "Humidify public directory and CAFE historical article",
+    "source_note": "Public directory evidence links CAFE Cannabis and Fine Edibles to 66 Fort York Blvd, and CAFE's own historical article describes the Fort York location as part of its early Toronto story. Potshops records identity and address context only.",
+    "last_verified_at": "2026-06-09",
+    "legacy_path": "/listing/cafe-cannabis-and-fine-edibles-fort-york/",
+    "location_hint": "Toronto, ON",
+    "gsc_impressions": 1154,
+    "gsc_clicks": 0,
+    "average_position": 33.73310225303293,
+    "commercial_claims": []
+  },
+  {
+    "slug": "pineapple-express-dispensary",
+    "name": "Pineapple Express Dispensary",
+    "status": "historical_source",
+    "address": "608 Esquimalt Rd",
+    "city": "Victoria",
+    "province": "BC",
+    "postal_code": "V9A 3L4",
+    "website": "",
+    "phone": "(778) 265-5250",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://cannabis.net/dispensaries/pineapple-express-dispensary",
+      "https://weedhub.ca/dispensaries/pineapple-express-dispensary-victoria/"
+    ],
+    "source_name": "Cannabis.net and WeedHub public directory pages",
+    "source_note": "Public directory pages identify Pineapple Express Dispensary in Victoria with Esquimalt Road address and phone context. Potshops uses this as historical directory evidence only.",
+    "last_verified_at": "2026-06-09",
+    "legacy_path": "/listing/pineapple-express-dispensary/",
+    "location_hint": "Victoria, BC",
+    "gsc_impressions": 865,
+    "gsc_clicks": 1,
+    "average_position": 20.44277456647399,
+    "commercial_claims": []
+  },
+  {
+    "slug": "1tonamara",
+    "name": "1Tonamara",
+    "status": "historical_source",
+    "address": "202 Spadina Ave",
+    "city": "Toronto",
+    "province": "ON",
+    "postal_code": "M5T 2C2",
+    "website": "",
+    "phone": "647-544-5652",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.1tonamara.com/catalog/",
+      "https://okanaganedge.net/2018/10/17/shops-play-waiting-game/"
+    ],
+    "source_name": "1Tonamara public website and Canadian Press reporting",
+    "source_note": "Public website and Canadian Press reporting identify 1Tonamara as a Toronto cannabis boutique/store associated with Spadina Avenue and Fort York Boulevard. Potshops records the Spadina legacy profile as historical context only.",
+    "last_verified_at": "2026-06-09",
+    "legacy_path": "/listing/1tonamara/",
+    "location_hint": "Toronto, ON",
+    "gsc_impressions": 836,
+    "gsc_clicks": 1,
+    "average_position": 16.0933014354067,
+    "commercial_claims": []
+  },
+  {
+    "slug": "peacemaker-420",
+    "name": "Peacemaker 420",
+    "status": "historical_source",
+    "address": "364 York Road",
+    "city": "Tyendinaga Mohawk Territory",
+    "province": "ON",
+    "postal_code": "K0K 1X0",
+    "website": "",
+    "phone": "613-243-8857",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.allbud.com/dispensaries/ontario/ontario-tyendinaga-mohawk-territory/peacemaker420-2/edible",
+      "https://shatterizer.ca/blogs/news/welcome-to-peacemaker-420"
+    ],
+    "source_name": "AllBud public directory and Shatterizer profile",
+    "source_note": "Public pages identify Peacemaker 420 with York Road context in Tyendinaga Mohawk Territory. Potshops records address and identity evidence only, not active service details.",
+    "last_verified_at": "2026-06-09",
+    "legacy_path": "/listing/peacemaker-420/",
+    "location_hint": "Tyendinaga Mohawk Territory, ON",
+    "gsc_impressions": 714,
+    "gsc_clicks": 3,
+    "average_position": 11.376750700280112,
+    "commercial_claims": []
+  },
+  {
+    "slug": "the-altered-native",
+    "name": "The Altered Native",
+    "status": "historical_source",
+    "address": "218 Broadway Ave",
+    "city": "Orangeville",
+    "province": "ON",
+    "postal_code": "L9W 1K4",
+    "website": "",
+    "phone": "(519) 942-2828",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://citizen.on.ca/long-time-proponent-of-legalization-opens-altered-nation-cannabis-in-downtown-orangeville/",
+      "https://www.allbiz.ca/the-altered-native_23-519-942-2828",
+      "https://cannawayz.com/dispensaries/the-altered-native-2"
+    ],
+    "source_name": "Orangeville Citizen reporting and public directory pages",
+    "source_note": "Orangeville Citizen reporting connects The Altered Native/Altered Nation history to cannabis retail context, while public directory evidence supplies Orangeville address context. Potshops treats this as legacy identity evidence.",
+    "last_verified_at": "2026-06-09",
+    "legacy_path": "/listing/the-altered-native/",
+    "location_hint": "Orangeville, ON",
+    "gsc_impressions": 692,
+    "gsc_clicks": 1,
+    "average_position": 20.61416184971098,
+    "commercial_claims": []
+  },
+  {
+    "slug": "the-grass-station",
+    "name": "The Grass Station",
+    "status": "historical_source",
+    "address": "53 Dundas St E, Suite 2",
+    "city": "Waterdown",
+    "province": "ON",
+    "postal_code": "",
+    "website": "",
+    "phone": "1-84-GRASS-420",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.leafly.ca/cannabis-store/grass-station"
+    ],
+    "source_name": "Leafly public directory page",
+    "source_note": "Leafly public directory page identifies Grass Station in Waterdown with Dundas Street East address and phone context. Potshops records this as public-source directory context only.",
+    "last_verified_at": "2026-06-09",
+    "legacy_path": "/listing/the-grass-station/",
+    "location_hint": "Waterdown, ON",
+    "gsc_impressions": 513,
+    "gsc_clicks": 0,
+    "average_position": 40.173489278752434,
+    "commercial_claims": []
+  },
+  {
+    "slug": "nelson-potorium",
+    "name": "The Nelson Potorium",
+    "status": "historical_source",
+    "address": "441 Baker St",
+    "city": "Nelson",
+    "province": "BC",
+    "postal_code": "V1L 4H7",
+    "website": "",
+    "phone": "(250) 352-6612",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.allbiz.ca/nelson-potorium-250-352-6612",
+      "https://ised-isde.canada.ca/cipo/trademark-search/1945055"
+    ],
+    "source_name": "AllBiz directory and Canadian Trademarks Database",
+    "source_note": "AllBiz identifies The Nelson Potorium with Baker Street address and phone context, and the Canadian Trademarks Database links Nelson Potorium Inc. to cannabis-related trademark goods. Potshops records historical profile context only.",
+    "last_verified_at": "2026-06-09",
+    "legacy_path": "/listing/nelson-potorium/",
+    "location_hint": "Nelson, BC",
+    "gsc_impressions": 481,
+    "gsc_clicks": 0,
+    "average_position": 16.23076923076923,
+    "commercial_claims": []
+  },
+  {
+    "slug": "best-online-buds-store-budsandbeyond",
+    "name": "Buds and Beyond",
+    "status": "historical_source",
+    "address": "",
+    "city": "",
+    "province": "",
+    "postal_code": "",
+    "website": "",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.budsandbeyond.cc/"
+    ],
+    "source_name": "Buds and Beyond public website",
+    "source_note": "Public website identifies Buds and Beyond as a Canadian cannabis retail brand. Potshops records only legacy identity context and does not assert service area, availability, or current commercial details.",
+    "last_verified_at": "2026-06-09",
+    "legacy_path": "/listing/best-online-buds-store-budsandbeyond/",
+    "location_hint": "Canada",
+    "gsc_impressions": 418,
+    "gsc_clicks": 2,
+    "average_position": 11.559808612440191,
+    "commercial_claims": []
+  },
+  {
+    "slug": "kushklub",
+    "name": "KushKlub Vancouver",
+    "status": "historical_source",
+    "address": "1735 Commercial Drive",
+    "city": "Vancouver",
+    "province": "BC",
+    "postal_code": "V5N 4A4",
+    "website": "",
+    "phone": "(604) 620-0700",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://content.kushklub.ca/kushklub-vancouver/",
+      "https://www.leafly.ca/cannabis-store/kushklub---vancouver"
+    ],
+    "source_name": "KushKlub Vancouver page and Leafly public directory",
+    "source_note": "KushKlub public page and Leafly directory identify the Vancouver Commercial Drive profile with address and phone context. Potshops records source-backed profile context only.",
+    "last_verified_at": "2026-06-09",
+    "legacy_path": "/listing/kushklub/",
+    "location_hint": "Vancouver, BC",
+    "gsc_impressions": 300,
+    "gsc_clicks": 0,
+    "average_position": 23.323333333333334,
+    "commercial_claims": []
+  },
+  {
+    "slug": "smoke-on-the-water-2",
+    "name": "Smoke on the Water Walpole Island",
+    "status": "historical_source",
+    "address": "1774 River Road North",
+    "city": "Walpole Island",
+    "province": "ON",
+    "postal_code": "",
+    "website": "",
+    "phone": "519-999-5935",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://rezweed.com/dispensary/smoke-on-the-water-568"
+    ],
+    "source_name": "RezWeed public directory page",
+    "source_note": "RezWeed public directory page identifies Smoke on the Water on Walpole Island with River Road North address and phone context. Potshops records this as public directory evidence only.",
+    "last_verified_at": "2026-06-09",
+    "legacy_path": "/listing/smoke-on-the-water-2/",
+    "location_hint": "Walpole Island, ON",
+    "gsc_impressions": 234,
+    "gsc_clicks": 1,
+    "average_position": 14.491452991452991,
+    "commercial_claims": []
+  },
+  {
+    "slug": "the-port-alberni-cannabis-club",
+    "name": "The Port Alberni Cannabis Club",
+    "status": "historical_source",
+    "address": "4824 Bute Street",
+    "city": "Port Alberni",
+    "province": "BC",
+    "postal_code": "V9Y 4X1",
+    "website": "",
+    "phone": "(778) 421-2224",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://humidify.co/listing/the-port-alberni-cannabis-club/",
+      "https://cannawayz.com/shops/the-port-alberni-cannabis-club"
+    ],
+    "source_name": "Humidify and Cannawayz public directory pages",
+    "source_note": "Public directory pages identify The Port Alberni Cannabis Club with Bute Street address and phone context. Potshops records source-backed legacy profile context only.",
+    "last_verified_at": "2026-06-09",
+    "legacy_path": "/listing/the-port-alberni-cannabis-club/",
+    "location_hint": "Port Alberni, BC",
+    "gsc_impressions": 105,
+    "gsc_clicks": 0,
+    "average_position": 30.514285714285716,
+    "commercial_claims": []
+  },
+  {
+    "slug": "grass-roots-medicinal",
+    "name": "Grass Roots Medicinal",
+    "status": "historical_source",
+    "address": "40437 Tantalus Road Unit 11",
+    "city": "Squamish",
+    "province": "BC",
+    "postal_code": "",
+    "website": "",
+    "phone": "(604) 390-3334",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://cannawayz.com/dispensaries/grass-roots-medicinal",
+      "https://www.biv.com/news/economy-law-politics/province-seeking-seize-properties-associated-squamish-cannabis-dispensary-8258658"
+    ],
+    "source_name": "Cannawayz directory page and Business in Vancouver reporting",
+    "source_note": "POT-86 scrape evidence found public-source Grass Roots Medicinal context in Squamish, including a Cannawayz directory address and phone plus Business in Vancouver reporting that the dispensary was forced to shut indefinitely. Potshops records this as historical source context only.",
+    "last_verified_at": "2026-06-10",
+    "observed_at": "2026-06-10T07:25:53.602Z",
+    "confidence": "medium",
+    "missing_reasons": [
+      "Current operation is not confirmed.",
+      "Current licence or regulator evidence is missing.",
+      "Menu, ordering, delivery, stock, hours, and availability are intentionally not promoted."
+    ],
+    "legacy_path": "/listing/grass-roots-medicinal/",
+    "location_hint": "Squamish, BC",
+    "gsc_impressions": 222,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "eggs-canna-nanaimo",
+    "name": "Eggs Canna Nanaimo",
+    "status": "historical_source",
+    "address": "51 Terminal Avenue",
+    "city": "Nanaimo",
+    "province": "BC",
+    "postal_code": "V9R 5C4",
+    "website": "",
+    "phone": "250-754-9864",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://eggscanna.ca/",
+      "https://www.allbud.com/dispensaries/british-columbia/british-columbia-nanaimo/eggs-canna-nanaimo-2"
+    ],
+    "source_name": "Eggs Canna public website and AllBud directory page",
+    "source_note": "POT-86 scrape evidence found the Eggs Canna public website and an AllBud Nanaimo directory record with Terminal Avenue address and phone context. Potshops records the Nanaimo row as historical public-directory context only.",
+    "last_verified_at": "2026-06-10",
+    "observed_at": "2026-06-10T07:25:53.602Z",
+    "confidence": "medium",
+    "missing_reasons": [
+      "The current Eggs Canna website did not confirm a Nanaimo location in the fetched text.",
+      "Current licence or regulator evidence is missing.",
+      "Menu, ordering, delivery, stock, hours, and availability are intentionally not promoted."
+    ],
+    "legacy_path": "/listing/eggs-canna-nanaimo/",
+    "location_hint": "Nanaimo, BC",
+    "gsc_impressions": 215,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "3-kings-medicinal",
+    "name": "3 Kings Medicinal",
+    "status": "historical_source",
+    "address": "",
+    "city": "",
+    "province": "",
+    "postal_code": "",
+    "website": "",
+    "phone": "",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://www.bestmarijuanaguide.com/profile/3-kings-medicinal",
+      "https://weedsfarm.com/store-region/nb/"
+    ],
+    "source_name": "Best Marijuana Guide profile and WeedsFarm regional directory",
+    "source_note": "POT-86 scrape evidence found a public 3 Kings Medicinal profile plus New Brunswick regional directory context. Potshops records this as a source-backed historical profile without address, phone, current operation, or licensing claims.",
+    "last_verified_at": "2026-06-10",
+    "observed_at": "2026-06-10T07:25:53.602Z",
+    "confidence": "low",
+    "missing_reasons": [
+      "Address, phone, and exact city were not confirmed in the fetched source text.",
+      "Current licence or regulator evidence is missing.",
+      "Current operation, menu, ordering, delivery, stock, hours, and availability are intentionally not promoted."
+    ],
+    "legacy_path": "/listing/3-kings-medicinal/",
+    "location_hint": "New Brunswick, Canada",
+    "gsc_impressions": 182,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "777-dispensary",
+    "name": "Mohawk Cannabis Store 777B",
+    "status": "historical_source",
+    "address": "777B Highway 49",
+    "city": "777B",
+    "province": "ON",
+    "postal_code": "K0K 1X0",
+    "website": "",
+    "phone": "613-243-7283",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://rezweed.com/dispensary/mohawk-cannabis-store-777b-557",
+      "https://rezweed.com/dispensaries/all"
+    ],
+    "source_name": "RezWeed public directory pages",
+    "source_note": "POT-86 scrape evidence mapped the old 777 Dispensary demand to RezWeed public directory context for Mohawk Cannabis Store at 777B Highway 49. Potshops records source-backed profile context only.",
+    "last_verified_at": "2026-06-10",
+    "observed_at": "2026-06-10T07:25:53.602Z",
+    "confidence": "medium",
+    "missing_reasons": [
+      "Current licence or regulator evidence is missing.",
+      "The legacy 777 Dispensary slug is mapped conservatively to the public-directory Mohawk Cannabis Store 777B source context.",
+      "Menu, ordering, delivery, stock, hours, and availability are intentionally not promoted."
+    ],
+    "legacy_path": "/listing/777-dispensary/",
+    "location_hint": "777B, ON",
+    "gsc_impressions": 176,
+    "gsc_clicks": 0,
+    "average_position": 0,
+    "commercial_claims": []
+  },
+  {
+    "slug": "mary-janes-2",
+    "name": "Mary Jane's Dispensary Alderville",
+    "status": "historical_source",
+    "address": "8927 Highway 45",
+    "city": "Roseneath",
+    "province": "ON",
+    "postal_code": "K0K 2X0",
+    "website": "",
+    "phone": "(905) 352-9333",
+    "categories": [
+      "dispensary"
+    ],
+    "source_urls": [
+      "https://maryjanes9333.ca/",
+      "https://rezweed.com/dispensary/mary-janes-dispensary-roseneath-260",
+      "https://www.ruralroutes.com/20709.html"
+    ],
+    "source_name": "MaryJane's public website, RezWeed, and Rural Routes directory pages",
+    "source_note": "POT-86 scrape evidence found MaryJane's Alderville public website plus RezWeed and Rural Routes directory pages with Roseneath address and phone context. Potshops records source-backed profile context only.",
+    "last_verified_at": "2026-06-10",
+    "observed_at": "2026-06-10T07:25:53.602Z",
+    "confidence": "medium",
+    "missing_reasons": [
+      "Current licence or regulator evidence is missing.",
+      "Menu, ordering, delivery, stock, hours, and availability are intentionally not promoted.",
+      "Potshops has not independently verified current operating status."
+    ],
+    "legacy_path": "/listing/mary-janes-2/",
+    "location_hint": "Roseneath, ON",
+    "gsc_impressions": 155,
+    "gsc_clicks": 0,
+    "average_position": 0,
     "commercial_claims": []
   }
 ]

@@ -22,6 +22,21 @@ const nextConfig: NextConfig = {
         destination: `/listings/${listing.slug}`,
         permanent: true,
       })),
+      {
+        source: '/listing/farm-the-original-farmacy',
+        destination: '/listings/farm-the-original-farmacy-downtown',
+        permanent: true,
+      },
+      {
+        source: '/listing/farm-the-original-farmacy/',
+        destination: '/listings/farm-the-original-farmacy-downtown',
+        permanent: true,
+      },
+      {
+        source: '/listing',
+        destination: '/updates',
+        permanent: true,
+      },
       ...priorityLocations.map((location) => ({
         source: `/location/${location.slug}`,
         destination: `/locations/${location.slug}`,
