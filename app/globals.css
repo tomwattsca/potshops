@@ -244,13 +244,3 @@ ul.clean { padding-left:18px; color:var(--muted); line-height:1.7; }
 .lookup-empty a { width:max-content; border:1px solid var(--green); border-radius:999px; padding:8px 12px; background:white; font-weight:800; }
 @media (max-width: 860px) { .lookup-result-grid { grid-template-columns:1fr; } .lookup-results-heading { flex-direction:column; } }
 @media (max-width: 620px) { .homepage-lookup { padding:18px; } .lookup-search-row { flex-direction:column; align-items:stretch; } .lookup-search-row button { width:100%; } }
-
-/* Cookie notice (house default: small, Manage / OK) */
-.consent { position:fixed; left:16px; bottom:16px; z-index:60; max-width:360px; background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,.12); padding:12px 14px; font-size:14px; line-height:1.4; }
-.consent p { margin:0 0 8px; }
-.consent-actions { display:flex; gap:10px; justify-content:flex-end; align-items:center; }
-.consent-ok { background:var(--green); color:#fff; border:1px solid var(--green); border-radius:999px; padding:6px 16px; font-weight:800; cursor:pointer; }
-.consent-link { background:none; border:0; color:var(--green); text-decoration:underline; cursor:pointer; padding:6px 4px; font-weight:600; }
-.consent-toggle { display:flex; gap:8px; align-items:flex-start; margin:0 0 10px; }
-.footer-cookie { background:none; border:0; padding:0; color:inherit; text-decoration:underline; cursor:pointer; font:inherit; }
-@media (max-width:600px){ .consent { left:8px; right:8px; bottom:8px; max-width:none; } }

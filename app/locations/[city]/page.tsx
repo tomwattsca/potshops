@@ -286,7 +286,7 @@ export default async function LocationPage({ params }: { params: Promise<{ city:
                     {listing.website && (
                       <p>
                         <strong>Website from research:</strong>{' '}
-                        <a href={listing.website} rel="nofollow noopener noreferrer" target="_blank" data-event="store_click" data-cta-location="location_profile_website" data-store={listing.slug}>{listing.website}</a>
+                        <a href={listing.website} rel="nofollow noopener noreferrer" target="_blank">{listing.website}</a>
                       </p>
                     )}
                     {!listing.website && (

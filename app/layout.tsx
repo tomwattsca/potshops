@@ -2,9 +2,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Script from 'next/script';
 import './globals.css';
-import SiteConsent from './SiteConsent';
-import CookieSettingsButton from './CookieSettingsButton';
-import { analyticsBootstrap } from './analytics-bootstrap';
 
 const siteUrl = 'https://potshops.ca';
 
@@ -26,8 +23,44 @@ function GoogleAnalytics() {
 
   return (
     <>
-      <Script id="potshops-ga4" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: analyticsBootstrap(measurementId) }} />
       <Script src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`} strategy="afterInteractive" />
+      <Script id="potshops-ga4" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', '${measurementId}', { anonymize_ip: true });
+        `}
+      </Script>
+      <Script id="potshops-cta-events" strategy="afterInteractive">
+        {`
+          document.addEventListener('click', function (event) {
+            var target = event.target && event.target.closest ? event.target.closest('[data-event]') : null;
+            if (!target || typeof window.gtag !== 'function') return;
+            var eventName = target.getAttribute('data-event');
+            var allowedEvents = { listing_update_click: true, internal_link_click: true };
+            if (!eventName || !allowedEvents[eventName]) return;
+            var linkUrl;
+            if (target.href) {
+              try {
+                var parsed = new URL(target.href, window.location.origin);
+                if (parsed.origin === window.location.origin) {
+                  linkUrl = parsed.pathname + parsed.search;
+                }
+              } catch (error) {
+                linkUrl = undefined;
+              }
+            }
+            window.gtag('event', eventName, {
+              cta_location: target.getAttribute('data-cta-location') || undefined,
+              link_url: linkUrl,
+              page_location: window.location.pathname,
+              transport_type: 'beacon'
+            });
+          });
+        `}
+      </Script>
     </>
   );
 }
@@ -63,10 +96,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="footer">
           <div className="footer-inner">
             <p><strong>Potshops.ca</strong> is an independent Canadian cannabis directory that separates public-source context from unverified current-store claims. Listings should be source-verified before publication, updates, or advertising. <Link href="/updates" data-event="listing_update_click" data-cta-location="global_footer">Suggest a correction</Link>.</p>
-            <p><Link href="/privacy">Privacy and cookies</Link> · <CookieSettingsButton className="footer-cookie" /></p>
           </div>
         </footer>
-        <SiteConsent />
       </body>
     </html>
   );

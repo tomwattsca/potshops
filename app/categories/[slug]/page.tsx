@@ -223,7 +223,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                 {listing.website && (
                   <div>
                     <dt>Website from research</dt>
-                    <dd><a href={listing.website} rel="nofollow noopener noreferrer" target="_blank" data-event="store_click" data-cta-location="category_profile_website" data-store={listing.slug}>{listing.website}</a></dd>
+                    <dd><a href={listing.website} rel="nofollow noopener noreferrer" target="_blank">{listing.website}</a></dd>
                   </div>
                 )}
                 <div>
