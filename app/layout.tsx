@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Script from 'next/script';
 import './globals.css';
+import { GA_GUARD_JS } from './ga-guard';
 
 const siteUrl = 'https://potshops.ca';
 
@@ -23,6 +24,7 @@ function GoogleAnalytics() {
 
   return (
     <>
+      <Script id="ga-automation-guard" strategy="beforeInteractive">{`window.gaGuardIds=[${JSON.stringify(measurementId)}];` + GA_GUARD_JS}</Script>
       <Script src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`} strategy="afterInteractive" />
       <Script id="potshops-ga4" strategy="afterInteractive">
         {`
