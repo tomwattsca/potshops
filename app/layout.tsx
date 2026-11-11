@@ -98,6 +98,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="footer">
           <div className="footer-inner">
             <p><strong>Potshops.ca</strong> is an independent Canadian cannabis directory that separates public-source context from unverified current-store claims. Listings should be source-verified before publication, updates, or advertising. <Link href="/updates" data-event="listing_update_click" data-cta-location="global_footer">Suggest a correction</Link>.</p>
+            {/* Google Preferred source badge (SYS-448): plain deep link, official artwork hosted in /badges, no Google script. */}
+            <a className="gps-badge" href="https://www.google.com/preferences/source?q=potshops.ca" target="_blank" rel="noopener">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/badges/google-preferred-source-light.png" srcSet="/badges/google-preferred-source-light.png 1x, /badges/google-preferred-source-light@2x.png 2x" width={126} height={40} alt="Add as a preferred source on Google" loading="lazy" decoding="async" />
+            </a>
           </div>
         </footer>
       </body>

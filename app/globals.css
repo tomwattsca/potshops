@@ -30,6 +30,12 @@ p { line-height:1.68; color:var(--muted); }
 .split { display:grid; gap:30px; grid-template-columns:minmax(0,1.4fr) minmax(260px,.6fr); align-items:start; }
 .notice { background:#fff7ed; border:1px solid #fed7aa; border-radius:16px; padding:16px; }
 .footer { border-top:1px solid var(--line); background:#f3faf5; margin-top:40px; }
+/* SYS-448 preferred source: Google badge under the footer blurb, 40px high, light artwork on the mint footer. */
+.footer .gps-badge { display:inline-block; margin-top:6px; border-radius:999px; line-height:0; }
+.footer .gps-badge:hover { opacity:.9; text-decoration:none; }
+.footer .gps-badge:focus-visible { outline:2px solid var(--green); outline-offset:3px; }
+.footer .gps-badge img { display:block; height:40px; width:auto; }
+/* /SYS-448 preferred source */
 ul.clean { padding-left:18px; color:var(--muted); line-height:1.7; }
 @media (max-width: 760px) { .split { grid-template-columns:1fr; } .nav { align-items:flex-start; flex-direction:column; } .nav-links { gap:10px; font-size:.95rem; } }
 
