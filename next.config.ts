@@ -4,6 +4,23 @@ import { listingSeeds, priorityCategories, priorityLocations } from './app/data/
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   outputFileTracingRoot: process.cwd(),
+  // Browser protections (pentest 17 Nov 2026): no framing by other sites, no MIME sniffing, HTTPS only, and no full
+  // URLs leaked to the shops we link out to. No full CSP: GA and the JSON-LD blocks would need nonces.
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'Content-Security-Policy', value: "frame-ancestors 'self'" },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Strict-Transport-Security', value: 'max-age=31536000' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       {
